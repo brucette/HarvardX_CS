@@ -3,9 +3,12 @@
 
 int main(void)
 {
+    int height;
     do
     {
-        int height = get_int("Enter height of pyramid: ");
+        height = get_int("Enter height of pyramid: ");
     }
     while (height < 1 || height > 8);
+
+    for ()
 }
