@@ -26,7 +26,7 @@ int main(void)
     //Right align the pyramid:
     for (int k = 1; k <= height; k++)
     {
-        for (int l = 1; l <= height - 1; l--)
+        for (int l = height - 1; l <= k - 1; l--)
         {
             printf(".");
         }
