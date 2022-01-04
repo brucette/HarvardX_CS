@@ -28,7 +28,7 @@ int main(void)
     {
         for (int l = height - 1; l >= k; l--)
         {
-            printf(".");
+            printf(" ");
         }
         for (int m = 1; m <= k; m++)
         {
