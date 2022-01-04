@@ -19,13 +19,13 @@ int main(void)
             printf(" ");
         }
 
-        for (int k = 0; k <= i; k++)
+        for (int k = 1; k <= i; k++)
         {
             printf("#");
         }
-        printf("..");
+        printf("  ");
 
-        for (int l = 0; l <= i; l++)
+        for (int l = 1; l <= i; l++)
         {
             printf("#");
         }
