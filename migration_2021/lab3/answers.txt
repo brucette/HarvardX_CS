@@ -1,0 +1,16 @@
+sort1 uses: bubble sort
+
+How do you know?: Bubble sort has a lower bound running time of Ω(n) making it faster than merge sort when the data set is already sorted.
+                  Sort 1 performs either faster or just slightly slower than sort 2 when sorting the sorted.txt files.
+
+
+sort2 uses: merge sort
+
+How do you know?: It is clearly the fastest overall of the three programs when running the different types of files.
+                  With a running time of Ө (n log n) merge sort is faster than the other two sorting types.
+
+
+sort3 uses: selection sort
+
+How do you know?: By process of elimination and the fact that the it has the slowest lower bound running time of Ω(n2) in the best case scenario
+                  of an already sorted data set. In all 3 types of .txt files, regardless of size, sort 3 took the longest time to sort them.

@@ -8,9 +8,10 @@
     "ms-vscode.hexeditor", 
     "ms-vsliveshare.vsliveshare-audio", 
     "MS-vsliveshare.vsliveshare-pack", 
+    "samuelcolvin.jinjahtml", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:fa67771aa2a28ac0436a7ba4d23dc79374ddda60", 
+  "image": "ghcr.io/cs50/codespace:62a561ac9422f18f1d682ac5d91142bcb381ce7a", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -53,9 +54,13 @@
     "experiments.override.gettingStarted.overrideCategory.ms-python.python.pythonWelcome.when": "false", 
     "experiments.override.gettingStarted.overrideCategory.ms-vscode.cpptools.cppWelcome.when": "false", 
     "extensions.ignoreRecommendations": true, 
+    "files.associations": {
+      "*.html": "jinja-html"
+    }, 
     "files.exclude": {
       "**/.*": true
     }, 
+    "files.trimTrailingWhitespace": true, 
     "files.watcherExclude": {
       "**/.git/objects/**": true, 
       "**/.git/subtree-cache/**": true, 
@@ -72,6 +77,9 @@
     "javascript.suggest.enabled": false, 
     "javascript.validate.enable": false, 
     "problems.decorations.enabled": false, 
+    "remote.otherPortsAttributes": {
+      "onAutoForward": "silent"
+    }, 
     "scm.countBadge": "off", 
     "terminal.integrated.commandsToSkipShell": [
       "workbench.action.toggleSidebarVisibility"
