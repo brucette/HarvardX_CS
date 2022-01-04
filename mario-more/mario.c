@@ -7,7 +7,7 @@ int main(void)
 
     do
     {
-        height = get_int("What height do you want?");
+        height = get_int("What height do you want? ");
     }
     while (height < 1 || height > 8);
 
