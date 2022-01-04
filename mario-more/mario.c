@@ -13,7 +13,10 @@ int main(void)
 
     for (int i = 1; i < height; i++)
     {
-        
+        for (int j = height-1; j >= i; j--)
+        {
+            
+        }
 
     }
 }
