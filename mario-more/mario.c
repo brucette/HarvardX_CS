@@ -15,7 +15,12 @@ int main(void)
     {
         for (int j = height-1; j >= i; j--)
         {
-            
+            printf(".");
+        }
+
+        for (int k = height-1; k >= i; k--)
+        {
+            printf(".");
         }
 
     }
