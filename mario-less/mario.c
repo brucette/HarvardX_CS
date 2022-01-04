@@ -3,5 +3,7 @@
 
 int main(void)
 {
+    do
     int height = get_int("Enter height of pyramid: ");
+    while
 }
