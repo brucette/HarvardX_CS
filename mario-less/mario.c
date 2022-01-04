@@ -20,12 +20,17 @@ int main(void)
         }
         printf("\n");
     }
+
         printf("\n");
-        
+
     //Right align the pyramid:
     for (int k = 1; k <= height; k++)
     {
-        for (int l = 1; l <= height; l++)
+        for (int l = 1; l <= height - 1; l--)
+        {
+            printf(".");
+        }
+        for (int m = 1; m <= k; m++)
         {
             printf("#");
         }
