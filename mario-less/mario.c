@@ -3,5 +3,5 @@
 
 int main(void)
 {
-    
+    int height = get_int("Enter height of pyramid: ");
 }
