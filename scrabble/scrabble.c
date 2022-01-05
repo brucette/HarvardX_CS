@@ -35,5 +35,7 @@ int compute_score(string word)
             }
         }
         int index = word[i] - 'a';
+        score = score + POINTS[index];
     }
+    return score;
 }
