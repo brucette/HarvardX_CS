@@ -6,6 +6,6 @@ int main(argc, argv[])
 {
     if (argc != 2)
     {
-        
+
     }
 }
