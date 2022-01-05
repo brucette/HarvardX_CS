@@ -2,7 +2,10 @@
 #include <stdio.h>
 
 
-int main(void)
+int main(argc, argv[])
 {
-    
+    if (argc != 2)
+    {
+        
+    }
 }
