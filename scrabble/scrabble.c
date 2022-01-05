@@ -33,6 +33,6 @@ int compute_score(string word)
                 tolower(word[i]);
             }
         }
-        int score =
+        int score = word[i] - 'a';
     }
 }
