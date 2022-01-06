@@ -6,8 +6,10 @@ int main(argc, argv[])
 {
     if (argc != 2)
     {
-
+        printf("Usage: ./caesar X");
+        return 1;
     }
+    if (isargv[1] )
 }
 
 rintf("%i letters\n", count_letters(text));
