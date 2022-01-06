@@ -10,8 +10,9 @@ int main(argc, argv[])
         return 1;
     }
 
-    string plaintext = get_string("plaintext:  "
-    );
+    string plain = get_string("plaintext:  ");
+
+    printf("ciphertext: %s\n", cipher);
 }
 
 rintf("%i letters\n", count_letters(text));
