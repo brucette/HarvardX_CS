@@ -19,7 +19,7 @@ int main(void)
     float per_hundred = 100 / count_words(text);
     int L = (count_letters(text) / count_words(text)) * per_hundred;    //average number of letters per 100 words
     int S = (count_sentences(text) / count_words(text)) * per_hundred;  //average number of sentences per 100 words
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = 0.0588 * L - 0.296 * S - 15.8;
 
 }
 
