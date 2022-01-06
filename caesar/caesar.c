@@ -4,12 +4,12 @@
 
 int main(argc, argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || isdigit(argv[1]) == false))
     {
-        printf("Usage: ./caesar X");
+        printf("Usage: ./caesar key");
         return 1;
     }
-    if (isargv[1] )
+
 }
 
 rintf("%i letters\n", count_letters(text));
