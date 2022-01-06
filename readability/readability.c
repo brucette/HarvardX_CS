@@ -11,17 +11,10 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    printf("%i letters\n", count_letters(text));
-    printf("%i words\n", count_words(text));
-    printf("%i sentences\n", count_sentences(text));
 
-
-    float per_hundred = (float) 100 / count_words(text); //7.14
-    printf("%f\n\n", per_hundred);
+    float per_hundred = (float) 100 / count_words(text);
     float L = (float) count_letters(text) * per_hundred;    //average number of letters per 100 words
-    printf("%f\n\n", L);
     float S = (float) count_sentences(text) * per_hundred;  //average number of sentences per 100 words
-    printf("%f\n\n", S);
     int index = round(0.0588 * L - 0.296 * S - 15.8);
 
     if (index < 1)
