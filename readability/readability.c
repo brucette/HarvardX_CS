@@ -11,9 +11,9 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    /printf("%i letters\n", count_letters(text));
+    /*printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
-    printf("%i sentences\n", count_sentences(text));
+    printf("%i sentences\n", count_sentences(text));*/
 
 
     int L = count_letters(text) / count_words(text) ;  //average number of letters per 100 words
