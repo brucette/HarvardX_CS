@@ -45,7 +45,7 @@ int count_sentences(string text)
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] == ".")  if (strcmp(s1, s2) == 0)
+        if (istext[i] == ".")  //if (strcmp(s1, s2) == 0)
         {
             sentences++;
         }
