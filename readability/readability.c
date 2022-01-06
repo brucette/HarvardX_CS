@@ -50,7 +50,7 @@ int count_sentences(string text)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (ispunct(text[i]) && text[i] != ',') //(isalnum(text[i]) == false && isspace(text[i]) == false && )  (strcmp(&text[i], '.') == 0 || strcmp(&text[i], '?') || strcmp(&text[i], '!'))
+        if (text[i] == ',')  //(ispunct(text[i]) && text[i] != ',') (isalnum(text[i]) == false && isspace(text[i]) == false && )  (strcmp(&text[i], '.') == 0 || strcmp(&text[i], '?') || strcmp(&text[i], '!'))
         {
             sentences++;
         }
