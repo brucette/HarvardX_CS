@@ -21,6 +21,8 @@ int main(void)
     int S = (count_sentences(text) / count_words(text)) * per_hundred;  //average number of sentences per 100 words
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
+    printf("%i Grade\n", index);
+
 }
 
 int count_letters(string text)
