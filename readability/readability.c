@@ -32,7 +32,7 @@ int main(void)
     }
 }
 
-//Functions
+//FUNCTIONS
 int count_letters(string text)
 {
     int letters = 0;
