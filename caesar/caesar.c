@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
-
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
 
 int main(argc, argv[])
 {
@@ -11,7 +13,9 @@ int main(argc, argv[])
     }
 
     string plain = get_string("plaintext:  ");
+    int key = argv[1];
 
+    for (int i = 0, n = strlen(plain); i < n; i++)
     printf("ciphertext: %s\n", cipher);
 }
 
