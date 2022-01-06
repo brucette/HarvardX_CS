@@ -18,7 +18,7 @@ int main(void)
 
     float per_hundred = (float) 100 / count_words(text); //7.14
     printf("%f\n\n", per_hundred);
-    float L = round ((float) count_letters(text) / count_words(text) * per_hundred);    //average number of letters per 100 words
+    float L = round ((float) count_letters(text) * per_hundred);    //average number of letters per 100 words
     printf("%f\n\n", L);
     float S = round ((float) count_sentences(text) / count_words(text) * per_hundred);  //average number of sentences per 100 words
     printf("%f\n\n", S);
