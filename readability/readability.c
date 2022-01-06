@@ -24,6 +24,10 @@ int main(void)
     printf("%f\n\n", S);
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
+    if (index < 1)
+    {
+        printf();
+    }
     printf("Grade %i\n", index);
 
 }
