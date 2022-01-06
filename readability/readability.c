@@ -44,13 +44,10 @@ int count_words(string text)
 int count_sentences(string text)
 {
     int sentences = 0;
-    char stop = '.';
-    //char question = ?;
-    //char excla = !;
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] == ',')  //(ispunct(text[i]) && text[i] != ',') (isalnum(text[i]) == false && isspace(text[i]) == false && )  (strcmp(&text[i], '.') == 0 || strcmp(&text[i], '?') || strcmp(&text[i], '!'))
+        if (text[i] == '.' || text[i] == '?' || text[i] == '!')  //(ispunct(text[i]) && text[i] != ',') (isalnum(text[i]) == false && isspace(text[i]) == false && )  (strcmp(&text[i], '.') == 0 || strcmp(&text[i], '?') || strcmp(&text[i], '!'))
         {
             sentences++;
         }
