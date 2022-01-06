@@ -45,7 +45,7 @@ int count_sentences(string text)
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isspace(text[i]))
+        if (text[i] == ".")
         {
             sentences++;
         }
