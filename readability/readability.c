@@ -9,8 +9,8 @@ int count_words(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    printf("%i", count_letters(text));
-    printf(" letters\n");
+    printf("%i letters\n", count_letters(text));
+    //printf("%i words\n", count_words(text));
 }
 
 int count_letters(string text)
@@ -26,15 +26,15 @@ int count_letters(string text)
     return letters;
 }
 
-int count_words(string text)
+/*int count_words(string text)
 {
     int words = 1;      //set to 1 to account for last word after the last space.
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if text[i] == " ")
+        if (text[i] == " ")
         {
             words++;
         }
     }
     return words;
-}
+}*/
