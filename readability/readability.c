@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <math.h>
 
+//function prototypes
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
@@ -29,9 +30,9 @@ int main(void)
     {
         printf("Grade %i\n", index);
     }
-
 }
 
+//Functions
 int count_letters(string text)
 {
     int letters = 0;
@@ -64,8 +65,7 @@ int count_sentences(string text)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] == '.' || text[i] == '?' || text[i] == '!')  //(ispunct(text[i]) && text[i] != ',') (isalnum(text[i]) == false && isspace(text[i]) == false && )  (strcmp(&text[i], '.') == 0 || strcmp(&text[i], '?') || strcmp(&text[i], '!'))
-        {
+        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
             sentences++;
         }
     }
