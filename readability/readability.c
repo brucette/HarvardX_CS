@@ -15,7 +15,7 @@ int main(void)
     printf("%i sentences\n", count_sentences(text));
 
 
-    int L = 0;
+    int L = 0;  //average number of letters per 100 words
     int S = 0;
     int index = 0.0588 * L - 0.296 * S - 15.8
 
