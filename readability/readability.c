@@ -17,9 +17,9 @@ int main(void)
 
 
     float per_hundred = 100 / count_words(text);
-    float L = (count_letters(text) / count_words(text)) * per_hundred;    //average number of letters per 100 words
+    float L = round(count_letters(text) / count_words(text)) * per_hundred;    //average number of letters per 100 words
     printf("%f\n", L);
-    float S = (count_sentences(text) / count_words(text)) * per_hundred;  //average number of sentences per 100 words
+    float S = round(count_sentences(text) / count_words(text)) * per_hundred;  //average number of sentences per 100 words
     printf("%f\n", S);
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
