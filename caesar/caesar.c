@@ -10,6 +10,7 @@ int main(argc, argv[])
         return 1;
     }
 
+    string plaintext = get_string("plaintext: ");
 }
 
 rintf("%i letters\n", count_letters(text));
