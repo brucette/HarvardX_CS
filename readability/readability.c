@@ -12,6 +12,7 @@ int main(void)
     string text = get_string("Text: ");
     printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
+    printf("%i sentences\n", count_sentences(text));
 }
 
 int count_letters(string text)
@@ -45,7 +46,7 @@ int count_sentences(string text)
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (istext[i] == ".")  //if (strcmp(s1, s2) == 0)
+        if (isalnum(text[i]) == false && isspace(text[i]) == false)  //can try: if (strcmp(s1, s2) == 0)
         {
             sentences++;
         }
