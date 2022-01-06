@@ -16,19 +16,19 @@ int main(void)
     float per_hundred = (float) 100 / count_words(text);
     float L = (float) count_letters(text) * per_hundred;    //average number of letters per 100 words
     float S = (float) count_sentences(text) * per_hundred;  //average number of sentences per 100 words
-    int index = round(0.0588 * L - 0.296 * S - 15.8);
+    int grade = round(0.0588 * L - 0.296 * S - 15.8);
 
-    if (index < 1)
+    if (grade < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (index > 16)
+    else if (grade > 16)
     {
         printf("Grade 16+\n");
     }
     else
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", grade);
     }
 }
 
