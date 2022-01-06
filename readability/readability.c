@@ -13,6 +13,12 @@ int main(void)
     printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
     printf("%i sentences\n", count_sentences(text));
+
+
+    int L = 0;
+    int S = 0;
+    int index = 0.0588 * L - 0.296 * S - 15.8
+
 }
 
 int count_letters(string text)
