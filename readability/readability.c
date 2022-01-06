@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -10,7 +11,7 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    printf("%i letters\n", count_letters(text));
+    /printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
     printf("%i sentences\n", count_sentences(text));
 
