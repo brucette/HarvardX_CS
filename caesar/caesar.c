@@ -52,6 +52,9 @@ bool only_digits(string key)
 char rotate(char c, int n)
 {
     if (isalpha(c))
+    {
+        if ()
+    }
 }
 
     //printf("%i letters\n", count_letters(text));
