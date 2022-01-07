@@ -51,11 +51,12 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
+    int cipher = 0;
     if (isalpha(c))
     {
         if (isupper(c))
         {
-            c 
+            cipher = c - A;
         }
         else
         {
