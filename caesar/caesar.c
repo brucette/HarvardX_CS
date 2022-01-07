@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    bool only_digits(key);
+    bool only_digits(string key);
 
     printf("key: %s\n", key);
 
@@ -32,9 +32,9 @@ bool only_digits(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (!= isdigit(key[i])
+        if (isdigit(key[i]) == false)
         {
-            
+            return 1;
         }
     }
 }
