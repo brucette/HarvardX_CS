@@ -14,7 +14,7 @@ int main(int argc, string argv[])
 
     string key = argv[1];
 
-    
+
     printf("key: %s\n", key);
 
     string plain = get_string("plaintext:  ");
@@ -24,6 +24,11 @@ int main(int argc, string argv[])
     //printf("ciphertext: %s\n", cipher);
 }
 
+//FUNCTIONS
+bool only_digits(string key)
+{
+
+}
     //printf("%i letters\n", count_letters(text));
     //printf("%i words\n", count_words(text));
     //printf("%i sentences\n", count_sentences(text));
