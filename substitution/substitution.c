@@ -43,6 +43,9 @@ int main(int argc, string argv[])
 //checks that only alphabets and no other characters or duplicates given
 bool is_valid(string key)
 {
+    int small_letters[26][26]; //to count number of letters
+    int big_letters[26][26];
+
     for (int i = 0, n = strlen(key); i < n; i++)
     {
         if (isalpha(key[i]) == false)
