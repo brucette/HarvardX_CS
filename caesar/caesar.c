@@ -4,6 +4,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+
+bool only_digits(string key);
+
 int main(int argc, string argv[])
 {
     if (argc != 2) //|| isdigit(argv[1]) == false))
@@ -29,7 +32,7 @@ bool only_digits(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        
+        isdigit
     }
 }
     //printf("%i letters\n", count_letters(text));
