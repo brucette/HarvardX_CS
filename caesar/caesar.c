@@ -11,16 +11,17 @@ int main(argc, argv[])
         printf("Usage: ./caesar key");
         return 1;
     }
-    
+
     int key = argv[1];
+    printf("key: %i", key);
 
     string plain = get_string("plaintext:  ");
 
 
-    for (int i = 0, n = strlen(plain); i < n; i++)
-    printf("ciphertext: %s\n", cipher);
+    //for (int i = 0, n = strlen(plain); i < n; i++)
+    //printf("ciphertext: %s\n", cipher);
 }
 
-rintf("%i letters\n", count_letters(text));
-    printf("%i words\n", count_words(text));
-    printf("%i sentences\n", count_sentences(text));
+    //printf("%i letters\n", count_letters(text));
+    //printf("%i words\n", count_words(text));
+    //printf("%i sentences\n", count_sentences(text));
