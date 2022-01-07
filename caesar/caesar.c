@@ -39,6 +39,8 @@ bool only_digits(string key)
     }
     return 0;
 }
+
+
     //printf("%i letters\n", count_letters(text));
     //printf("%i words\n", count_words(text));
     //printf("%i sentences\n", count_sentences(text));
