@@ -16,7 +16,12 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-    bool only_digits(string key);
+
+    if (only_digits(key) == false)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 
     printf("key: %s\n", key);
 
