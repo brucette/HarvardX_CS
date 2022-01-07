@@ -54,11 +54,11 @@ char rotate(char c, int n)
     {
         if (isupper(c))
         {
-            cipher = c - A + n;
+            c = c - A + n;   65 - 65 + 3 = 3 
         }
         else
         {
-
+            c = c - a + n;
         }
     }
 }
