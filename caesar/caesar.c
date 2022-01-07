@@ -28,15 +28,14 @@ int main(int argc, string argv[])
         key = atoi(argv[1]);
     }
 
-    string plain = get_string("plaintext:  ");
+    string plain = get_string("plaintext:  \n");
 
-    string cipher = NULL;
-
+    printf("ciphertext: \n");
     for (int i = 0, n = strlen(plain); i < n; i++)
     {
-        cipher[i] = rotate(plain[i], key);
+        printf("%c", rotate(plain[i], key));
     }
-    printf("ciphertext: %s\n", cipher);
+
 }
 
 //FUNCTION DECLARATIONS
