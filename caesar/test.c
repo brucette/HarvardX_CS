@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     int small_letters[26][26]; //to count number of letters
     int big_letters[26][26];
 
-    for (int i = 0, k = 0; i < 26; i++, k++)
+    for (int i = 0, k = 0; i < 26; i++)
     {
         for (int j = 'A'; j < 'Z'; j++)
         {
@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     {
         for (int l = 0; l < 26; l++)
         {
-            printf("%c", big_letters[m][l]);
+            printf("%c\n", big_letters[m][l]);
         }
     }
 }
