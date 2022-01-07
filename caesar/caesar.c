@@ -4,8 +4,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-
+//Function prototypes
 bool only_digits(string key);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -27,16 +28,13 @@ int main(int argc, string argv[])
         key = atoi(argv[1]);
     }
 
-    printf("key: %i\n", key);
-
     string plain = get_string("plaintext:  ");
-
 
     //for (int i = 0, n = strlen(plain); i < n; i++)
     //printf("ciphertext: %s\n", cipher);
 }
 
-//FUNCTIONS
+//FUNCTION DECLARATIONS
 bool only_digits(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
