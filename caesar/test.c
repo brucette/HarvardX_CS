@@ -20,9 +20,9 @@ int main(int argc, string argv[])
         {
             //strcpy(&j, big_letters[i]);
             //strcpy(0, big_letters[k]);
-            big_letters[i][k] = 0;
-            strcpy(&j+32, small_letters[i]);
-            strcpy(0, small_letters[k]);
+            big_letters[i][k] = j;
+            //strcpy(&j+32, small_letters[i]);
+            //strcpy(0, small_letters[k]);
             //small_letters[i] = j + 32;
             //small_letters[k] = 0;
         }
