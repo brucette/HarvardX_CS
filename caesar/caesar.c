@@ -56,7 +56,7 @@ char rotate(char c, int n)
     {
         if (isupper(c))
         {
-            cipher = c - A;
+            cipher = c - A + n;
         }
         else
         {
