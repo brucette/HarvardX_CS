@@ -66,16 +66,16 @@ bool is_valid(string key)
         printf("%c%i\n", big_letters[m][m], big_letters[m][m+1]);
     }*/
 
-    for (int i = 0; i < len; i++)
+    for (int l = 0; l < len; l++)
     {
-        if (isalpha(key[i]) == false)
+        if (isalpha(key[l]) == false)
         {
             return false;
             printf("Non alphabetical characters not allowed.");
         }
     }
 
-    for (int j = 0; i < len; i++)
+    for (int m = 0; m < len; m++)
 
         if (key[i] == )
         {
