@@ -39,10 +39,10 @@ bool only_digits(string key)
     {
         if (isdigit(key[i]) == false)
         {
-            return 1;
+            return false;
         }
     }
-    return 0;
+    return true;
 }
 
 
