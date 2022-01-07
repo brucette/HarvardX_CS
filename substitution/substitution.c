@@ -38,16 +38,21 @@ int main(int argc, string argv[])
 }
 
 //FUNCTION DECLARATIONS
-bool only_digits(string key)
+bool is_valid(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
+        if (n == 26)
+        {
+
+        }
+
         if (isdigit(key[i]) == false)
         {
-            return false;
+            return ;
         }
     }
-    return true;
+    return false;
 }
 
 char rotate(char c, int n)
