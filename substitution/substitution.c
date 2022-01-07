@@ -14,7 +14,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int key = 0;
+    string key = argv[1];
+
+
+
 
     if (only_digits(argv[1]) == false)
     {
