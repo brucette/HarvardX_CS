@@ -23,7 +23,7 @@ int main(int argc, string argv[])
             big_letters[i][k] = j;
             //strcpy(&j+32, small_letters[i]);
             //strcpy(0, small_letters[k]);
-            //small_letters[i] = j + 32;
+            small_letters[i][k] = j + 32;
             //small_letters[k] = 0;
         }
     }
