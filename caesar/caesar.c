@@ -54,7 +54,7 @@ char rotate(char c, int n)
     {
         if (isupper(c))
         {
-            c = c - A + n;   65 - 65 + 3 = 3 
+            c = (c - A + n) % 26;
         }
         else
         {
