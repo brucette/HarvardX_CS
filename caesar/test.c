@@ -14,12 +14,13 @@ int main(int argc, string argv[])
     char small_letters[26][26]; //to count number of letters
     char big_letters[26][26];
 
-    for (char i = 0, k = 0; i < 26; i++, k++)
+    for (int i = 0, k = 0; i < 26; i++, k++)
     {
-        for (char j = 65; j < 91; j++)
+        for (char j = 'A'; j < 'Z'; j++)
         {
-            strcpy(j, big_letters[i]);
-            big_letters[k] = 0;
+            strcpy(&j, big_letters[i]);
+            strcpy(0, big_letters[k]);
+            //big_letters[k] = 0;
             small_letters[i] = j + 32;
             small_letters[k] = 0;
         }
