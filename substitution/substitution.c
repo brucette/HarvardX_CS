@@ -75,13 +75,18 @@ bool is_valid(string key)
         }
     }
 
-    for (int m = 0; m < len; m++)
-
-        if (key[m] == big_letters[m][0])
+    for (int m = 0; m < 1; m++)
+    {
+        for (int n = 0; n < len; n++)
         {
-            return false;
-            printf("No duplicate characters allowed.");
+            if (key[m] == big_letters[n][0])
+            {
+                big_letters[n][1] += 1;
+            }
         }
+    }
+
+
     }
     return false;
 }
