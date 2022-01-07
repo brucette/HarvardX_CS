@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <math.h>
 
-int main(argc, argv[])
+int main(argc, string argv[])
 {
     if (argc != 2) //|| isdigit(argv[1]) == false))
     {
