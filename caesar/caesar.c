@@ -27,7 +27,10 @@ int main(int argc, string argv[])
 //FUNCTIONS
 bool only_digits(string key)
 {
+    for (int i = 0, n = strlen(key); i < n; i++)
+    {
 
+    }
 }
     //printf("%i letters\n", count_letters(text));
     //printf("%i words\n", count_words(text));
