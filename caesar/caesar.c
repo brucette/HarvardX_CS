@@ -6,14 +6,16 @@
 
 int main(argc, argv[])
 {
-    if (argc != 2 || isdigit(argv[1]) == false))
+    if (argc != 2) //|| isdigit(argv[1]) == false))
     {
         printf("Usage: ./caesar key");
         return 1;
     }
+    
+    int key = argv[1];
 
     string plain = get_string("plaintext:  ");
-    int key = argv[1];
+
 
     for (int i = 0, n = strlen(plain); i < n; i++)
     printf("ciphertext: %s\n", cipher);
