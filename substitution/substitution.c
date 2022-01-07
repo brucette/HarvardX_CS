@@ -77,7 +77,7 @@ bool is_valid(string key)
 
     for (int m = 0; m < len; m++)
 
-        if (key[m] == big_letters[])
+        if (key[m] == big_letters[m][m])
         {
             return false;
             printf("No duplicate characters allowed.");
