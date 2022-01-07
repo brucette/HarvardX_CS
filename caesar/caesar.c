@@ -30,10 +30,13 @@ int main(int argc, string argv[])
 
     string plain = get_string("plaintext:  ");
 
+    string cipher = NULL;
+
     for (int i = 0, n = strlen(plain); i < n; i++)
     {
-        printf("ciphertext: %c\n", rotate(plain[i], key));
+        cipher[i] = rotate(plain[i], key);
     }
+    printf("ciphertext: %s\n", cipher);
 }
 
 //FUNCTION DECLARATIONS
