@@ -5,8 +5,7 @@
 #include <stdlib.h>
 
 //Function prototypes
-bool only_digits(string key);
-char rotate(char c, int n);
+
 
 int main(int argc, string argv[])
 {
