@@ -18,10 +18,10 @@ int main(int argc, string argv[])
     {
         for (int j = 'A'; j < 'Z'; j++)
         {
-            big_letters[i][k] = j;
-            big_letters[i][k+1] = 0;
-            small_letters[i][k] = j + 32;
-            small_letters[i][k+1] = 0;
+            big_letters[i][i] = j;
+            big_letters[i][i+1] = 0;
+            small_letters[i][i] = j + 32;
+            small_letters[i][i+1] = 0;
         }
     }
     for (int m = 0; m < 26; m++)
