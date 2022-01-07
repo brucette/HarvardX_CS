@@ -9,7 +9,7 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || argv[1] != 26) //checks that 1 CL argument is given and its length is 26
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -38,13 +38,14 @@ int main(int argc, string argv[])
 }
 
 //FUNCTION DECLARATIONS
+//checks that it
 bool is_valid(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
         if (n == 26)
         {
-            
+
         }
 
         if (isdigit(key[i]) == false)
