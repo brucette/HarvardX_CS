@@ -48,15 +48,20 @@ bool is_valid(string key)
     int small_letters[26][26]; //to count number of letters
     int big_letters[26][26];
 
-    for (int i = 0, k = 0; i < 26; i++, k++)
+    //populate two arrays with capital and small alphabets
+    for (int i = 0, j = 'A'; i < 26; i++, j++)
     {
-        for (int j = 65; j < 91; j++)
+        for (int k = 0; k < 2; k++)
         {
-            big_letters[i] = j;
-            big_letters[k] = 0;
-            small_letters[i] = j + 32;
-            small_letters[k] = 0;
+            big_letters[i][i] = j;
+            big_letters[i][i+1] = 0;
+            small_letters[i][i] = j + 32;
+            small_letters[i][i+1] = 0;
         }
+    }
+    for (int m = 0; m < 26; m++)
+    {
+        printf("%c%i\n", big_letters[m][m], big_letters[m][m+1]);
     }
 
 
