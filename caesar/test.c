@@ -26,6 +26,9 @@ int main(int argc, string argv[])
     }
     for (int m = 0; m < 26; m++)
     {
-        printf("%c", big_letters[m][m]);
+        for (int l = 0; l < 26; l++)
+        {
+            printf("%c", big_letters[m][l]);
+        }
     }
 }
