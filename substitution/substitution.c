@@ -6,7 +6,6 @@
 
 //Function prototypes
 
-
 int main(int argc, string argv[])
 {
     if (argc != 2 || argv[1] != 26) //checks that 1 CL argument is given and its length is 26
