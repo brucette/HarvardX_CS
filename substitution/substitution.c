@@ -5,6 +5,8 @@
 #include <stdlib.h>
 
 //Function prototypes
+bool is_valid(string key);
+
 
 int main(int argc, string argv[])
 {
