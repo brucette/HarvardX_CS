@@ -16,9 +16,9 @@ int main(int argc, string argv[])
 
     for (int i = 0, k = 0; i < 26; i++, k++)
     {
-        for (int j = 65; j < 91; j++)
+        for (char j = 65; j < 91; j++)
         {
-            big_letters[i] = j;
+            //big_letters[i] = j;
             big_letters[k] = 0;
             small_letters[i] = j + 32;
             small_letters[k] = 0;
