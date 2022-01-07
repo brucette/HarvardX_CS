@@ -32,7 +32,7 @@ int main(int argc, string argv[])
 
     for (int i = 0, n = strlen(plain); i < n; i++)
     {
-        rotate(plain[i], key);
+        printf("ciphertext: %c\n", rotate(plain[i], key));
     }
 }
 
@@ -55,12 +55,12 @@ char rotate(char c, int n)
     {
         if (isupper(c))
         {
-            c = (c - A + n) % 26;
+            c = ((c - 'A' + n) % 26) + 'A';
         }
         else
         {
-            c = (c - a + n) % 26;
+            c = ((c - 'a' + n) % 26) + 'a';
         }
     }
+    return c;
 }
-    //printf("%i letters\n", count_letters(text));
