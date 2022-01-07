@@ -15,19 +15,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string key = argv[1];
+    int key = 0;
 
-    if (only_digits(key) == false)
+    if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
     else
     {
-        atoi(key);
+        key = atoi(argv[1]);
     }
 
-    printf("key: %s\n", key);
+    printf("key: %i\n", key);
 
     string plain = get_string("plaintext:  ");
 
@@ -49,6 +49,10 @@ bool only_digits(string key)
     return true;
 }
 
+string rotate(string text)
+{
+    
+}
 
     //printf("%i letters\n", count_letters(text));
     //printf("%i words\n", count_words(text));
