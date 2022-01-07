@@ -9,7 +9,7 @@ bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2) //|| isdigit(argv[1]) == false))
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
