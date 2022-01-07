@@ -8,12 +8,12 @@ int main(int argc, string argv[])
 {
     if (argc != 2) //|| isdigit(argv[1]) == false))
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
     string key = argv[1];
-    printf("key: %i", key);
+    printf("key: %s", key);
 
     string plain = get_string("plaintext:  ");
 
