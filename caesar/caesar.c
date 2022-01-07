@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <math.h>
+#include <stdlib.h>
 
-int main(argc, string argv[])
+int main(int argc, string argv[])
 {
     if (argc != 2) //|| isdigit(argv[1]) == false))
     {
@@ -12,7 +12,7 @@ int main(argc, string argv[])
         return 1;
     }
 
-    int key = argv[1];
+    string key = argv[1];
     printf("key: %i", key);
 
     string plain = get_string("plaintext:  ");
