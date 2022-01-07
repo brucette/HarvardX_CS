@@ -61,11 +61,10 @@ bool is_valid(string key)
             small_letters[i][i+1] = 0;
         }
     }
-    for (int m = 0; m < 26; m++)
+    /*for (int m = 0; m < 26; m++)
     {
         printf("%c%i\n", big_letters[m][m], big_letters[m][m+1]);
-    }
-
+    }*/
 
     for (int i = 0; i < len; i++)
     {
