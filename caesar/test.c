@@ -7,20 +7,7 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || argv[1] != 26) //checks that 1 CL argument is given and its length is 26
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-
     string key = argv[1];
-
-    if (is_valid(key) == false)
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-
 
     int len = strlen(key);
 
