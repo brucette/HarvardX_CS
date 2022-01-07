@@ -58,7 +58,7 @@ char rotate(char c, int n)
         }
         else
         {
-            c = c - a + n;
+            c = (c - a + n) % 26;
         }
     }
 }
