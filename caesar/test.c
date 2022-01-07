@@ -23,4 +23,8 @@ int main(int argc, string argv[])
             small_letters[i] = j + 32;
             small_letters[k] = 0;
         }
+    for (int m = 0; m < 26; m++)
+    {
+        printf("%c%i", big_letters[m][m]);
+    }
     }
