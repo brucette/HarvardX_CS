@@ -45,12 +45,18 @@ bool is_valid(string key)
 {
     int len = strlen(key);
 
-    for (int i = 65; i < 91; i++)
+    int small_letters[26][26]; //to count number of letters
+    int big_letters[26][26];
+
+    for (int i = 0; i < 26; i++)
     {
-        big_letters[i] = 
+        for (int j = 65; j < 91; j++)
+        {
+            big_letters[i] = j;
+            small_letters[i] = j + 32;
+        }
     }
-    int small_letters['a', 'b', 'c'][3]; //to count number of letters
-    int big_letters['A', 'B', 'C'][3];
+
 
     for (int i = 0; i < len; i++)
     {
