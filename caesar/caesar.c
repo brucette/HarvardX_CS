@@ -35,6 +35,7 @@ int main(int argc, string argv[])
     {
         printf("%c", rotate(plain[i], key));
     }
+    printf("\n");
 }
 
 //FUNCTION DECLARATIONS
