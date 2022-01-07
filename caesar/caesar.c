@@ -49,9 +49,9 @@ bool only_digits(string key)
     return true;
 }
 
-string rotate(string text)
+char rotate(char c, int n)
 {
-    
+
 }
 
     //printf("%i letters\n", count_letters(text));
