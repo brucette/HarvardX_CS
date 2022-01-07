@@ -43,17 +43,22 @@ int main(int argc, string argv[])
 //checks that only alphabets and no other characters or duplicates given
 bool is_valid(string key)
 {
-    int small_letters[26][26]; //to count number of letters
-    int big_letters[26][26];
+    int len = strlen(key);
+    int small_letters['a', 'b', 'c'][3]; //to count number of letters
+    int big_letters['A', 'B', 'C'][3];
 
-    for (int i = 0, n = strlen(key); i < n; i++)
+    for (int i = 0; i < len; i++)
     {
         if (isalpha(key[i]) == false)
         {
             return false;
             printf("Non alphabetical characters not allowed.");
         }
-        if (duplicate characters == true)
+    }
+
+    for (int j = 0; i < len; i++)
+
+        if (key[i] == )
         {
             return false;
             printf("No duplicate characters allowed.");
