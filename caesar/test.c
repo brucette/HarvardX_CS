@@ -16,7 +16,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < 26; i++)
     {
-        for (int j = 'A'; j < 'Z'; j++)
+        for (int j = 'A'; j < 'Z'+1; j++)
         {
             big_letters[i][i] = j;
             big_letters[i][i+1] = 0;
