@@ -18,13 +18,10 @@ int main(int argc, string argv[])
     {
         for (int j = 'A'; j < 'Z'; j++)
         {
-            //strcpy(&j, big_letters[i]);
-            //strcpy(0, big_letters[k]);
             big_letters[i][k] = j;
-            //strcpy(&j+32, small_letters[i]);
-            //strcpy(0, small_letters[k]);
+            big_letters[i][k+1] = 0;
             small_letters[i][k] = j + 32;
-            //small_letters[k] = 0;
+            small_letters[i][k+1] = 0;
         }
     }
     for (int m = 0; m < 26; m++)
