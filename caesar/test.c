@@ -15,28 +15,13 @@ int main(int argc, string argv[])
 
     string key = argv[1];
 
-    if (only_digits(argv[1]) == false)
+    if (is_valid(key) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else
-    {
-        key = atoi(argv[1]);
-    }
 
-    string plain = get_string("plaintext:  ");
 
-    printf("ciphertext: ");
-    for (int i = 0, n = strlen(plain); i < n; i++)
-    {
-        printf("%c", rotate(plain[i], key));
-    }
-    printf("\n");
-}
-
-bool is_valid(string key)
-{
     int len = strlen(key);
 
     int small_letters[26][26]; //to count number of letters
