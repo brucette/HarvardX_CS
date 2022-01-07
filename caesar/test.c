@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     {
         for (int j = 65; j < 91; j++)
         {
-            strcpy(big_letters[i] = j;
+            strcpy(j, big_letters[i]);
             big_letters[k] = 0;
             small_letters[i] = j + 32;
             small_letters[k] = 0;
