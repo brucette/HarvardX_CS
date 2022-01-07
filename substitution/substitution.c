@@ -85,7 +85,8 @@ bool is_valid(string key)
             }
         }
     }
-
+    //return false;
+    //printf("No duplicate characters allowed.");
 
     }
     return false;
