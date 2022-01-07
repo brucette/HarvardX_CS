@@ -43,9 +43,9 @@ bool is_valid(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (isdigit(key[i]) == false)
+        if (isalpha(key[i]) == false)
         {
-            return ;
+            return false;
         }
     }
     return false;
