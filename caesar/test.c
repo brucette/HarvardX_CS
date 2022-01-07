@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     {
         for (char j = 65; j < 91; j++)
         {
-            //big_letters[i] = j;
+            big_letters[i] = j;
             big_letters[k] = 0;
             small_letters[i] = j + 32;
             small_letters[k] = 0;
@@ -27,4 +27,4 @@ int main(int argc, string argv[])
     {
         printf("%c%i", big_letters[m][m]);
     }
-    }
+}
