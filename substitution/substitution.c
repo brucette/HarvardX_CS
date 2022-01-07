@@ -44,6 +44,11 @@ int main(int argc, string argv[])
 bool is_valid(string key)
 {
     int len = strlen(key);
+
+    for (int i = 65; i < 91; i++)
+    {
+        big_letters[i] = 
+    }
     int small_letters['a', 'b', 'c'][3]; //to count number of letters
     int big_letters['A', 'B', 'C'][3];
 
