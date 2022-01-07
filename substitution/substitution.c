@@ -48,6 +48,12 @@ bool is_valid(string key)
         if (isalpha(key[i]) == false)
         {
             return false;
+            printf("Non alphabetical characters not allowed.");
+        }
+        if (duplicate characters == true)
+        {
+            return false;
+            printf("No duplicate characters allowed.");
         }
     }
     return false;
