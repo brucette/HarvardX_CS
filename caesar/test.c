@@ -21,11 +21,14 @@ int main(int argc, string argv[])
             strcpy(&j, big_letters[i]);
             strcpy(0, big_letters[k]);
             //big_letters[k] = 0;
-            small_letters[i] = j + 32;
-            small_letters[k] = 0;
+            strcpy(&j+32, small_letters[i]);
+            strcpy(0, small_letters[k]);
+            //small_letters[i] = j + 32;
+            //small_letters[k] = 0;
         }
+    }
     for (int m = 0; m < 26; m++)
     {
-        printf("%c%i", big_letters[m][m]);
+        printf("%c", big_letters[m][m]);
     }
 }
