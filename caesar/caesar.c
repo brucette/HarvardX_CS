@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
-
+    bool only_digits(key);
 
     printf("key: %s\n", key);
 
