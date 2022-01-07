@@ -49,7 +49,6 @@ bool only_digits(string key)
 
 char rotate(char c, int n)
 {
-    int cipher = 0;
     if (isalpha(c))
     {
         if (isupper(c))
@@ -62,7 +61,4 @@ char rotate(char c, int n)
         }
     }
 }
-
     //printf("%i letters\n", count_letters(text));
-    //printf("%i words\n", count_words(text));
-    //printf("%i sentences\n", count_sentences(text));
