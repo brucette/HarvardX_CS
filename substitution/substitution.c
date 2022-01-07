@@ -38,16 +38,11 @@ int main(int argc, string argv[])
 }
 
 //FUNCTION DECLARATIONS
-//checks that it
+//checks that only alphabets and no other characters or duplicates given
 bool is_valid(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (n == 26)
-        {
-
-        }
-
         if (isdigit(key[i]) == false)
         {
             return ;
