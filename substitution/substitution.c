@@ -83,6 +83,10 @@ bool is_valid(string key)
             {
                 big_letters[n][1] += 1;
             }
+            if (key[m] == small_letters[n][0])
+            {
+                small_letters[n][1] += 1;
+            }
         }
     }
     //return false;
