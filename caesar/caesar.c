@@ -13,6 +13,8 @@ int main(int argc, string argv[])
     }
 
     string key = argv[1];
+
+    
     printf("key: %s\n", key);
 
     string plain = get_string("plaintext:  ");
