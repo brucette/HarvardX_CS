@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        
+        atoi(key);
     }
 
     printf("key: %s\n", key);
