@@ -19,13 +19,13 @@ int main(int argc, string argv[])
         for (int k = 0; k < 2; k++)
         {
             //big_letters[i][i] = j;
-            big_letters[i][i+1] = 0;
-            small_letters[i][i] = j + 32;
+            //big_letters[i][i+1] = 0;
+            small_letters[i][i] = j //+ 32;
             small_letters[i][i+1] = 0;
         }
     }
     for (int m = 0; m < 26; m++)
     {
-        printf("%c%i\n", big_letters[m][m], big_letters[m][m+1]);
+        printf("%c%i\n", small_letters[m][m], small_letters[m][m+1]);
     }
 }
