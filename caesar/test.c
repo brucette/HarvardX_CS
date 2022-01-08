@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         {
             //big_letters[i][i] = j;
             //big_letters[i][i+1] = 0;
-            small_letters[i][i] = j //+ 32;
+            small_letters[i][i] = j; //+ 32;
             small_letters[i][i+1] = 0;
         }
     }
