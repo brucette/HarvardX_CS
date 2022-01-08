@@ -18,7 +18,11 @@ int main(int argc, string argv[])
 
     string key = argv[1];
 
-
+    if (is_valid(key) == false)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 
 
     if (only_digits(argv[1]) == false)
@@ -56,7 +60,7 @@ bool is_valid(string key)
         }
     }
 
-    
+
 
     for (int m = 0; m < 1; m++)
     {
