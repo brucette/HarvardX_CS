@@ -47,22 +47,6 @@ bool is_valid(string key)
 {
     int len = strlen(key);
 
-    int small_letters[26][26]; //to count number of letters
-
-    //populate two arrays with capital and small alphabets
-    for (int i = 0, j = 'a'; i < 26; i++, j++)
-    {
-        for (int k = 0; k < 2; k++)
-        {
-            small_letters[i][i] = j;
-            small_letters[i][i+1] = 0;
-        }
-    }
-    /*for (int m = 0; m < 26; m++)
-    {
-        printf("%c%i\n", big_letters[m][m], big_letters[m][m+1]);
-    }*/
-
     for (int l = 0; l < len; l++)
     {
         if (isalpha(key[l]) == false)
@@ -71,6 +55,8 @@ bool is_valid(string key)
             printf("Non alphabetical characters not allowed.");
         }
     }
+
+    
 
     for (int m = 0; m < 1; m++)
     {
