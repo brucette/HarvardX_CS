@@ -10,30 +10,20 @@ bool is_valid(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || argv[1] != 26) //checks that 1 CL argument is given and its length is 26
+    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and its length is 26
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    string key = argv[1];
-
-    if (is_valid(key) == false)
+    if (argv[1] != 26)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
 
 
-    if (only_digits(argv[1]) == false)
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-    else
-    {
-        key = atoi(argv[1]);
-    }
+
 
     string plain = get_string("plaintext:  ");
 
