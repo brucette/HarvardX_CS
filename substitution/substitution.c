@@ -62,8 +62,9 @@ bool is_valid(string key)
         for (int k = 0; k < 2; k++)
         {
             small_letters[i][k] = j;
-            small_letters[i][k] = 0;
+            small_letters[i][k+1] = 0;
         }
+        //prinftf
     }
 
     //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
