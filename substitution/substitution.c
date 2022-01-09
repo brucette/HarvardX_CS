@@ -74,10 +74,10 @@ bool is_valid(string key)
             if (key[m] == small_letters[m][p] || key[m] == (small_letters[m][p] + 32))    //is first character same as 'a' or 'A'
             {
                 small_letters[m][1] += 1;
-
             }
-            printf("%c character is\n", small_letters[m][p]);
+        printf("%c character is\n", small_letters[m][p]);
         }
+
     }
 
     //REMOVE LATER
