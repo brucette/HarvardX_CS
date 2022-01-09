@@ -69,19 +69,15 @@ bool is_valid(string key)
     //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
     for (int n = 0; n < len; n++)
     {
-        for (int m = 0; m < 1; m++)
+        for (int p = 0; p < len; p++)
         {
-            for (int p = 0; p < len; p++)
+            if (strcmp(&key[n], &small_letters[p][m]) == 0 || strcmp(&key[n], (&small_letters[p][m] + 32)) == 0)    //is first character same as 'a' or 'A'
             {
-                if (strcmp(&key[n], &small_letters[p][m]) == 0 || strcmp(&key[n], (&small_letters[p][m] + 32)) == 0)    //is first character same as 'a' or 'A'
-                {
-                    small_letters[p][1] += 1;
-                }
-            //printf("%c character is\n", small_letters[m][p]);
+                small_letters[p][1] += 1;
             }
+            //printf("%c character is\n", small_letters[m][p]);
         }
     }
-
 
     //REMOVE LATER
     for (int q = 0; q < 26; q++)
