@@ -92,11 +92,13 @@ char rotate(char c, string key)
 {
     if (isupper(c))
     {
-        c = ((c - 'A') % 26) + 'A';
+        int index = ((c - 'A') % 26);
+        c = key[index];
     }
     else
     {
-        c = ((c - 'a' + n) % 26) + 'a';
+        int index = ((c - 'a') % 26);
+        c = key[index];
     }
     return c;
 }
