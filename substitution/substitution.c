@@ -92,7 +92,7 @@ bool is_valid(string key)
     //loop through array to get counter result
     for (int o = 0; o < len; o++)
     {
-        if (small_letters[o][1] != 0)
+        if (small_letters[o][1] != 1)
         {
             printf("No duplicate characters allowed.\n");
             return false;
@@ -107,12 +107,12 @@ char rotate(char c, string key)
     if (isupper(c))
     {
         int index = ((c - 'A') % 26);
-        c = key[index]; //+ 32
+        c = toupper(key[index]);
     }
     else
     {
         int index = ((c - 'a') % 26);
-        c = key[index];  //- 32
+        c = tolower(key[index]);
     }
     return c;
 }
