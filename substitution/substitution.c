@@ -73,7 +73,7 @@ bool is_valid(string key)
         {
             if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] + 32)    //(strcmp(&key[n], &small_letters[p][0]) == 0 || strcmp(&key[n], (&small_letters[p][0] + 32)) == 0) is first character same as 'a' or 'A'
             {
-                small_letters[p][1]++;
+                small_letters[p][1] += 1;
             }
             //printf("%c character is\n", small_letters[p][1]);
         }
