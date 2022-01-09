@@ -16,15 +16,14 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (argv[1] != 26)
+    if (argv[1] != 26)  //checks that length is 26
     {
         printf("Key must contain 26 characters.\n");
         return 1;
     }
 
-    if (is_valid(argv[1]) == false)
+    if (is_valid(argv[1]) == false) //checks that all are alphabets and no duplicates
     {
-        printf("Usage: ./caesar key\n");
         return 1;
     }
 
