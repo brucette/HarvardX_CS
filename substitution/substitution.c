@@ -40,10 +40,10 @@ int main(int argc, string argv[])
 }
 
 //FUNCTION DECLARATIONS
-
 bool is_valid(string key)
 {
     int len = strlen(key);
+
     //checks that only alphabets and no other characters given
     for (int l = 0; l < len; l++)
     {
@@ -61,7 +61,6 @@ bool is_valid(string key)
     {
         small_letters[i][0] = j;
         small_letters[i][1] = 0;
-        //prinftf
     }
 
     //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
@@ -73,15 +72,14 @@ bool is_valid(string key)
             {
                 small_letters[p][1] += 1;
             }
-            //printf("%c character is\n", small_letters[p][1]);
         }
     }
 
     //REMOVE LATER
-    for (int q = 0; q < 26; q++)
-    {
-        printf("%c%i\n", small_letters[q][0], small_letters[q][1]);
-    }
+    //for (int q = 0; q < 26; q++)
+    //{
+        //printf("%c%i\n", small_letters[q][0], small_letters[q][1]);
+    //}
 
     //loop through array to get counter result
     for (int o = 0; o < len; o++)
