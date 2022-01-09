@@ -76,14 +76,13 @@ bool is_valid(string key)
     }
 
     //loop through array to get counter result
-    for (int o = 0; o < len; o++)
+    for (int i = 0; i < len; i++)
     {
-        if (small_letters[o][1] != 1)
+        if (small_letters[i][1] != 1)
         {
             printf("No duplicate characters allowed.\n");
             return false;
         }
-    return true;
     }
     return true;
 }
