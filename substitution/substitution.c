@@ -36,11 +36,11 @@ int main(int argc, string argv[])
 }
 
 //FUNCTION DECLARATIONS
-//checks that only alphabets and no other characters or duplicates given
+
 bool is_valid(string key)
 {
     int len = strlen(key);
-
+    //checks that only alphabets and no other characters given
     for (int l = 0; l < len; l++)
     {
         if (isalpha(key[l]) == false)
