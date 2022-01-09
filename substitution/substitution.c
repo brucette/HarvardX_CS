@@ -63,11 +63,11 @@ bool is_valid(string key)
         small_letters[i][1] = 0;
     }
 
-    //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
+    //compare each character in key with the alphabets in the array. Increase alphabets counter by 1 if it exists in key.
     for (int n = 0; n < len; n++)
     {
         for (int p = 0; p < len; p++)
-        {
+        {                                                   //use ascii to get 'A'
             if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] - 32)
             {
                 small_letters[p][1] += 1;
@@ -75,7 +75,7 @@ bool is_valid(string key)
         }
     }
 
-    //loop through array to get counter result
+    //loop through two dimensional array to get counter result
     for (int i = 0; i < len; i++)
     {
         if (small_letters[i][1] != 1)
