@@ -68,18 +68,12 @@ bool is_valid(string key)
     {
         for (int p = 0; p < len; p++)
         {
-            if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] - 32)    //(strcmp(&key[n], &small_letters[p][0]) == 0 || strcmp(&key[n], (&small_letters[p][0] + 32)) == 0) is first character same as 'a' or 'A'
+            if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] - 32)
             {
                 small_letters[p][1] += 1;
             }
         }
     }
-
-    //REMOVE LATER
-    //for (int q = 0; q < 26; q++)
-    //{
-        //printf("%c%i\n", small_letters[q][0], small_letters[q][1]);
-    //}
 
     //loop through array to get counter result
     for (int o = 0; o < len; o++)
