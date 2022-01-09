@@ -49,7 +49,7 @@ bool is_valid(string key)
     {
         if (isalpha(key[l]) == false)
         {
-            printf("Non alphabetical characters not allowed.");
+            printf("Non alphabetical characters not allowed.\n");
             return false;
         }
     }
@@ -83,7 +83,7 @@ bool is_valid(string key)
     {
         if (small_letters[0][o] != 1)
         {
-            printf("No duplicate characters allowed.");
+            printf("No duplicate characters allowed.\n");
             return false;
         }
     }
