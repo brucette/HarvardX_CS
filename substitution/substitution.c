@@ -72,7 +72,7 @@ bool is_valid(string key)
     {
         for (int p = 0; p < len; p++)
         {
-            if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] + 32)    //(strcmp(&key[n], &small_letters[p][0]) == 0 || strcmp(&key[n], (&small_letters[p][0] + 32)) == 0) is first character same as 'a' or 'A'
+            if (key[n] == small_letters[p][0] || key[n] == (small_letters[p][0] + 32))    //(strcmp(&key[n], &small_letters[p][0]) == 0 || strcmp(&key[n], (&small_letters[p][0] + 32)) == 0) is first character same as 'a' or 'A'
             {
                 small_letters[p][1] += 1;
             }
