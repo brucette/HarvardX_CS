@@ -54,6 +54,17 @@ bool is_valid(string key)
             return false;
         }
     }
+    //populate a two dimensional array with the alphabet and a counter for each
+    int small_letters[26][26];
+
+    for (int i = 0, j = 'a'; i < 26; i++, j++)
+    {
+        for (int k = 0; k < 2; k++)
+        {
+            small_letters[i][i] = j; //+ 32;
+            small_letters[i][i+1] = 0;
+        }
+    }
 
 
     for (int m = 0; m < 1; m++)
