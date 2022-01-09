@@ -54,6 +54,7 @@ bool is_valid(string key)
             return false;
         }
     }
+
     //populate a two dimensional array with the alphabet and a counter for each
     int small_letters[26][26];
 
