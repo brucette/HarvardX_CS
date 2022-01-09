@@ -78,6 +78,11 @@ bool is_valid(string key)
         }
     }
 
+    for (int q = 0; q < 26; q++)
+    {
+        printf("%c%i\n", small_letters[q][q], small_letters[q][q+1]);
+    }
+
     //loop through array to get counter result
     for (int o = 0; o < len; o++)
     {
