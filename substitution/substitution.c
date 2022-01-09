@@ -107,12 +107,12 @@ char rotate(char c, string key)
     if (isupper(c))
     {
         int index = ((c - 'A') % 26);
-        c = key[index] + 32;
+        c = key[index]; //+ 32
     }
     else
     {
         int index = ((c - 'a') % 26);
-        c = key[index] - 32;
+        c = key[index];  //- 32
     }
     return c;
 }
