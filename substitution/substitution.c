@@ -6,7 +6,7 @@
 
 //Function prototypes
 bool is_valid(string key);
-
+char rotate(char c, string key);
 
 int main(int argc, string argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (argv[1] != 26)  //checks that length is 26
+    if (strlen(argv[1]) != 26)  //checks that length is 26
     {
         printf("Key must contain 26 characters.\n");
         return 1;
