@@ -76,6 +76,10 @@ bool is_valid(string key)
             {
                 small_letters[n][1] += 1;
             }
+            if (key[m] == small_letters[n][0] + 32)
+            {
+                small_letters[n][1] += 1;
+            }
         }
     }
     //return false;
