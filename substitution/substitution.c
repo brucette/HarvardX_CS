@@ -50,8 +50,8 @@ bool is_valid(string key)
     {
         if (isalpha(key[l]) == false)
         {
-            return false;
             printf("Non alphabetical characters not allowed.");
+            return false;
         }
     }
 
