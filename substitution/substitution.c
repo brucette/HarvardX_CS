@@ -66,7 +66,7 @@ bool is_valid(string key)
         }
     }
 
-
+    //compare aech character if it matches with any of the alphabets in the array. Increase alphabets counter if it does
     for (int m = 0; m < 1; m++)
     {
         for (int n = 0; n < len; n++)
