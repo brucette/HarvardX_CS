@@ -97,6 +97,7 @@ bool is_valid(string key)
             printf("No duplicate characters allowed.\n");
             return false;
         }
+    return true;
     }
     return true;
 }
