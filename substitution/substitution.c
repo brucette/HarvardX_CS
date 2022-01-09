@@ -92,7 +92,7 @@ char rotate(char c, string key)
 {
     if (isupper(c))
     {
-        c = ((c - 'A' + n) % 26) + 'A';
+        c = ((c - 'A') % 26) + 'A';
     }
     else
     {
