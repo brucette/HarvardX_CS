@@ -75,7 +75,7 @@ bool is_valid(string key)
             {
                 small_letters[p][1] += 1;
             }
-            //printf("%c character is\n", small_letters[m][p]);
+            //printf("%c character is\n", small_letters[p][1]);
         }
     }
 
