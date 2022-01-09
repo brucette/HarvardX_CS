@@ -37,8 +37,12 @@ int main(void)
 
 int get_cents(void)
 {
-    do// TODO
-    while  < 1 || height > 8);
+    do
+    {
+        int cents = get_int("How many cents? ")
+    }
+    while  (cents < 0);
+
     return 0;
 }
 
