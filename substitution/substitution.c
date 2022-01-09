@@ -90,7 +90,7 @@ bool is_valid(string key)
     }
 }
 
-char rotate(char c, int n)
+char rotate(char c, string key)
 {
     if (isalpha(c))
     {
