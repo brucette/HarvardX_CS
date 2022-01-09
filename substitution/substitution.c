@@ -10,7 +10,7 @@ bool is_valid(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and
+    if (argc != 2)  //checks that 1 CL argument is given
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -19,6 +19,12 @@ int main(int argc, string argv[])
     if (argv[1] != 26)
     {
         printf("Key must contain 26 characters.\n");
+        return 1;
+    }
+
+    if (is_valid(argv[1]) == false)
+    {
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
