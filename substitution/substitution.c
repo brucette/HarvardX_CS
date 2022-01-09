@@ -67,26 +67,27 @@ bool is_valid(string key)
         }
     }
 
-    //compare aech character if it matches with any of the alphabets in the array. Increase alphabets counter if it does
+    //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
     for (int m = 0; m < 1; m++)
     {
         for (int n = 0; n < len; n++)
         {
-            if (key[m] == small_letters[n][0])
-            {
-                small_letters[n][1] += 1;
-            }
-            if (key[m] == small_letters[n][0] + 32)
+            if (key[m] == small_letters[n][0] || key[m] == small_letters[n][0] + 32)    //is first character same as 'a' or 'A'
             {
                 small_letters[n][1] += 1;
             }
         }
     }
-    //return false;
-    //printf("No duplicate characters allowed.");
 
+    //loop through array to get counter result
+    for (int o = 0; o < len; o++)
+    {
+        if (small_letters[0][o] != 1;)
+        {
+            printf("No duplicate characters allowed.");
+            return false;
+        }
     }
-    return false;
 }
 
 char rotate(char c, int n)
