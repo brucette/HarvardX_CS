@@ -71,9 +71,9 @@ bool is_valid(string key)
     {
         for (int n = 0; n < len; n++)
         {
-            if (key[m] == small_letters[n][m] || key[m] == small_letters[n][m] + 32)    //is first character same as 'a' or 'A'
+            if (key[m] == small_letters[m][n] || key[m] == (small_letters[m][n] + 32))    //is first character same as 'a' or 'A'
             {
-                small_letters[n][m] += 1;
+                small_letters[m][n] += 1;
             }
         }
     }
