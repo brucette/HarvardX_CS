@@ -38,6 +38,7 @@ int main(void)
 int get_cents(void)
 {
     do// TODO
+    while  < 1 || height > 8);
     return 0;
 }
 
