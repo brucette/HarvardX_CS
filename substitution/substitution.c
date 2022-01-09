@@ -10,7 +10,7 @@ bool is_valid(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and 
+    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -22,10 +22,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
-
-
     string plain = get_string("plaintext:  ");
+
+
+
 
     printf("ciphertext: ");
     for (int i = 0, n = strlen(plain); i < n; i++)
