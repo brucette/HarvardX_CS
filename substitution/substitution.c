@@ -29,6 +29,7 @@ int main(int argc, string argv[])
 
     string plain = get_string("plaintext:  ");
 
+    string key = argv[1];
 
     printf("ciphertext: ");
     for (int i = 0, n = strlen(plain); i < n; i++)
@@ -80,12 +81,13 @@ bool is_valid(string key)
     //loop through array to get counter result
     for (int o = 0; o < len; o++)
     {
-        if (small_letters[0][o] != 1;)
+        if (small_letters[0][o] != 1)
         {
             printf("No duplicate characters allowed.");
             return false;
         }
     }
+    return true;
 }
 
 char rotate(char c, string key)
