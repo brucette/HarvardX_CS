@@ -56,7 +56,6 @@ bool is_valid(string key)
     }
 
 
-
     for (int m = 0; m < 1; m++)
     {
         for (int n = 0; n < len; n++)
