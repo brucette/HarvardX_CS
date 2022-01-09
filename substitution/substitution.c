@@ -77,6 +77,7 @@ bool is_valid(string key)
             }
         }
     }
+
     //REMOVE LATER
     for (int q = 0; q < 26; q++)
     {
