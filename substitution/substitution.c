@@ -72,10 +72,6 @@ bool is_valid(string key)
     {
         for (int n = 0; n < len; n++)
         {
-            if (key[m] == big_letters[n][0])
-            {
-                big_letters[n][1] += 1;
-            }
             if (key[m] == small_letters[n][0])
             {
                 small_letters[n][1] += 1;
