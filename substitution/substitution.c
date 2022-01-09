@@ -62,7 +62,7 @@ bool is_valid(string key)
     {
         for (int k = 0; k < 2; k++)
         {
-            small_letters[i][i] = j; //+ 32;
+            small_letters[i][i] = j;
             small_letters[i][i+1] = 0;
         }
     }
