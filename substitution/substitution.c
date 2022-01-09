@@ -10,7 +10,7 @@ bool is_valid(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and its length is 26
+    if (argc != 2 || (is_valid(argv[1]) == false) //checks that 1 CL argument is given and 
     {
         printf("Usage: ./caesar key\n");
         return 1;
