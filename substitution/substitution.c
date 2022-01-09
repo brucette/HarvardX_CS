@@ -90,16 +90,13 @@ bool is_valid(string key)
 
 char rotate(char c, string key)
 {
-    if (isalpha(c))
+    if (isupper(c))
     {
-        if (isupper(c))
-        {
-            c = ((c - 'A' + n) % 26) + 'A';
-        }
-        else
-        {
-            c = ((c - 'a' + n) % 26) + 'a';
-        }
+        c = ((c - 'A' + n) % 26) + 'A';
+    }
+    else
+    {
+        c = ((c - 'a' + n) % 26) + 'a';
     }
     return c;
 }
