@@ -67,9 +67,9 @@ bool is_valid(string key)
     }
 
     //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
-    for (int m = 0; m < len; m++)
+    for (int m = 0, n = 1; m < len; m++)
     {
-        for (int n = 1; n < 2; n++)
+        for (int p = 0; p < len; p++)
         {
             if (key[m] == small_letters[m][m] || key[m] == (small_letters[m][m] + 32))    //is first character same as 'a' or 'A'
             {
