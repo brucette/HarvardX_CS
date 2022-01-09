@@ -100,15 +100,18 @@ bool is_valid(string key)
 
 char rotate(char c, string key)
 {
-    if (isupper(c))
+    if (isalpha(c))
     {
-        int index = ((c - 'A') % 26);
-        c = toupper(key[index]);
-    }
-    else
-    {
-        int index = ((c - 'a') % 26);
-        c = tolower(key[index]);
+        if (isupper(c))
+        {
+            int index = ((c - 'A') % 26);
+            c = toupper(key[index]);
+        }
+        else
+        {
+            int index = ((c - 'a') % 26);
+            c = tolower(key[index]);
+        }
     }
     return c;
 }
