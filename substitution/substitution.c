@@ -55,7 +55,7 @@ bool is_valid(string key)
     }
 
     //populate a two dimensional array with the alphabet and a counter for each
-    int small_letters[26][26];
+    char small_letters[26][26];
 
     for (int i = 0, j = 'a'; i < 26; i++, j++)
     {
@@ -73,7 +73,7 @@ bool is_valid(string key)
         {
             for (int p = 0; p < len; p++)
             {
-                if (strcmp(&key[n], small_letters[p][m]) == 0 || strcmp(&key[n], (small_letters[p][m] + 32)) == 0)    //is first character same as 'a' or 'A'
+                if (strcmp(&key[n], &small_letters[p][m]) == 0 || strcmp(&key[n], (&small_letters[p][m] + 32)) == 0)    //is first character same as 'a' or 'A'
                 {
                     small_letters[p][1] += 1;
                 }
