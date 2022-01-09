@@ -67,17 +67,21 @@ bool is_valid(string key)
     }
 
     //compare each character with the alphabets in the array. Increase alphabets counter by 1 if it does.
-    for (int m = 0; m < 1; m++)
+    for (int n = 0; n < len; n++)
     {
-        for (int p = 0; p < len; p++)
+        for (int m = 0; m < 1; m++)
         {
-            if (key[m] == small_letters[m][p] || key[m] == (small_letters[m][p] + 32))    //is first character same as 'a' or 'A'
+            for (int p = 0; p < len; p++)
             {
-                small_letters[m][1] += 1;
+                if (key[m] == small_letters[m][p] || key[m] == (small_letters[m][p] + 32))    //is first character same as 'a' or 'A'
+                {
+                    small_letters[m][1] += 1;
+                }
+            //printf("%c character is\n", small_letters[m][p]);
             }
-        printf("%c character is\n", small_letters[m][p]);
         }
     }
+
 
     //REMOVE LATER
     for (int q = 0; q < 26; q++)
