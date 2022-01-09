@@ -77,7 +77,7 @@ bool is_valid(string key)
             }
         }
     }
-
+    //REMOVE LATER
     for (int q = 0; q < 26; q++)
     {
         printf("%c%i\n", small_letters[q][q], small_letters[q][q+1]);
