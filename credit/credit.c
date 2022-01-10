@@ -9,11 +9,13 @@
 int main(void)
 {
     long number = get_long("Number: ");
-
+    int multiplier = 10;
+    int last_two;
 
 
     while (number)
     {
+        int multiplier = 10;
         int last_two = number % 100; //get last two digits
         while (last_two >= 10)
 	    {
