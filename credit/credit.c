@@ -12,7 +12,7 @@ int main(void)
     scanf("%ld", &number);
 
 
-    printf("%s\n", number);
+    printf("%ld\n", number);
     int multiplier = 10;
     int last_numbs;
     int first_numb;
