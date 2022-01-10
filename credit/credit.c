@@ -10,14 +10,16 @@ int main(void)
 {
     long number = get_long("Number: ");
 
-    int last_two = number % 100; //get last two digits
+
 
     while (number)
     {
+        int last_two = number % 100; //get last two digits
         while (last_two >= 10)
 	    {
 		    last_two = last_two / 10;
 	    }
+    }
 
     printf("%i\n", last_two);//HOW IS THIS SUPPOSED TO WORK???
 
