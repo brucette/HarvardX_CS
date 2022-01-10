@@ -9,8 +9,8 @@ int main(void)
 
     printf("%li\n", number % 10);//HOW IS THIS SUPPOSED TO WORK???
 
-    string characters = (string) number;
-    printf("%s\n", characters);
+    string characters;
+    printf("%s\n", (string) number);
 
     //char characters[]
     printf("AMEX\n");
