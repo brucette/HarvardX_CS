@@ -9,7 +9,8 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    char *last = (char*) number;
+
+    int last = number;
 
     printf("%s\n", last);//HOW IS THIS SUPPOSED TO WORK???
 
