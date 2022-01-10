@@ -9,11 +9,8 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    scanf("%ld", &number);
 
-
-    printf("%ld\n", number);
-    int multiplier = 10;
+    int multiplier = 100;
     int last_numbs;
     int first_numb;
     int sum = 0;
