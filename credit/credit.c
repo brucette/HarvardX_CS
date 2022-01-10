@@ -9,21 +9,24 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    int multiplier = 10;
-    int last_two;
 
+    int multiplier = 10;
+    int last_numbs;
+    int first_numb;
+    int sum = 0;
 
     while (number)
     {
-        int multiplier = 10;
-        int last_two = number % 100; //get last two digits
-        while (last_two >= 10)
+        last_numbs = number % multiplier; // get last digits
+        while (last_numbs >= 10)
 	    {
-		    last_two = last_two / 10;
+		    first_numb = last_numbs / 10;   // then get the first number and add to sum
+            sum += first_numb;
 	    }
+         printf("%i\n", first_numb);//HOW IS THIS SUPPOSED TO WORK???
     }
 
-    printf("%i\n", last_two);//HOW IS THIS SUPPOSED TO WORK???
+
 
     //string characters;
     //printf("%s\n", (string) number);
