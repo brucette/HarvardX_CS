@@ -9,10 +9,10 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    scanf("%s", number);
+    scanf("%ld", &number);
 
 
-    printf("%s\n", conv);
+    printf("%s\n", number);
     int multiplier = 10;
     int last_numbs;
     int first_numb;
