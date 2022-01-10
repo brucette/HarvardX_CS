@@ -10,12 +10,13 @@ int main(void)
 {
     long number = get_long("Number: ");
 
+    int itoa = 
     int multiplier = 10;
     int last_numbs;
     int first_numb;
     int sum = 0;
 
-    while (number)
+    while (number > x) // length of number / 2?
     {
         last_numbs = number % multiplier; // get last digits
         while (last_numbs >= 10)
