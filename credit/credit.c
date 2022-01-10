@@ -12,14 +12,15 @@ int main(void)
 
     do
     {
-  uint32_t digit = n%10;
-  // do something with digit
-}
-while (n/=10);
-    int multiplier = 100;
+        int digit = number % 10;
+        printf("%i", digit)
+    }
+    while (number /= 10);
+
+    /*int multiplier = 100;
     int last_numbs;
     int first_numb;
-    int sum = 0;
+    int sum = 0;*/
 
     /*while (number > x) // length of number / 2?
     {
