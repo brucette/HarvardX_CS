@@ -10,7 +10,7 @@ int main(void)
 {
     long number = get_long("Number: ");
 
-    printf("%li\n", number % 100);//HOW IS THIS SUPPOSED TO WORK???
+    printf("%li\n", number % 1);//HOW IS THIS SUPPOSED TO WORK???
 
     //string characters;
     //printf("%s\n", (string) number);
