@@ -10,13 +10,14 @@ int main(void)
 {
     long number = get_long("Number: ");
 
-    int itoa = 
+    string conv = itoa(number);
+    printf("%s\n", conv);
     int multiplier = 10;
     int last_numbs;
     int first_numb;
     int sum = 0;
 
-    while (number > x) // length of number / 2?
+    /*while (number > x) // length of number / 2?
     {
         last_numbs = number % multiplier; // get last digits
         while (last_numbs >= 10)
@@ -26,7 +27,7 @@ int main(void)
             printf("%i\n", first_numb);  //HOW IS THIS SUPPOSED TO WORK???
 	    }
         multiplier *= 10;
-    }
+    }*/
 
 
 
