@@ -9,9 +9,9 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    char last = (char) (number % 10);
+    char *last = (char*) number;
 
-    printf("%c\n", last);//HOW IS THIS SUPPOSED TO WORK???
+    printf("%s\n", last);//HOW IS THIS SUPPOSED TO WORK???
 
     //string characters;
     //printf("%s\n", (string) number);
