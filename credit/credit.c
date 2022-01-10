@@ -10,6 +10,9 @@ int main(void)
 {
     long number = get_long("Number: ");
 
+    char len[16];
+    for (i = 0)
+
     int multiplier = 100;
     int last_numbs;
     int first_numb;
