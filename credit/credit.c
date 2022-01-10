@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 
 int main(void)
@@ -8,7 +9,10 @@ int main(void)
 
     printf("%li\n", number % 30);//HOW IS THIS SUPPOSED TO WORK???
 
-    char characters[]
+    string characters = (string) number;
+    printf("%s\n", characters);
+
+    //char characters[]
     printf("AMEX\n");
     printf("MASTERCARD\n");
     printf("VISA\n");
