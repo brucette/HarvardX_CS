@@ -22,9 +22,9 @@ int main(void)
 	    {
 		    first_numb = last_numbs / 10;   // then get the first number and add to sum
             sum += first_numb;
-            multiplier *= 10;
+            printf("%i\n", first_numb);//HOW IS THIS SUPPOSED TO WORK???
 	    }
-         printf("%i\n", first_numb);//HOW IS THIS SUPPOSED TO WORK???
+        multiplier *= 10;
     }
 
 
