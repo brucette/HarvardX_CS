@@ -10,6 +10,7 @@ int main(void)
 {
     long number = get_long("Number: ");
 
+    int counter = 0;
     do
     {
         int digit = number % 10;
