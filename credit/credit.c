@@ -11,21 +11,21 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
 
-
+    int counter = 0;
     do
     {
-        int counter = 0;
         digit = number % 10;
         counter++;
         //printf("%i\n", digit);
-        if (counter == 0)
-        {
-            printf("%i\n", digit);
-        }
-        counter--;
     }
     while (number /= 10);
+    counter--;
 
+
+    if (counter == 1)
+    {
+        printf("%i\n", digit);
+    }
 
     /*int multiplier = 100;
     int last_numbs;
