@@ -9,7 +9,7 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    scanf("%s", &number);
+    scanf("%s", number);
 
 
     printf("%s\n", conv);
