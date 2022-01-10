@@ -9,7 +9,7 @@
 int main(void)
 {
     long number = get_long("Number: ");
-    char last = number % 10;
+    char last = (char) (number % 10);
 
     printf("%c\n", last);//HOW IS THIS SUPPOSED TO WORK???
 
