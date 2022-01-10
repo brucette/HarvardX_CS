@@ -4,9 +4,9 @@
 
 int main(void)
 {
-    long number = get_long("Number ");
+    long number = get_long("Number: ");
 
-    printf("%li", number % 10)
+    printf("%li\n", number % 11);
 
     printf("AMEX\n");
     printf("MASTERCARD\n");
