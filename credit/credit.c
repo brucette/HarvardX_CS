@@ -6,7 +6,7 @@ int main(void)
 {
     long number = get_long("Number: ");
 
-    printf("%li\n", number % 15);
+    printf("%li\n", number % 30);
 
     printf("AMEX\n");
     printf("MASTERCARD\n");
