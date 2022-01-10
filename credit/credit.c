@@ -9,8 +9,9 @@
 int main(void)
 {
     long number = get_long("Number: ");
+    sprintf("%i");
 
-    string conv = itoa(number);
+
     printf("%s\n", conv);
     int multiplier = 10;
     int last_numbs;
