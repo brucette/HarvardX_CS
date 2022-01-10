@@ -10,6 +10,12 @@ int main(void)
 {
     long number = get_long("Number: ");
 
+    do
+    {
+  uint32_t digit = n%10;
+  // do something with digit
+}
+while (n/=10);
     int multiplier = 100;
     int last_numbs;
     int first_numb;
