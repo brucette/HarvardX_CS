@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
+// MASTERCARD: 16 digits, Start with 51/52/53/54/55
+// VISA: 13/16 digits, Start with 4
+// AMEX: 15 digits, Start with 34/37
 
 int main(void)
 {
