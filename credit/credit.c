@@ -15,6 +15,10 @@ int main(void)
     do
     {
         digit = number % 10;
+        if (counter == 1)
+        {
+            printf("%i\n", digit);
+        }
         counter++;
         //printf("%i\n", digit);
     }
@@ -22,10 +26,7 @@ int main(void)
     counter--;
 
 
-    if (counter == 1)
-    {
-        printf("%i\n", digit);
-    }
+
 
     /*int multiplier = 100;
     int last_numbs;
