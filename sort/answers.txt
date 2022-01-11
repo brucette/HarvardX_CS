@@ -1,11 +1,11 @@
 sort1 uses: bubble sort
 
-How do you know?: Is the fastest in the best case scenario where  the file is already sorted. Bubble sort has the best lower bound running time of 
+How do you know?: Is the fastest in the best case scenario where the file is already sorted. Bubble sort has the best lower bound running time of Ω(n) out of the three.
 
 sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: Has similar run time with all 3 different types of files and is faster than sort3. Merge sort has a run time of Ө (n log n) which is faster than selection sort's run time of Ө (n2).
 
 sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: Has similar run time with all 3 different types of files like sort2, but it is slower than sort2.
