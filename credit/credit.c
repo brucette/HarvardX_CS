@@ -11,7 +11,7 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int sum = 0;
-    int backwards[16]
+    int backwards[16];
 
     int counter = 1;
     do
