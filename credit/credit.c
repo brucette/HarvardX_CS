@@ -25,7 +25,7 @@ int main(void)
         }
         else
         {
-            printf("remainders: %i\n", digit);     // get remainder digits sum
+            printf("remainders: %i\n", digit);     // get remaining digits sum
             remainder_sum += digit;
         }
         counter++;
