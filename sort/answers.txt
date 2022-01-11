@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: Is the fastest in the best case scenario where  the file is already sorted. Bubble sort has the best lower bound running time of 
 
 sort2 uses: merge sort
 
