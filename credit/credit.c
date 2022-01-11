@@ -21,7 +21,7 @@ int main(void)
         if (counter % 2 == 0)
         {
             printf("backwards: %i\n", digit);
-            sum += digit * 2;
+
         }
         else
         {
