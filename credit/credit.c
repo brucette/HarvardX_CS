@@ -31,13 +31,13 @@ int main(void)
 
     // get remainder digits:
     int remainder;
-    int count = 0;
+    int count = 1;
     do
     {
         remainder = number % 10;
-        if (count % 2 == 0)
+        if (count % 2 != 0)
         {
-            printf("%i remainders: \n\n", digit);
+            printf("%i remainders: \n", remainder);
             //sum += digit * 2;
         }
         count++;
