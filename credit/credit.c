@@ -12,9 +12,9 @@ int main(void)
     int digit;
 
     int counter = 1;
+    counter--;
     do
     {
-        counter--;
         digit = number % 10;
         if (counter == 1)
         {
