@@ -12,18 +12,17 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int remainder_sum = 0;
-    long backwards[sizeof(number)];
+    //long backwards[sizeof(number)];
 
-    //
     int counter = 0;
     do
     {
         digit = number % 10;    // gets last digit of a number
         if (counter % 2 != 0)
         {
-            printf("backwards: %i\n", digit);       // get every other digit starting from second last
-            int conv = digit * 2;                   // multiply every digit by 2
-            strcpy((char)conv, backwards);          // how to then add those digits to another long/int array/char array, how to convert int to string?
+            printf("backwards: %i\n", digit);    // get every other digit starting from second last
+            int conv = digit * 2;                // multiply every digit by 2
+            strcpy((char)conv, backwards);       // how to then add those digits to another long/int array/char array, how to convert int to string?
 
         }
         else
@@ -34,6 +33,10 @@ int main(void)
         counter++;
     }
     while (number /= 10);
+
+    //ADD ALL DIGITS IN backwards together (use isdigit()?)
+    //CONVERT NUMBER TO TRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
+    if
 
     for (int i = 0; i < 8; i++)
     {
