@@ -27,6 +27,7 @@ int main(void)
     }
     while (number /= 10);
 
+
     // get remainder digits:
     int remainder;
     int count = 1;
