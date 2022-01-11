@@ -10,6 +10,7 @@ int main(void)
 {
     long number = get_long("Number: ");
     int digit;
+    int sum = 0;
 
     int counter = 1;
     do
@@ -18,6 +19,7 @@ int main(void)
         if (counter % 2 == 0)
         {
             printf("%i\n", digit);
+            sum += digit * 2;
         }
         counter++;
     }
