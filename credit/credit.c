@@ -12,7 +12,7 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int remainder_sum = 0;
-    char backwards[16];
+    long backwards;
 
     //
     int counter = 0;
@@ -22,14 +22,14 @@ int main(void)
         if (counter % 2 != 0)
         {
             printf("backwards: %i\n", digit);       // get every other digit starting from second last
-            char conv = (char) digit * 2;
-            strcpy(backwards, &conv);
+            //char conv = (char) digit * 2;
+            //strcpy(backwards, &conv);
         }
-        /*else
+        else
         {
             printf("remainders: %i\n", digit);     // get remaining digits sum
             remainder_sum += digit;
-        }*/
+        }
         counter++;
     }
     while (number /= 10);
