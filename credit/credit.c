@@ -22,7 +22,8 @@ int main(void)
         if (counter % 2 != 0)
         {
             printf("backwards: %i\n", digit);       // get every other digit starting from second last
-            strcpy(backwards, (char) digit * 2);
+            char conv = (char) digit * 2;
+            strcpy(backwards, conv);
         }
         else
         {
