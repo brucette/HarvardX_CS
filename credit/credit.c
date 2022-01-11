@@ -23,7 +23,7 @@ int main(void)
         //printf("%i\n", digit);
     }
     while (number /= 10);
-    counter--;
+
 
 
 
