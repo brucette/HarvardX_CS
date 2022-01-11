@@ -24,12 +24,13 @@ int main(void)
             printf("backwards: %i\n", digit);       // get every other digit starting from second last
             char conv = (char) digit * 2;
             strcpy(backwards, &conv);
+            printf("%s\n", backwards);
         }
-        else
+        /*else
         {
             printf("remainders: %i\n", digit);     // get remaining digits sum
             remainder_sum += digit;
-        }
+        }*/
         counter++;
     }
     while (number /= 10);
