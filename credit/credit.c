@@ -27,6 +27,21 @@ int main(void)
     }
     while (number /= 10);
 
+    // get remainder digits:
+    int remainder;
+    int count = 1;
+    do
+    {
+        remainder = number % 10;
+        if (counter % 2 != 0)
+        {
+            printf("%i\n", digit);
+            //sum += digit * 2;
+        }
+        count++;
+    }
+    while (number /= 10);
+
 
 
 
