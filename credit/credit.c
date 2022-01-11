@@ -27,7 +27,6 @@ int main(void)
             index++;
             //int conv = digit * 2;                // multiply every digit by 2
             //strcpy((char)conv, backwards);       // how to then add those digits to another long/int array/char array, how to convert int to string?
-
         }
         else
         {
