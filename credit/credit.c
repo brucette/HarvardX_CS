@@ -13,6 +13,7 @@ int main(void)
     int sum = 0;
     int backwards[16];
 
+    // get every other digit starting from second last:
     int counter = 1;
     do
     {
