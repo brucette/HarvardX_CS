@@ -35,7 +35,7 @@ int main(void)
         remainder = number % 10;
         if (counter % 2 != 0)
         {
-            printf("%i\n", digit);
+            printf("%i\n\n", digit);
             //sum += digit * 2;
         }
         count++;
