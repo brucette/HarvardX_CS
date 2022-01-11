@@ -10,7 +10,7 @@ int main(void)
 {
     long number = get_long("Number: ");
     int digit;
-    int sum = 0;
+    int remainder_sum = 0;
     int backwards[16];
 
     // get every other digit starting from second last:
@@ -20,31 +20,25 @@ int main(void)
         digit = number % 10;
         if (counter % 2 == 0)
         {
-            printf("%i backwards: \n", digit);
+            printf("backwards: %i\n", digit);
             sum += digit * 2;
+        }
+        else
+        {
+            printf("remainders: %i\n", digit);     // get remainder digits sum
+            remainder_sum += digit;
         }
         counter++;
     }
     while (number /= 10);
 
     printf("\n\n");
-    
-    printf("%li\n number: ", number);
 
-    // get remainder digits:
-    int remainder;
-    int count = 1;
-    do
-    {
-        remainder = number % 10;
-        if (count % 2 != 0)
-        {
-            printf("%i remainders: \n", remainder);
-            //sum += digit * 2;
-        }
-        count++;
-    }
-    while (number /= 10);
+
+
+
+
+
 
 
 
