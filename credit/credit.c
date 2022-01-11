@@ -29,7 +29,7 @@ int main(void)
 
     // get remainder digits:
     int remainder;
-    int count = 1;
+    int count = 0;
     do
     {
         remainder = number % 10;
