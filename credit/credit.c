@@ -20,7 +20,7 @@ int main(void)
         digit = number % 10;
         if (counter % 2 == 0)
         {
-            printf("%i\n", digit);
+            printf("%i backwards: \n", digit);
             sum += digit * 2;
         }
         counter++;
@@ -33,9 +33,9 @@ int main(void)
     do
     {
         remainder = number % 10;
-        if (counter % 2 != 0)
+        if (count % 2 != 0)
         {
-            printf("%i\n\n", digit);
+            printf("%i remainders: \n\n", digit);
             //sum += digit * 2;
         }
         count++;
@@ -69,8 +69,8 @@ int main(void)
     //printf("%s\n", (string) number);
 
     //char characters[]
-    printf("AMEX\n");
-    printf("MASTERCARD\n");
-    printf("VISA\n");
-    printf("INVALID\n");
+    //printf("AMEX\n");
+    //printf("MASTERCARD\n");
+    //printf("VISA\n");
+    //printf("INVALID\n");
 }
