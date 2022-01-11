@@ -28,7 +28,7 @@ int main(void)
     while (number /= 10);
 
     printf("\n\n");
-    printf("li\n", number);
+    printf("%li\n", number);
 
     // get remainder digits:
     int remainder;
