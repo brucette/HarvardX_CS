@@ -12,11 +12,10 @@ int main(void)
     int digit;
 
     int counter = 1;
-    counter--;
     do
     {
         digit = number % 10;
-        if (counter == 1)
+        if (counter % 2 == 0)
         {
             printf("%i\n", digit);
         }
