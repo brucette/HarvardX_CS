@@ -13,15 +13,15 @@ int main(void)
     int remainder_sum = 0;
     int backwards[16];
 
-    // get every other digit starting from second last:
-    int counter = 1;
+    //
+    int counter = 0;
     do
     {
         digit = number % 10;
-        if (counter % 2 == 0)
+        if (counter % 2 != 0)
         {
-            printf("backwards: %i\n", digit);
-
+            printf("backwards: %i\n", digit);       // get every other digit starting from second last
+            //backwards = digit * 2;
         }
         else
         {
