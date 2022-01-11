@@ -23,10 +23,10 @@ int main(void)
         if (counter % 2 != 0)
         {
             printf("backwards: %i\n", digit);    // get every other digit starting from second last
-            first_set[index] = digit;
+            first_set[index] = digit * 2;
             index++;
-            //int conv = digit * 2;                // multiply every digit by 2
-            //strcpy((char)conv, backwards);       // how to then add those digits to another long/int array/char array, how to convert int to string?
+            //int conv = digit * 2;                \\ multiply every digit by 2
+            //strcpy((char)conv, backwards);       \\ how to then add those digits to another long/int array/char array, how to convert int to string?
         }
         else
         {
