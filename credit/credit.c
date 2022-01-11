@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 // MASTERCARD: 16 digits, Start with 51/52/53/54/55
 // VISA: 13/16 digits, Start with 4
@@ -11,7 +12,7 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int remainder_sum = 0;
-    int backwards[16];
+    string backwards[16];
 
     //
     int counter = 0;
