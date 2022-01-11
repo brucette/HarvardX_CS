@@ -39,11 +39,11 @@ int main(void)
 
     //ADD ALL DIGITS IN backwards together (use isdigit()?)
     //CONVERT NUMBER TO TRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
-    if
+
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", backwards);
+        printf("%i\n", first_set[i]);
     }
     printf("\n\n");
 
