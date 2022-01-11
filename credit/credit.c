@@ -20,7 +20,6 @@ int main(void)
             printf("%i\n", digit);
         }
         counter++;
-        //printf("%i\n", digit);
     }
     while (number /= 10);
 
