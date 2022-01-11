@@ -11,9 +11,10 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
 
-    int counter = 0;
+    int counter = 1;
     do
     {
+        counter--;
         digit = number % 10;
         if (counter == 1)
         {
