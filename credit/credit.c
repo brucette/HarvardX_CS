@@ -12,7 +12,7 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int remainder_sum = 0;
-    char backwards[sizeof(number)];
+    char backwards[sizeof(number)+1];
 
     //
     int counter = 0;
