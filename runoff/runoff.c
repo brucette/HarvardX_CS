@@ -162,16 +162,18 @@ void tabulate(void)
         int index = preferences[i][j];
         if (preferences[i][j] != -1)
         {
+            if (candidates[index].eliminated == false)
+            {
+                candidates[index].votes++;
+                preferences[i][j] = -1;
+            }
+            else
+            {
+                candidates[preferences[i][j + 1]].votes++;
+            }
+        }
 
-        }
-        if (candidates[index].eliminated == false)
-        {
-            candidates[index].votes++;
-        }
-        else
-        {
-            candidates[preferences[i][j + 1]].votes++;
-        }
+
     }
 }
 
