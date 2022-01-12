@@ -172,9 +172,10 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    for (int i = 0; i < candidate_count; j++)
+    int half_votes = 
+    for (int i = 0; i < candidate_count; i++)
     {
-        printf("%s%i\n", candidates[j].name, candidates[j].votes);
+       candidates[i].votes);
     }
     return false;
 }
