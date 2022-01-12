@@ -159,11 +159,11 @@ void tabulate(void)
 }
 
 // Print the winner of the election, if there is one
-bool print_winner(void)
+/*bool print_winner(void)
 {
     // TODO
     return false;
-}
+}*/
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
