@@ -160,6 +160,10 @@ void tabulate(void)
     {
         int j = 0;
         int index = preferences[i][j];
+        if (preferences[i][j] != -1)
+        {
+
+        }
         if (candidates[index].eliminated == false)
         {
             candidates[index].votes++;
