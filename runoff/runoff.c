@@ -83,6 +83,18 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    for (int i = 0; i < voter_count; i++)
+    {
+        int index = preferences[i][0];
+        if (candidates[index].eliminated == false)
+        {
+            candidates[index].votes++;
+        }
+    }
+    for (int j = 0; j < candidate_count; j++)
+    {
+        printf("%s%i\n", candidates[j].name, candidates[j].votes);
+    }
     // Keep holding runoffs until winner exists
     while (true)
     {
