@@ -165,8 +165,8 @@ void tabulate(void)
         }
         else
         {
-            j++
-            
+            j++;
+            candidates[index].votes++;
         }
     }
 }
