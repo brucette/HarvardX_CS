@@ -172,6 +172,7 @@ void tabulate(void)
             //}
         }
     }
+    return;
 }
 
 // Print the winner of the election, if there is one
