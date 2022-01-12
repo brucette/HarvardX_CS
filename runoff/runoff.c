@@ -164,17 +164,13 @@ void tabulate(void)
             if (candidates[index].eliminated == false)
             {
                 candidates[index].votes++;
+                break;
             }
-        }
-
-
-
-
             else
             {
                 candidates[preferences[i][j + 1]].votes++;
             }
-       
+        }
     }
 }
 
