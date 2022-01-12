@@ -82,7 +82,7 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
-
+    //REMOVE AFTER!!!!
     for (int i = 0; i < voter_count; i++)
     {
         int index = preferences[i][0];
@@ -172,10 +172,13 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    int half_votes = 
+    int half_votes = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
-       candidates[i].votes);
+       if (!candidates[i].eliminated || candidates[i].votes > half_votes)
+       {
+           return true;
+       }
     }
     return false;
 }
