@@ -166,10 +166,10 @@ void tabulate(void)
                 candidates[index].votes++;
                 break;
             }
-            else
-            {
-                candidates[preferences[i][j + 1]].votes++;
-            }
+            //else
+            //{
+                //candidates[preferences[i][j + 1]].votes++;
+            //}
         }
     }
 }
