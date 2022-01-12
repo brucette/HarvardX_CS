@@ -83,6 +83,10 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    for (int j = 0; j < candidate_count; j++)
+    {
+        printf("%s%i\n", candidates[j].name, candidates[j].votes);
+    }
     // Keep holding runoffs until winner exists
     while (true)
     {
