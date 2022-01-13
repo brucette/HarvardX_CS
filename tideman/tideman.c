@@ -100,6 +100,14 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(name, candidates[i]) == 0) //compare candidate voter gave to all the candidates running
+        {
+            ranks[i] =
+            return true;
+        }
+    }
     return false;
 }
 
