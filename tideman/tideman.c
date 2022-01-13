@@ -104,7 +104,7 @@ bool vote(int rank, string name, int ranks[])
     {
         if (strcmp(name, candidates[i]) == 0) //compare candidate voter gave to all the candidates running
         {
-            ranks[i] = 
+            ranks[rank] = 
             return true;
         }
     }
