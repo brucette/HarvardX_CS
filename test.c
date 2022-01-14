@@ -4,6 +4,11 @@
 // Max number of candidates
 #define MAX 3
 
+// ranks[i] is voter's ith preference
+int ranks[] = {2, 1, 0};
+
+int preferences[3][3];
+
 void record_preferences(int ranks[])
 {
     // TODO
@@ -20,10 +25,6 @@ void record_preferences(int ranks[])
     return;
 }
 
-// ranks[i] is voter's ith preference
-int ranks[] = {2, 1, 0};
-
-int preferences[3][3];
 
 int main(void)
 {
