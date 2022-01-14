@@ -16,9 +16,12 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < 3; j++)
         {
-            if (ranks[i] == j)
+            for (int k = 0; k < 3; k++)
             {
-                preferences[i][j]++;
+                if (ranks[i] == i)
+                {
+                    preferences[i][j]++;
+                }
             }
         }
     }
@@ -38,8 +41,9 @@ int main(void)
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%i\n", preferences[i][j]);
+            printf("%i ", preferences[i][j]);
         }
+        printf("\n");
     }
 
 
