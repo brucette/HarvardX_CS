@@ -35,11 +35,18 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     int temp_header[HEADER_SIZE];   //allocate memory for header
-    fread(&temp_header, sizeof(HEADER_SIZE), 1, input);    //read header to memory
-    fwrite(&temp_header, sizeof(HEADER_SIZE), 1, output); //write header from memory to new file
+
+    //read header to memory
+    fread(&temp_header, sizeof(HEADER_SIZE), 1, input);
+
+    //write header from memory to new file
+    fwrite(&temp_header, sizeof(HEADER_SIZE), 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
-
+    // allocate memory for 2 int sample
+    fread();
+    
+    //
 
     // Close files
     fclose(input);
