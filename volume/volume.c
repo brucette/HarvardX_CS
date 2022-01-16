@@ -49,11 +49,9 @@ int main(int argc, char *argv[])
     // copy a sample from file to memory
     while (fread(&temp_sample, sizeof(temp_sample), 1, input))
     {
-        fwrite()
+        // copy a sample from memory to new file
+        fwrite(&temp_sample, sizeof(temp_sample), 1, output);
     }
-
-
-    // copy a sample from memory to new file
 
     // Close files
     fclose(input);
