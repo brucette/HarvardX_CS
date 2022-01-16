@@ -47,8 +47,11 @@ int main(int argc, char *argv[])
     int16_t temp_sample;
 
     // copy a sample from file to memory
-    while ()
-    fread();
+    while (fread(&temp_sample, sizeof(temp_sample), 1, input))
+    {
+        fwrite()
+    }
+
 
     // copy a sample from memory to new file
 
