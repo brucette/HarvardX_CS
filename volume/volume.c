@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     while (fread(&temp_sample, sizeof(temp_sample), 1, input))
     {
         // copy a sample from memory to new file
-        fwrite(&temp_sample, sizeof(temp_sample), 1, output);
+        fwrite(&temp_sample, sizeof(temp_sample * factor), 1, output );
     }
 
     // Close files
