@@ -49,8 +49,10 @@ int main(int argc, char *argv[])
     // copy a sample from file to memory
     while (fread(&temp_sample, sizeof(temp_sample), 1, input))
     {
+        // increase or decrease size of the memory by given factor
+        temp_sample = temp_sample * factor;
         // copy a sample from memory to new file
-        fwrite(&temp_sample, sizeof(temp_sample * factor), 1, output );
+        fwrite(&temp_sample, sizeof(temp_sample), 1, output );
     }
 
     // Close files
