@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     fread(); //read header to memory
-    fwrite(); //write header from mem
-    
+    fwrite(); //write header from memory to new file
+
     // TODO: Read samples from input file and write updated data to output file
 
 
