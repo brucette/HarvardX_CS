@@ -112,7 +112,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // put surrounding pixels into an array so you can iterate over them
             int surround_coords[] = {i, j, upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,
-            left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j}
+            left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j};
 
             // check if any of pixels are outside of the image, collect colors for valid ones
             for (int k = 0; k < 18; k+=2)
@@ -128,7 +128,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-
             int avgBlue = round(totalBlue / counter);
             int avgGreen = round(totalGreen / counter);
             int avgRed = round(totalRed / counter);
@@ -148,7 +147,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtRed = temp[i][j].rgbtRed;
                 }
             }
-
         }
     }
     return;
