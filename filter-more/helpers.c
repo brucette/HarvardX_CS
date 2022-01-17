@@ -50,7 +50,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-
+            // get surrounding pixels coordinates
+            int upper_left_i = i - 1;
+            int upper_left_j = j - 1;
+            int top_i = i - 1;
+            int top_j = j;
+            int upper_right_i = i - 1;
+            int upper_right_j = j + 1;
+            int left_i = i;
+            int left_j = j - 1;
+            int right_i = i;
+            int right_j = j + 1;
+            int lower_left_i = i + 1;
+            int lower_left_j = j - 1;
+            int bottom_i = i + 1;
+            int bottom_j = j;
+            int lower_right_i = i + 1;
+            int lower_right_j = j + 1;
         }
     }
     return;
