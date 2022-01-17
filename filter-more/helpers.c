@@ -67,6 +67,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int bottom_j = j;
             int lower_right_i = i + 1;
             int lower_right_j = j + 1;
+
+            // assign the coordinates to an array so they can be iterated over
+            int surround_coords[18] = {i, j, upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,
+            left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j};
+
+            // check if coordinates are out of image range and get rgb values for valid pixels
+            for (int k = 0; k < 18; k += 2)
+            {
+                if (surround_coords[k] >= 0 && surround_coords[k] < height)
+                {
+                    if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
+                    {
+                        totalBlue += 
+                    }
+                }
+            }
         }
     }
     return;
