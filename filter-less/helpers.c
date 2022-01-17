@@ -57,19 +57,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE buffer;
 
-    if (width % 2 == 0)
+    for (int i = 0; i < height; i++)
     {
-        for (int i = 0; i < height; i++)
+        for (int j = 0; j < width / 2; j++)
         {
-            for (int j = 0; j < width / 2; j++)
-            {
-
-            }
+            image[i][j] 
         }
     }
-    else
-    
-
     return;
 }
 
