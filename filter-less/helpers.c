@@ -121,9 +121,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] <= width)
                     {
-                        totalBlue += surround_coords[k][k + 1].rgbtBlue;
-                        totalGreen += surround_coords[k][k + 1].rgbtGreen;
-                        totalRed += surround_coords[k][k + 1].rgbtRed;
+                        int x = surround_coords[k];
+                        int y = surround_coords[k + 1];
+
+                        totalBlue += image[x][y].rgbtBlue;
+                        totalGreen += image[x][y].rgbtGreen;
+                        totalRed += image[x][y].rgbtRed;
                         counter++;
                     }
                 }
