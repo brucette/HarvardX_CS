@@ -48,6 +48,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtRed = sepiaRed;
         }
+    }
     return;
 }
 
