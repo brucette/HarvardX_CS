@@ -93,8 +93,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int totalRed = 0;
 
             // assign surrounding pixels for pixel to be blurred
-            int upper_left_i = i -1;
-            int upper_left_j = j -1;
+            int upper_left_i = i - 1;
+            int upper_left_j = j - 1;
             int top_i = i - 1;
             int top_j = j;
             int upper_right_i = i - 1;
