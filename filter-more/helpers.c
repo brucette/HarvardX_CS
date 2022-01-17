@@ -34,7 +34,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             k--;
 
             // reset k for next row
-            if (k < round((float)width / 2)
+            if (k < round((float)width / 2))
             {
                 k = width -1;
             }
