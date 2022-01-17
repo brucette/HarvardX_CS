@@ -162,6 +162,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[l][m] = temp[l][m];
             }
         }
-    }
-    return;
+      return;
 }
+
+
