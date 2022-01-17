@@ -107,7 +107,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int lower_left_j = j - 1;
             int bottom_i = i + 1;
             int bottom_j = j;
-            int lower_right_i = 
+            int lower_right_i = i + 1;
+            int lower_right_j = j + 1;
 
 
             int avgBlue =
