@@ -135,6 +135,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avgGreen = round(totalGreen / counter);
             int avgRed = round(totalRed / counter);
 
+            if (avgBlue > 255)
+            {
+                avgBlue = 255;
+            }
+            if (avgGreen > 255)
+            {
+                avgGreen = 255;
+            }
+            if (avgRed > 255)
+            {
+                avgRed = 255;
+            }
+
             temp[i][j].rgbtBlue = avgBlue;
             temp[i][j].rgbtGreen = avgGreen;
             temp[i][j].rgbtRed = avgRed;
