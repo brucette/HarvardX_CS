@@ -101,6 +101,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avgGreen = round((float)totalGreen / counter);
             int avgRed = round((float)totalRed / counter);
 
+            if (avgBlue > 255)
+            {
+                avgBlue = 255;
+            }
+            if (avgGreen > 255)
+            {
+                avgGreen = 255;
+            }
+            if (avgRed > 255)
+            {
+                avgRed = 255;
+            }
+
+
         }
     }
     return;
