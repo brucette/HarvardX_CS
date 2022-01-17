@@ -22,14 +22,22 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int k = width -1;
+    RGBTRIPLE buffer;   //buffer for a pixel that is being swapped
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width / 2; j++)
         {
-            int avg = round(((float)image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3);
-            image[i][j].rgbtBlue = avg;
-            image[i][j].rgbtGreen = avg;
-            image[i][j].rgbtRed = avg;
+            buffer = image[i][j];
+            image[i][j] = image[i][k];
+            image[i][k] = buffer;
+            k--;
+
+            // reset k for next row
+            if (k < round((float)width / 2)
+            {
+                k = width -1;
+            }
         }
     }
     return;
