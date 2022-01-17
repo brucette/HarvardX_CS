@@ -115,11 +115,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j};
 
             // check if any of pixels are outside of the image, collect colors for valid ones
-            for (int k = 0; k < 18; k+=2)
+            for (int k = 0; k < 18; k += 2)
             {
-                if (surround_coords[k] >= 0 && surround_coords[k] <= height)
+                if (surround_coords[k] >= 0 && surround_coords[k] < height)
                 {
-                    if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] <= width)
+                    if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
                     {
                         int x = surround_coords[k];
                         int y = surround_coords[k + 1];
