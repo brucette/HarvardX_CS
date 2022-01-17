@@ -67,6 +67,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[i][k] = buffer;
             k--;
 
+            // resets k for next row
             if (k < round((float)width / 2))
             {
                 k = width - 1;
