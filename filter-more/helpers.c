@@ -87,12 +87,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
                     {
-                        int i = surround_coords[k];
-                        int j = surround_coords[k + 1];
+                        int x = surround_coords[k];
+                        int y = surround_coords[k + 1];
 
-                        totalBlue += image[i][j].rgbtBlue;
-                        totalGreen += image[i][j].rgbtGreen;
-                        totalRed += image[i][j].rgbtRed;
+                        totalBlue += image[x][y].rgbtBlue;
+                        totalGreen += image[x][y].rgbtGreen;
+                        totalRed += image[x][y].rgbtRed;
                         counter++;
                     }
                 }
@@ -114,7 +114,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgRed = 255;
             }
 
-
+            temp[i][j].rgbtBlue = avgBlue;
+            temp[i][j].rgbtGreen = avgGreen;
+            temp[i][j].rgbtRed = avgRed;
+        }
+    }
+    // move pixels from temp pic to the original
+    for (int l = 0; l < height; l++)
+    {
+        for (int m = 0; m < width; m++)
+        {
+            image[l][m] = temp[l][m];
         }
     }
     return;
