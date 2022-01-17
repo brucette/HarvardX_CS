@@ -151,15 +151,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             temp[i][j].rgbtBlue = avgBlue;
             temp[i][j].rgbtGreen = avgGreen;
             temp[i][j].rgbtRed = avgRed;
-
+        }
+    }
             // move pixels from temp pic to the original
 
-            for (int l = 0; l < height; l++)
+        for (int l = 0; l < height; l++)
+        {
+            for (int m = 0; m < width; m++)
             {
-                for (int m = 0; m < width; m++)
-                {
-                    image[l][m] = temp[l][m];
-                }
+                image[l][m] = temp[l][m];
             }
         }
     }
