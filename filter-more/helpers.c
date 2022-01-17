@@ -97,7 +97,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            
+            int avgBlue = round((float)totalBlue / counter);
+            int avgGreen = round((float)totalGreen / counter);
+            int avgRed = round((float)totalRed / counter);
+
         }
     }
     return;
