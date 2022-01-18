@@ -216,9 +216,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     yi++;
                 }
 
-                int finalBlue = sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue));
-                int finalGreen = sqrt((GxGreen * GxGreen) + (GyGreen * GyGreen));
-                int finalRed = sqrt((GxRed * GxRed) + (GyRed * GyRed));
+                int finalBlue = round(sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue)));
+                int finalGreen = round(sqrt((GxGreen * GxGreen) + (GyGreen * GyGreen)));
+                int finalRed = round(sqrt((GxRed * GxRed) + (GyRed * GyRed)));
 
                 if (finalBlue > 255)
                 {
