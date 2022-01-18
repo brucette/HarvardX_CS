@@ -22,7 +22,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    int k = width -1;
+    int k = width - 1;
     RGBTRIPLE buffer;   //buffer for a pixel that is being swapped
 
     for (int i = 0; i < height; i++)
@@ -37,7 +37,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             // reset k for next row
             if (k < round((float)width / 2))
             {
-                k = width -1;
+                k = width - 1;
             }
         }
     }
@@ -78,8 +78,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int lower_right_j = j + 1;
 
             // assign the coordinates to an array so they can be iterated over
-            int surround_coords[18] = {i, j, upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,
-            left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j};
+            int surround_coords[18] =   {i, j, upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,
+                                         left_i, left_j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j
+                                        };
 
             // check if coordinates are out of image range and get rgb values for valid pixels
             for (int k = 0; k < 18; k += 2)
@@ -160,8 +161,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int lower_right_j = j + 1;
 
             // assign the coordinates to an array so they can be iterated over
-            int surround_coords[18] = {upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,
-            left_i, left_j, i, j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j};
+            int surround_coords[18] =   {upper_left_i, upper_left_j, top_i, top_j, upper_right_i, upper_right_j,left_i, left_j,
+                                        i, j, right_i, right_j, lower_left_i, lower_left_j, bottom_i, bottom_j, lower_right_i, lower_right_j
+                                        };
 
             // Gx values
             int Gx[9] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
@@ -232,7 +234,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-             image[i][j] = temp[i][j];
+            image[i][j] = temp[i][j];
         }
     }
     return;
