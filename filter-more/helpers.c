@@ -232,7 +232,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 finalRed = 255;
             }
-            printf("finalBlue: %i\n", finalBlue);
+
             temp[i][j].rgbtBlue = finalBlue;
             temp[i][j].rgbtGreen = finalGreen;
             temp[i][j].rgbtRed = finalRed;
