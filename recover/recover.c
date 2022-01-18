@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     // if so, copy byte into a new file name ###.jpg
     sprintf(filename, "%03i.jpg", counter);
-    
+
     // keep reading 512 byte chunks into a buffer
     while (fread(buffer, sizeof(buffer), 1, card))
     {
@@ -37,10 +37,8 @@ int main(int argc, char *argv[])
                 // open new file and write (paste) the byte into it
                 FILE *img = fopen(filename, "w");
             }
-        }
-
         fwrite(buffer, sizeof(buffer), 1, filename);
-
+        }
     }
 
 
