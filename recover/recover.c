@@ -8,14 +8,14 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf()
+        printf("Usage: recover filename\n");
         return 1;
     }
 
     int counter = 0;
     BYTE buffer[512];
     //buffer for filename
-    char *filename[8];
+    char filename[8];
 
     //open file for reading ("coping")
     FILE *card = fopen(argv[1],"r");
@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename, "w");
                 fwrite(buffer, sizeof(buffer), 1, filename);
             }
-        fwrite(buffer, sizeof(buffer), 1, filename);
         }
+        fwrite(buffer, sizeof(buffer), 1, filename);
     }
 
 
