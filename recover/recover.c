@@ -35,7 +35,9 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename, "w");
             }
         }
-        fwrite();
+        // if so, copy byte into a new file name ###.jpg
+        sprintf(filename, "%03i.jpg", counter);
+        fwrite(buffer, sizeof(buffer), 1, filename);
 
     }
 
