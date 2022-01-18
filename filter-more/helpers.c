@@ -181,7 +181,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int GyGreen = 0;
             int GyRed = 0;
 
-            for (int k = 0; k < 18; k++)
+            for (int k = 0; k < 18; k += 2)
             {
                 if (surround_coords[k] >= 0 && surround_coords[k] < height)
                 {
@@ -205,10 +205,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int x = surround_coords[k];
                     int y = surround_coords[k + 1];
-                    Blue += 0 * Gx[xi];
-                    Green += 0 * Gx[xi];
-                    Red += 0 * Gx[xi];
+                    GxBlue += 0 * Gx[xi];
+                    GxGreen += 0 * Gx[xi];
+                    GxRed += 0 * Gx[xi];
                     xi++;
+
+                    GyBlue += 0 * Gy[yi];
+                    GyGreen += 0 * Gy[yi];
+                    GyRed += 0 * Gy[yi];
+                    yi++;
+
                 }
             }
         }
