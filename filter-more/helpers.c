@@ -204,18 +204,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         yi++;
                     }
                 }
-                /*else
+                else
                 {
-                    GxBlue += Gx[xi] * 0;
+                    /*GxBlue += Gx[xi] * 0;
                     GxGreen += Gx[xi] * 0;
-                    GxRed += Gx[xi] * 0;
+                    GxRed += Gx[xi] * 0;*/
                     xi++;
 
-                    GyBlue += Gy[yi] * 0;
+                    /*GyBlue += Gy[yi] * 0;
                     GyGreen += Gy[yi] * 0;
-                    GyRed += Gy[yi] * 0;
+                    GyRed += Gy[yi] * 0;*/
                     yi++;
-                }*/
+                }
             }
 
             int finalBlue = round(sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue)));
