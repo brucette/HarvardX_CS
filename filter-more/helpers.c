@@ -137,9 +137,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     // temp pic for edged pixels, with additional two for the black pixels that fall outside image
     RGBTRIPLE temp[height + 2][width + 2];
 
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height + 2; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width + 2; j++)
         {
             // get surrounding pixels coordinates
             int upper_left_i = i - 1;
@@ -241,9 +241,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // transfer pixels from temp to image
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height + 2; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width + 2; j++)
         {
              image[i][j] = temp[i][j];
         }
