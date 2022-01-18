@@ -57,6 +57,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // temp pic for blurred pixels
     RGBTRIPLE temp[height][width];
 
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -106,6 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
+            // calculate average colours for pixel
             int avgBlue = round((float)totalBlue / counter);
             int avgGreen = round((float)totalGreen / counter);
             int avgRed = round((float)totalRed / counter);
@@ -123,6 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgRed = 255;
             }
 
+            //set temporary picture's pixel colors
             temp[i][j].rgbtBlue = avgBlue;
             temp[i][j].rgbtGreen = avgGreen;
             temp[i][j].rgbtRed = avgRed;
