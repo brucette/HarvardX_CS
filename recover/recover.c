@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 // open new file and write (paste) the byte into it
                 FILE *img = fopen(filename, "w");
+                fwrite(buffer, sizeof(buffer), 1, filename);
             }
         fwrite(buffer, sizeof(buffer), 1, filename);
         }
