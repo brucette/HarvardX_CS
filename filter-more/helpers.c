@@ -168,10 +168,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Gy values
             int Gy[9] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
 
-            // indices for G values
-            int xi = 0;
-            int yi = 0;
-
             //
             int GxBlue = 0;
             int GxGreen = 0;
@@ -181,6 +177,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int GyGreen = 0;
             int GyRed = 0;
 
+            // indices for G values
+            int xi = 0;
+            int yi = 0;
+
+            // check if pixels outside of image
             for (int k = 0; k < 18; k += 2)
             {
                 int x = surround_coords[k];
