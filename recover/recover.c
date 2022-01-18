@@ -20,6 +20,9 @@ int main(int argc, char *argv[])
     //open file for reading ("coping")
     FILE *card = fopen(argv[1],"r");
 
+    // if so, copy byte into a new file name ###.jpg
+    sprintf(filename, "%03i.jpg", counter);
+    
     // keep reading 512 byte chunks into a buffer
     while (fread(buffer, sizeof(buffer), 1, card))
     {
@@ -35,8 +38,7 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename, "w");
             }
         }
-        // if so, copy byte into a new file name ###.jpg
-        sprintf(filename, "%03i.jpg", counter);
+
         fwrite(buffer, sizeof(buffer), 1, filename);
 
     }
