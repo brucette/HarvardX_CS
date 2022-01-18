@@ -137,7 +137,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-
             // get surrounding pixels coordinates
             int upper_left_i = i - 1;
             int upper_left_j = j - 1;
@@ -170,9 +169,24 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Gxi = 0;
             int Gyi = 0;
 
+            //
+            int Blue;
+            int Green;
+            int Red;
+
             for (int k = 0; k < 18; k++)
             {
-                if ()
+                if (surround_coords[k] >= 0 && surround_coords[k] < height)
+                {
+                    if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
+                    {
+                        Blue += 
+                    }
+                }
+                else
+                {
+
+                }
             }
 
 
