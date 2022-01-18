@@ -9,7 +9,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+
     //open file for reading ("coping")
+
 
     // keep reading 512 byte chunks into a buffer
 
