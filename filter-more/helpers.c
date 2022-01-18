@@ -219,7 +219,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int finalBlue = round(sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue)));
             int finalGreen = round(sqrt((GxGreen * GxGreen) + (GyGreen * GyGreen)));
             int finalRed = round(sqrt((GxRed * GxRed) + (GyRed * GyRed)));
-            printf("finalBlue: %i\n", finalBlue);
+
             if (finalBlue > 255)
             {
                 finalBlue = 255;
@@ -232,7 +232,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 finalRed = 255;
             }
-
+            printf("finalBlue: %i\n", finalBlue);
             temp[i][j].rgbtBlue = finalBlue;
             temp[i][j].rgbtGreen = finalGreen;
             temp[i][j].rgbtRed = finalRed;
