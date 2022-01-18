@@ -20,5 +20,7 @@ int main(int argc, char *argv[])
         }
 
         // if so, copy byte into a new file name ###.jpg
-        sprintf(filename, "%03i.jpg", no.)
+        sprintf(filename, "%03i.jpg", no.(counter))
+
+        // write (paste) the byte into the new file
 }
