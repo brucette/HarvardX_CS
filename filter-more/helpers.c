@@ -214,28 +214,28 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     GyRed += 0 * Gy[yi];
                     yi++;
                 }
-
-                int finalBlue = round(sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue)));
-                int finalGreen = round(sqrt((GxGreen * GxGreen) + (GyGreen * GyGreen)));
-                int finalRed = round(sqrt((GxRed * GxRed) + (GyRed * GyRed)));
-                printf("finalBlue: %i\n", finalBlue);
-                if (finalBlue > 255)
-                {
-                    finalBlue = 255;
-                }
-                if (finalGreen > 255)
-                {
-                    finalGreen = 255;
-                }
-                if (finalRed > 255)
-                {
-                    finalRed = 255;
-                }
-
-                temp[i][j].rgbtBlue = finalBlue;
-                temp[i][j].rgbtGreen = finalGreen;
-                temp[i][j].rgbtRed = finalRed;
             }
+
+            int finalBlue = round(sqrt((GxBlue * GxBlue) + (GyBlue * GyBlue)));
+            int finalGreen = round(sqrt((GxGreen * GxGreen) + (GyGreen * GyGreen)));
+            int finalRed = round(sqrt((GxRed * GxRed) + (GyRed * GyRed)));
+            printf("finalBlue: %i\n", finalBlue);
+            if (finalBlue > 255)
+            {
+                finalBlue = 255;
+            }
+            if (finalGreen > 255)
+            {
+                finalGreen = 255;
+            }
+            if (finalRed > 255)
+            {
+                finalRed = 255;
+            }
+
+            temp[i][j].rgbtBlue = finalBlue;
+            temp[i][j].rgbtGreen = finalGreen;
+            temp[i][j].rgbtRed = finalRed;
         }
     }
     // transfer pixels from temp to image
