@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     }
 
     int counter = 0;
-    
+
     BYTE buffer[512];
 
     //buffer for filename
@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
             }
         sprintf(filename, "%03i.jpg", counter);
         FILE *img = fopen(filename, "w");
-        fwrite(buffer, sizeof(buffer), 1, img);
         }
+        fwrite(buffer, sizeof(buffer), 1, img);
     }
 
 
