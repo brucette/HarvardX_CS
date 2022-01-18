@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +13,7 @@ int main(int argc, char *argv[])
     }
 
     int counter = 0;
-    int buffer = 
+    BYTE buffer;
 
     //open file for reading ("coping")
     FILE *card = fopen(argv[1],"r");
