@@ -194,7 +194,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         // get the Gx colours
                         GxBlue += Gx[xi] * image[x][y].rgbtBlue;
-                        GxGreen += Gx[xi] * image[x][y].rgbtGreen ;
+                        GxGreen += Gx[xi] * image[x][y].rgbtGreen;
                         GxRed += Gx[xi] * image[x][y].rgbtRed;
                         xi++;
                         // get the Gy colours
@@ -206,9 +206,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
                 else
                 {
-                    GxBlue += Gx[xi] * image[x][y].rgbtBlue;
-                    GxGreen += Gx[xi] * image[x][y].rgbtGreen ;
-                    GxRed += Gx[xi] * image[x][y].rgbtRed;
+                    GxBlue += Gx[xi] * 0;
+                    GxGreen += Gx[xi] * 0;
+                    GxRed += Gx[xi] * 0;
                     xi++;
 
                     GyBlue += Gy[yi] * 0;
