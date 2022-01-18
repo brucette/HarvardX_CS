@@ -30,9 +30,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++) // divide by 2 to only iterate half way of image
         {
+            // move pixel from first row first place to buffer
             buffer = image[i][j];
+
+            // move a row's last pixel to row's first pixel
             image[i][j] = image[i][k];
+
+            // move first pixel from buffer to last pixel
             image[i][k] = buffer;
+
             k--;
 
             // reset k for next row
