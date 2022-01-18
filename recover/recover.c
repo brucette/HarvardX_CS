@@ -31,15 +31,17 @@ int main(int argc, char *argv[])
         {
             if (counter > 0)
             {
-                fclose(filename);
+                fclose(img);
                 // if so, copy byte into a new file name ###.jpg
                 sprintf(filename, "%03i.jpg", counter);
                 // open new file and write (paste) the byte into it
                 FILE *img = fopen(filename, "w");
-                fwrite(buffer, sizeof(buffer), 1, filename);
+                fwrite(buffer, sizeof(buffer), 1, img);
             }
+        sprintf(filename, "%03i.jpg", counter);
+        FILE *img = fopen(filename, "w");
+        fwrite(buffer, sizeof(buffer), 1, img);
         }
-        fwrite(buffer, sizeof(buffer), 1, filename);
     }
 
 
