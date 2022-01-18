@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    int counter = 0;
 
     //open file for reading ("coping")
 
