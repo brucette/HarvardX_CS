@@ -191,12 +191,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         int y = surround_coords[k + 1];
                         // get the Gx colours
                         GxBlue += image[x][y].rgbtBlue * Gx[xi];
-                        GxGreen += image[x][y].rgbGreen * Gx[xi];
+                        GxGreen += image[x][y].rgbtGreen * Gx[xi];
                         GxRed += image[x][y].rgbtRed * Gx[xi];
                         xi++;
                         // get the Gy colours
                         GyBlue += image[x][y].rgbtBlue * Gy[yi];
-                        GyGreen += image[x][y].rgbGreen * Gy[yi];
+                        GyGreen += image[x][y].rgbtGreen * Gy[yi];
                         GyRed += image[x][y].rgbtRed * Gy[yi];
                         yi++;
                     }
