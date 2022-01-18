@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     int counter = 0;
     BYTE buffer[512];
     //buffer for filename
-    char
+    char *filename[8];
 
     //open file for reading ("coping")
     FILE *card = fopen(argv[1],"r");
