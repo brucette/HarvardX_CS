@@ -135,11 +135,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     // temp pic for edged pixels, with additional two for the black pixels that fall outside image
-    RGBTRIPLE temp[height + 2][width + 2];
+    RGBTRIPLE temp[height][width];
 
-    for (int i = 0; i < height + 2; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width + 2; j++)
+        for (int j = 0; j < width; j++)
         {
             // get surrounding pixels coordinates
             int upper_left_i = i - 1;
@@ -169,11 +169,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Gy values
             int Gy[9] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
 
-            //
             int GxBlue = 0;
             int GxGreen = 0;
             int GxRed = 0;
-
             int GyBlue = 0;
             int GyGreen = 0;
             int GyRed = 0;
@@ -196,12 +194,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         GxBlue += Gx[xi] * image[x][y].rgbtBlue;
                         GxGreen += Gx[xi] * image[x][y].rgbtGreen;
                         GxRed += Gx[xi] * image[x][y].rgbtRed;
-                        //xi++;
+
                         // get the Gy colours
                         GyBlue += Gy[yi] * image[x][y].rgbtBlue;
                         GyGreen += Gy[yi] * image[x][y].rgbtGreen;
                         GyRed += Gy[yi] * image[x][y].rgbtRed;
-                        //yi++;
                     }
                 }
                 xi++;
@@ -231,9 +228,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // transfer pixels from temp to image
-    for (int i = 0; i < height + 2; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width + 2; j++)
+        for (int j = 0; j < width; j++)
         {
              image[i][j] = temp[i][j];
         }
