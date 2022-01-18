@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1],"r");
 
     // keep reading 512 byte chunks into a buffer
-    while (fread(buffer))
+    while (fread(buffer, ))
         // check if first 4 bytes are start of a jpg
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0 == 0xe0))
         {
