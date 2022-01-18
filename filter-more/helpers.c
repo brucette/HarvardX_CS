@@ -166,8 +166,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Gy[9] = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
 
             // indices for G values
-            int Gxi = 0;
-            int Gyi = 0;
+            int xi = 0;
+            int yi = 0;
 
             //
             int Blue;
@@ -182,9 +182,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         int x = surround_coords[k];
                         int y = surround_coords[k + 1];
-                        Blue += image[x][y].rgbtBlue * ;
-                        Green += image[x][y].rgbGreen;
-                        Red += image[x][y].rgbtRed;
+                        Blue += image[x][y].rgbtBlue * Gx[xi];
+                        Green += image[x][y].rgbGreen * Gx[xi];
+                        Red += image[x][y].rgbtRed * Gx[xi];
 
 
                     }
