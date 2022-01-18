@@ -8,12 +8,14 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: recover filename\n");
+        printf("Usage: ./recover filename\n");
         return 1;
     }
 
     int counter = 0;
+    
     BYTE buffer[512];
+
     //buffer for filename
     char filename[8];
 
