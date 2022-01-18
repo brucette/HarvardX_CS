@@ -22,5 +22,6 @@ int main(int argc, char *argv[])
         // if so, copy byte into a new file name ###.jpg
         sprintf(filename, "%03i.jpg", no.(counter))
 
-        // write (paste) the byte into the new file
+        // open new file and write (paste) the byte into it
+        FILE *img = fopen();
 }
