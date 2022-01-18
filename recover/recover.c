@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, sizeof(buffer), 1, card))
     {
         // check if first 4 bytes are start of a jpg
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0 == 0xe0))
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (counter > 0)
             {
