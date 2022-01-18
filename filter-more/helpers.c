@@ -183,12 +183,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int k = 0; k < 18; k += 2)
             {
+                int x = surround_coords[k];
+                int y = surround_coords[k + 1];
                 if (surround_coords[k] >= 0 && surround_coords[k] < height)
                 {
                     if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
                     {
-                        int x = surround_coords[k];
-                        int y = surround_coords[k + 1];
                         // get the Gx colours
                         GxBlue += Gx[xi] * image[x][y].rgbtBlue;
                         GxGreen += Gx[xi] * image[x][y].rgbtGreen ;
@@ -203,8 +203,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
                 else
                 {
-                    int x = surround_coords[k];
-                    int y = surround_coords[k + 1];
                     GxBlue += 0 * Gx[xi];
                     GxGreen += 0 * Gx[xi];
                     GxRed += 0 * Gx[xi];
