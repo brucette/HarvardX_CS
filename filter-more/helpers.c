@@ -205,7 +205,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     GxBlue += 0 * Gx[xi];
                     GxGreen += 0 * Gx[xi];
-                    GxRed += 0 * Gx[xi];*/
+                    GxRed += 0 * Gx[xi];
                     xi++;
                     GyBlue += 0 * Gy[yi];
                     GyGreen += 0 * Gy[yi];
