@@ -24,14 +24,17 @@ int main(int argc, char *argv[])
         // check if first 4 bytes are start of a jpg
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0 == 0xe0) && counter )
         {
-
+            if (counter > 0)
+            {
+                // if so, copy byte into a new file name ###.jpg
+                sprintf(filename, "%03i.jpg", counter)
+            }
         }
 
     }
 
 
-        // if so, copy byte into a new file name ###.jpg
-        sprintf(filename, "%03i.jpg", no.(counter))
+
 
         // open new file and write (paste) the byte into it
         FILE *img = fopen();
