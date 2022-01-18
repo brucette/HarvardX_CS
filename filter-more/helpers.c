@@ -239,7 +239,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    
-
+    // transfer pixels from temp to image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            temp[i][j] = image[i][j];
+        }
+    }
     return;
 }
