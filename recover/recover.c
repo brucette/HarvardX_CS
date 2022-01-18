@@ -20,4 +20,5 @@ int main(int argc, char *argv[])
         }
 
         // if so, copy byte into a new file name ###.jpg
+        sprintf()
 }
