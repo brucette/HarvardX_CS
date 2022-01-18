@@ -186,8 +186,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         Green += image[x][y].rgbGreen * Gx[xi];
                         Red += image[x][y].rgbtRed * Gx[xi];
                         xi++;
-
-
                     }
                 }
                 else
@@ -200,8 +198,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     xi++;
                 }
             }
-
-
         }
     }
 
