@@ -8,4 +8,6 @@ int main(int argc, char *argv[])
         printf()
         return 1;
     }
+
+    //open file for reading ("coping")
 }
