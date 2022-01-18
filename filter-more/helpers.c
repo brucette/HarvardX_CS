@@ -187,6 +187,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 int x = surround_coords[k];
                 int y = surround_coords[k + 1];
+                
                 if (surround_coords[k] >= 0 && surround_coords[k] < height)
                 {
                     if (surround_coords[k + 1] >= 0 && surround_coords[k + 1] < width)
