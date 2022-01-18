@@ -214,8 +214,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     GyGreen += 0 * Gy[yi];
                     GyRed += 0 * Gy[yi];
                     yi++;
-
                 }
+
+                
             }
         }
     }
