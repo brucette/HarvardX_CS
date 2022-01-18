@@ -216,9 +216,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     yi++;
                 }
 
-                temp[i][j].rgbtBlue = ;
-                temp[i][j].rgbtGreen = ;
-                temp[i][j].rgbtRed = ;
+                int finalBlue = 0;
+                int finalGreen = 0;
+                int finalRed = 0;
+
+                if (finalBlue > 255)
+                {
+                    finalBlue = 255;
+                }
+                if (finalGreen > 255)
+                {
+                    finalGreen = 255;
+                }
+                if (finalRed > 255)
+                {
+                    finalRed = 255;
+                }
+                
+                temp[i][j].rgbtBlue = finalBlue;
+                temp[i][j].rgbtGreen = finalGreen;
+                temp[i][j].rgbtRed = finalRed;
             }
         }
     }
