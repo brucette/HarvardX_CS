@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     char filename[8];
 
     //open file for reading ("coping")
-    FILE *card = fopen(argv[1],"r");
+    FILE *card = fopen(argv[1], "r");
     if (card == NULL)
     {
         printf("Could not open %s\n", argv[1]);
