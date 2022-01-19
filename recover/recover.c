@@ -17,10 +17,15 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
 
     //buffer for filename
-    char *filename;
+    char filename[8];
 
     //open file for reading ("coping")
     FILE *card = fopen(argv[1],"r");
+    if (card == NULL)
+    {
+        printf("Could not open %s\n", argv[1]);
+        return 1;
+    }
 
     // keep reading 512 byte chunks into a buffer
     while (fread(buffer, sizeof(buffer), 1, card))
