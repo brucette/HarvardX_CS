@@ -54,11 +54,5 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, sizeof(buffer), 1, img);
         }
-
     }
-
-
-
-
-
 }
