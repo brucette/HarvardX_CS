@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
                 FILE *img = fopen(filename, "w");
                 fwrite(buffer, sizeof(buffer), 1, img);
             }
-        sprintf(filename, "%03i.jpg", counter);
-        FILE *img = fopen(filename, "w");
+            sprintf(filename, "%03i.jpg", counter);
+            FILE *img = fopen(filename, "w");
+            fwrite(buffer, sizeof(buffer), 1, img);
         }
-        fwrite(buffer, sizeof(buffer), 1, img);
     }
 
 
