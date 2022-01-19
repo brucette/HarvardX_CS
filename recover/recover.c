@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
             if (counter > 0)
             {
                 fclose(filename);
+                counter++;
                 // if so, copy byte into a new file name ###.jpg
                 sprintf(filename, "%03i.jpg", counter);
                 // open new file and write (paste) the byte into it
