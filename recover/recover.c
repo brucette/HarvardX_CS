@@ -52,7 +52,10 @@ int main(int argc, char *argv[])
         }
         else
         {
+            if ()
+            {
 
+            }
         }
         fwrite(buffer, sizeof(buffer), 1, img);
     }
