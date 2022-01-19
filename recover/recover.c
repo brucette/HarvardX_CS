@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int counter = 0;
+    int counter = -1;
 
     BYTE buffer[512];
 
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
         // check if first 4 bytes are start of a jpg
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            counter++;
             if (counter > 0)
             {
                 fclose(img);
@@ -51,10 +52,6 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if ()
-            {
-
-            }
             fwrite(buffer, sizeof(buffer), 1, img);
         }
 
