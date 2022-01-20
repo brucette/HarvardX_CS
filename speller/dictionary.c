@@ -41,9 +41,15 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    FILE *f = fopen(dictionary, "r");
+    FILE *dictionary = fopen(dictionary, "r");
+    if (f == NULL)
+    {
+        printf("Could not open %s\n", dictionary);
+        return 1;
+    }
 
     // read strings from the file one at a time
+    fscanf(dictionary, "%s", word); // will return EOF once it reaches the end
     // create a new node for each word
     // hash word to obtain a hash value
     // insert node into hash table at that location
