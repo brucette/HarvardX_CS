@@ -48,12 +48,13 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    char *buffer[LENGTH];
+    char *buffer[LENGTH + 1];
     // read strings from the file one at a time
     while (fscanf(dictionary, "%s", buffer)) // will return EOF once it reaches the end
     {
-        
-    }// create a new node for each word
+        // create a new node for each word
+        node *
+    }
 
 
 
