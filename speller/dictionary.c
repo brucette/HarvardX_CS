@@ -39,6 +39,8 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
+    FILE *f = fopen(dictionary, "r");
+
     // read strings from the file one at a time
     // create a new node for each word
     // hash word to obtain a hash value
