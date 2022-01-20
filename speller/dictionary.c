@@ -38,7 +38,9 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    //read strings from the file one at a time
+    // read strings from the file one at a time
+    // create a new node for each word
+    // 
     return false;
 }
 
