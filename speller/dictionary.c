@@ -53,6 +53,7 @@ bool load(const char *dictionary)
     fscanf(dictionary, "%s", buffer); // will return EOF once it reaches the end
     // create a new node for each word
 
+    
     // hash word to obtain a hash value
     // insert node into hash table at that location
     return false;
