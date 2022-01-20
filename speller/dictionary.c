@@ -48,7 +48,7 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    
+    char *
     // read strings from the file one at a time
     fscanf(dictionary, "%s", into memory); // will return EOF once it reaches the end
     // create a new node for each word
