@@ -54,6 +54,11 @@ bool load(const char *dictionary)
     {
         // create a new node for each word
         node *n = malloc(sizeof(node));
+        if (f == NULL)
+        {
+            return 1;
+        }
+
         // hash word to obtain a hash value
         hash(buffer);
         // insert node into hash table at that location
