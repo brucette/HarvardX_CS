@@ -56,7 +56,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            return 1;
+            return NULL;
         }
 
         // hash word to obtain a hash value
