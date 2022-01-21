@@ -74,11 +74,12 @@ bool load(const char *dictionary)
         {
             table[index] = n;
             n->next = NULL;
+            counter++;
         }
         else
         {
-            n->next =
-            table[index] =
+            n->next = table[index]
+            table[index] = n;
         }
 
     }
