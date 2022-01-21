@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Could not open %s\n", file);
-        return 1;
+        return false;
     }
 
     char buffer[LENGTH + 1];
