@@ -72,7 +72,6 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         table[index] = n->next;
 
-
     }
     return false;
 }
