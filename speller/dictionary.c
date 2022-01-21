@@ -47,7 +47,7 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("Could not open %s\n", file);
+        printf("Could not open %s\n", dictionary);
         return false;
     }
 
