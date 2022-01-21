@@ -36,7 +36,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    
+
     return toupper(word[0]) - 'A';
 }
 
@@ -73,14 +73,14 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         if (counter == 0)   // first word
         {
-            table[index] = n;
+            table[index]->next = n;
             n->next = NULL;
             counter++;
         }
         else
         {
             n->next = table[index];
-            table[index] = n;
+            table[index]->next = n;
         }
     }
     return true;
