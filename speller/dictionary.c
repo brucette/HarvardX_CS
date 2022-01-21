@@ -72,7 +72,12 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         if (counter == 0)   // first word
         {
-            table[index] = n->next;
+            table[index] = n;
+            n->next = NULL;
+        }
+        else
+        {
+            
         }
 
     }
