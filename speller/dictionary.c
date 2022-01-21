@@ -34,7 +34,7 @@ bool check(const char *word)
 
     // access linked list at that index in the hash table
     node temp = malloc(sizeof(node));
-    
+
     table[index];
     // traverse linked list, looking for the word(strcasecmp)
     return false;
