@@ -60,7 +60,9 @@ bool load(const char *dictionary)
         }
 
         // hash word to obtain a hash value
-        hash(buffer);
+        int index = hash(buffer);
+        // copy buffer into node
+        
         // insert node into hash table at that location
     }
     return false;
