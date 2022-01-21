@@ -2,11 +2,14 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-//#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
+
+//#include <stdlib.h>
+#include <stdio.h>
+
+
 
 // Represents a node in a hash table
 typedef struct node
@@ -41,17 +44,17 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    FILE *dictionary = fopen(dictionary, "r");
-    if (f == NULL)
+    FILE *file = fopen(dictionary, "r");
+    if (file == NULL)
     {
-        printf("Could not open %s\n", dictionary);
+        printf("Could not open %s\n", file);
         return 1;
     }
 
     char *buffer[LENGTH + 1];
 
     // read strings from the file one at a time
-    while (fscanf(dictionary, "%s", buffer)) // will return EOF once it reaches the end
+    while (fscanf(file, "%s", buffer)) // will return EOF once it reaches the end
     {
         // create a new node for each word
         node *n = malloc(sizeof(node));
