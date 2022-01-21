@@ -29,6 +29,9 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // hash word to obtain has value
+    // access linked list at that index in the hash table
+    // traverse linked list, looking for the word(strcasecmp)
     return false;
 }
 
