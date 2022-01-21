@@ -70,7 +70,10 @@ bool load(const char *dictionary)
         // copy buffer into node
         strcpy(n->word, buffer);
         // insert node into hash table at that location
-        table[index] = n->next;
+        if (counter == 0)   // first word
+        {
+            table[index] = n->next;
+        }
 
     }
     return false;
