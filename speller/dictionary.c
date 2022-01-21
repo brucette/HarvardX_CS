@@ -49,6 +49,7 @@ bool load(const char *dictionary)
     }
 
     char *buffer[LENGTH + 1];
+    
     // read strings from the file one at a time
     while (fscanf(dictionary, "%s", buffer)) // will return EOF once it reaches the end
     {
