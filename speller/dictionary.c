@@ -47,10 +47,11 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
-    //(word[0] - 'A' * 26) + (word[1] - 'a') % N;  676;
+    //(word[0] - 'A' * 26) + (word[1] - 'a') % 26;  676;
     // Az 65 122
-    (0) + ()
+    (0) + () = 25
     // Ba 66 97
+    (26) + ()
     //
 }
 
