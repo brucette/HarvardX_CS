@@ -74,17 +74,19 @@ bool load(const char *dictionary)
 
         // hash word to obtain a hash value
         int index = hash(buffer);
-        // copy buffer into node
-        strcpy(n->word, buffer);
+
         // insert node into hash table at that location
         if (table[index] == NULL)   // first word
         {
+            strcpy(table[index]->word, buffer);
             table[index] = n;
             n->next = NULL;
             //counter++;
         }
         else
         {
+            // copy buffer into node
+            strcpy(n->word, buffer);
             n->next = table[index];
             table[index]->next = n;
         }
