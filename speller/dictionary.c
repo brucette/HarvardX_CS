@@ -49,7 +49,9 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 
     // Ab (% N) 676;
-    word[0] word[1] 
+    word[0] word[1]
+    0 + 1
+    0 + 2
     // Ba
 }
 
