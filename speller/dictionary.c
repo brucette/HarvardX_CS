@@ -71,7 +71,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-
+        
         // hash word to obtain a hash value
         int index = hash(buffer);
         // copy buffer into node
