@@ -47,7 +47,10 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
-    // % N;
+
+    // Ab (% N) 676;
+    word[0] word[1] 
+    // Ba
 }
 
 // Loads dictionary into memory, returning true if successful, else false
