@@ -78,7 +78,6 @@ bool load(const char *dictionary)
         if (table[index] == NULL)   // first word
         {
             strcpy(table[index]->word, buffer);
-            table[index] = n;
             table[index]->next = NULL;
             //counter++;
         }
