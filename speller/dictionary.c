@@ -25,6 +25,8 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+int counter = N;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -61,8 +63,6 @@ bool load(const char *dictionary)
 
     char buffer[LENGTH + 1];
 
-    int counter = 0;
-
     // read strings from the file one at a time
     while (fscanf(file, "%s", buffer)) // will return EOF once it reaches the end
     {
@@ -89,6 +89,7 @@ bool load(const char *dictionary)
 
             // copy buffer into node
             strcpy(n->word, buffer);
+            counter++;
             n->next = table[index];
             table[index]->next = n;
         }
