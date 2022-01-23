@@ -20,7 +20,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 676;
 
 // Hash table
 node *table[N];
@@ -31,7 +31,7 @@ int counter = N;
 bool check(const char *word)
 {
     // TODO
-    // hash word to obtain has value
+    // hash word to obtain hash value
     int index = hash(word);
 
     // access linked list at that index in the hash table
@@ -47,16 +47,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
-    return (word[0] - 'A' * 26) + (word[1] - 'a') % 676;
-    /* Az 65 122
-    (0) + () = 25
-    // Ba 66 97
-    (26) + ()
-    Bb
-    (26) + (1)
-    Zz
-    (650) + (25) = 675;
-    */
+    return (word[0] - 'A' * 26) + (word[1] - 'a') % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
