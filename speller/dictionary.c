@@ -71,23 +71,22 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        
+
         // hash word to obtain a hash value
         int index = hash(buffer);
         // copy buffer into node
         strcpy(n->word, buffer);
         // insert node into hash table at that location
-        if (counter == 0)   // first word
+         /*if (counter == 0)   // first word
         {
             table[index]->next = n;
             n->next = NULL;
             counter++;
         }
         else
-        {
+        {}*/
             n->next = table[index];
             table[index]->next = n;
-        }
     }
     return true;
 }
