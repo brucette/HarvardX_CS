@@ -114,7 +114,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    printf("Called function is: uload\n");
+    printf("Called function is: unload\n");
     // TODO
     for (int i = 0; i < N; i++)
     {                                   //node *cursor = table[i];
