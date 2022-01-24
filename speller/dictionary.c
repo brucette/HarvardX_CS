@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <cs50.h>
+#include <strings.h>
 
 
 
