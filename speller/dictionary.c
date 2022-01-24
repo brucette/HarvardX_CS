@@ -99,6 +99,7 @@ bool load(const char *dictionary)
             table[index] = n;
         }
     }
+printf("after hashing\n");
 return true;
 }
 
