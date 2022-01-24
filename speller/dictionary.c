@@ -86,12 +86,11 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         if (table[index] == NULL)   // first word
         {
-            table[index]->next = NULL;
+
         }
         else
         {
-            n = table[index];
-            table[index]->next = n;
+
         }
 return true;
 }
