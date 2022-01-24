@@ -94,7 +94,7 @@ bool load(const char *dictionary)
         n->next = NULL;
         counter++;
         n = table[index];
-        table[index] = n;
+        table[index]-> = n;
     }
 return true;
 }
