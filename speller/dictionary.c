@@ -115,18 +115,11 @@ bool unload(void)
         while (table[i] != NULL)
         {
             node *tmp = table[i]->next;
+            free(table[i]);
+            table[i] = tmp;
         }
     }
-
-    // Free list
-    while (list != NULL)
-    {
-        node *tmp = list->next;
-        free(list);
-        list = tmp;
-    }
     return 0;
-
 
     return false;
 }
