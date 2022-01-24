@@ -93,9 +93,10 @@ bool load(const char *dictionary)
 
             // copy buffer into node
             strcpy(n->word, buffer);
+            n->next = NULL;
             counter++;
-            n->next = table[index];
-            table[index]->next = n;
+            n = table[index];
+            table[index] = n;
         }
     }
     return true;
