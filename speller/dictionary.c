@@ -61,8 +61,8 @@ bool load(const char *dictionary)
     printf("Called function is: load\n");
     // TODO
     // open dictionary file
-    FILE *file = fopen(dictionary, "r");
-    if (file == NULL)
+    FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
     {
         return false;
     }
@@ -72,7 +72,7 @@ bool load(const char *dictionary)
     // read strings from the file one at a time
     while (!EOF) // will return EOF once it reaches the end
     {
-        fscanf(file, "%s", buffer); // create a new node for each word
+        fscanf(dict, "%s", buffer); // create a new node for each word
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
@@ -93,7 +93,7 @@ bool load(const char *dictionary)
     }
 printf("after hashing\n");
 return true;
-fclose(file);
+fclose(dict);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
