@@ -70,6 +70,14 @@ bool load(const char *dictionary)
     // read strings from the file one at a time
     while (fscanf(file, "%s", buffer)) // will return EOF once it reaches the end
     {
+        // create a new node for each word
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
+        }
+        counter++;
+
         // hash word to obtain a hash value
         int index = hash(buffer);
 
@@ -78,24 +86,15 @@ bool load(const char *dictionary)
         {
             strcpy(table[index]->word, buffer);
             table[index]->next = NULL;
-            counter++;
+
         }
         else
-        {*/
-        // create a new node for each word
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
         {
-            return false;
+            // copy buffer into node
+            strcpy(n->word, buffer);
+            n = table[index];
+            table[index]->next = n;
         }
-
-        // copy buffer into node
-        strcpy(n->word, buffer);
-        n->next = NULL;
-        counter++;
-        n = table[index];
-        table[index]->next = n;
-    }
 return true;
 }
 
