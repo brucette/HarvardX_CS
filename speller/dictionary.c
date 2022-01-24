@@ -110,7 +110,13 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (int i = 0, *cursor = table[index]; tmp != NULL; tmp = tmp->next)
+    for (int i = 0; i < N; i++)
+    {
+        while (table[i] != NULL)
+        {
+            node *tmp = table[i]->next;
+        }
+    }
 
     // Free list
     while (list != NULL)
