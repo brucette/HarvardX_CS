@@ -111,11 +111,11 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {                                   //node *cursor = table[i];
-        node *cursor = table[i]->next;
-        while (cursor != NULL)        //while (cursor != NULL)
+        //node *cursor = table[i]->next;
+        while (table[i] != NULL)        //while (cursor != NULL)
         {
-            node *tmp = cursor;         //node *tmp = cursor
-            cursor = cursor->next;      //cursor = cursor->next
+            node *tmp = table[i]->next;         //node *tmp = cursor
+            //cursor = cursor->next;      //cursor = cursor->next
             free(tmp);                  //if (tmp != NULL)
             printf("After unload\n");
         }
