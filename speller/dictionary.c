@@ -81,7 +81,9 @@ bool load(const char *dictionary)
         counter++;
 
         // hash word to obtain a hash value
+        printf("BEfore hash in load");
         int index = hash(buffer);
+         printf("after hash in load");
         // copy buffer into node
         strcpy(n->word, buffer);
 
