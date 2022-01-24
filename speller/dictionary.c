@@ -91,8 +91,10 @@ bool load(const char *dictionary)
         }
         else
         {
-            n
+            n = table[index]->next;
+            table[index]->next = n;
         }
+    }
 return true;
 }
 
