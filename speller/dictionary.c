@@ -70,9 +70,9 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
 
     // read strings from the file one at a time
-    while () // will return EOF once it reaches the end
+    while (!EOF) // will return EOF once it reaches the end
     {
-        // create a new node for each word
+        fscanf(file, "%s", buffer); // create a new node for each word
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
