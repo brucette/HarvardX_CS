@@ -76,14 +76,14 @@ bool load(const char *dictionary)
         int index = hash(buffer);
 
         // insert node into hash table at that location
-        if (table[index] == NULL)   // first word
+        /*if (table[index] == NULL)   // first word
         {
             strcpy(table[index]->word, buffer);
             table[index]->next = NULL;
             counter++;
         }
         else
-        {
+        {*/
             // create a new node for each word
             node *n = malloc(sizeof(node));
             if (n == NULL)
