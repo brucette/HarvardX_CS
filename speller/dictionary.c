@@ -120,6 +120,5 @@ bool unload(void)
         }
     }
     return 0;
-
     return false;
 }
