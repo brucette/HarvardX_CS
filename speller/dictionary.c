@@ -116,7 +116,8 @@ bool unload(void)
         {
             node *tmp = table[i]->next;         //node *tmp = cursor
             //cursor = cursor->next;      //cursor = cursor->next
-            free(tmp);                  //if (tmp != NULL)
+            free(table[i]);                  //if (tmp != NULL)
+            table[i] = tmp;
             printf("After unload\n");
         }
     }                                   //free(tmp)
