@@ -41,6 +41,10 @@ bool check(const char *word)
     table[index];
     // traverse linked list, looking for the word(strcasecmp)
     for (; != NULL; ++)
+    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
+    {
+        printf("%i\n", tmp->number);
+    }
     return false;
 }
 
