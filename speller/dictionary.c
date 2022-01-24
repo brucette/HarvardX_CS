@@ -121,5 +121,5 @@ bool unload(void)
             printf("After unload\n");
         }
     }                                   //free(tmp)
-    return false;                       //return false
+    return true;                       //return false
 }
