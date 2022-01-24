@@ -30,7 +30,7 @@ int counter = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    printf("Called function is: %s\n",func);
     // hash word to obtain hash value
     int index = hash(word);
 
@@ -49,6 +49,7 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
+    printf("Called function is: %s\n",func);
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
     return (word[0] - 'A' * 26) + (word[1] - 'a') % N;
@@ -57,6 +58,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    printf("Called function is: %s\n",func);
     // TODO
     // open dictionary file
     FILE *file = fopen(dictionary, "r");
@@ -101,6 +103,7 @@ return true;
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
+    printf("Called function is: %s\n",func);
     // TODO
     return counter;
 }
@@ -108,6 +111,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+    printf("Called function is: %s\n",func);
     // TODO
     for (int i = 0; i < N; i++)
     {                                   //node *cursor = table[i];
