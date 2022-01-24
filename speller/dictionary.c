@@ -30,7 +30,7 @@ int counter = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    printf("Called function is: check\n");
+    //printf("Called function is: check\n");
     // hash word to obtain hash value
     int index = hash(word);
 
@@ -49,7 +49,7 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    printf("Called function is: hash\n");
+    //printf("Called function is: hash\n");
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
     return ((toupper(word[0]) - 'A' ) * 26) + (word[1] - 'a') % N;
@@ -58,7 +58,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    printf("Called function is: load\n");
+    //printf("Called function is: load\n");
     // TODO
     // open dictionary file
     FILE *dict = fopen(dictionary, "r");
@@ -81,17 +81,17 @@ bool load(const char *dictionary)
         counter++;
 
         // hash word to obtain a hash value
-        printf("BEfore hash in load\n");
+        //printf("BEfore hash in load\n");
         int index = hash(buffer);
-        printf("after hash in load %i\n", index);
+        //printf("after hash in load %i\n", index);
         // copy buffer into node
         strcpy(n->word, buffer);
-        printf("I copy the word\n");
+        //printf("I copy the word\n");
         // insert node into hash table at that location
         n->next = table[index];
         table[index] = n;
     }
-printf("after hashing\n");
+//printf("after hashing\n");
 return true;
 fclose(dict);
 }
@@ -99,7 +99,7 @@ fclose(dict);
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    printf("Called function is: size\n");
+    //printf("Called function is: size\n");
     // TODO
     return counter;
 }
@@ -107,7 +107,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    printf("Called function is: unload\n");
+    //printf("Called function is: unload\n");
     // TODO
     for (int i = 0; i < N; i++)
     {                                   //node *cursor = table[i];
@@ -118,7 +118,7 @@ bool unload(void)
             //cursor = cursor->next;      //cursor = cursor->next
             free(table[i]);                  //if (tmp != NULL)
             table[i] = tmp;
-            printf("After unload\n");
+            //printf("After unload\n");
         }
     }                                   //free(tmp)
     return true;                       //return false
