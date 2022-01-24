@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
     printf("Called function is: hash\n");
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
-    return toupper(word[0]) - 'A' * 26 + (word[1] - 'a') % N;
+    return ((toupper(word[0]) - 'A' ) * 26) + (word[1] - 'a') % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
