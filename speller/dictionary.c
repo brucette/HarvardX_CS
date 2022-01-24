@@ -30,7 +30,6 @@ int counter = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    //printf("Called function is: check\n");
     // hash word to obtain hash value
     int index = hash(word);
 
@@ -49,7 +48,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    //printf("Called function is: hash\n");
     // TODO: Improve this hash function
     //return toupper(word[0]) - 'A';
     return ((toupper(word[0]) - 'A' ) * 26) + (word[1] - 'a') % N;
@@ -58,7 +56,6 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    //printf("Called function is: load\n");
     // TODO
     // open dictionary file
     FILE *dict = fopen(dictionary, "r");
@@ -90,7 +87,6 @@ bool load(const char *dictionary)
         n->next = table[index];
         table[index] = n;
     }
-    //printf("after hashing\n");
     return true;
     fclose(dict);
 }
