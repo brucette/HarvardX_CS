@@ -1,5 +1,4 @@
 // Implements a dictionary's functionality
-
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
@@ -10,7 +9,6 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <strings.h>
-
 
 
 // Represents a node in a hash table
