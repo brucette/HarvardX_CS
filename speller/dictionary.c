@@ -87,6 +87,7 @@ bool load(const char *dictionary)
         if (table[index] == NULL)   // first word
         {
             table[index]->next = n;
+            n->next = NULL;
         }
         else
         {
