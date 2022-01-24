@@ -87,7 +87,7 @@ bool load(const char *dictionary)
         strcpy(n->word, buffer);
 
         // insert node into hash table at that location
-        n = table[index]; //->next
+        n->next = table[index];
         table[index] = n;
     }
     //printf("after hashing\n");
@@ -106,19 +106,17 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    //printf("Called function is: unload\n");
     // TODO
     for (int i = 0; i < N; i++)
-    {                                   //node *cursor = table[i];
+    {
         node *cursor = table[i];
         node *tmp = cursor;
-        while (cursor != NULL)        //while (cursor != NULL)
+        while (cursor != NULL)
         {
-            cursor = cursor->next;      //cursor = cursor->next
-            free(tmp);                  //if (tmp != NULL)
+            cursor = cursor->next;
+            free(tmp);
             tmp = cursor;
-            //printf("After unload\n");
         }
-    }                                   //free(tmp)
-    return true;                       //return false
+    }
+    return true;
 }
