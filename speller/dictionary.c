@@ -91,9 +91,9 @@ bool load(const char *dictionary)
         n->next = table[index];
         table[index] = n;
     }
-//printf("after hashing\n");
-return true;
-fclose(dict);
+    //printf("after hashing\n");
+    return true;
+    fclose(dict);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
