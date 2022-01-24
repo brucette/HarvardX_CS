@@ -84,23 +84,23 @@ bool load(const char *dictionary)
         }
         else
         {*/
-            // create a new node for each word
-            node *n = malloc(sizeof(node));
-            if (n == NULL)
-            {
-                return false;
-            }
-
-            // copy buffer into node
-            strcpy(n->word, buffer);
-            n->next = NULL;
-            counter++;
-            n = table[index];
-            table[index] = n;
+        // create a new node for each word
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
         }
+
+        // copy buffer into node
+        strcpy(n->word, buffer);
+        n->next = NULL;
+        counter++;
+        n = table[index];
+        table[index] = n;
     }
-    return true;
+return true;
 }
+
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
