@@ -70,7 +70,6 @@ bool load(const char *dictionary)
     // read strings from the file one at a time
     while (fscanf(file, "%s", buffer)) // will return EOF once it reaches the end
     {
-
         if (n == NULL)
         {
             return false;
