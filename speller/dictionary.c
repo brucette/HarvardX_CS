@@ -70,7 +70,7 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
 
     // read strings from the file one at a time
-    while (fscanf(file, "%s", buffer)) // will return EOF once it reaches the end
+    while () // will return EOF once it reaches the end
     {
         // create a new node for each word
         node *n = malloc(sizeof(node));
@@ -100,6 +100,7 @@ bool load(const char *dictionary)
     }
 printf("after hashing\n");
 return true;
+fclose(file);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
