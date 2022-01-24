@@ -117,6 +117,7 @@ bool unload(void)
             node *tmp = cursor;         //node *tmp = cursor
             cursor = cursor->next;      //cursor = cursor->next
             free(tmp);                  //if (tmp != NULL)
+            printf("After unload\n");
         }
     }                                   //free(tmp)
     return false;                       //return false
