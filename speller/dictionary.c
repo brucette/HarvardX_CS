@@ -40,6 +40,7 @@ bool check(const char *word)
     temp = table[index];
     table[index];
     // traverse linked list, looking for the word(strcasecmp)
+    for (; != NULL; ++)
     return false;
 }
 
