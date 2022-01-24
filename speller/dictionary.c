@@ -38,7 +38,7 @@ bool check(const char *word)
     // traverse linked list, looking for the word
     for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
     {
-        if (strcasecmp(tmp->word, word) == 0)  if (strcasecmp(s1, s2) == 0)
+        if (strcasecmp(tmp->word, word) == 0)
         {
             return true;
         }
