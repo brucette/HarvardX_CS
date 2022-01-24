@@ -88,16 +88,15 @@ bool load(const char *dictionary)
         strcpy(n->word, buffer);
         printf("I copy the word\n");
         // insert node into hash table at that location
-        if (table[index] == NULL)   // first word
+        /*if (table[index] == NULL)   // first word
         {
             table[index] = n;
             n->next = NULL;
         }
         else
-        {
-            n->next = table[index];
-            table[index] = n;
-        }
+        {*/
+        n->next = table[index];
+        table[index] = n;
     }
 printf("after hashing\n");
 return true;
