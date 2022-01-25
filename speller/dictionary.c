@@ -75,13 +75,14 @@ bool load(const char *dictionary)
     while (!EOF) // will return EOF once it reaches the end
     {
         fscanf(dict, "%s", buffer);
+        counter++;
+
         // create a new node for each word
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
         }
-        counter++;
 
         // hash word to obtain a hash value
         unsigned int index = hash(buffer);
