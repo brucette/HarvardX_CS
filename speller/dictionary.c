@@ -30,11 +30,6 @@ unsigned int counter = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
-        {
-            printf("%s\n", tmp->word);
-        }
-
     // hash word to obtain hash value
     unsigned int index = hash(word);
 
@@ -113,7 +108,7 @@ unsigned int size(void)
     return counter;
 }
 
-// Unloads dictionary from memory, returning true if successful, else false
+// `s dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     // TODO
@@ -126,7 +121,10 @@ bool unload(void)
             //cursor = cursor->next;
             free(table[i]);
             //table[i] = tmp;
-            printf("loop");
+            printf("loop");for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
+        {
+            printf("%s\n", tmp->word);
+        }
         }
     }
     return true;
