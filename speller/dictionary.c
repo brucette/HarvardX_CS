@@ -88,7 +88,7 @@ bool load(const char *dictionary)
 
         // copy buffer into node
         strcpy(n->word, buffer);
-        printf("word is %s\n", n->word);
+
 
         // insert node into hash table at that location
         n->next = table[index];
