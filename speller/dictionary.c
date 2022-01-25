@@ -97,7 +97,6 @@ bool load(const char *dictionary)
         //printf("table index is %i%s\n", index, n->word);
         table[index] = n;
     }
-    printf("buffer is %s\n", buffer);
     fclose(dict);
     return true;
 }
