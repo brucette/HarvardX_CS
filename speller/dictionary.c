@@ -121,10 +121,10 @@ bool unload(void)
     {
         while (table[i] != NULL)
         {
+            node *cursor = table[i];
             node *tmp = table[i];
-            node *cursor = ;
             cursor = cursor->next;
-            // free(tmp);
+            free(tmp);
             // tmp = cursor;
             printf("loop");
         }
