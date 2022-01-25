@@ -30,6 +30,11 @@ int counter = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
+        {
+            printf("%s\n", tmp->word);
+        }
+
     // hash word to obtain hash value
     unsigned int index = hash(word);
 
@@ -98,11 +103,6 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         n->next = table[index];
         table[index] = n;
-
-        for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
-        {
-            printf("%s\n", tmp->word);
-        }
     }
     fclose(dict);
     return true;
