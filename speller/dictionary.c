@@ -70,6 +70,7 @@ bool load(const char *dictionary)
     }
 
     char buffer[LENGTH + 1];
+    printf("buffer is %s\n", buffer);
 
     // read strings from the file one at a time
     while (!EOF) // will return EOF once it reaches the end
@@ -86,7 +87,7 @@ bool load(const char *dictionary)
         // hash word to obtain a hash value
         unsigned int index = hash(buffer);
 
-        printf("buffer is %s\n", buffer);
+
         // copy buffer into node
         strcpy(n->word, buffer);
 
