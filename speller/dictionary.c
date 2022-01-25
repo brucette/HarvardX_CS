@@ -124,7 +124,7 @@ bool unload(void)
             //node *cursor = table[i];
             node *tmp = table[i]->next;
             //cursor = cursor->next;
-            free(tmp);
+            free(table[i]);
             table[i] = tmp;
             printf("loop");
         }
