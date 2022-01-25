@@ -41,8 +41,9 @@ bool check(const char *word)
         {
             return true;
         }
+        return false;
     }
-    return false;
+    return 0;
 }
 
 // Hashes word to a number
