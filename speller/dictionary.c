@@ -89,20 +89,19 @@ bool load(const char *dictionary)
         }
 
         // hash word to obtain a hash value
-        unsigned int index = hash(n->word);
-        printf("buffer is %i\n", index);
+        unsigned int index = hash(buffer);
 
         // copy buffer into node
         strcpy(n->word, buffer);
 
-        if (table[index] == NULL)
-        {
-            n->next = NULL;
-            table[index] = n;
-        }
-        // insert node into hash table at that location
-        n->next = table[index];
+        /*if (table[index] == NULL)
+        {*/
+        n->next = NULL;
         table[index] = n;
+        //}
+        /*// insert node into hash table at that location
+        n->next = table[index];
+        table[index] = n;*/
     }
     fclose(dict);
     return true;
