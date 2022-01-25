@@ -91,7 +91,7 @@ bool load(const char *dictionary)
         printf("word is %s\n", n->word);
 
         // insert node into hash table at that location
-        n = table[index];
+        n->next = table[index];
         //printf("table index is %i%s\n", index, n->word);
         table[index] = n;
     }
