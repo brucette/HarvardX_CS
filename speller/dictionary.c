@@ -27,13 +27,6 @@ node *table[N];
 
 unsigned int counter = 0;
 
-int main(void)
-{
-    load("dictionary/cat.txt");
-
-}
-
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
