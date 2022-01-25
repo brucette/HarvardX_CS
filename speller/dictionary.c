@@ -100,7 +100,10 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     fclose(dict);
-    
+    for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
+    {
+        printf("%s\n", tmp->word);
+    }
     return true;
 }
 
