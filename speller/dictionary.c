@@ -120,10 +120,10 @@ bool unload(void)
             {
                 node *tmp = cursor;
                 free(tmp);
+                tmp = cursor;
                 printf("loop");
-                return true;
             }
         }
     }
-    return false;
+    return true;
 }
