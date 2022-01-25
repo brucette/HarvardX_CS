@@ -6,8 +6,10 @@ int main(void)
     if (file != NULL)
     {
         char buffer[5];
-        fscanf(file, "%s", buffer);
+        while (fscanf(file, "%s", buffer) != EOF)
+        {
+            printf("%s\n", buffer);
+        }
         fclose(file);
-        printf("%s\n", buffer);
     }
 }
