@@ -25,7 +25,7 @@ const unsigned int N = 676;
 // Hash table
 node *table[N];
 
-int counter = 0;
+unsigned int counter = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
