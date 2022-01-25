@@ -98,12 +98,13 @@ bool load(const char *dictionary)
         // insert node into hash table at that location
         n->next = table[index];
         table[index] = n;
+
+        for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
+        {
+            printf("%s\n", tmp->word);
+        }
     }
     fclose(dict);
-    for (node *tmp = table[0]; tmp != NULL; tmp = tmp->next)
-    {
-        printf("%s\n", tmp->word);
-    }
     return true;
 }
 
