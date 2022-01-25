@@ -94,14 +94,14 @@ bool load(const char *dictionary)
         // copy buffer into node
         strcpy(n->word, buffer);
 
-        /*if (table[index] == NULL)
-        {*/
-        n->next = NULL;
-        table[index] = n;
-        //}
-        /*// insert node into hash table at that location
+        if (table[index] == NULL)
+        {
+            n->next = NULL;
+            table[index] = n;
+        }
+        // insert node into hash table at that location
         n->next = table[index];
-        table[index] = n;*/
+        table[index] = n;
     }
     fclose(dict);
     return true;
