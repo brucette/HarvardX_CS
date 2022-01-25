@@ -110,7 +110,6 @@ unsigned int size(void)
 // `s dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
     for (int i = 0; i < N; i++)
     {
         if (table[i] != NULL)
@@ -120,10 +119,9 @@ bool unload(void)
                 node *tmp = cursor;
                 free(tmp);
                 tmp = cursor;
-                //printf("loop");
-                return true;
             }
         }
+    return true;
     }
     return false;
 }
