@@ -31,7 +31,7 @@ int counter = 0;
 bool check(const char *word)
 {
     // hash word to obtain hash value
-    int index = hash(word);
+    unsigned int index = hash(word);
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
@@ -78,7 +78,7 @@ bool load(const char *dictionary)
         counter++;
 
         // hash word to obtain a hash value
-        int index = hash(buffer);
+        unsigned int index = hash(buffer);
 
         // copy buffer into node
         strcpy(n->word, buffer);
