@@ -116,11 +116,6 @@ bool unload(void)
     {
         if (table[i] != NULL)
         {
-
-
-            //cursor = cursor->next;
-            free(table[i]);
-            //table[i] = tmp;
             for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
             {   node *tmp = cursor;
                 free(); printf("loop");
