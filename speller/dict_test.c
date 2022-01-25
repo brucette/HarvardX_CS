@@ -1,16 +1,13 @@
+#include <stdio.h>
 
-/ Represents a node in a hash table
-typedef struct node
+int main(void)
 {
-    char word[LENGTH + 1];
-    struct node *next;
+    FILE *file = fopen("hi.txt", "r");
+    if (file != NULL)
+    {
+        char buffer[3];
+        fscanf(file, "%s", buffer);
+        fclose(file);
+        printf("%s\n", buffer);
+    }
 }
-node;
-
-// TODO: Choose number of buckets in hash table
-const unsigned int N = 676;
-
-// Hash table
-node *table[N];
-
-unsigned int counter = 0;
