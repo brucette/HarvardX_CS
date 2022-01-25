@@ -100,6 +100,7 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     fclose(dict);
+    
     return true;
 }
 
