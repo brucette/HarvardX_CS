@@ -123,7 +123,7 @@ bool unload(void)
             //table[i] = tmp;
             for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
             {   node *tmp = cursor;
-                printf("loop");
+                free(); printf("loop");
             }
         }
     }
