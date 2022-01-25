@@ -121,9 +121,10 @@ bool unload(void)
                 node *tmp = cursor;
                 free(tmp);
                 tmp = cursor;
-                printf("loop");
+                //printf("loop");
+                return true;
             }
         }
     }
-    return true;
+    return false;
 }
