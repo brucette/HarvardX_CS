@@ -108,8 +108,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    //printf("Called function is: size\n");
-    // TODO
     return counter;
 }
 
