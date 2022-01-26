@@ -31,9 +31,9 @@ unsigned int counter = 0;
 bool check(const char *word)
 {
     // hash word to obtain hash value
-    int index = hash(word);
-    printf("hash is %i\n", index);
-    printf("word length is %lu\n", strlen(word));
+    //int index = hash(word);
+    //printf("hash is %i\n", index);
+    //printf("word length is %lu\n", strlen(word));
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
@@ -57,17 +57,15 @@ bool check(const char *word)
 //:) handles words with apostrophes properly
 //:) spell-checking is case-insensitive
 
- for (int i = 0; i < length; i++) // we take the word and LC and save that into copy
+    for (int i = 0; i < length; i++) // we take the word and LC and save that into copy
     {
         copy[i] = tolower(word[i]);
     }
 
 
-       int hashcode=hash(copy); // get a hashcode for that copy
-       node *tmp=table[hashcode];
+    int hashcode = hash(copy); // get a hashcode for that copy
 
-
-    node *tmp = table[index];
+    node *tmp = table[hashcode];
     if(tmp == NULL) // if tmp points to null return
     {
         return false;
