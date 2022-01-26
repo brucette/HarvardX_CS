@@ -91,7 +91,7 @@ bool load(const char *dictionary)
         // copy buffer into node
         strcpy(n->word, buffer);
 
-        printf("****%s*****\n", buffer);
+                                                            //printf("****%s*****\n", buffer);
         printf("****%s*****\n", table[index]->word);
 
         if (table[index] == NULL)
