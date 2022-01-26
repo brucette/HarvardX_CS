@@ -38,7 +38,7 @@ bool check(const char *word)
     // traverse linked list, looking for the word
     for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
     {
-        if (strcasecmp(tmp->word, word) == 0)
+        if (strcasecmp(word, tmp->word) == 0)
         {
             printf("hash word is %s\n", tmp->word);
             printf("text word is %s\n", word);
