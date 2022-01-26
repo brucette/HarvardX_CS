@@ -31,12 +31,15 @@ unsigned int counter = 0;
 bool check(const char *word)
 {
     // hash word to obtain hash value
-    //int index = hash(word);
+    int index = hash(word);
     //printf("hash is %i\n", index);
     //printf("word length is %lu\n", strlen(word));
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
+
+    printf("INDEX BEGIN IS****%s*****\n", table[index]->word);
+
     for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
     {
         if (strcasecmp(word, tmp->word) == 0)
