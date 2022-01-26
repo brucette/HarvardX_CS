@@ -104,11 +104,10 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     fclose(dict);
-    //see();
     return true;
 }
 
-void see(void)
+/*void see(void)
 {
     for (node *cursor = table[52]; cursor != NULL; cursor == cursor->next)
     {
@@ -116,7 +115,7 @@ void see(void)
         printf("%s\n", table[52]->word);
         //printf("===hello\n:");
     }
-}
+}*/
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
