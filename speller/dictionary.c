@@ -103,13 +103,13 @@ bool load(const char *dictionary)
     fclose(dict);
     for (int i = 0; i < N; i++)
     {
-        if (table[i] != NULL)
-        {
+        /*if (table[i] != NULL)
+        {*/
             for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
             {
                 printf("%s\n", cursor->word);
             }
-        }
+        //}
     }
     return true;
 }
