@@ -37,7 +37,7 @@ bool check(const char *word)
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
-    for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
+    /*for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
     {
         if (strcasecmp(word, tmp->word) == 0)
         {
@@ -46,7 +46,24 @@ bool check(const char *word)
             return true;
         }
     }
-    return false;
+    return false;*/
+    node *tmp = table[index];
+    if(tmp == NULL) // if tmp points to null return
+    {
+        return false;
+    }
+
+    while(tmp != NULL) // do it until the ll ends
+    {
+        if (strcasecmp(tmp->word, word) == 0) // check case insesnitive for word in node to our word(copy)
+        {
+            return true; // if found
+        }
+
+        tmp=tmp->next; // else move to next node, traverse the ll
+    }
+
+    return false; // if not found copy until end
 }
 
 // Hashes word to a number
