@@ -105,13 +105,13 @@ bool load(const char *dictionary)
     {
         if (table[i] != NULL)
         {
-            for (node *cursor = table[i]; cursor = cursor->next)
+            for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
         {
             printf("%s\n", cursor->word);
         }
     }
 }
-    return;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
