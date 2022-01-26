@@ -10,7 +10,7 @@
 #include <cs50.h>
 #include <strings.h>
 
-void table(void);
+void see(void);
 
 // Represents a node in a hash table
 typedef struct node
@@ -105,12 +105,11 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     fclose(dict);
-    table();
-   }
+    see();
     return true;
 }
 
-void table(void)
+void see(void)
 {
     for (node *cursor = table[52]; cursor != NULL; cursor = cursor->next)
     {
