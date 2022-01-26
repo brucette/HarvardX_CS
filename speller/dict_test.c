@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    if (strcasecmp("foo's", "foo") == 0)
+    if (strcasecmp("ca", "cat") == 0)
         {
             printf("Same\n");
         }
