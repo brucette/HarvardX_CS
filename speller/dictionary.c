@@ -98,11 +98,11 @@ bool load(const char *dictionary)
                                                                             //printf("BUFFER IS ****%s*****\n\n", buffer);
                                                                             //printf("INDEX BEGIN IS****%s*****\n", table[index]->word);
 
-        if (table[index] == NULL)
-        {
-            n->next = NULL;
-            table[index] = n;
-        }
+        //if (table[index] == NULL)
+        //{
+            //n->next = NULL;
+            //table[index] = n;
+        //}
         // insert node into hash table at that location
         n->next = table[index];
         table[index] = n;
