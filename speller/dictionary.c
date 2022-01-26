@@ -105,7 +105,7 @@ bool load(const char *dictionary)
     {
         if (table[i] != NULL)
         {
-            for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
+            for (node *cursor = table[i]; cursor = cursor->next)
         {
             printf("%s\n", cursor->word);
         }
