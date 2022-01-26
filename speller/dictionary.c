@@ -133,13 +133,14 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *tmp = table[i];
-        if (tmp != NULL)
+        while (tmp != NULL)
         {
             node *cursor = tmp->next;
             free(tmp);
+            tmp = cursor;
             cursor = cursor->next;
         }
-        free(tmp);
+        free(tmp->next);
         return true;
     }
     return false;
