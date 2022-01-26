@@ -31,7 +31,7 @@ unsigned int counter = 0;
 bool check(const char *word)
 {
     // hash word to obtain hash value
-    unsigned int index = hash(word);
+    int index = hash(word);
     printf("hash is %i\n", index);
 
     // access linked list at that index in the hash table
