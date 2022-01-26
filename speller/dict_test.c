@@ -8,6 +8,10 @@ int main(void)
 {
     if (strcasecmp("foo's", "foo") == 0)
         {
-            return true;
+            printf("Same");
         }
+    else
+    {
+        printf("not the same")
+    }
 }
