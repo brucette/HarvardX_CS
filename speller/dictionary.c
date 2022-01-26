@@ -107,8 +107,9 @@ bool load(const char *dictionary)
         {*/
             //for (node *cursor = table[4]; cursor != NULL; cursor = cursor->next)
             //{
-                printf("hello");
-                printf("%s\n", table[4]->word);
+                printf("===hello\n:");
+                printf("%s\n", table[52]->word);
+                printf("===hello\n:");
             //}
         //}
     //}
