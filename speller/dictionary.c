@@ -32,7 +32,8 @@ bool check(const char *word)
 {
     // hash word to obtain hash value
     int index = hash(word);
-                                                                    //printf("hash is %i\n", index);
+    printf("hash is %i\n", index);
+    printf("word length is %lu\n", strlen(word));
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
