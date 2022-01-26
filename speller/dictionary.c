@@ -137,12 +137,11 @@ bool unload(void)
 
         while (tmp != NULL)
         {
-            cursor = tmp->next;
+            cursor = cursor->next;
             free(tmp);
             tmp = cursor;
         }
-        free(tmp);
-        free(cursor);
+        free();
         return true;
     }
     return false;
