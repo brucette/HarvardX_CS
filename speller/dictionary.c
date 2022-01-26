@@ -138,9 +138,7 @@ bool unload(void)
             node *cursor = tmp->next;
             free(tmp);
             tmp = cursor;
-            cursor = cursor->next;
         }
-        free(tmp->next);
         return true;
     }
     return false;
