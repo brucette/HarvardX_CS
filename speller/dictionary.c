@@ -42,7 +42,6 @@ bool check(const char *word)
         {
             printf("hash word is %s\n", tmp->word);
             printf("text word is %s\n", word);
-
             return true;
         }
     }
