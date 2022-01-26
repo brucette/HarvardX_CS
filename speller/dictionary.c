@@ -90,8 +90,8 @@ bool load(const char *dictionary)
 
         // copy buffer into node
         strcpy(n->word, buffer);
-        printf("%s%s\n", table[index]->next->word, table[index]->word);
-        if (table[index]->word == false)
+        printf("%s\n", table[index]->word);
+        if (table[index] == NULL)
         {
             n->next = NULL;
             table[index] = n;
