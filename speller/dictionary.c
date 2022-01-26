@@ -101,6 +101,19 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     fclose(dict);
+    for (int i = 0; i < N; i++)
+    {
+        if (table[i] != NULL)
+        {
+            for (node *cursor = table[i]; cursor != NULL; cursor = cursor->next)
+        {
+            node *tmp = cursor;
+            free(tmp);
+            tmp = cursor;
+            return true;
+        }
+    }
+}
     return true;
 }
 
