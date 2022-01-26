@@ -111,7 +111,7 @@ bool load(const char *dictionary)
 
 void see(void)
 {
-    for (node *cursor = table[52]; cursor != NULL; cursor = cursor->next)
+    for (node *cursor = table[52]; cursor != NULL; cursor == cursor->next)
     {
         //printf("===hello\n:");
         printf("%s\n", table[52]->word);
