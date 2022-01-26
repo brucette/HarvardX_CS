@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
         {
             // Terminate current word
             word[index] = '\0';
-            printf("%s\n", word);                   //REMOVE LATER!!!!!
+                                                //printf("%s\n", word);                   //REMOVE LATER!!!!!
 
             // Update counter
             words++;
