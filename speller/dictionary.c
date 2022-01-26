@@ -47,6 +47,26 @@ bool check(const char *word)
         }
     }
     return false;*/
+
+    int length = strlen(word);
+    char copy[length+1]; // take a byte extra for NTC
+    copy[length] = '\0'; // necessary to add the ntc after allocating space to it
+
+// not converting gave errors to :) handles min length (1-char) words
+//:) handles max length (45-char) words
+//:) handles words with apostrophes properly
+//:) spell-checking is case-insensitive
+
+ for (int i = 0; i < length; i++) // we take the word and LC and save that into copy
+    {
+        copy[i] = tolower(word[i]);
+    }
+
+
+       int hashcode=hash(copy); // get a hashcode for that copy
+       node *tmp=table[hashcode];
+
+
     node *tmp = table[index];
     if(tmp == NULL) // if tmp points to null return
     {
