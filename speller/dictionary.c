@@ -94,13 +94,13 @@ bool load(const char *dictionary)
 
         // copy buffer into node
         strcpy(n->word, buffer);
-                                                                           //printf("BUFFER IS ****%s*****\n\n", buffer);
-                                                                            //printf("INDEX BEGIN IS****%s*****\n", table[index]->word);
-        //if (table[index] == NULL)
-        //{
-            //n->next = NULL;
-            //table[index] = n;
-        //}
+
+        /*if (table[index] == NULL)
+          {
+            n->next = NULL;
+            table[index] = n;
+          }*/
+
         // insert node into hash table at that location
         n->next = table[index];
         table[index] = n;
@@ -108,16 +108,6 @@ bool load(const char *dictionary)
     fclose(dict);
     return true;
 }
-
-/*void see(void)
-{
-    for (node *cursor = table[52]; cursor != NULL; cursor == cursor->next)
-    {
-        //printf("===hello\n:");
-        printf("%s\n", table[52]->word);
-        //printf("===hello\n:");
-    }
-}*/
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
@@ -133,7 +123,6 @@ bool unload(void)
         node *cursor = table[i];
         while (cursor != NULL)
         {
-
             node *tmp = cursor;
             cursor = cursor->next;
             free(tmp);
@@ -142,11 +131,3 @@ bool unload(void)
     }
     return true;
 }
-
-/*while (list != NULL)
-    {
-        node *tmp = list->next;
-        free(list);
-        list = tmp;
-    }
-    return 0;*/
