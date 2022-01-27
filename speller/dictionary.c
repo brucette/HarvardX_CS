@@ -44,8 +44,6 @@ bool check(const char *word)
     {
         if (strcasecmp(word, tmp->word) == 0)
         {
-                                                                    //printf("hash word is %s\n", tmp->word);
-                                                                    //printf("text word is %s\n", word);
             return true;
         }
     }
@@ -55,8 +53,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    //return toupper(word[0]) - 'A';
     if (strlen(word) == 1)
     {
         return ((toupper(word[0]) - 'A' ) * 26) % N;
