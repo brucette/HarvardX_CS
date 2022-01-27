@@ -73,7 +73,7 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
 
     // read strings from the file one at a time
-    while (fscanf(dict, "%s", buffer) != EOF) 
+    while (fscanf(dict, "%s", buffer) != EOF)
     {
         counter++;
 
@@ -89,12 +89,6 @@ bool load(const char *dictionary)
 
         // copy buffer into node
         strcpy(n->word, buffer);
-
-        /*if (table[index] == NULL)
-          {
-            n->next = NULL;
-            table[index] = n;
-          }*/
 
         // insert node into hash table at that location
         n->next = table[index];
