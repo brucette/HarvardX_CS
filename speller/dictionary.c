@@ -19,7 +19,7 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
+// Choose number of buckets in hash table
 const unsigned int N = 676;
 
 // Hash table
@@ -32,14 +32,9 @@ bool check(const char *word)
 {
     // hash word to obtain hash value
     int index = hash(word);
-    //printf("hash is %i\n", index);
-    //printf("word length is %lu\n", strlen(word));
 
     // access linked list at that index in the hash table
     // traverse linked list, looking for the word
-
-    //printf("INDEX BEGIN IS****%s*****\n", table[index]->next->next->word);
-
     for (node *tmp = table[index]; tmp != NULL; tmp = tmp->next)
     {
         if (strcasecmp(word, tmp->word) == 0)
@@ -104,7 +99,7 @@ unsigned int size(void)
     return counter;
 }
 
-// `s dictionary from memory, returning true if successful, else false
+// Unload`s dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     for (int i = 0; i < N; i++)
