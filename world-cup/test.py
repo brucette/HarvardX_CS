@@ -10,8 +10,8 @@ with open(sys.argv[1]) as file:
     for row in reader:
         newdict = row["team"], int(row["rating"])
         teams.append(newdict)
-        print(newdict)
+        print(newdict[0])
 
 
-#countries = {"Norway":"1915"}
-#print(countries[Norway])
+countries = {"Norway", "1915"}
+print(countries[0])
