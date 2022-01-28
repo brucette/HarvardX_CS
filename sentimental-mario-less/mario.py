@@ -12,8 +12,7 @@ for i in range(height):
 
     for k in range():
         print("#", end="")
-
-        #print(, end="")
+        
     print()
     height -= 1
 
