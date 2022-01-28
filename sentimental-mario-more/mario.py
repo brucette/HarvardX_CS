@@ -29,5 +29,3 @@ for i in range(height):
     counter += 1
     height -= 1
 
-
-
