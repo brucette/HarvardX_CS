@@ -11,3 +11,8 @@ with open(sys.argv[1]) as file:
         newdict = row["team"], int(row["rating"])
         teams.append(newdict)
         print(newdict[0])
+
+
+counter = len(teams)
+print(counter)
+#for i in range():
