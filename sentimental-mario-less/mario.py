@@ -15,7 +15,7 @@ counter = 1
         #print("#", end="")
 
     #print()
-    #height -= 1
-    #counter += 1
+    height -= 1
+    counter += 1
 
 
