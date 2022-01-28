@@ -12,4 +12,10 @@ for i in range(height):
     for j in range(height - 1):
         print(".", end="")
 
-        
+        # Print the hashes and space
+        for k in range(counter):
+            print("#", end="")
+            print("..")
+
+        #
+
