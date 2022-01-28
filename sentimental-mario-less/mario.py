@@ -6,6 +6,7 @@ while True:
         break
 
 for i in range(height):
-    print("#")
+    print("#", end="")
+print()
 
 
