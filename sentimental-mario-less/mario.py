@@ -8,6 +8,7 @@ while True:
 
 for i in range(height):
     for j in range(height):
+        print("." * )
         print("#", end="")
     print()
 
