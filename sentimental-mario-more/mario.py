@@ -6,13 +6,14 @@ while True:
     if height > 0 and height < 9:
         break
 
+# Set counter for second nested loop to go upwards
 counter = 1
 
 for i in range(height):
     for j in range(height - 1):
         print(".", end="")
 
-    # Print the hashes and space
+    # Print the hashes
     for k in range(counter):
         print("#", end="")
 
@@ -20,6 +21,7 @@ for i in range(height):
 
     for l in range(counter):
         print("#", end="")
+
     print()
     counter += 1
     height -= 1
