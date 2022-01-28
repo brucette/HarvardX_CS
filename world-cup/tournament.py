@@ -58,7 +58,8 @@ def simulate_tournament(teams):
     # TODO
     counter = len(teams)
 
-    for i in range()
+    for i in range():
+
 
 
 if __name__ == "__main__":
