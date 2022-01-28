@@ -17,3 +17,4 @@ counter = len(teams)
 print(counter)
 
 while counter != 1:
+    
