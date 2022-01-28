@@ -9,7 +9,8 @@ with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
     rating = row[int("rating")]
 
-    teams.append(reader[int(ratings)])
+    teams.append(reader)
+
     print(reader[ratings])
 
 
