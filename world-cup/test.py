@@ -10,7 +10,7 @@ with open(sys.argv[1]) as file:
     next(reader)
     for row in reader:
         rating = row[1]
-
+        int(rating)
     teams.append(reader[int(ratings)])
     print(reader[ratings])
 
