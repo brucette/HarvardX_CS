@@ -57,9 +57,9 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     counter = len(teams)
-
     for i in range():
 
+    while simulate_round(teams) != 1:
 
 
 if __name__ == "__main__":

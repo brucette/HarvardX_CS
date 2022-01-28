@@ -13,8 +13,7 @@ with open(sys.argv[1]) as file:
         print(newdict[0])
 
 
-counter = len(teams)
-print(counter)
+winners = []
 
-while counter != 1:
-    
+
+
