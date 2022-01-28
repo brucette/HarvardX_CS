@@ -7,7 +7,7 @@ teams = []
 # TODO: Read teams into memory from file
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
-    rating = reader[1]
+    rating = row[int("rating")]
 
     teams.append(reader[int(ratings)])
     print(reader[ratings])
