@@ -13,5 +13,5 @@ with open(sys.argv[1]) as file:
         print(newdict[0])
 
 
-countries = {"Norway", "1915"}
+countries = {"Norway": "1915"}
 print(countries[0])
