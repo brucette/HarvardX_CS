@@ -26,6 +26,11 @@ def simulate_round(teams):
     return winners
 
 
+while len(simulate_round(teams)) != 1:
+     winner = (simulate_round(teams)
+return winner
+
+
 
 
 
