@@ -15,11 +15,11 @@ for i in range(height):
     # Print the hashes and space
     for k in range(counter):
         print("#", end="")
-        print("..")
-        print("#", end="")
-    print()
-    counter += 1
-    height -= 1
+    print("..")
+        #print("#", end="")
+    #print()
+    #counter += 1
+    #height -= 1
 
         #
 
