@@ -5,9 +5,9 @@ while True:
     if height > 0 and height < 9:
         break
 
-def pyramid(n):
-    for i in range(n):
-        print("#", end="")
-    print()
 
+for i in range(3):
+    for j in range(3):
+    print("#", end="")
+print()
 
