@@ -15,4 +15,5 @@ with open(sys.argv[1]) as file:
 
 counter = len(teams)
 print(counter)
-#for i in range():
+
+while counter != 1:
