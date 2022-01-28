@@ -7,15 +7,19 @@ while True:
 
 counter = 1
 
+#for i in range(height):
+    #for j in range(height - 1):
+        #print(" ", end="")
+
+    #for k in range(counter):
+        #print("#", end="")
+
+    #print()
+    #height -= 1
+    #counter += 1
+
+
 for i in range(height):
-    for j in range(height - 1):
-        print(" ", end="")
-
-    for k in range(counter):
-        print("#", end="")
-
-    print()
-    height -= 1
-    counter += 1
-
+    for j in range(height):
+        print("#")
 
