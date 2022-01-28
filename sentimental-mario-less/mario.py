@@ -19,10 +19,3 @@ counter = 1
     #counter += 1
 
 
-for i in range(height):
-    for j in range(counter):
-        print("#", end="")
-        counter += 1
-    print()
-    #height += 1
-
