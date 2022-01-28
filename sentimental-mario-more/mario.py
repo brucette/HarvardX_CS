@@ -16,6 +16,10 @@ for i in range(height):
         for k in range(counter):
             print("#", end="")
             print("..")
+            print("#", end="")
+    print()
+    counter += 1
+    height -= 1
 
         #
 
