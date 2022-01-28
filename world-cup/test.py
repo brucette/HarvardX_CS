@@ -7,11 +7,9 @@ teams = []
 # TODO: Read teams into memory from file
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
-    rating = row[int("rating")]
-
-    teams.append(reader)
-
-    print(reader[ratings])
+    for row in reader:
+        #teams.append(row["team"], row["rating"])
+        print(row)
 
 
 #countries = {"Norway":"1915"}
