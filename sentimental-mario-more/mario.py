@@ -15,7 +15,8 @@ for i in range(height):
     # Print the hashes and space
     for k in range(counter):
         print("#", end="")
-        print("..")
+
+    print("..")
 
     for l in range(counter):
         print("#", end="")
