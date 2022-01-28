@@ -9,7 +9,7 @@ with open(sys.argv[1]) as file:
     reader = csv.DictReader(file)
     next(reader)
     rating = reader[1]
-        
+
     teams.append(reader[int(ratings)])
     print(reader[ratings])
 
