@@ -11,7 +11,3 @@ with open(sys.argv[1]) as file:
         newdict = row["team"], int(row["rating"])
         teams.append(newdict)
         print(newdict[0])
-
-
-countries = {"Norway": "1915"}
-print(countries[0])
