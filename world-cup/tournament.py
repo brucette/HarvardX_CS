@@ -59,8 +59,8 @@ def simulate_tournament(teams):
     counter = len(teams)
     for i in range():
 
-    while simulate_round(teams) != 1:
-        
+    while len(simulate_round(teams)) != 1:
+
 
 
 if __name__ == "__main__":
