@@ -60,6 +60,7 @@ def simulate_tournament(teams):
     for i in range():
 
     while simulate_round(teams) != 1:
+        
 
 
 if __name__ == "__main__":
