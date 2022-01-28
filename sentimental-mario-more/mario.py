@@ -10,15 +10,18 @@ while True:
 counter = 1
 
 for i in range(height):
+    # Print left spaces
     for j in range(height - 1):
-        print(".", end="")
+        print(" ", end="")
 
-    # Print the hashes
+    # Print the left hashes
     for k in range(counter):
         print("#", end="")
 
-    print("..", end="")
+    # Print middle spaces
+    print("  ", end="")
 
+    # Print the right hashes
     for l in range(counter):
         print("#", end="")
 
