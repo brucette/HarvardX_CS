@@ -21,7 +21,7 @@ for i in range(height):
     for l in range(counter):
         print("#", end="")
 
-    print()
+    #print()
     counter += 1
     height -= 1
 
