@@ -6,8 +6,8 @@ while True:
         break
 
 
-for i in range(3):
-    for j in range(3):
+for i in range(height):
+    for j in range(height - 1):
         print("#", end="")
     print()
 
