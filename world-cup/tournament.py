@@ -23,8 +23,6 @@ def main():
           teams.append(newdict)
 
 
-
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
