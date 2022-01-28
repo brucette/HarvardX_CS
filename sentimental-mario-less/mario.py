@@ -20,6 +20,9 @@ counter = 1
 
 
 for i in range(height):
-    for j in range(height):
-        print("#")
+    for j in range((height - height) + 1):
+        print("#", end="")
+        height += 1
+    print()
+    #height += 1
 
