@@ -12,7 +12,7 @@ with open(sys.argv[1]) as file:
         teams.append(dict(row))
 
 for i in range(len(teams)):
-    print(teams[i['team']]) #newdict[0])
+    print(teams[i]['team']) #newdict[0])
 
 
 
