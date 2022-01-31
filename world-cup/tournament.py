@@ -27,8 +27,8 @@ def main():
     for i in teams:
         counts["team"] = i["team"]
 
-    for team, number in counts.items():
-        number = 0;
+    for team in counts:
+        team = 0;
 
     print(counts)
 
