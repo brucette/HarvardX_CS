@@ -32,16 +32,13 @@ def main():
 
     #print(f"printing counts: {counts}")
 
-    final_winners = []
-
     for _i in range(0, N):
         winner = simulate_tournament(teams)
         final_winners.append(winner)
 
     print(f"*****printing final winner******: {final_winners}")
     print()
-    for winner in final_winners:
-        counts[final_winner["team"]] += 1
+
 
     #print(f"printing counts: {counts}")
 
