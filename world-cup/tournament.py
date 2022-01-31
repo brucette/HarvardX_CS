@@ -26,7 +26,9 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
     for i in teams:
         counts[i] = i["team"]
-        counts[team] = 0;
+
+    for country in counts:
+        counts[country] = 0;
 
     for j in range(N):
         winner = simulate_tournament(teams)
