@@ -31,18 +31,20 @@ def main():
 
     print(f"printing counts: {counts}")
     #'Norway': 0
+    final_winners = []
 
     for x in range(N):
         winner = simulate_tournament(teams)
-    #print(f"printing winner: {winner}")
+        final_winners.append(winner)
+    print(f"printing final winner: {final_winners}")
     #[[{'team': 'Australia', 'rating': '2003'
-        counts[winner["team"]] += 1
+    #counts[winner["team"]] += 1
 
     print(f"printing counts: {counts}")
 
-    # Print each team's chances of winning, according to simulation
-    #for team in sorted(counts, key=lambda team: counts[team], reverse=True):
-        #print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
+    #Print each team's chances of winning, according to simulation
+    for team in sorted(counts, key=lambda team: counts[team], reverse=True):
+        print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
 
 
 def simulate_game(team1, team2):
