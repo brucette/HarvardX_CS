@@ -22,14 +22,14 @@ def main():
           int(row["rating"])
           teams.append(row)
 
-    counts = {"canda": 0, "norway": 2}
+    counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in teams:
-        counts[team] = i["team"]
+        counts[i["team"]] = 0;
 
-    #for team in counts:
+    for team in counts:
         #team = 0;
-    #print(counts)
+    print(counts)
 
     for j in range(N):
         winner = simulate_tournament(teams)
