@@ -38,10 +38,9 @@ def main():
         final_winners.append(winner)
 
     for k in final_winners:
-        counts[winner["team"]] += 1
+        counts[k["team"]] += 1
 
     print(f"*****printing final winner******: {final_winners}")
-    #[[{'team': 'Australia', 'rating': '2003'
 
     print(f"printing counts: {counts}")
 
