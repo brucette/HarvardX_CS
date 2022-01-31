@@ -34,7 +34,7 @@ def main():
 
     for winner in range(0, N):
         winner = simulate_tournament(teams)
-        counts[team["team"]] += 1
+        counts[winner[""]] += 1
 
     print(f"*****printing winner******: {winner}")
     print()
