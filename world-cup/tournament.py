@@ -24,10 +24,11 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    print(f"*****printing teams******: {final_winners}")
+
+    print(f"*****printing teams******: {teams}")
+    print()
     for team in teams:
         counts[team["team"]] = 0
-
 
     #print(f"printing counts: {counts}")
 
@@ -37,10 +38,10 @@ def main():
         winner = simulate_tournament(teams)
         final_winners.append(winner)
 
+    print(f"*****printing final winner******: {final_winners}")
+    print()
     for winner in final_winners:
         counts[final_winner["team"]] += 1
-
-    print(f"*****printing final winner******: {final_winners}")
 
     #print(f"printing counts: {counts}")
 
