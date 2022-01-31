@@ -32,7 +32,7 @@ def main():
     for j in range(N):
         winner = simulate_tournament(teams)
     #print(winner)
-        counts[winner["team"]] += 1
+        counts["team"[winner]] += 1
 
 
     # Print each team's chances of winning, according to simulation
