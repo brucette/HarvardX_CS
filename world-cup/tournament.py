@@ -31,7 +31,7 @@ def main():
 
     final_winners = []
 
-    for i in range(0, N):
+    for _i in range(0, N):
         winner = simulate_tournament(teams)
         final_winners.append(winner)
 
