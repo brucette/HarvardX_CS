@@ -29,8 +29,7 @@ def main():
 
     for team in counts:
         team = 0;
-
-    print(counts)
+        print(counts)
 
     for j in range(N):
         winner = simulate_tournament(teams)
