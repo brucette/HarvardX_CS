@@ -22,7 +22,7 @@ def main():
           int(row["rating"])
           teams.append(row)
 
-    print(f"printing teams: , {teams}")
+    #print(f"printing teams: , {teams}")
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -34,10 +34,11 @@ def main():
 
     for x in range(N):
         winner = simulate_tournament(teams)
-    print(f"printing winner: {winner}")
+    #print(f"printing winner: {winner}")
     #[[{'team': 'Australia', 'rating': '2003'
         counts[winner['team']] += 1
 
+    print(f"printing counts: {counts}")
 
     # Print each team's chances of winning, according to simulation
     #for team in sorted(counts, key=lambda team: counts[team], reverse=True):
