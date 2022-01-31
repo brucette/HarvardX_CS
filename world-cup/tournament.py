@@ -24,12 +24,12 @@ def main():
 
     counts = {"canda": 0, "norway": 2}
     # TODO: Simulate N tournaments and keep track of win counts
-    #for i in teams:
-        #counts["team"] = i["team"]
+    for i in teams:
+        counts[i] = i["team"]
 
     #for team in counts:
         #team = 0;
-    print(counts)
+    #print(counts)
 
     for j in range(N):
         winner = simulate_tournament(teams)
