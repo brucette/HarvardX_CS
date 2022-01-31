@@ -27,8 +27,8 @@ def main():
     for i in teams:
         counts["country"] = i["team"]
 
-    for country in counts:
-        counts[country] = 0;
+    for country, number in counts.items():
+        number = 0;
 
     for j in range(N):
         winner = simulate_tournament(teams)
