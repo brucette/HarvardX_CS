@@ -32,7 +32,7 @@ def main():
     print(f"printing counts: {counts}")
     #'Norway': 0
 
-    for j in range(N):
+    for x in range(N):
         winner = simulate_tournament(teams)
     print(f"printing winner: {winner}")
     #[[{'team': 'Australia', 'rating': '2003'
