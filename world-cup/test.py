@@ -11,7 +11,9 @@ with open(sys.argv[1]) as file:
         newdict = row["team"], int(row["rating"])
         teams.append(newdict)
 
-print(teams) #newdict[0])
+for i in teams:
+    print(teams["team"]) #newdict[0])
+
 
 
 
