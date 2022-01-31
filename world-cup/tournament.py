@@ -19,7 +19,7 @@ def main():
     with open(sys.argv[1]) as file:
       reader = csv.DictReader(file)
       for row in reader:
-          int(["rating"])
+          row["rating"] = int(row["rating"])
           teams.append(row)
 
     counts = {}
@@ -39,8 +39,8 @@ def main():
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
-    rating1 = int(team1["rating"]) #REMOVE INT BACK
-    rating2 = int(team2["rating"])
+    rating1 = team1["rating"] #REMOVE INT BACK
+    rating2 = team2["rating"]
     probability = 1 / (1 + 10 ** ((rating2 - rating1) / 600))
     return random.random() < probability
 
