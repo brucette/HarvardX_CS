@@ -22,18 +22,16 @@ def main():
           int(row["rating"])
           teams.append(row)
 
-    #print(f"printing teams: , {teams}")
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for team in teams:
         counts[team["team"]] = 0
 
     print(f"printing counts: {counts}")
-    #'Norway': 0
+
     final_winners = []
 
-    for i in range(N):
+    for i in range(0, N):
         winner = simulate_tournament(teams)
         final_winners.append(winner)
 
