@@ -27,7 +27,7 @@ def main():
     for team in teams:
         counts[team["team"]] = 0
 
-    print(f"printing counts: {counts}")
+    #print(f"printing counts: {counts}")
 
     final_winners = []
 
@@ -40,7 +40,7 @@ def main():
 
     print(f"*****printing final winner******: {final_winners}")
 
-    print(f"printing counts: {counts}")
+    #print(f"printing counts: {counts}")
 
     #Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
