@@ -27,10 +27,10 @@ def main():
     for i in teams:
         counts["team"] = i["team"]
 
-    print(counts)
-
     for team, number in counts.items():
         number = 0;
+
+    print(counts)
 
     for j in range(N):
         winner = simulate_tournament(teams)
