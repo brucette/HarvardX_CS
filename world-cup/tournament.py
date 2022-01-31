@@ -36,7 +36,7 @@ def main():
         winner = simulate_tournament(teams)
     print(f"printing winner: {winner}")
     #[[{'team': 'Australia', 'rating': '2003'
-        #counts[winner['team']] += 1
+        counts[winner['team']] += 1
 
 
     # Print each team's chances of winning, according to simulation
@@ -69,11 +69,10 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    winner = []
 
-    while len(winner) != 1:
-        winner = simulate_round(winner)
-    return winner
+    while len(teams) != 1:
+        teams = simulate_round(teams)
+    return teams
 
 
 
