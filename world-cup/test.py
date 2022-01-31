@@ -9,7 +9,7 @@ with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
     for row in reader:
         newdict = row["team"], int(row["rating"])
-        teams.append(dict(row))
+        teams.append(newdict)
 
 for i in range(len(teams)):
     print(teams[i]['team']) #newdict[0])
