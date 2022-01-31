@@ -27,7 +27,7 @@ def main():
     for i in teams:
         counts["team"] = i["team"]
 
-    for country, number in counts.items():
+    for team, number in counts.items():
         number = 0;
 
     for j in range(N):
