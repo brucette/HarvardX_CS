@@ -69,11 +69,11 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    winner = 
+
     while len(winner) != 1:
         winner.append(simulate_round(teams))
 
-    return winner
+
 
 
 
