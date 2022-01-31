@@ -35,7 +35,7 @@ def main():
     for j in range(N):
         winner = simulate_tournament(teams)
     print(f"printing winner: {winner}")
-    #'team': 'Australia', 'rating': '2003'
+    #[[{'team': 'Australia', 'rating': '2003'
         #counts[winner['team']] += 1
 
 
