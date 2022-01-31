@@ -8,11 +8,11 @@ teams = []
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
     for row in reader:
-        #newdict = row["team"], int(row["rating"])
-        teams.append(row)
+        newdict = row["team"], int(row["rating"])
+        teams.append(dict(row))
 
 for i in teams:
-    print(teams["team"]) #newdict[0])
+    print(teams[team]) #newdict[0])
 
 
 
