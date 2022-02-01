@@ -19,22 +19,22 @@ if quarters > 0:
     coins += quarters
 
 # Divide by 10 cents
-dimes = int(amount % 25) / 10
+dimes = int((amount % 25) / 10)
 
 if dimes > 0:
     coins += dimes
 
 # Divide by 5 cents
-nickels = ((amount % 25) % 10) / 5
+nickels = int(((amount % 25) % 10) / 5)
 
 if nickels > 0:
     coins += nickels
 
 # Divide by 1 cents
-pennies = (((amount % 25) % 10) % 5) / 1
+pennies = int((((amount % 25) % 10) % 5) / 1)
 
 if pennies > 0:
     coins += pennies
 
-print(int(coins))
+print(coins)
 print()
