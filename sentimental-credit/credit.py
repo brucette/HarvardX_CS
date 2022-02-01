@@ -37,6 +37,7 @@ while i >= 0:
     i -= 2
 
 
+# Check if 0 exists in end sum by using % 10
 if (sum_rest + sum) % 10 == 0:
 
     if card[0] == '4' and (length == 13 or 16):
