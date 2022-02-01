@@ -14,8 +14,7 @@ int main(void)
     int remainder_sum = 0;
     int first_set[8];
     long backwards[sizeof(number)];
-    string num = (string) number;
-    printf("%s", number)
+
     /*
     int counter = 0;
     do
@@ -59,7 +58,7 @@ int main(void)
 
 
 
-    /*int multiplier = 100;
+    int multiplier = 100;
     int last_numbs;
     int first_numb;
     int sum = 0;*/
