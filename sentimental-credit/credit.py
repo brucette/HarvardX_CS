@@ -11,7 +11,7 @@ print(length)
 # String for every other digit starting from second last
 every_other = ""
 
-for digit in range(length - 1, -2, 0):
-    every_other  += digit
+for digit in every_other:
+    every_other += digit
 
 print(every_other)
