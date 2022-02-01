@@ -43,3 +43,6 @@ while i >= 0:
     i -= 2
 
 print(sum_rest)
+
+if (sum_rest + sum) % 10:
+    
