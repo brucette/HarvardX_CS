@@ -19,7 +19,7 @@ if quarters > 0:
     coins += quarters
 
 # Divide by 10 cents
-dimes = (amount % 25) / 10
+dimes = int(amount % 25) / 10
 
 if dimes > 0:
     coins += dimes
