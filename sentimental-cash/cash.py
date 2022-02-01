@@ -10,14 +10,18 @@ while True:
 coins = 0
 
 # Divide by 25 cents with truncation
-quarters = amount * 100 / 25
-#trunc = trunc(quarters)
+quarters = int(amount * 100 / 25)
 
-if math.trunc(quarters) > 0:
-    coins += math.trunc(quarters)
+if quarters > 0:
+    coins += quarters
 
 # Divide by 10 cents
+dimes = amount - quarters * 100 / 25
 
 # Divide by 5 cents
+nickels =
+
 # Divide by 1 cents
+pennies =
+
 print(coins)
