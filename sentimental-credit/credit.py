@@ -48,7 +48,7 @@ print(length)
 
 if sum_rest + sum % 10 == 0:
 
-    if card[0] == 4 and length == 13 or 16:
+    if card[0] == 4 and (length == 13 or 16):
         print("VISA\n")
 
     if card[0] == 5 and card[1] >= 1 and card[1] <= 5 and length == 16:
