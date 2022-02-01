@@ -14,7 +14,7 @@ int main(void)
     int remainder_sum = 0;
     //int first_set[8];
     char first_set[8];
-    //long backwards[sizeof(number)];
+    char backwards[8];
     //string num [8];
 
 
@@ -27,7 +27,8 @@ int main(void)
         {
             printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
             int num = digit * 2;
-            sprintf(first_set, "%i", num);
+            sprintf(first_set, "%i", num); // converts integer to string
+            strcpy(first_set, backwards);
             printf("#####FIRST_SET: %s\n", first_set);
             index++;
 
