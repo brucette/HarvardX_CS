@@ -13,7 +13,7 @@ int main(void)
     int digit;
     int remainder_sum = 0;
     int first_set[8];
-    long backwards[sizeof(number)];
+    //long backwards[sizeof(number)];
 
 
     int counter = 0;
