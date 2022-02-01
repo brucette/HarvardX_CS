@@ -8,6 +8,8 @@ if  length != 13 or length != 15 or length != 16:
     print("INVALID\n")
 
 # String for every other digit starting from second last
+every_other = ""
 
-for i in range(length - 1, -2, 0):
-    x += i
+for digit in range(length - 1, -2, 0):
+    every_other  += digit
+print(every_other)
