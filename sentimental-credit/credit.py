@@ -54,7 +54,7 @@ if sum_rest + sum % 10 == 0:
     if card[0] == 5 and card[1] >= 1 and card[1] <= 5 and length == 16:
         print("MASTERCARD\n")
 
-    if card[0] == 3 and card[1] == 4 or card[1] == 7 and length == 15:
+    if card[0] == 3 and (card[1] == 4 or card[1] == 7) and length == 15:
         print("AMEX\n")
     else:
         print("INVALID\n")
