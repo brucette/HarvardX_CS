@@ -12,4 +12,5 @@ every_other = ""
 
 for digit in range(length - 1, -2, 0):
     every_other  += digit
+print(length)
 print(every_other)
