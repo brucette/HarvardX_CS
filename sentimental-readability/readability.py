@@ -6,8 +6,8 @@ text = get_string("Text: ")
 # Number of letters
 letters = 0
 for i in text:
-    letter = ord(i)
-    if letter 
+    letter = print(ord(i))
+    if letter.lower() 
 # Number of words
 words = 0
 
