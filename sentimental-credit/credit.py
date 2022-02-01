@@ -14,7 +14,7 @@ while i >= 0:
     i -= 2
 
 
-# String for every other digit (from second last) multiplied by 2
+# Multiply by 2 every digit in concatenated string
 multiplied = ""
 
 for digit in every_other:
@@ -31,7 +31,7 @@ for digit in multiplied:
 # Sum of remaining numbers
 sum_rest = 0
 
-i = length -1
+i = length - 1
 while i >= 0:
     sum_rest += int(card[i])
     i -= 2
