@@ -27,9 +27,9 @@ int main(void)
         {
             printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
             int num = digit * 2;
-            char conv = sprintf(first_set, "%i", num); // converts integer to string
+            char conv = sprintf(&first_set[index], "%i", num); // converts integer to string
             strcpy(backwards, &conv);
-            printf("#####FIRST_SET: %s\n", first_set);
+            printf("#####FIRST_SET: %c\n", first_set[index]);
             index++;
 
 //strcpy((char)conv, backwards);  \\ how to then add those digits to another long/int array/char array,how to convert int to string?
