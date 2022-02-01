@@ -40,7 +40,6 @@ int main(void)
     }
     while (number /= 10);
 
-    //printf("FIRST_SET: %i", first_set)
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
