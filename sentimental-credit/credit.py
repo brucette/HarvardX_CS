@@ -51,11 +51,11 @@ if sum_rest + sum % 10 == 0:
     if card[0] == 4 and (length == 13 or 16):
         print("VISA\n")
 
-    if card[0] == 5 and card[1] >= 1 and card[1] <= 5 and length == 16:
+    elif card[0] == 5 and card[1] >= 1 and card[1] <= 5 and length == 16:
         print("MASTERCARD\n")
 
-    if card[0] == 3 and (card[1] == 4 or card[1] == 7) and length == 15:
+    elif card[0] == 3 and (card[1] == 4 or card[1] == 7) and length == 15:
         print("AMEX\n")
-    else:
-        print("INVALID\n")
+else:
+    print("INVALID\n")
 
