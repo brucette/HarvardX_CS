@@ -26,6 +26,7 @@ int main(void)
         {
             printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
             first_set[index] = digit * 2;
+            printf("FIRST_SET: %i\n", first_set[index]);
             index++;
             //int conv = digit * 2;                \\ multiply every digit by 2
             //strcpy((char)conv, backwards);       \\ how to then add those digits to another long/int array/char array, how to convert int to string?
@@ -39,7 +40,7 @@ int main(void)
     }
     while (number /= 10);
 
-    printf("FIRST_SET: %i", first_set)
+    //printf("FIRST_SET: %i", first_set)
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
