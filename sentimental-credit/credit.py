@@ -45,4 +45,8 @@ while i >= 0:
 print(sum_rest)
 
 if (sum_rest + sum) % 10:
-    
+    if card[0] == 4 and (length == 13 or length == 16):
+        print("VISA\n")
+
+    if card[0] == 5 and (card[1] >= 1 and  card[1] <= 5) anf length == 16:
+        print("MASTERCARD\n")
