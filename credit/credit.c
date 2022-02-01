@@ -44,7 +44,7 @@ int main(void)
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%i\n", first_set[i]);
+        printf("FIRST SET: %i\n", first_set[i]);
     }
     printf("\n\n");
 
