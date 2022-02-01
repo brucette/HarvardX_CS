@@ -4,7 +4,7 @@ from cs50 import get_string
 card = get_string("Number: ")
 length = len(card)
 
-if len(card) != 13 or len(card) != 15 or len(card) != 16:
+if length != 13 and length != 15 and length != 16:
     print("INVALID\n")
 print(length)
 
