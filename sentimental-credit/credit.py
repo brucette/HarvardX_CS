@@ -10,3 +10,4 @@ if  length != 13 or length != 15 or length != 16:
 # String for every other digit starting from second last
 
 for i in range(length - 1, -2, 0):
+    x += i
