@@ -10,13 +10,13 @@ sentences = 0
 for character in text:
     letter = ord(character.lower())
                 #97        122
-    if letter >= 'a' and letter <= 'z':
+    if letter >= 97 and letter <= 122:
         letters += 1
 
     if character == " ":
         words += 1
 
-    if character == '.' or == '!' or === '?':
+    if character == '.' or character == '!' or character == '?':
         sentences += 1
 
 print(letters, words, sentences)
