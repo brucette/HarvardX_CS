@@ -5,6 +5,9 @@ while True:
     if amount > 0:
         break
 
+# Number of coins
+coins = 0
+
 # Divide by 25 cents
 quarters = amount * 100 // 25
 print(quarters)
