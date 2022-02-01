@@ -43,7 +43,7 @@ int main(void)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
-    for (int i = 0; i < 8; i++)
+    /*for (int i = 0; i < 8; i++)
     {
         printf("FIRST SET: %i\n", first_set[i]);
     }
@@ -57,14 +57,7 @@ int main(void)
 
 
 
-
-
-    int multiplier = 100;
-    int last_numbs;
-    int first_numb;
-    int sum = 0;
-
-    /*while (number > x) // length of number / 2?
+    while (number > x) // length of number / 2?
     {
         last_numbs = number % multiplier; // get last digits
         while (last_numbs >= 10)
@@ -75,8 +68,6 @@ int main(void)
 	    }
         multiplier *= 10;
     }*/
-
-
 
     //string characters;
     //printf("%s\n", (string) number);
