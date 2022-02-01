@@ -8,8 +8,9 @@ while True:
 # Number of coins
 coins = 0
 
-# Divide by 25 cents
+# Divide by 25 cents with truncation
 quarters = amount * 100 // 25
+coins += quarters
 print(quarters)
 # Divide by 10 cents
 # Divide by 5 cents
