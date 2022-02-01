@@ -3,13 +3,13 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 letters = 0
-#for last word
+# start with 1 to account for last word
 words = 1
 sentences = 0
 
 for character in text:
     letter = ord(character.lower())
-               # ascii: 97 = 'a', 122 = 'z'
+          # ascii: 97 = 'a', 122 = 'z'
     if letter >= 97 and letter <= 122:
         letters += 1
 
@@ -26,7 +26,7 @@ L = (letters / words) * 100
 S = (sentences / words) * 100
 
 # Calculate reading grade
-grade = int(0.0588 * L - 0.296 * S - 15.8)
+grade = round(0.0588 * L - 0.296 * S - 15.8)
 
 if grade >= 16:
     print(f"Grade 16+")
