@@ -1,4 +1,5 @@
 from cs50 import get_float
+import math
 
 while True:
     amount = get_float("Amount: ")
@@ -13,7 +14,7 @@ quarters = amount * 100 / 25
 #trunc = trunc(quarters)
 
 if math.trunc(quarters) > 0:
-    coins += trunc(quarters)
+    coins += math.trunc(quarters)
 
 # Divide by 10 cents
 
