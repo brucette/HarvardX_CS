@@ -13,8 +13,9 @@ int main(void)
     int digit;
     int remainder_sum = 0;
     int first_set[8];
-    //long backwards[sizeof(number)];
+    long backwards[sizeof(number)];
 
+    /*
     int counter = 0;
     do
     {
@@ -38,7 +39,7 @@ int main(void)
     while (number /= 10);
 
     //ADD ALL DIGITS IN backwards together (use isdigit()?)
-    //CONVERT NUMBER TO TRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
+    //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
     for (int i = 0; i < 8; i++)
@@ -84,4 +85,5 @@ int main(void)
     //printf("MASTERCARD\n");
     //printf("VISA\n");
     //printf("INVALID\n");
+    
 }
