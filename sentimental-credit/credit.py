@@ -11,7 +11,9 @@ print(length)
 # String for every other digit starting from second last
 every_other = ""
 
-for i in range(:length -2, -2, :):
+i = length -2
+while i >= 0:
     every_other += card[i]
+    i -= 2
 
 print(every_other)
