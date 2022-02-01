@@ -36,4 +36,5 @@ pennies = (((amount % 25) % 10) % 5) / 1
 if pennies > 0:
     coins += pennies
 
-print(coins)
+print(int(coins))
+print()
