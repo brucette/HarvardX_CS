@@ -1,11 +1,11 @@
 from cs50 import get_float
 import math
 
-amount = -1
-while amount < 0:
+
+while True:
     amount = get_float("Amount: ")
-    #if amount > 0:
-        #break
+    if amount > 0:
+        break
 
 # Convert amount to cents
 amount *= 100
