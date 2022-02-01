@@ -44,6 +44,7 @@ while i >= 0:
 
 print(sum_rest + sum)
 print(card[0], card[1])
+print(length)
 
 if sum_rest + sum % 10 == 0:
 
