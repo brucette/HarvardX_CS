@@ -49,6 +49,11 @@ int main(void)
     printf("FIRST SET: %i\n", first_set[0]);
     printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
+    printf("FIRST SET: %i\n", first_set[3]);
+    printf("FIRST SET: %i\n", first_set[4]);
+    printf("FIRST SET: %i\n", first_set[5]);
+    printf("FIRST SET: %i\n", first_set[6]);
+    printf("FIRST SET: %i\n", first_set[7]);
     printf("\n\n");
 
 
