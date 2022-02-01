@@ -6,7 +6,7 @@ while True:
         break
 
 # Divide by 25 cents
-quarters = amount * 100 / 250
+quarters = amount * 100 // 25
 print(quarters)
 # Divide by 10 cents
 # Divide by 5 cents
