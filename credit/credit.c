@@ -15,7 +15,7 @@ int main(void)
     int first_set[8];
     long backwards[sizeof(number)];
 
-    /*
+
     int counter = 0;
     do
     {
@@ -23,7 +23,7 @@ int main(void)
         int index = 0;
         if (counter % 2 != 0)
         {
-            printf("backwards: %i\n", digit);    // get every other digit starting from second last
+            printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
             first_set[index] = digit * 2;
             index++;
             //int conv = digit * 2;                \\ multiply every digit by 2
@@ -61,7 +61,7 @@ int main(void)
     int multiplier = 100;
     int last_numbs;
     int first_numb;
-    int sum = 0;*/
+    int sum = 0;
 
     /*while (number > x) // length of number / 2?
     {
