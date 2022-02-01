@@ -20,10 +20,10 @@ for character in text:
         sentences += 1
 
 # Calculate average number of letters per 100 words
-L = int((letters / words) * 100)
+L = (letters / words) * 100
 
 # Calculate average number of sentences per 100 words
-S = int((sentences / words) * 100)
+S = (sentences / words) * 100
 
 # Calculate reading grade
 grade = int(0.0588 * L - 0.296 * S - 15.8)
