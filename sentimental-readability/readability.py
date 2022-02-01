@@ -3,16 +3,23 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 
-# Number of letters
 letters = 0
-for i in text:
-    letter = print(ord(i))
-    if letter.lower() 
-# Number of words
 words = 0
-
-# Number of sentences
 sentences = 0
+
+for character in text:
+    letter = ord(character.lower())
+                #97        122
+    if letter >= 'a' or <= 'z':
+        letters += 1
+
+    if character == " ":
+        words += 1
+
+    if character == ''
+
+
+
 
 # 0.0588 * L - 0.296 * S - 15.8,
 # where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text
