@@ -9,7 +9,7 @@ sentences = 0
 
 for character in text:
     letter = ord(character.lower())
-          # ascii: 97 = 'a', 122 = 'z'
+    # ascii: 97 = 'a', 122 = 'z'
     if letter >= 97 and letter <= 122:
         letters += 1
 
