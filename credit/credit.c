@@ -45,10 +45,10 @@ int main(void)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
-    for (int i = 0; i < 8; i++)
-    {
-        printf("FIRST SET: %i\n", first_set[i]);
-    }
+
+    printf("FIRST SET: %i\n", first_set[0]);
+    printf("FIRST SET: %i\n", first_set[1]);
+    printf("FIRST SET: %i\n", first_set[2]);
     printf("\n\n");
 
 
