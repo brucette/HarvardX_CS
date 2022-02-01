@@ -17,3 +17,11 @@ while i >= 0:
     i -= 2
 
 print(every_other)
+
+# Sum of products of every other digit starting from second last
+sum_every_other = 0
+
+for digit in every_other:
+    sum_every_other += int(digit)
+
+print(sum_every_other)
