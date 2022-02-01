@@ -46,7 +46,7 @@ if (sum_rest + sum) % 10 == 0:
     elif card[0] == '5' and card[1] >= '1' and card[1] <= '5' and length == 16:
         print("MASTERCARD\n")
 
-    elif card[0] == '3' and (card[1] == '4' or '7') and length == 15:   #or card[1] ==
+    elif card[0] == '3' and card[1] == '4' or '7' and length == 15:
         print("AMEX\n")
 else:
     print("INVALID\n")
