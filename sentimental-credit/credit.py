@@ -43,7 +43,7 @@ while i >= 0:
     i -= 2
 
 print(sum_rest + sum)
-print(card[0])
+print(card[0], card[1])
 
 if sum_rest + sum % 10 == 0:
 
