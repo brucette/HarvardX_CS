@@ -12,7 +12,8 @@ int main(void)
     long number = get_long("Number: ");
     int digit;
     int remainder_sum = 0;
-    int first_set[8];
+    //int first_set[8];
+    char first_set[8];
     //long backwards[sizeof(number)];
     //string num [8];
 
@@ -25,8 +26,8 @@ int main(void)
         if (counter % 2 != 0)
         {
             printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
-            first_set[index] = digit * 2;
-            sprintf(result, "%f", num);
+            int num = digit * 2;
+            sprintf(&first_set[index], "%d", num);
             printf("#####FIRST_SET: %i\n", first_set[index]);
             index++;
 
