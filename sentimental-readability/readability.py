@@ -4,5 +4,13 @@ text = get_string("Text: ")
 
 
 # Number of letters
+letters = 0
+
 # Number of words
+words = 0
+
 # Number of sentences
+sentences = 0
+
+# 0.0588 * L - 0.296 * S - 15.8, where L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text
+
