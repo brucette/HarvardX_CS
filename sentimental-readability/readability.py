@@ -5,7 +5,9 @@ text = get_string("Text: ")
 
 # Number of letters
 letters = 0
-
+for i in text:
+    letter = ord(i)
+    if letter 
 # Number of words
 words = 0
 
