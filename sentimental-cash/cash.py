@@ -4,3 +4,5 @@ while True:
     amount = get_float("Amount: ")
     if amount > 0:
         break
+
+# Divide by 25 
