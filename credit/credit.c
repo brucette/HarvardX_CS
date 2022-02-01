@@ -52,25 +52,6 @@ int main(void)
     printf("\n\n");
 
 
-
-
-
-
-
-
-
-    while (number > x) // length of number / 2?
-    {
-        last_numbs = number % multiplier; // get last digits
-        while (last_numbs >= 10)
-	    {
-		    first_numb = last_numbs / 10;   // then get the first number and add to sum
-            sum += first_numb;
-            printf("%i\n", first_numb);  //HOW IS THIS SUPPOSED TO WORK???
-	    }
-        multiplier *= 10;
-    }*/
-
     //string characters;
     //printf("%s\n", (string) number);
 
