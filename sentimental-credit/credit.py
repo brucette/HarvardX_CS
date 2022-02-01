@@ -5,13 +5,14 @@ card = get_string("Number: ")
 length = len(card)
 
 
-# Concatenate to new string with every other digit of card, starting from second last
+# Concatenate to new string every other digit of card, starting from second last
 every_other = ""
 
 i = length - 2
 while i >= 0:
     every_other += card[i]
     i -= 2
+
 
 # String for every other digit (from second last) multiplied by 2
 multiplied = ""
