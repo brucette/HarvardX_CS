@@ -18,10 +18,17 @@ while i >= 0:
 
 print(every_other)
 
-# Sum of products of every other digit starting from second last
-sum_every_other = 0
-
+# String for every other digit (from second last) multiplied by 2
+multiplied = ""
 for digit in every_other:
-    sum_every_other += int(digit)
+    multiplied += str(int(digit) * 2)
 
-print(sum_every_other)
+print(multiplied)
+
+# Sum of products of every other digit starting from second last
+#sum_every_other = 0
+
+#for digit in every_other:
+    #sum_every_other += int(digit)
+
+#print(sum_every_other)
