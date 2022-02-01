@@ -21,10 +21,19 @@ if quarters > 0:
 # Divide by 10 cents
 dimes = (amount % 25) / 10
 
+if dimes > 0:
+    coins += dimes
+
 # Divide by 5 cents
-nickels = amount / 5
+nickels = (amount % 25) % 10) / 5
+
+if nickels > 0:
+    coins += nickels
 
 # Divide by 1 cents
-pennies = amount / 1
+pennies = (amount % 25) % 10) % 5) / 1
+
+if pennies > 0:
+    coins += pennies
 
 print(coins)
