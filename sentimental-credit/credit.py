@@ -20,15 +20,16 @@ print(every_other)
 
 # String for every other digit (from second last) multiplied by 2
 multiplied = ""
+
 for digit in every_other:
     multiplied += str(int(digit) * 2)
 
 print(multiplied)
 
-# Sum of products of every other digit starting from second last
-#sum_every_other = 0
+# Sum of products of every other digit starting from second last multiplied by 2
+sum = 0
 
-#for digit in every_other:
-    #sum_every_other += int(digit)
+for digit in multiplied:
+    sum += int(digit)
 
-#print(sum_every_other)
+print(sum)
