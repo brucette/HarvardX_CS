@@ -33,3 +33,13 @@ for digit in multiplied:
     sum += int(digit)
 
 print(sum)
+
+# Sum of remaining numbers
+sum_rest = 0
+
+i = length -1
+while i >= 0:
+    sum_rest += int(card[i])
+    i -= 2
+
+print(sum_rest)
