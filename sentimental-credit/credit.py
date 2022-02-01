@@ -1,5 +1,12 @@
 from cs50 import get_string
 
-while True:
-    card = get_string("Number: ")
-    if len(card) !=
+
+card = get_string("Number: ")
+length = len(card)
+
+if  length != 13 or length != 15 or length != 16:
+    print("INVALID\n")
+
+# String for every other digit starting from second last
+
+for i in range(length - 1, -2, 0):
