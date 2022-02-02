@@ -20,7 +20,8 @@ def main():
     dna = []
 
     with open(sys.argv[2], "r") as f:
-        
+        genes = f.read()
+
     # TODO: Find longest match of each STR in DNA sequence
     # len(s) might be useful
     # s[i:j] finds substring
