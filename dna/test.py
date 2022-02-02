@@ -3,6 +3,7 @@ import csv
 import sys
 import random
 
+#python dna.py databases/small.csv sequences/5.txt
 
 database = [] #argv[1]
 dna = [] #argv[2]
