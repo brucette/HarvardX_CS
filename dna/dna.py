@@ -27,8 +27,10 @@ def main():
     # len(s) might be useful
     # s[i:j] finds substring
     # TODO: Check database for matching profiles
+    snippets = {}
+
     for i in range(len(dna)):
-        
+
 
     return
 
