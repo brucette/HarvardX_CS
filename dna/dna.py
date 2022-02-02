@@ -17,7 +17,9 @@ def main():
             database.append(row)
 
     # TODO: Read DNA sequence file into a variable
+    dna = []
 
+    with open
     # TODO: Find longest match of each STR in DNA sequence
     # len(s) might be useful
     # s[i:j] finds substring
