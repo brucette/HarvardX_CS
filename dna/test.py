@@ -22,7 +22,7 @@ for i in range(len(database)):
     print(database[i]) #newdict[0]) #["rating"]
 print()
 print(database)
-print(f"length: {len(database[0] - 1 )}")
+print(f"length: {len(database[0]) - 1}")
 
 # Read database file into a variable
 with open(sys.argv[1]) as file:
