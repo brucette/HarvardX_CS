@@ -28,7 +28,7 @@ def main():
     # s[i:j] finds substring
     # TODO: Check database for matching profiles
 
-    return
+    return 
 
 
 def longest_match(sequence, subsequence):
