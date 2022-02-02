@@ -23,7 +23,7 @@ for i in range(len(database)):
 print()
 print(database)
 #print(f"length: {len(database[0]) - 1}")
-print(database[0][0])
+print(database[0]["name"])
 
 # Read database file into a variable
 with open(sys.argv[1]) as file:
