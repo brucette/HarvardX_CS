@@ -4,6 +4,7 @@ import sys
 import random
 
 #python dna.py databases/small.csv sequences/5.txt
+# f.read for dna file?
 
 database = [] #argv[1]
 database2 = [] #argv[1]
