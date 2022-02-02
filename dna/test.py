@@ -47,7 +47,7 @@ for i in range(0, len(dna)):
     print(dna[i], " ")
 
 print()
-print(dna)
+print(len(dna))
 
 
 def longest_match(dna, AGATC):
@@ -55,11 +55,11 @@ def longest_match(dna, AGATC):
 
     # Initialize variables
     longest_run = 0
-    subsequence_length = len(subsequence) 5
-    sequence_length = len(sequence) 171
+    subsequence_length = len(subsequence) #5
+    sequence_length = len(sequence) #171
 
     # Check each character in sequence for most consecutive runs of subsequence
-    for i in range(sequence_length): 171
+    for i in range(sequence_length): #171
 
         # Initialize count of consecutive runs
         count = 0
@@ -70,8 +70,8 @@ def longest_match(dna, AGATC):
         while True:
 
             # Adjust substring start and end
-            start = i + count * subsequence_length 0
-            end = start + subsequence_length 5
+            start = i + count * subsequence_length #0
+            end = start + subsequence_length #5
 
             # If there is a match in the substring
             if sequence[start:end] == subsequence:
