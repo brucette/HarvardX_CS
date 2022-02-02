@@ -13,7 +13,8 @@ def main():
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    # len(s) might be useful
+    # s[i:j] finds substring
     # TODO: Check database for matching profiles
 
     return
