@@ -29,7 +29,7 @@ def main():
     # TODO: Check database for matching profiles
     snippets = {}
 
-    for i in range(len(dna)):
+    for i in range(len(dna[i] -1)):
 
 
     return
