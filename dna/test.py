@@ -38,8 +38,9 @@ print()
 print(database2)
 
 with open(sys.argv[2], "r") as f:
-        snippet = f.read(4)
-        dna.append(snippet)
+        snippet = f.read()
+        print(len(snippet))
+        #dna.append(snippet)
 
 print()
 for i in range(len(dna)):
