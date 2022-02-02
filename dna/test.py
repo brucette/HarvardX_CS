@@ -44,7 +44,8 @@ with open(sys.argv[2], "r") as f:
 
 print()
 for i in range(0, len(dna), 4):
-    print(dna[i])
+    print(dna[i], " ")
+
 print()
 print(dna)
 
