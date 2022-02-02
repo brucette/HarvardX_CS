@@ -3,8 +3,9 @@ import csv
 import sys
 import random
 
-database = []
-dna = []
+
+database = [] #argv[1]
+dna = [] #argv[2]
 
 # Read database file into a variable
 with open(sys.argv[1]) as file:
