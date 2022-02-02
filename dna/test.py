@@ -15,6 +15,8 @@ with open(sys.argv[1]) as file:
     for row in reader:
         database.append(row)
 
+print()
+print("DICTREADER")
 for i in range(len(database)):
     print(database[i]) #newdict[0]) #["rating"]
 
@@ -25,6 +27,8 @@ with open(sys.argv[1]) as file:
     for row in reader:
         database2.append(row)
 
+print()
+print("READER")
 for i in range(len(database2)):
     print(database2[i])
 
