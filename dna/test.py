@@ -70,8 +70,8 @@ def longest_match(dna, AGATC):
         while True:
 
             # Adjust substring start and end
-            start = i + count * subsequence_length
-            end = start + subsequence_length
+            start = i + count * subsequence_length 0
+            end = start + subsequence_length 5
 
             # If there is a match in the substring
             if sequence[start:end] == subsequence:
