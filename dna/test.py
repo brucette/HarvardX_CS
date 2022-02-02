@@ -20,6 +20,7 @@ for i in range(len(database)):
 # Read database file into a variable
 with open(sys.argv[1]) as file:
     reader = csv.reader(file) #gives a list
+    next(reader)
     for row in reader:
         database.append(row)
 
