@@ -6,6 +6,7 @@ import random
 #python dna.py databases/small.csv sequences/5.txt
 
 database = [] #argv[1]
+database2 = [] #argv[1]
 dna = [] #argv[2]
 
 # Read database file into a variable
@@ -15,15 +16,17 @@ with open(sys.argv[1]) as file:
         database.append(row)
 
 for i in range(len(database)):
-    print(teams[i]["rating"]) #newdict[0])
+    print(database[i]) #newdict[0]) #["rating"]
 
 # Read database file into a variable
 with open(sys.argv[1]) as file:
     reader = csv.reader(file) #gives a list
     next(reader)
     for row in reader:
-        database.append(row)
+        database2.append(row)
 
+for i in range(len(database2)):
+    print(database2[i])
 
 
 
