@@ -6,7 +6,7 @@ import random
 database = []
 dna = []
 
-# TODO: Read teams into memory from file
+# Read database file into a variable
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
     for row in reader:
