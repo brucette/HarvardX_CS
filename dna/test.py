@@ -12,8 +12,13 @@ dna = [] #argv[2]
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
     for row in reader:
-        int(row["rating"])
-        teams.append(row)
+        database.append(row)
+
+# Read database file into a variable
+with open(sys.argv[1]) as file:
+    reader = csv.DictReader(file) #gives a dictionary
+    for row in reader:
+        database.append(row)
 
 for i in range(len(teams)):
     print(teams[i]["rating"]) #newdict[0])
