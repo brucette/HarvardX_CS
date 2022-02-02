@@ -3,7 +3,9 @@ import csv
 import sys
 import random
 
-teams = []
+database = []
+dna = []
+
 # TODO: Read teams into memory from file
 with open(sys.argv[1]) as file:
     reader = csv.DictReader(file) #gives a dictionary
