@@ -38,6 +38,7 @@ print()
 print(database2)
 
 with open(sys.argv[2], "r") as f:
+    f.read(4)
 
 
 
