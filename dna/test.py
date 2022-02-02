@@ -38,7 +38,7 @@ print()
 print(database2)
 
 with open(sys.argv[2], "r") as f:
-    snippet = f.read(4)
+    snippet = f.read()
     dna.append(snippet)
 
 print()
