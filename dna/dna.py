@@ -21,6 +21,7 @@ def main():
 
     with open(sys.argv[2], "r") as f:
         genes = f.read()
+        dna.append(genes)
 
     # TODO: Find longest match of each STR in DNA sequence
     # len(s) might be useful
