@@ -39,10 +39,10 @@ print(database2)
 
 with open(sys.argv[2], "r") as f:
         genes = f.read()
-        for i in range(0, len(genes), 4):
-            snippet
-        print(len(snippet))
-        #dna.append(snippet)
+        i = range(0, len(genes), 4)
+        for i in genes:
+            dna.append(genes.split())
+
 
 print()
 for i in range(len(dna)):
