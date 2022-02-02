@@ -29,7 +29,8 @@ def main():
     # TODO: Check database for matching profiles
     snippets = {}
 
-    for i in range(len(dna[i] -1)):
+    for i in range(len(dna[i]) - 1):
+        snippets[i] = dna[i][]
 
 
     return
