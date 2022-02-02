@@ -50,16 +50,16 @@ print()
 print(dna)
 
 
-def longest_match(dna, subsequence):
+def longest_match(dna, AGATC):
     """Returns length of longest run of subsequence in sequence."""
 
     # Initialize variables
     longest_run = 0
-    subsequence_length = len(subsequence)
-    sequence_length = len(sequence)
+    subsequence_length = len(subsequence) 5
+    sequence_length = len(sequence) 171
 
     # Check each character in sequence for most consecutive runs of subsequence
-    for i in range(sequence_length):
+    for i in range(sequence_length): 171
 
         # Initialize count of consecutive runs
         count = 0
