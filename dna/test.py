@@ -14,14 +14,16 @@ with open(sys.argv[1]) as file:
     for row in reader:
         database.append(row)
 
+for i in range(len(database)):
+    print(teams[i]["rating"]) #newdict[0])
+
 # Read database file into a variable
 with open(sys.argv[1]) as file:
-    reader = csv.DictReader(file) #gives a dictionary
+    reader = csv.reader(file) #gives a list
     for row in reader:
         database.append(row)
 
-for i in range(len(teams)):
-    print(teams[i]["rating"]) #newdict[0])
+
 
 
 
