@@ -37,6 +37,8 @@ for i in range(len(database2)):
 print()
 print(database2)
 
+f = open(sys.argv[2], "r")
+
 
 
 
