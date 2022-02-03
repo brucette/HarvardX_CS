@@ -31,8 +31,10 @@ for code in STRs:           #(1, len(STRs))
 print()
 #for i in range(1, len(snippets)):
     #print(snippets[i])
-print(f"STRs: {STRs}")
-print(f"Snippets: {snippets}")
+#print(f"STRs: {STRs}")
+#print(f"Snippets: {snippets}")
+print(f"Reader: {reader}")
+print(f"database: {database}")
 #for i in range(1, len(list_of_column_names)):
     #print(list_of_column_names[i])
 
