@@ -17,11 +17,10 @@ def main():
             database.append(row)
 
     # TODO: Read DNA sequence file into a variable
-    dna = []
-
+        #dna = []
     with open(sys.argv[2], "r") as f:
         genes = f.read()
-        dna.append(genes)
+        #dna.append(genes)
 
     # TODO: Find longest match of each STR in DNA sequence
         # len(s) might be useful
