@@ -22,7 +22,7 @@ with open(sys.argv[1], "r") as file:
     for row in reader:
         database.append(row)
 
-final_STRs = STRs.del(0)
+final_STRs = del STRs[0]
 
 snippets = {}
 for code in final_STRs:
