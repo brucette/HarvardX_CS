@@ -71,7 +71,7 @@ print(database)
 
 for key in snippets.keys():
     for entry in database:
-        if entry[key] == snippets[key]:
+        if key in entry and entry[key] == snippets[key]:
             print(entry["name"])
 #for entry in database:
     #for i in range(len(STRs)):
