@@ -70,7 +70,7 @@ for code in STRs:
 #print(database)
 
 for i in range(len(STRs)):
-    for key in snippets.keys():
+    #for key in snippets.keys():
         for entry in database:
             print(entry[key])
             if key in entry and entry[key] == snippets[key]:
