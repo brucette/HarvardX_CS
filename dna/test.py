@@ -23,10 +23,10 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 snippets = {}
-i = 1
-j = STRs[len(STRs) - 1]
-for code in STRs[i:j]       #(1, len(STRs))
-    snippets[code] = 0
+
+    #snippets[code] = 0
+for i in range(1, len(STRs)):
+    print(STRs[i])
 
 dna = []
 with open(sys.argv[2], "r") as f:
@@ -34,8 +34,7 @@ with open(sys.argv[2], "r") as f:
     dna.append(genes)
 
 print()
-#for i in range(1, len(snippets)):
-    #print(snippets[i])
+
 #print(f"genes: {genes}")
 #print(type(genes))
 #print(f"dna: {dna}")
