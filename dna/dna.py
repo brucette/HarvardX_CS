@@ -39,14 +39,13 @@ def main():
     snippets = {}
     for code in STRs:
         snippets[code] = 0
+        longest_match(genes, code)
 
     snippets[subsequence] += 1
     for snippet in snippets:
         for entry in database:
             if entry[subsequence] == snippets[subsequence]:
-
-
-    return
+                return entry["name"]
 
 
 def longest_match(sequence, subsequence):
