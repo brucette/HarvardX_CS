@@ -23,9 +23,9 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 snippets = {}
-i = STRs[1]
+i = 1
 j = STRs[len(STRs) - 1]
-for code in STRs[i:j]:        #(1, len(STRs))
+for code in STRs[i:j]       #(1, len(STRs))
     snippets[code] = 0
 
 dna = []
