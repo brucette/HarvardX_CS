@@ -35,7 +35,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(1, len(STRs)):
-        
+        snippets[i] = STRs[i]
+
 
     snippets = {}
 
