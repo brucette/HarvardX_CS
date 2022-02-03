@@ -26,6 +26,13 @@ with open(sys.argv[1], "r") as file:
 snippets = {}
 for code in STRs:
     snippets[code] = 0
+    number = longest_match(genes, code)
+    snippets[code] += number
+
+    for snippet in snippets:
+        for entry in database:
+            if entry[code] == snippets[code]:
+                return entry["name"]
 
 dna = []
 with open(sys.argv[2], "r") as f:
