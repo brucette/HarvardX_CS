@@ -24,8 +24,14 @@ def main():
         dna.append(genes)
 
     # TODO: Find longest match of each STR in DNA sequence
-    # len(s) might be useful
-    # s[i:j] finds substring
+        # len(s) might be useful
+        # s[i:j] finds substring
+    # Get the STRs to be checked for in the sequence:
+    with open(sys.argv[1], "r") as file:
+        reader = csv.DictReader(file) #gives a dictionary
+        header = dict(list(reader)[0])
+        list_of_column_names = list(header.keys())
+
     # TODO: Check database for matching profiles
     snippets = {}
 
