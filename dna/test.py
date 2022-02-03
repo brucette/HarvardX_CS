@@ -24,8 +24,8 @@ with open(sys.argv[1], "r") as file:
 
 snippets = {}
 for i in range(1, len(STRs)):
-    snippets[i]["name"] = STRs[i]
-    snippets[name["count"]] = 0
+    snippets[i] = STRs[i]
+    #snippets[name["count"]] = 0
 
 print()
 #for i in range(1, len(snippets)):
