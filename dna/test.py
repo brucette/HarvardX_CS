@@ -24,8 +24,8 @@ with open(sys.argv[1], "r") as file:
 
 snippets = {}
 i = STRs[1]
-j = STRs[len(STRs)]
-for code in STRs[i:j-1]:        #(1, len(STRs))
+j = STRs[len(STRs) - 1]
+for code in STRs[i:j]:        #(1, len(STRs))
     snippets[code] = 0
 
 dna = []
