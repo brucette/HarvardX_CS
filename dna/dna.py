@@ -34,7 +34,7 @@ def main():
 
     # TODO: Check database for matching profiles
     snippets = {}
-    for code in STRs:           
+    for code in STRs:
         snippets[code] = 0
 
 
