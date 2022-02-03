@@ -32,11 +32,13 @@ def main():
         header = dict(list(reader)[0])
         STRs = list(header.keys())
 
+    # Remove 'name' from list of STRs to e checked
+    final_STRs = STRs.del(0)
+
     # TODO: Check database for matching profiles
+
     snippets = {}
-    i = STRs[1]
-    j = STRs[len(STRs)]
-    for code in STRs[i:j-1]:
+    for code in final_STRs:
         snippets[code] = 0
 
 
