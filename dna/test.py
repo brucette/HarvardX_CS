@@ -15,6 +15,7 @@ dna = [] #argv[2]
 file = open(sys.argv[1], "r")
 
 reader = csv.DictReader(file) #gives a dictionary
+header = csv.DictReader(file)
 header = dict(list(reader)[0])
 list_of_column_names = list(header.keys())
 for row in reader:
