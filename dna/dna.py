@@ -32,7 +32,7 @@ def main():
         header = dict(list(reader)[0])
         STRs = list(header.keys())
         # Remove 'name' from list of STRs to be checked
-        STRs del[0]
+        del STRs[0]
 
     # TODO: Check database for matching profiles
 
