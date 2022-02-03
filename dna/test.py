@@ -23,7 +23,7 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 print()
-#for i in range(len(snippets)):
+#for i in range(1, len(snippets)):
     #print(snippets[i])
 print(list_of_column_names)
 for i in range(len(database)):

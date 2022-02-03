@@ -34,7 +34,8 @@ def main():
         STRs = list(header.keys())
 
     # TODO: Check database for matching profiles
-    for i in range(len(STRs) - 1):
+    for i in range(1, len(STRs)):
+        
 
     snippets = {}
 
