@@ -23,8 +23,8 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 snippets = {}
-for i in range(1, len(STRs)):
-    snippets[i] = STRs[i]
+for code in STRs(1, len(STRs)):
+    snippets[code][] = STRs[i]
     #snippets[name["count"]] = 0
 
 print()
