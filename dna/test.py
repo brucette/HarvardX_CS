@@ -23,7 +23,9 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 snippets = {}
-for code in STRs:           #(1, len(STRs))
+i = STRs[1]
+j = STRs[len(STRs)]
+for code in STRs[i:j-1]:        #(1, len(STRs))
     snippets[code] = 0
 
 dna = []
@@ -38,8 +40,8 @@ print()
 #print(type(genes))
 #print(f"dna: {dna}")
 #print(type(dna))
-print(f"STRs: {STRs}")
-#print(f"Snippets: {snippets}")
+#print(f"STRs: {STRs}")
+print(f"Snippets: {snippets}")
 #print(f"Reader: {reader}")
 #print(f"database: {database}")
 #print(f"headers: {header}")

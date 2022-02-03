@@ -34,7 +34,9 @@ def main():
 
     # TODO: Check database for matching profiles
     snippets = {}
-    for code in STRs:
+    i = STRs[1]
+    j = STRs[len(STRs)]
+    for code in STRs[i:j-1]:
         snippets[code] = 0
 
 
