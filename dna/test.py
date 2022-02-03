@@ -71,13 +71,13 @@ for code in STRs:
 
 
 
-#for key in snippets.keys():
-for i in range(len(STRs)-1):
+for key in snippets.keys():
+#for i in range(len(STRs)-1):
     for entry in database:
             #print(entry[key])
         i = 1
         while i != len(STRs):
-            if entry[key] == snippets[key] and entry[key+] == snippets[key]:
+            if entry[i] == snippets[key] and entry[key+] == snippets[key]:
             print(entry["name"])
 
         #if entry[code] == snippets[code]:
