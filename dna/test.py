@@ -23,12 +23,10 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
 snippets = {}
-
 for code in STRs:           #(1, len(STRs))
     snippets[code] = 0
 
 dna = []
-
 with open(sys.argv[2], "r") as f:
     genes = f.read()
     dna.append(genes)
