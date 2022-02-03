@@ -17,7 +17,8 @@ with open(sys.argv[1], "r") as file:
     header = csv.reader(file)
     for row in reader:
         database.append(row)
-    snippets.append(header[0])
+    for row in header:
+        snippets.append(row)
 
 print()
 print(header)
