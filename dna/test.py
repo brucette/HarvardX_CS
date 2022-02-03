@@ -65,13 +65,14 @@ for code in STRs:
     snippets[code] = 0
     number = longest_match(genes, code)
     snippets[code] += number
-print(snippets)
-print()
-print(database)
+#print(snippets)
+#print()
+#print(database)
 
 for i in range(len(STRs)):
     for key in snippets.keys():
         for entry in database:
+            print(entry[key])
             if key in entry and entry[key] == snippets[key]:
                 print(entry["name"])
 
