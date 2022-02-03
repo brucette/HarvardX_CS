@@ -26,7 +26,8 @@ print()
 #for i in range(len(snippets)):
     #print(snippets[i])
 print(list_of_column_names)
-print(database)
+for i in range(len(database)):
+    print(database[i])
 
 
 
