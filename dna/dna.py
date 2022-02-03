@@ -34,11 +34,10 @@ def main():
         STRs = list(header.keys())
 
     # TODO: Check database for matching profiles
+    snippets = {}
     for i in range(1, len(STRs)):
         snippets[i] = STRs[i]
 
-
-    snippets = {}
 
     for i in range(len(dna[i]) - 1):
         snippets[i] = dna[i][]
