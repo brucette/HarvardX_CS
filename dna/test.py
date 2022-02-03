@@ -14,11 +14,11 @@ dna = [] #argv[2]
 # Read database file into a variable
 with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file) #gives a dictionary
-    #header = csv.reader(file)
     header = dict(list(reader)[0])
-    #dict_from_csv = dict(list(csv_reader)[0])
     list_of_column_names = list(header.keys())
 
+with open(sys.argv[1], "r") as file:
+    reader = csv.DictReader(file)
     for row in reader:
         database.append(row)
 
