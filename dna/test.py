@@ -19,6 +19,9 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
     snippets.append(header[0])
 
+print()
+print(header)
+print(database)
 
 
 
