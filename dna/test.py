@@ -19,6 +19,7 @@ with open(sys.argv[1], "r") as file:
         database.append(row)
 
     header = dict(list(reader)[0])
+    dict_from_csv = dict(list(csv_reader)[0])
 
 print()
 #for i in range(len(snippets)):
