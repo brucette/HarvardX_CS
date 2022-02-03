@@ -24,7 +24,7 @@ print()
 for i in range(len(snippets)):
     print(snippets[i])
 #print(header)
-print(database)
+#print(database)
 
 
 
