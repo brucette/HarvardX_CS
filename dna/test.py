@@ -22,10 +22,11 @@ with open(sys.argv[1], "r") as file:
     for row in reader:
         database.append(row)
 
+final_STRs = STRs.del(0)
+
 snippets = {}
-for i in range(1, len(STRs)):
-    print(STRs[i])
-    snippets[i] = 0
+for code in final_STRs:
+        snippets[code] = 0
 
 dna = []
 with open(sys.argv[2], "r") as f:
@@ -38,6 +39,7 @@ print(f"genes: {genes}")
 #print(type(genes))
 #print(f"dna: {dna}")
 #print(type(dna))
+#print(f"STRs: {STRs}")
 #print(f"STRs: {STRs}")
 #print(f"Snippets: {snippets}")
 #print(f"Reader: {reader}")
