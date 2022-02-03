@@ -69,9 +69,10 @@ print(snippets)
 print()
 print(database)
 
-for entry in database:
-    for  in entry.keys():
-        if
+for key in snippets.keys():
+    for entry in database:
+        if entry[key] == snippets[key]:
+            print(entry["name"])
 #for entry in database:
     #for i in range(len(STRs)):
         #if entry[code] == snippets[code]:
