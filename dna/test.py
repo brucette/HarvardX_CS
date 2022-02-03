@@ -83,8 +83,6 @@ for i in range(len(STRs)):
 
 
 
-
-
 #print(f"genes: {genes}")
 #print(type(genes))
 #print(f"dna: {dna}")
