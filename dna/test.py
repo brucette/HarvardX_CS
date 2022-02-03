@@ -16,14 +16,12 @@ with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file) #gives a dictionary
     header = dict(list(reader)[0])
     STRs = list(header.keys())
+    del STRs[0]
 
 with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         database.append(row)
-
-final_STRs = STRs
-del final_STRs[0]
 
 snippets = {}
 for code in final_STRs:

@@ -31,14 +31,13 @@ def main():
         reader = csv.DictReader(file) #gives a dictionary
         header = dict(list(reader)[0])
         STRs = list(header.keys())
-
-    # Remove 'name' from list of STRs to e checked
-    final_STRs = STRs.del(0)
+        # Remove 'name' from list of STRs to be checked
+        STRs del[0]
 
     # TODO: Check database for matching profiles
 
     snippets = {}
-    for code in final_STRs:
+    for code in STRs:
         snippets[code] = 0
 
 
