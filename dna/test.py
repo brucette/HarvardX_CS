@@ -18,6 +18,7 @@ with open(sys.argv[1], "r") as file:
     for row in reader:
         database.append(row)
     for row in header:
+        snippet = row
         snippets.append(row)
 
 print()
