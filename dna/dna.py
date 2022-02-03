@@ -38,10 +38,6 @@ def main():
         snippets[code] = 0
 
 
-    for i in range(len(dna[i]) - 1):
-        snippets[i] = dna[i][]
-
-
     return
 
 
