@@ -42,7 +42,8 @@ def main():
 
     snippets[subsequence] += 1
     for entry in database:
-        if entry
+        if entry[subsequence] == snippets[subsequence]:
+            
 
     return
 
