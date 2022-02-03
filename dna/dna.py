@@ -40,8 +40,7 @@ def main():
     for code in STRs:
         snippets[code] = 0
         number = longest_match(genes, code)
-
-        snippets[subsequence] += 1
+        snippets[subsequence] += number
 
     for snippet in snippets:
         for entry in database:
