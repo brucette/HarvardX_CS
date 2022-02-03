@@ -18,7 +18,7 @@ with open(sys.argv[1], "r") as file:
     for row in reader:
         database.append(row)
 
-    header = dict(list(reader))
+    header = dict(list(reader)[0])
 
 print()
 #for i in range(len(snippets)):
