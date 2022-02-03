@@ -69,12 +69,12 @@ for code in STRs:
 #print()
 #print(database)
 
-for i in range(len(STRs)):
-    #for key in snippets.keys():
-        for entry in database:
+#for i in range(len(STRs)):
+for key in snippets.keys():
+    for entry in database:
             #print(entry[key])
-            if entry[key] == snippets[key] and entry[key+] == snippets[key]:
-                print(entry["name"])
+        if entry[key] == snippets[key] and entry[key+] == snippets[key]:
+            print(entry["name"])
 
         #if entry[code] == snippets[code]:
             #print(entry["name"])
