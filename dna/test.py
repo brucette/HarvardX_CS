@@ -7,6 +7,7 @@ import random
 # f.read for dna file?
 
 database = [] #argv[1]
+snippets = []
 database2 = [] #argv[1]
 dna = [] #argv[2]
 
@@ -16,6 +17,7 @@ with open(sys.argv[1], "r") as file:
     header = csv.reader(file)
     for row in reader:
         database.append(row)
+    snippets.append(header[0])
 
 print()
 print("DICTREADER")
