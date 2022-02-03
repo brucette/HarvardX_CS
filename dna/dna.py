@@ -36,7 +36,8 @@ def main():
     # TODO: Check database for matching profiles
     snippets = {}
     for i in range(1, len(STRs)):
-        snippets[i] = STRs[i]
+        snippets[i]["name"] = STRs[i]
+        snippets[name["count"]] = 0
 
 
     for i in range(len(dna[i]) - 1):

@@ -15,19 +15,24 @@ dna = [] #argv[2]
 with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file) #gives a dictionary
     header = dict(list(reader)[0])
-    list_of_column_names = list(header.keys())
+    STRs = list(header.keys())
 
 with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         database.append(row)
 
+snippets = {}
+for i in range(1, len(STRs)):
+    snippets[i]["name"] = STRs[i]
+    snippets[name["count"]] = 0
+
 print()
 #for i in range(1, len(snippets)):
     #print(snippets[i])
-print(list_of_column_names)
-for i in range(1, len(list_of_column_names)):
-    print(list_of_column_names[i])
+print(snippets)
+#for i in range(1, len(list_of_column_names)):
+    #print(list_of_column_names[i])
 
 
 
