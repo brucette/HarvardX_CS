@@ -3,11 +3,46 @@ import csv
 import sys
 import random
 
-#python dna.py databases/small.csv sequences/5.txt
-# f.read for dna file?
+
+def longest_match(sequence, subsequence):
+    """Returns length of longest run of subsequence in sequence."""
+
+    # Initialize variables
+    longest_run = 0
+    subsequence_length = len(subsequence)
+    sequence_length = len(sequence)
+
+    # Check each character in sequence for most consecutive runs of subsequence
+    for i in range(sequence_length):
+
+        # Initialize count of consecutive runs
+        count = 0
+
+        # Check for a subsequence match in a "substring" (a subset of characters) within sequence
+        # If a match, move substring to next potential match in sequence
+        # Continue moving substring and checking for matches until out of consecutive matches
+        while True:
+
+            # Adjust substring start and end
+            start = i + count * subsequence_length
+            end = start + subsequence_length
+
+            # If there is a match in the substring
+            if sequence[start:end] == subsequence:
+                count += 1
+
+            # If there is no match in the substring
+            else:
+                break
+
+        # Update most consecutive matches found
+        longest_run = max(longest_run, count)
+
+    # After checking for runs at each character in seqeuence, return longest run found
+    return longest_run
 
 database = [] #argv[1]
-database2 = [] #argv[1]
+
 
 # Read database file into a variable
 with open(sys.argv[1], "r") as file:
@@ -15,6 +50,11 @@ with open(sys.argv[1], "r") as file:
     header = dict(list(reader)[0])
     STRs = list(header.keys())
     del STRs[0]
+
+dna = []
+with open(sys.argv[2], "r") as f:
+    genes = f.read()
+    dna.append(genes)
 
 with open(sys.argv[1], "r") as file:
     reader = csv.DictReader(file)
@@ -30,12 +70,9 @@ for code in STRs:
     for snippet in snippets:
         for entry in database:
             if entry[code] == snippets[code]:
-                return entry["name"]
+                print(entry["name"])
 
-dna = []
-with open(sys.argv[2], "r") as f:
-    genes = f.read()
-    dna.append(genes)
+
 
 print()
 
@@ -44,7 +81,7 @@ print()
 #print(f"dna: {dna}")
 #print(type(dna))
 #print(f"STRs: {STRs}")
-print(f"Snippets: {snippets}")
+#print(f"Snippets: {snippets}")
 #print(f"Reader: {reader}")
 #print(f"database: {database}")
 #print(f"headers: {header}")
