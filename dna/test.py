@@ -1,7 +1,6 @@
 
 import csv
 import sys
-import random
 
 
 def longest_match(sequence, subsequence):
