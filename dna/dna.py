@@ -42,10 +42,10 @@ def main():
         number = longest_match(genes, code)
         snippets[code] += number
 
-    for snippet in snippets:
-        for entry in database:
-            if entry[subsequence] == snippets[subsequence]:
-                return entry["name"]
+        for snippet in snippets:
+            for entry in database:
+                if entry[code] == snippets[code]:
+                    return entry["name"]
 
 
 def longest_match(sequence, subsequence):
