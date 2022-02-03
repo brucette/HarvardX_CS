@@ -40,7 +40,8 @@ def main():
     for code in STRs:
         snippets[code] = 0
 
-
+    snippets[subsequence] += 1
+    
     return
 
 
