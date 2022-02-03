@@ -21,7 +21,9 @@ with open(sys.argv[1], "r") as file:
         snippets.append(row)
 
 print()
-print(header)
+for i in range(len(snippets)):
+    print(snippets[i])
+#print(header)
 print(database)
 
 
