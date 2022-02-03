@@ -71,6 +71,8 @@ for code in STRs:
         for entry in database:
             if entry[code] == snippets[code]:
                 print(entry["name"])
+            else:
+                print("No Match")
 
 
 
