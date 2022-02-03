@@ -39,7 +39,7 @@ def main():
     snippets = {}
     for code in STRs:
         snippets[code] = 0
-        longest_match(genes, code)
+        number = longest_match(genes, code)
 
         snippets[subsequence] += 1
 
