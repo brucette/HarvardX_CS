@@ -71,7 +71,7 @@ print(snippets)
 for entry in database:
     for snippet in snippets:
         #print(entry["name"])
-        if entry[name[code] == snippets[code]:
+        if entry[code] == snippets[code]:
             #print(entry["name"])
         #else:
             #print("No Match")
