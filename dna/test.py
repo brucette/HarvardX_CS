@@ -70,11 +70,13 @@ for code in STRs:
 #print(database)
 
 #for i in range(len(STRs)):
-i = 1
+
 for key in snippets.keys():
     for entry in database:
             #print(entry[key])
-        while 
+        i = 1
+        while i != len(STRs):
+
         if entry[key] == snippets[key] and entry[key+] == snippets[key]:
             print(entry["name"])
 
