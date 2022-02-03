@@ -35,6 +35,7 @@ print()
 #print(f"Snippets: {snippets}")
 print(f"Reader: {reader}")
 print(f"database: {database}")
+print(f"headers: {header}")
 #for i in range(1, len(list_of_column_names)):
     #print(list_of_column_names[i])
 
