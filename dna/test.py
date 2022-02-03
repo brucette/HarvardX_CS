@@ -26,16 +26,24 @@ snippets = {}
 
 for code in STRs:           #(1, len(STRs))
     snippets[code] = 0
-    #snippets[name["count"]] = 0
+
+dna = []
+
+with open(sys.argv[2], "r") as f:
+    genes = f.read()
+    dna.append(genes)
 
 print()
 #for i in range(1, len(snippets)):
     #print(snippets[i])
+print(f"genes: {genes}")
+print(type(genes))
+print(f"dna: {dna}")
 #print(f"STRs: {STRs}")
 #print(f"Snippets: {snippets}")
-print(f"Reader: {reader}")
-print(f"database: {database}")
-print(f"headers: {header}")
+#print(f"Reader: {reader}")
+#print(f"database: {database}")
+#print(f"headers: {header}")
 #for i in range(1, len(list_of_column_names)):
     #print(list_of_column_names[i])
 
