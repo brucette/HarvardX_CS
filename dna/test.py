@@ -70,13 +70,13 @@ print()
 print(database)
 
 for entry in database:
-    print(entry.items())
-    for entry_k, entry_v in entry.items():
-        #print(f"***{entry.items()})
-        if entry_k in snippets.keys() and int(entry_v) == snippets[entry_k]:
-             print(entry["name"])
-             #print(type(snippets[entry_k]))
-            #if :
+    #print(entry.items())
+    for entry_k, entry_v in database.items():
+    #print(f"***{entry.items()})
+    if entry_k in snippets.keys() and int(entry_v) == snippets[entry_k]:
+            print(entry["name"])
+            #print(type(snippets[entry_k]))
+        #if :
 
 
 
