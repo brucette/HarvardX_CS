@@ -72,8 +72,8 @@ print(database)
 for entry in database:
     #print(f"***,{entry.items()}")
     for entry_k, entry_v in entry.items():
-        #if entry_k in snippets.keys():
-        print(f"***,{str(snippets[entry_k])}")
+        if entry_k in snippets.keys():
+            print(f"***,{str(snippets[entry_k])}")
         #if entry_v == str(snippets[entry_k]):
             #print("yes")
             #else:
