@@ -71,10 +71,12 @@ for code in STRs:
 
 for entry in database:
     name = entry.pop("name")
-    print(entry)
-    print(snippets)
-    if int(entry.values()) == snippets:
-        print("true")
+    for value in entry.values():
+        value = int(value)
+        print(entry)
+    #print(snippets)
+    #if int(entry.values()) == snippets:
+        #print("true")
 
     #for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
