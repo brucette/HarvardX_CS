@@ -52,7 +52,7 @@ def check_for_match(snippets, database):
             if entry == snippets:
                 return name
             else:
-                return "No match."
+                return False
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
