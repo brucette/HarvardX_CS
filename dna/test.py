@@ -73,15 +73,16 @@ for entry in database:
     #print(f"***,{entry.items()}")
     for entry_k, entry_v in entry.items():
         if entry_k in snippets.keys():
-            print(f"***,{str(snippets[entry_k])}")
-        #if entry_v == str(snippets[entry_k]):
-            #print("yes")
-            #else:
-                #print("No Match")
+            #print(f"***,{str(snippets[entry_k])}")
+            if entry_v != str(snippets[entry_k]):
+                continue
+        #print("yes")
+            else:
+                print(entry["name"])
 
         #while i != len(STRs):
             #if entry[i] == snippets[key] and entry[key+] == snippets[key]:
-            #print(entry["name"])
+            #
 
 
 
