@@ -69,9 +69,20 @@ print(snippets)
 print()
 print(database)
 
+#for entry in database:
+    #print(f"***,{entry.items()}")
+    #for entry_k[i], entry_v[i] in entry.items():
+        #if entry_k in snippets.keys():
+            #if int(entry_v) == snippets[entry_k]:
+                #print(entry["name"])
+            #else:
+                #print("No Match")
+
 for entry in database:
     print(f"***,{entry.items()}")
-    for entry_k, entry_v in entry.items():
+    i = 1
+    while
+    for entry_k[i], entry_v[i] in entry.items():
         if entry_k in snippets.keys():
             if int(entry_v) == snippets[entry_k]:
                 print(entry["name"])
@@ -81,13 +92,12 @@ for entry in database:
 
 
 
-
 #
         #while i != len(STRs):
             #if entry[i] == snippets[key] and entry[key+] == snippets[key]:
             #print(entry["name"])
 
-    
+
 
 #print(f"genes: {genes}")
 #print(type(genes))
