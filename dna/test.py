@@ -69,10 +69,12 @@ for code in STRs:
 #print()
 #print(database)
 
-for key,value in snippets.items():
-    print(key,value)
-    for entry.items() in database:
-        if ==
+for entry in database:
+    for entry_k, entry_v in entry.items():
+        if entry_k==
+    
+
+
 
 #for key in snippets.keys():
 #for i in range(len(STRs)-1):
