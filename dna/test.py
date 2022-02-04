@@ -72,7 +72,8 @@ print()
 for entry in database:
     for entry_k, entry_v in entry.items():
         print(entry_k, entry_v)
-        if entry_k in snippets.items():
+        if entry_k in snippets.keys():
+            if entry_v == 
             print("yes")
 
 
