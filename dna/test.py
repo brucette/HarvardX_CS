@@ -71,6 +71,7 @@ for code in STRs:
 
 for entry in database:
     for entry_k, entry_v in entry.items():
+        print(entry_k, entry_v)
         if entry_k and entry_v in snippets.items():
             print("yes")
 
