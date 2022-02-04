@@ -78,6 +78,9 @@ for entry in database:
     #if int(entry.values()) == snippets:
         #print("true")
 
+    for keys in dicts:
+        dicts[keys] = int(dicts[keys])
+
     #for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
             #print(f"***,{str(snippets[entry_k])}")
