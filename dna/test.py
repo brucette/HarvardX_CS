@@ -69,12 +69,12 @@ print(snippets)
 print()
 print(database)
 
-#for entry in database:
+for entry in database:
     #print(f"***,{entry.items()}")
-    #for entry_k[i], entry_v[i] in entry.items():
+    for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
-            #if int(entry_v) == snippets[entry_k]:
-                #print(entry["name"])
+        if int(entry_v) == snippets[entry_k]:
+            print(entry["name"])
             #else:
                 #print("No Match")
 
