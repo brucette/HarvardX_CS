@@ -69,12 +69,17 @@ for code in STRs:
 #print()
 #print(database)
 
-for entry in database:
-    for entry_k, entry_v in entry.items():
-        print(entry_k, entry_v)
-        if entry_k, entry_v in snippets.items():
-            print("yes")
+#for entry in database:
+    #for entry_k, entry_v in entry.items():
+        #print(entry_k, entry_v)
+        #if entry_k, entry_v in snippets.items():
+            #print("yes")
 
+for key, value in snippets.items():
+    for entry in database:
+        #for entry_k, entry_v in entry.items():
+        if key in entry.items() and value in entry.items():
+            print("yes")
 
 
 
