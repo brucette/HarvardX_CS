@@ -71,8 +71,10 @@ for code in STRs:
 
 for entry in database:
     name = entry.pop("name")
-    if entry == snippets:
-        print(entry.name)
+    print(entry)
+    print(snippets)
+    #if entry == snippets:
+        #print("true")
 
     #for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
