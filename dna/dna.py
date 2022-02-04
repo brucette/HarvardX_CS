@@ -42,11 +42,12 @@ def main():
         number = longest_match(genes, code)
         snippets[code] += number
 
-        for snippet in snippets:
-            for entry in database:
-                if entry[code] == snippets[code]:
-                    return entry["name"]
-
+    for entry in database:
+        name = entry.pop("name")
+        for value in entry:
+            entry[value] = int(entry[value])
+            if entry == snippets:
+            print(name)
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
