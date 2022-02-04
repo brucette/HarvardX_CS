@@ -65,8 +65,8 @@ for code in STRs:
     snippets[code] = 0
     number = longest_match(genes, code)
     snippets[code] += number
-#print(snippets)
-#print()
+print(snippets)
+print()
 #print(database)
 
 for entry in database:
