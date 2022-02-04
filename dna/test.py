@@ -74,7 +74,7 @@ for entry in database:
         print(entry_k, entry_v)
         if entry_k in snippets.keys():
             if entry_v == snippets[entry_k]:
-            print("yes")
+                print("yes")
 
 
 
