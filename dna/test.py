@@ -73,7 +73,7 @@ for entry in database:
     name = entry.pop("name")
     print(entry)
     print(snippets)
-    if entry == str(snippets):
+    if int(entry.values()) == snippets:
         print("true")
 
     #for entry_k, entry_v in entry.items():
