@@ -81,11 +81,11 @@ print(database)
 for entry in database:
     print(f"***,{entry.items()}")
     i = 1
-    while True:
-        entry_k[i], entry_v[i] in entry.items():
-        if entry_k in snippets.keys():
-            if int(entry_v) == snippets[entry_k]:
-                print(entry["name"])
+    while i != len(SRT):
+        for entry_k[i], entry_v[i] in entry.items():
+            if entry_k in snippets.keys():
+                if int(entry_v) == snippets[entry_k]:
+                i += 1
             else:
                 print("No Match")
 
