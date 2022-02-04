@@ -47,7 +47,7 @@ def main():
         for value in entry:
             entry[value] = int(entry[value])
             if entry == snippets:
-            print(name)
+                print(name)
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
