@@ -74,7 +74,7 @@ for entry in database:
     for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
         if entry_v == str(snippets[entry_k]):
-            print(entry["name"])
+            print(entry[entry_k])
             #else:
                 #print("No Match")
 
