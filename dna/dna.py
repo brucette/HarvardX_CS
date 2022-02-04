@@ -43,6 +43,10 @@ def main():
         snippets[code] += number
 
     result = check_for_match(snippets, database)
+    if result == False:
+        print("No match.")
+    else:
+        print(result)
 
 def check_for_match(snippets, database):
     for entry in database:
