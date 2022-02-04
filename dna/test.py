@@ -73,7 +73,7 @@ for entry in database:
     name = entry.pop("name")
     for value in entry.values():
         value = int(value)
-        print(entry)
+    print(entry)
     #print(snippets)
     #if int(entry.values()) == snippets:
         #print("true")
