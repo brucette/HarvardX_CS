@@ -70,6 +70,7 @@ for code in STRs:
 #print(database)
 
 for key,value in snippets.items():
+    print(key,value)
 
 
 #for key in snippets.keys():
