@@ -43,7 +43,7 @@ def main():
         snippets[code] += number
 
     result = check_for_match(snippets, database)
-    if result == False:
+    if result == None:
         print("No match.")
     else:
         print(result)
@@ -55,8 +55,8 @@ def check_for_match(snippets, database):
             entry[value] = int(entry[value])
             if entry == snippets:
                 return name
-            else:
-                return False
+            #else:
+                #return 0
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
