@@ -71,33 +71,12 @@ for code in STRs:
 
 for entry in database:
     name = entry.pop("name")
-    for value in entry.values():
-        value = int(value)
-    print(entry)
+    for value in entry:
+        entry[value] = int(entry[value])
+    #print(entry)
     #print(snippets)
-    #if int(entry.values()) == snippets:
-        #print("true")
-    for dicts in test_list:
-        for keys in dicts:
-            dicts[keys] = int(dicts[keys])
-
-    #for entry_k, entry_v in entry.items():
-        #if entry_k in snippets.keys():
-            #print(f"***,{str(snippets[entry_k])}")
-            #if entry_v != str(snippets[entry_k]):
-
-
-#for entry in database:
-    #print(f"***,{entry.items()}")
-    #for entry_k, entry_v in entry.items():
-        #if entry_k in snippets.keys():
-            #print(f"***,{str(snippets[entry_k])}")
-            #if entry_v != str(snippets[entry_k]):
-                #continue
-        #print("yes")
-            #else:
-                #print(entry["name"])
-
+        if entry == snippets:
+            print(name)
 
 
 #print(f"genes: {genes}")
