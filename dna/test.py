@@ -82,7 +82,6 @@ for key, value in snippets.items():
             print("yes")
 
 
-
 #for key in snippets.keys():
 #for i in range(len(STRs)-1):
     #for entry in database:
