@@ -81,10 +81,10 @@ print(database)
 for entry in database:
     print(f"***,{entry.items()}")
     i = 1
-    while i != len(SRTs):
+    while i != len(STRs):
         for entry_k[i], entry_v[i] in entry.items():
-            if entry_k in snippets.keys():
-                if int(entry_v) == snippets[entry_k]:
+            if entry_k[i] in snippets.keys():
+                if int(entry_v[i]) == snippets[entry_k[i]]:
                     i += 1
             else:
                 break
