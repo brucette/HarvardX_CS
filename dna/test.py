@@ -77,9 +77,9 @@ for entry in database:
     #print(snippets)
     #if int(entry.values()) == snippets:
         #print("true")
-
-    for keys in dicts:
-        dicts[keys] = int(dicts[keys])
+    for dicts in test_list:
+        for keys in dicts:
+            dicts[keys] = int(dicts[keys])
 
     #for entry_k, entry_v in entry.items():
         #if entry_k in snippets.keys():
