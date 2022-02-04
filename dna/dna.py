@@ -42,6 +42,7 @@ def main():
         number = longest_match(genes, code)
         snippets[code] += number
 
+ def check_for_match():
     for entry in database:
         name = entry.pop("name")
         for value in entry:
