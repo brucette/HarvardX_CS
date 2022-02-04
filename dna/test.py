@@ -71,8 +71,8 @@ for code in STRs:
 
 for key,value in snippets.items():
     print(key,value)
-    for entry in database:
-        print(entry.items())
+    for entry.items() in database:
+        if items == 
 
 #for key in snippets.keys():
 #for i in range(len(STRs)-1):
