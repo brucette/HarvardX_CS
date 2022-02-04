@@ -70,9 +70,9 @@ print()
 print(database)
 
 for entry in database:
-    print
+    print(entry.items())
     for entry_k, entry_v in entry.items():
-        print(f"***{entry.items()})
+        #print(f"***{entry.items()})
         if entry_k in snippets.keys() and int(entry_v) == snippets[entry_k]:
              print(entry["name"])
              #print(type(snippets[entry_k]))
