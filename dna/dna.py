@@ -14,19 +14,18 @@ def main():
     # Read database file into a variable
     database = []
     with open(datafile, "r") as file:
-        reader = csv.DictReader(file)
+        reader = csv.DictReader(file) #gives a dictionary
         for row in reader:
             database.append(row)
 
     # Read DNA sequence file into a variable
     with open(textfile], "r") as f:
         genes = f.read()
-
                                                                 # len(s) might be useful
     # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
     # Get the STRs to be checked for in the sequence:
     with open(datafile, "r") as file:
-        reader = csv.DictReader(file) #gives a dictionary
+        reader = csv.DictReader(file)
         header = dict(list(reader)[0])
         STRs = list(header.keys())
         # Remove 'name' from list of STRs to be checked
