@@ -32,6 +32,14 @@ def main():
         del STRs[0]
 
     # Check database for matching profiles
+    snippets = get_number_of_each_STR(STRs)
+
+    result = check_for_match(snippets, database)
+    if result == None:
+        print("No match.")
+    else:
+        print(result)
+
 
 def get_number_of_each_STR(list_of_STRs)
     snippets = {}
@@ -40,12 +48,6 @@ def get_number_of_each_STR(list_of_STRs)
         number = longest_match(genes, code)
         snippets[code] += number
     return snippets
-
-    result = check_for_match(snippets, database)
-    if result == None:
-        print("No match.")
-    else:
-        print(result)
 
 def check_for_match(snippets, database):
     for entry in database:
