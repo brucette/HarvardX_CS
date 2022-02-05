@@ -19,7 +19,7 @@ def main():
             database.append(row)
 
     # Read DNA sequence file into a variable
-    with open(textfile], "r") as f:
+    with open(textfile, "r") as f:
         genes = f.read()
                                                                 # len(s) might be useful
     # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
@@ -32,7 +32,7 @@ def main():
         del STRs[0]
 
     # Check database for matching profiles
-    snippets = get_number_of_each_STR(STRs)
+    snippets = get_number_of_each_STR(STRs, genes)
 
     result = check_for_match(snippets, database)
     if result == None:
@@ -41,11 +41,11 @@ def main():
         print(result)
 
 
-def get_number_of_each_STR(list_of_STRs)
+def get_number_of_each_STR(list_of_STRs, gene_sequence):
     snippets = {}
-    for code in STRs:
+    for code in list_of_STRs:
         snippets[code] = 0
-        number = longest_match(genes, code)
+        number = longest_match(gene_sequence, code)
         snippets[code] += number
     return snippets
 
