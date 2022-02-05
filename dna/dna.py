@@ -32,12 +32,14 @@ def main():
         del STRs[0]
 
     # Check database for matching profiles
-def get_number_of_(list_of_)
+
+def get_number_of_each_STR(list_of_STRs)
     snippets = {}
     for code in STRs:
         snippets[code] = 0
         number = longest_match(genes, code)
         snippets[code] += number
+    return snippets
 
     result = check_for_match(snippets, database)
     if result == None:
