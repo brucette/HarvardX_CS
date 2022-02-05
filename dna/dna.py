@@ -32,7 +32,7 @@ def main():
         del STRs[0]
 
     # Check database for matching profiles
-def
+def get_number_
     snippets = {}
     for code in STRs:
         snippets[code] = 0
