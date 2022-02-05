@@ -45,7 +45,6 @@ def main():
     else:
         print(result)
 
-
 def check_for_match(snippets, database):
     for entry in database:
         name = entry.pop("name")
@@ -90,5 +89,7 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
+
 
 main()
