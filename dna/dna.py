@@ -5,10 +5,9 @@ import sys
 def main():
 
     # Check for command-line usage
-    number_of_CLvalues = sys.argv
-    if len(number_of_CLvalues) != 3:
+    if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py DATABASE SEQUENCE")
-
+    
     # Read database file into a variable
     database = []
     with open(sys.argv[1], "r") as file:
@@ -17,7 +16,7 @@ def main():
             database.append(row)
 
     # Read DNA sequence file into a variable
-    with open(number_of_CLvalues[2], "r") as f:
+    with open(sys.argv[2], "r") as f:
         genes = f.read()
 
                                                                 # len(s) might be useful
