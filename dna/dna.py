@@ -25,7 +25,7 @@ def main():
                                                                 # len(s) might be useful
     # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
     # Get the STRs to be checked for in the sequence:
-    with open(sys.argv[1], "r") as file:
+    with open(datafile, "r") as file:
         reader = csv.DictReader(file) #gives a dictionary
         header = dict(list(reader)[0])
         STRs = list(header.keys())
