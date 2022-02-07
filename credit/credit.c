@@ -40,7 +40,7 @@ int main(void)
             char conv = sprintf(first_set, "%i", num); // converts integer to string
             printf("\n CHAR: %s\n", first_set);
 
-            strcpy(backwards, first_set);
+            strcat(backwards, first_set);
             //printf("#####BACKW: %s\n", backwards);
             index++;
 
