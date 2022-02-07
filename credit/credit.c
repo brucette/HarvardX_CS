@@ -15,7 +15,7 @@ int main(void)
     int digit;
     int remainder_sum = 0;
     //int first_set[8];
-    char *first_set = NULL;
+    char first_set[17];
     char *backwards = NULL;
     //string num [8];
 
