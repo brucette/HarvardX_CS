@@ -60,23 +60,11 @@ int main(void)
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < 8; i++)
     {
-        printf("BACKWARDS: %s\n", backwards);
-        //printf("BACKWARDS: %s\n", first_set);
+        back_sum += (int)backwards[i];
+        printf("BACKSUM: %i\n", back_sum);
     }
 
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
-
-
-
-
-    /*printf("FIRST SET: %i\n", first_set[1]);
-    printf("FIRST SET: %i\n", first_set[2]);
-    printf("FIRST SET: %i\n", first_set[3]);
-    printf("FIRST SET: %i\n", first_set[4]);
-    printf("FIRST SET: %i\n", first_set[5]);
-    printf("FIRST SET: %i\n", first_set[6]);
-    printf("FIRST SET: %i\n", first_set[7]);
-    printf("\n\n");*/
 
 
     //string characters;
