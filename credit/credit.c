@@ -54,7 +54,8 @@ int main(void)
     while (number /= 10);
 
     int back_sum = 0;
-    sscanf(backwards, "%d", &x);
+    
+    sscanf(backwards, "%d", &back_sum);
 
     printf("FIRST: %s\n", backwards);
 
