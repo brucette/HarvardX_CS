@@ -16,7 +16,7 @@ int main(void)
     char card[17];
     char converted = sprintf(card, "%li", number);
 
-    printf("*****STRING: %s\n", card);
+    //printf("*****STRING: %s\n", card);
 
     int digit;
     int remainder_sum = 0;
@@ -40,7 +40,7 @@ int main(void)
             char conv = sprintf(first_set, "%i", num); // converts integer to string
             printf("\n CHAR: %s\n", first_set);
 
-            strcpy(backwards, &conv);
+            strcpy(backwards, first_set);
             //printf("#####BACKW: %s\n", backwards);
             index++;
 
@@ -56,7 +56,7 @@ int main(void)
     }
     while (number /= 10);
 
-    //printf("FIRST: %s\n", backwards);//first_set);
+    printf("FIRST: %s\n", backwards);//first_set);
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
