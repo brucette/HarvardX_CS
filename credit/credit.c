@@ -13,6 +13,11 @@ int main(void)
 {
     long number = get_long("Number: ");
 
+    char card[17];
+    char converted = sprintf(card, "%li", number);
+
+    printf("*****STRING: %c\n", converted);
+
     int digit;
     int remainder_sum = 0;
     //int first_set[8];
@@ -51,19 +56,19 @@ int main(void)
     }
     while (number /= 10);
 
-    printf("FIRST: %s\n", backwards);//first_set);
+    //printf("FIRST: %s\n", backwards);//first_set);
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
-    for (int i = 0; i < 8; i++)
+    /*for (int i = 0; i < 8; i++)
     {
         printf("BACKWARDS: %s\n", backwards);
         //printf("BACKWARDS: %s\n", first_set);
     }
 
-    /*printf("FIRST SET: %i\n", first_set[1]);
+    printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
     printf("FIRST SET: %i\n", first_set[3]);
     printf("FIRST SET: %i\n", first_set[4]);
