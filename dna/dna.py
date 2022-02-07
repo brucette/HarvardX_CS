@@ -4,6 +4,7 @@ import sys
 # This is a DNA profiling program. Given a sample it will look for Short Tandem Repeats (STRs), repetitive sequences in a persons DNA.
 # The program then looks in database of different people and their specific STRs to see if a match is found.
 
+
 def main():
 
     # Check for command-line usage
@@ -16,7 +17,7 @@ def main():
     # Read database file into a variable
     database = []
     with open(datafile, "r") as file:
-        reader = csv.DictReader(file) #gives a dictionary
+        reader = csv.DictReader(file)  # gives a dictionary
         for row in reader:
             database.append(row)
 
@@ -55,6 +56,7 @@ def get_number_of_each_STR(list_of_STRs, gene_sequence):
 
     return snippets
 
+
 def check_for_match(snippets, database):
     """Compares the number of STRs found in the sequence to see if it matches
     the STRs of any person in the database"""
@@ -68,6 +70,7 @@ def check_for_match(snippets, database):
                 return name
 
     return False
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
