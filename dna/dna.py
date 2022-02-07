@@ -54,12 +54,14 @@ def get_number_of_each_STR(list_of_STRs, gene_sequence):
     return snippets
 
 def check_for_match(snippets, database):
+    """ """
     for entry in database:
         name = entry.pop("name")
         for value in entry:
             entry[value] = int(entry[value])
             if entry == snippets:
                 return name
+
     return False
 
 def longest_match(sequence, subsequence):
@@ -98,7 +100,6 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
-
 
 
 main()
