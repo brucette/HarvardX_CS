@@ -41,7 +41,7 @@ int main(void)
             printf("\n CHAR: %s\n", first_set);
 
             strcat(backwards, first_set);
-            //printf("#####BACKW: %s\n", backwards);
+            //printf("#####BACKW: %s\n", backwards); 6166618814
             index++;
 
 //strcpy((char)conv, backwards);
