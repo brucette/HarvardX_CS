@@ -1,7 +1,7 @@
 import csv
 import sys
 
-# This program checks for 
+# This is a DNA checking program. Given a sample it will look for Short Tandem Repeats (STRs) (consecutive )
 
 def main():
 
