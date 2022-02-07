@@ -16,7 +16,7 @@ int main(void)
     char card[17];
     char converted = sprintf(card, "%li", number);
 
-    printf("*****STRING: %c\n", converted);
+    printf("*****STRING: %s\n", card);
 
     int digit;
     int remainder_sum = 0;
