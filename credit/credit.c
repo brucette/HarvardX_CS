@@ -54,10 +54,10 @@ int main(void)
     while (number /= 10);
 
     int back_sum = 0;
-    
     sscanf(backwards, "%d", &back_sum);
 
     printf("FIRST: %s\n", backwards);
+    printf("FIRST: %i\n", back_sum);
 
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < strlen(backwards); i++)
