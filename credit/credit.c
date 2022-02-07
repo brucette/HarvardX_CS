@@ -15,41 +15,40 @@ int main(void)
 
     char card[17];
     char converted = sprintf(card, "%li", number);
-
     //printf("*****STRING: %s\n", card);
 
     int digit;
+    int back_sum = 0;
     int remainder_sum = 0;
-    //int first_set[8];
     char first_set[17];
     char *backwards = malloc((sizeof(char) * 8) + 1);
-    //string num [8];
 
 
     int counter = 0;
     do
     {
-        digit = number % 10;    // gets last digit of a number
+        // Gets last digit of a number
+        digit = number % 10;
+
+        // Get every other digit starting from second last by using counter
         int index = 0;
         if (counter % 2 != 0)
         {
-            printf("*****backwards: %i\n", digit);    // get every other digit starting from second last
 
-            int num = digit * 2;    // multiply every other number starting from second last by 2
+            // Multiply every other number starting from second last by 2
+            int num = digit * 2;
 
-            char conv = sprintf(first_set, "%i", num); // converts integer to string
-            printf("\n CHAR: %s\n", first_set);
+            // Convert that integer to string                   //printf("\n CHAR: %s\n", first_set);
+            char conv = sprintf(first_set, "%i", num);
 
+            // Concatenate that string to a new variable
             strcat(backwards, first_set);
-            //printf("#####BACKW: %s\n", backwards); 6166618814
+            //6166618814
             index++;
-
-//strcpy((char)conv, backwards);
-// how to then add those digits to another long/int array/char array,how to convert int to string?
         }
         else
         {
-            printf("remainders: %i\n", digit);     // get remaining digits sum
+            // Get sum of the remaining digits
             remainder_sum += digit;
         }
         counter++;
@@ -58,15 +57,17 @@ int main(void)
 
     printf("FIRST: %s\n", backwards);//first_set);
 
-    //ADD ALL DIGITS IN first_set together (use isdigit()?)
-    //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
-
-
+    //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < 8; i++)
     {
         printf("BACKWARDS: %s\n", backwards);
         //printf("BACKWARDS: %s\n", first_set);
     }
+
+    //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
+
+
+
 
     /*printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
