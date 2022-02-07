@@ -62,13 +62,13 @@ int main(void)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
-    /*for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 8; i++)
     {
         printf("BACKWARDS: %s\n", backwards);
         //printf("BACKWARDS: %s\n", first_set);
     }
 
-    printf("FIRST SET: %i\n", first_set[1]);
+    /*printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
     printf("FIRST SET: %i\n", first_set[3]);
     printf("FIRST SET: %i\n", first_set[4]);
