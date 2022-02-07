@@ -1,6 +1,7 @@
 import csv
 import sys
 
+# This program checks for 
 
 def main():
 
@@ -54,7 +55,8 @@ def get_number_of_each_STR(list_of_STRs, gene_sequence):
     return snippets
 
 def check_for_match(snippets, database):
-    """Compares the STR """
+    """Compares the number of STRs found in the sequence to see if it matches
+    the STRs of any person in the database"""
     for entry in database:
         name = entry.pop("name")
         for value in entry:
