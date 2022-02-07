@@ -7,7 +7,7 @@
 // MASTERCARD: 16 digits, Start with 51/52/53/54/55
 // VISA: 13/16 digits, Start with 4
 // AMEX: 15 digits, Start with 34/37
-// 371449635398431
+
 
 int main(void)
 {
@@ -60,7 +60,7 @@ int main(void)
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < strlen(backwards); i++)
     {
-        back_sum += (int)backwards[i];
+        back_sum += backwards[i];
 
         printf("BACKSUM: %i\n", back_sum);
         //printf("BACKSUM: %c\n", (int)backwards[i]);
@@ -73,5 +73,6 @@ int main(void)
     //printf("MASTERCARD\n");
     //printf("VISA\n");
     //printf("INVALID\n");
+    // 371449635398431
 
 }
