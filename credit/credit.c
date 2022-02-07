@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 // MASTERCARD: 16 digits, Start with 51/52/53/54/55
 // VISA: 13/16 digits, Start with 4
@@ -16,7 +17,7 @@ int main(void)
     int remainder_sum = 0;
     //int first_set[8];
     char first_set[17];
-    char *backwards = malloc(sizeof(byte) * 1);
+    char *backwards = malloc((sizeof(char) * 8) + 1);
     //string num [8];
 
 
