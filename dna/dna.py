@@ -26,9 +26,10 @@ def main():
     # Get the STRs to be checked for in the sequence:
     with open(datafile, "r") as file:
         reader = csv.DictReader(file)
+        # Get first line(column names) of database
         header = dict(list(reader)[0])
         STRs = list(header.keys())
-        # Remove 'name' from list of STRs to be checked
+        # Remove 'name' from list of STRs(colums names) to be checked
         del STRs[0]
 
     # Check database for matching profiles
@@ -42,6 +43,7 @@ def main():
 
 
 def get_number_of_each_STR(list_of_STRs, gene_sequence):
+    """Returns as a dict the name of STR and number of how many times it repeats consecutively in the DNA sample"""
     snippets = {}
     for code in list_of_STRs:
         snippets[code] = 0
