@@ -54,7 +54,7 @@ def get_number_of_each_STR(list_of_STRs, gene_sequence):
     return snippets
 
 def check_for_match(snippets, database):
-    """ """
+    """Compares the STR """
     for entry in database:
         name = entry.pop("name")
         for value in entry:
