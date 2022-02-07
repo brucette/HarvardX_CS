@@ -60,9 +60,9 @@ int main(void)
     for (int i = 0; i < strlen(backwards); i++)
     {
         printf("%c\n", backwards[i]);
-        int again = atoi(&backwards[i]);
-        printf("%i\n", backwards[i]);
+        int again = (int)(backwards[i]);
         back_sum += again;
+        printf("%i\n", back_sum);
     }
     printf("BACKSUM: %i\n", back_sum);
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
