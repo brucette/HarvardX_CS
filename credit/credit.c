@@ -60,19 +60,18 @@ int main(void)
     for (int i = 0; i < strlen(backwards); i++)
     {
         int again = atoi(&backwards[i]);
+        printf("%i\n", backwards[i]);
         back_sum += again;
-
-        printf("BACKSUM: %i\n", back_sum);
-        //printf("BACKSUM: %c\n", (int)backwards[i]);
     }
-
+    printf("BACKSUM: %i\n", back_sum);
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
+    // 371449635398431
     //char characters[]
     //printf("AMEX\n");
     //printf("MASTERCARD\n");
     //printf("VISA\n");
     //printf("INVALID\n");
-    // 371449635398431
+
 
 }
