@@ -1,7 +1,8 @@
 import csv
 import sys
 
-# This is a DNA checking program. Given a sample it will look for Short Tandem Repeats (STRs) (consecutive )
+# This is a DNA profiling program. Given a sample it will look for Short Tandem Repeats (STRs), repetitive sequences in a persons DNA.
+# The program then looks in database of different people and their specific STRs to see if a match is found.
 
 def main():
 
