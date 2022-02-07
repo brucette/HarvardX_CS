@@ -9,7 +9,7 @@ def main():
         sys.exit("Usage: python dna.py DATABASE SEQUENCE")
 
     datafile = sys.argv[1]
-    textfile = sys.argv[2]
+    dnafile = sys.argv[2]
 
     # Read database file into a variable
     database = []
@@ -19,7 +19,7 @@ def main():
             database.append(row)
 
     # Read DNA sequence file into a variable
-    with open(textfile, "r") as text:
+    with open(dnafile, "r") as text:
         genes = text.read()
                                                                 # len(s) might be useful
     # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
