@@ -60,15 +60,10 @@ int main(void)
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < strlen(backwards); i++)
     {
-
         printf("BACKSUM: %i\n", backwards[i]);
     }
 
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
-
-
-    //string characters;
-    //printf("%s\n", (string) number);
 
     //char characters[]
     //printf("AMEX\n");
