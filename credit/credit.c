@@ -16,7 +16,7 @@ int main(void)
     int remainder_sum = 0;
     //int first_set[8];
     char first_set[17];
-    char backwards[17]; //= malloc(strlen(conv) + 1);
+    char *backwards = malloc(sizeof(byte) * 1);
     //string num [8];
 
 
