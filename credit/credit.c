@@ -55,13 +55,13 @@ int main(void)
     }
     while (number /= 10);
 
-    printf("FIRST: %s\n", backwards);//first_set);
+    printf("FIRST: %s\n", backwards);
 
     //ADD ALL DIGITS IN first_set together
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < strlen(backwards); i++)
     {
-        back_sum += (int)backwards[i];
-        printf("BACKSUM: %i\n", back_sum);
+
+        printf("BACKSUM: %i\n", backwards[i]);
     }
 
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
