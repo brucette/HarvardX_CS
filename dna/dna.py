@@ -43,12 +43,14 @@ def main():
 
 
 def get_number_of_each_STR(list_of_STRs, gene_sequence):
-    """Returns as a dict the name of STR and number of how many times it repeats consecutively in the DNA sample"""
+    """Returns as a dict the name of STR and number of how many times
+     it repeats consecutively in the DNA sample"""
     snippets = {}
     for code in list_of_STRs:
         snippets[code] = 0
         number = longest_match(gene_sequence, code)
         snippets[code] += number
+
     return snippets
 
 def check_for_match(snippets, database):
