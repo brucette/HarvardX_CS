@@ -31,8 +31,8 @@ int main(void)
 
             int num = digit * 2;    // multiply every other number starting from second last by 2
 
-            //char conv =
-            sprintf(first_set, "%i", num); // converts integer to string
+            //char conv = printf()
+            sprintf(&first_set, "%i", num); // converts integer to string
             printf("\n CHAR: %c\n", first_set);
 
             strcpy(backwards, &conv);
