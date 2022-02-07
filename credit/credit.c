@@ -21,8 +21,8 @@ int main(void)
     int back_sum = 0;
     int remainder_sum = 0;
     char first_set[17];
-    char *backwards = malloc((sizeof(char) * 8) + 1);
-
+    //char *backwards = malloc((sizeof(char) * 8) + 1);
+    char backwards[9];
 
     int counter = 0;
     do
@@ -43,7 +43,6 @@ int main(void)
 
             // Concatenate that string to a new variable
             strcat(backwards, first_set);
-            //6166618814
             index++;
         }
         else
