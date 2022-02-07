@@ -60,7 +60,8 @@ int main(void)
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < strlen(backwards); i++)
     {
-        back_sum += backwards[i];
+        int again = atoi(backwards[i]);
+        back_sum += again;
 
         printf("BACKSUM: %i\n", back_sum);
         //printf("BACKSUM: %c\n", (int)backwards[i]);
