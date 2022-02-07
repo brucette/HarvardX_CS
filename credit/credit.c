@@ -18,7 +18,6 @@ int main(void)
     //printf("*****STRING: %s\n", card);
 
     int digit;
-    int back_sum = 0;
     int remainder_sum = 0;
     char first_set[17];
     //char *backwards = malloc((sizeof(char) * 8) + 1);
@@ -53,6 +52,9 @@ int main(void)
         counter++;
     }
     while (number /= 10);
+
+    int back_sum = 0;
+    sscanf(backwards, "%d", &x);
 
     printf("FIRST: %s\n", backwards);
 
