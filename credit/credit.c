@@ -34,6 +34,7 @@ int main(void)
             char conv = sprintf(first_set, "%i", num); // converts integer to string
             printf("\n CHAR: %s\n", first_set);
 
+            char *t = malloc(strlen(conv) + 1);
             strcpy(backwards, &conv);
             //printf("#####BACKW: %s\n", backwards);
             index++;
