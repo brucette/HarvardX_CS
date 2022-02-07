@@ -23,15 +23,15 @@ def main():
     # Read DNA sequence file into a variable
     with open(dnafile, "r") as text:
         genes = text.read()
-                                                                # len(s) might be useful
-    # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
+
+    # Find longest match of each STR in DNA sequence
     # Get the STRs to be checked for in the sequence:
     with open(datafile, "r") as file:
         reader = csv.DictReader(file)
-        # Get first line(column names) of database
+        # Get first line (column names) of database
         header = dict(list(reader)[0])
         STRs = list(header.keys())
-        # Remove 'name' from list of STRs(colums names) to be checked
+        # Remove 'name' from list of STRs (colums names) to be checked
         del STRs[0]
 
     # Check database for matching profiles
@@ -45,7 +45,7 @@ def main():
 
 
 def get_number_of_each_STR(list_of_STRs, gene_sequence):
-    """Returns as a dict the name of STR and number of how many times
+    """Returns as a dict the names of each STR and the number of times
      it repeats consecutively in the DNA sample"""
     snippets = {}
     for code in list_of_STRs:
