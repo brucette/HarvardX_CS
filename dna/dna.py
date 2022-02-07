@@ -35,7 +35,7 @@ def main():
     snippets = get_number_of_each_STR(STRs, genes)
 
     result = check_for_match(snippets, database)
-    if result == None:
+    if result:
         print("No match.")
     else:
         print(result)
@@ -56,6 +56,8 @@ def check_for_match(snippets, database):
             entry[value] = int(entry[value])
             if entry == snippets:
                 return name
+            else:
+                return False
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
