@@ -16,7 +16,7 @@ int main(void)
     int remainder_sum = 0;
     //int first_set[8];
     char first_set[17];
-    char *backwards = NULL;
+    char *backwards = malloc(strlen(conv) + 1);
     //string num [8];
 
 
@@ -34,7 +34,6 @@ int main(void)
             char conv = sprintf(first_set, "%i", num); // converts integer to string
             printf("\n CHAR: %s\n", first_set);
 
-            char *t = malloc(strlen(conv) + 1);
             strcpy(backwards, &conv);
             //printf("#####BACKW: %s\n", backwards);
             index++;
