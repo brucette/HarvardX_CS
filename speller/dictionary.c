@@ -50,9 +50,9 @@ unsigned int hash(const char *word)
 {
     if (strlen(word) == 1)
     {
-        return ((toupper(word[0]) - 'A' ) * 26) % N;
+        return ((toupper(word[0]) - 'A') * 26) % N;
     }
-    return (((toupper(word[0]) - 'A' ) * 26) + (tolower(word[1]) - 'a')) % N;
+    return (((toupper(word[0]) - 'A') * 26) + (tolower(word[1]) - 'a')) % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
