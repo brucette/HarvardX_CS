@@ -6,6 +6,7 @@
 // MASTERCARD: 16 digits, Start with 51/52/53/54/55
 // VISA: 13/16 digits, Start with 4
 // AMEX: 15 digits, Start with 34/37
+// 371449635398431
 
 int main(void)
 {
@@ -31,8 +32,8 @@ int main(void)
             int num = digit * 2;    // multiply every other number starting from second last by 2
 
             char conv = sprintf(&first_set, "%i", num); // converts integer to string
-            printf("#####FIRST_SET: %c\n", first_set[index]);
-            
+            printf("\n CHAR:: %c\n", conv);
+
             strcpy(backwards, &conv);
             printf("#####FIRST_SET: %c\n", first_set[index]);
             index++;
