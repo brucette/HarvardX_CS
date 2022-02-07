@@ -36,9 +36,9 @@ def main():
 
     result = check_for_match(snippets, database)
     if result:
-        print("No match.")
-    else:
         print(result)
+    else:
+        print("No match.")
 
 
 def get_number_of_each_STR(list_of_STRs, gene_sequence):
