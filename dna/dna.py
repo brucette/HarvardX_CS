@@ -59,7 +59,7 @@ def check_for_match(snippets, database):
     """Compares the number of STRs found in the sequence to see if it matches
     the STRs of any person in the database"""
     for entry in database:
-        # Remove the first item "name" in each dict entry, in order to be able to compare directly to the dict snippets which doesn't have the name item
+        # Remove the first item "name" in each dict entry, to able direct comparison with the dict snippets which doesn't have the name item
         name = entry.pop("name")
         for value in entry:
             # Values in each dict entry are strings, convert to be able to compare to snippets which has integer values
