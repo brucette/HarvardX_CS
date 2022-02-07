@@ -19,8 +19,8 @@ def main():
             database.append(row)
 
     # Read DNA sequence file into a variable
-    with open(textfile, "r") as f:
-        genes = f.read()
+    with open(textfile, "r") as text:
+        genes = text.read()
                                                                 # len(s) might be useful
     # Find longest match of each STR in DNA sequence            # s[i:j] finds substring
     # Get the STRs to be checked for in the sequence:
