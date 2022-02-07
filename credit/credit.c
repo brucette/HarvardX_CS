@@ -16,7 +16,7 @@ int main(void)
     int remainder_sum = 0;
     //int first_set[8];
     char first_set[17];
-    char backwards[17];
+    char *backwards[17];
     //string num [8];
 
 
@@ -51,17 +51,16 @@ int main(void)
     }
     while (number /= 10);
 
-    printf("#####BACKW: %s\n", backwards);
+
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
 
-
-    /*for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 8; i++)
     {
         printf("BACKWARDS: %s\n", backwards);
-    }*/
+    }
 
     /*printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
