@@ -59,7 +59,7 @@ int main(void)
     //ADD ALL DIGITS IN first_set together
     for (int i = 0; i < strlen(backwards); i++)
     {
-        printf("%c\n", backwards[i]);
+        printf("%i\n", (int)(backwards[i]));
         int again = (int)(backwards[i]);
         back_sum += again;
         printf("%i\n", back_sum);
