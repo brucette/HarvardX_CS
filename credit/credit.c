@@ -68,11 +68,5 @@ int main(void)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
 
     // 371449635398431
-    //char characters[]
-    //printf("AMEX\n");
-    //printf("MASTERCARD\n");
-    //printf("VISA\n");
-    //printf("INVALID\n");
-
 
 }
