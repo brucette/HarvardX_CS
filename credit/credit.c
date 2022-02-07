@@ -54,10 +54,11 @@ int main(void)
 
 
 
-    for (int i = 0; i < 8; i++)
+    /*for (int i = 0; i < 8; i++)
     {
         printf("BACKWARDS: %s\n", backwards);
-    }
+    }*/
+
     /*printf("FIRST SET: %i\n", first_set[1]);
     printf("FIRST SET: %i\n", first_set[2]);
     printf("FIRST SET: %i\n", first_set[3]);
