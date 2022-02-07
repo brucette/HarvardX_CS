@@ -50,7 +50,7 @@ int main(void)
     }
     while (number /= 10);
 
-    printf("FIRST: %s\n", first_set);
+    printf("FIRST: %s\n", backwards);//first_set);
 
     //ADD ALL DIGITS IN first_set together (use isdigit()?)
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
@@ -58,7 +58,7 @@ int main(void)
 
     for (int i = 0; i < 8; i++)
     {
-        //printf("BACKWARDS: %s\n", backwards);
+        printf("BACKWARDS: %s\n", backwards);
         //printf("BACKWARDS: %s\n", first_set);
     }
 
