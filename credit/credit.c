@@ -56,8 +56,8 @@ int main(void)
     // Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
     {
-        int again = backwards[i] - '0';
-        backw_sum += again;
+        int integer = backwards[i] - '0';
+        backw_sum += integer;
     }
 
     // Add sum of remainder digits and products of the multiplied digits together
