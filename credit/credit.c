@@ -17,8 +17,6 @@ int main(void)
 
     int remainder_sum = 0;
 
-    
-
     char *backwards = malloc((sizeof(char) * 10) + 1);
 
     int counter = 0;
@@ -35,6 +33,8 @@ int main(void)
             int num = digit * 2;
 
             // Convert num to a string
+            // Variable for printing a string to (when converting each digit to string)
+            char digit_to_string[3];
             char conv = sprintf(digit_to_string, "%i", num);
 
             // Concatenate that string to a new string of all the digits
