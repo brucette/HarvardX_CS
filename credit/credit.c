@@ -69,7 +69,5 @@ int main(void)
     }
     printf("BACKSUM: %i\n", back_sum);
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
-
     // 371449635398431
-
 }
