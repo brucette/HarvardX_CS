@@ -20,7 +20,7 @@ int main(void)
     int digit;
     int remainder_sum = 0;
     char first_set[17];
-    char *backwards = malloc((sizeof(char) * 8) + 1);
+    char *backwards = malloc((sizeof(char) * 10) + 1);
     //char backwards[9];
 
     int counter = 0;
