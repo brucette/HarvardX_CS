@@ -67,7 +67,8 @@ bool is_valid(string key)
     for (int n = 0; n < len; n++)
     {
         for (int p = 0; p < len; p++)
-        {                                                   //use ascii to get 'A'
+        {
+            //use ascii to get 'A'
             if (key[n] == small_letters[p][0] || key[n] == small_letters[p][0] - 32)
             {
                 small_letters[p][1] += 1;
