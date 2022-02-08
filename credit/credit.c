@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-// MASTERCARD: 16 digits, Start with 51/52/53/54/55
+// This program checks for the validity of a credit card using the 
 
 int main(void)
 {
