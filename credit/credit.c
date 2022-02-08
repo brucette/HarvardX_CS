@@ -95,6 +95,7 @@ int main(void)
         printf("INVALID\n");
     }
 
+    free(backwards);
 }
 
 
