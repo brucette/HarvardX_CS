@@ -72,7 +72,7 @@ int main(void)
 
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
     //char *card =
-    printf("CARDlength: %i\n", strlen(card));
+    printf("CARDlength: %lu\n", strlen(card));
 
     /* Check if 0 exists in end sum by using % 10
     if (final % 10 == 0)
@@ -101,4 +101,4 @@ int main(void)
     // 371449635398431
 
 
-}
+
