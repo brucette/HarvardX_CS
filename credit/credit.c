@@ -59,14 +59,18 @@ int main(void)
     printf("FIRST: %s\n", backwards);
     //printf("FIRST: %i\n", back_sum);
 
-    //ADD ALL DIGITS IN first_set together
+    //Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
     {
         int again = backwards[i] - '0';
         back_sum += again;
-        printf("%i\n", back_sum);
     }
-    //printf("BACKSUM: %i\n", back_sum);
+
+    //Add sum of remainder digits and products of the multiplied digits together
+    int final = back_sum + remainder_sum;
+    printf("FINALSUM: %i\n", final);
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
     // 371449635398431
+
+
 }
