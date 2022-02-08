@@ -11,10 +11,14 @@ int main(void)
     long number = get_long("Number: ");
 
     char card[17];
+
+    // Print whole number as a string and save in card
     char converted = sprintf(card, "%li", number);
 
     int digit;
     int remainder_sum = 0;
+
+    // Variable for
     char first_set[17];
     char *backwards = malloc((sizeof(char) * 10) + 1);
 
