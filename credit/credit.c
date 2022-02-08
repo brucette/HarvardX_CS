@@ -51,17 +51,17 @@ int main(void)
     }
     while (number /= 10);
 
-    int back_sum = 0;
+    int backw_sum = 0;
 
     // Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
     {
         int again = backwards[i] - '0';
-        back_sum += again;
+        backw_sum += again;
     }
 
     // Add sum of remainder digits and products of the multiplied digits together
-    int final = back_sum + remainder_sum;
+    int final = backw_sum + remainder_sum;
 
     int length = strlen(card);
 
