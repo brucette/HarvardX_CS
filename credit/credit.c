@@ -59,17 +59,41 @@ int main(void)
     printf("FIRST: %s\n", backwards);
     //printf("FIRST: %i\n", back_sum);
 
-    //Add products of the multiplied digits together
+    // Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
     {
         int again = backwards[i] - '0';
         back_sum += again;
     }
 
-    //Add sum of remainder digits and products of the multiplied digits together
+    // Add sum of remainder digits and products of the multiplied digits together
     int final = back_sum + remainder_sum;
     printf("FINALSUM: %i\n", final);
+
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
+    char *card =
+
+    // Check if 0 exists in end sum by using % 10
+    if (final % 10 == 0)
+    {
+        if (card[0] == '4' && (length == 13 or 16))
+        {
+            printf("VISA\n")
+        }
+
+
+    }
+
+
+
+    elif card[0] == '5' and card[1] >= '1' and card[1] <= '5' and length == 16:
+        print("MASTERCARD\n")
+
+    elif card[0] == '3' and card[1] == '4' or '7' and length == 15:
+        print("AMEX\n")
+    else:
+    print("INVALID\n")
+
     // 371449635398431
 
 
