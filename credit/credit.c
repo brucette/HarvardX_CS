@@ -64,10 +64,9 @@ int main(void)
 
     // Add sum of remainder digits and products of the multiplied digits together
     int final = back_sum + remainder_sum;
-    printf("FINALSUM: %i\n", final);
+    //printf("FINALSUM: %i\n", final);
 
     int length = strlen(card);
-    //printf("CARDlength: %i\n", length);
 
     // Check if 0 exists in end sum by using % 10
     if (final % 10 == 0)
