@@ -53,10 +53,11 @@ int main(void)
     }
     while (number /= 10);
 
-    int back_sum = backwards[0] - '0';
+    int back_sum = atoi(backwards);
+    //int back_sum = backwards[0] - '0';
     //sscanf(backwards, "%i", back_sum);
 
-    printf("FIRST: %c\n", backwards[0]);
+    //printf("FIRST: %c\n", backwards[0]);
     printf("FIRST: %i\n", back_sum);
 
     //ADD ALL DIGITS IN first_set together
