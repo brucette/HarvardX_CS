@@ -19,7 +19,7 @@ int main(void)
     int remainder_sum = 0;
 
     // Variable for printing a string to (when converting each digit to string)
-    char first_set[3];
+    char digit_to_string[3];
 
     char *backwards = malloc((sizeof(char) * 10) + 1);
 
@@ -37,10 +37,10 @@ int main(void)
             int num = digit * 2;
 
             // Convert num to a string
-            char conv = sprintf(first_set, "%i", num);
+            char conv = sprintf(digit_to_string, "%i", num);
 
-            // Concatenate that string to a new variable
-            strcat(backwards, first_set);
+            // Concatenate that string to a new string of all the digits
+            strcat(backwards, digit_to_string);
         }
         else
         {
