@@ -77,21 +77,21 @@ int main(void)
     // Check if 0 exists in end sum by using % 10
     if (final % 10 == 0)
     {
-        if (card[0] == '4' && (length == 13 || 16))
+        if (card[0] == '4' && (length == 13 || length == 16))
         {
             printf("VISA\n");
         }
         else if (card[0] == '5' && card[1] >= '1' && card[1] <= '5' && length == 16)
         {
-            print("MASTERCARD\n");
+            printf("MASTERCARD\n");
         }
         else if (card[0] == '3' && card[1] == '4' || '7' && length == 15)
         {
-            print("AMEX\n");
+            printf("AMEX\n");
         }
         else:
         {
-            print("INVALID\n");
+            printf("INVALID\n");
         }
     }
 
