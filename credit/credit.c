@@ -47,6 +47,7 @@ int main(void)
     }
     while (number /= 10);
 
+
     int backw_sum = 0;
 
     // Add products of the multiplied digits together
@@ -55,6 +56,7 @@ int main(void)
         int integer = backwards[i] - '0';
         backw_sum += integer;
     }
+
 
     // Add sum of remainder digits and products of the multiplied digits together
     int final = backw_sum + remainder_sum;
@@ -86,6 +88,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
+
 
     free(backwards);
 }
