@@ -57,7 +57,7 @@ int main(void)
     //int back_sum = backwards[0] - '0';
     //sscanf(backwards, "%i", back_sum);
 
-    //printf("FIRST: %c\n", backwards[0]);
+    printf("FIRST: %s\n", backwards);
     printf("FIRST: %i\n", back_sum);
 
     //ADD ALL DIGITS IN first_set together
