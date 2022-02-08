@@ -28,12 +28,10 @@ int main(void)
         // Get every other digit starting from second last by using counter
         if (counter % 2 != 0)
         {
-
             // Multiply every other number starting from second last by 2
             int num = digit * 2;
 
-            // Convert num to a string
-            // Variable for printing a string to (when converting each digit to string)
+            // Print multiplied digit to a string
             char digit_to_string[3];
             char conv = sprintf(digit_to_string, "%i", num);
 
