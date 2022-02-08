@@ -53,19 +53,15 @@ int main(void)
     //int back_sum = atoi(backwards);
     //int back_sum = backwards[0] - '0';
 
-    printf("FIRST: %s\n", backwards);
-
-
     // Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
     {
         int again = backwards[i] - '0';
         back_sum += again;
     }
-    printf("BACKSUM: %i\n", back_sum);
+
     // Add sum of remainder digits and products of the multiplied digits together
     int final = back_sum + remainder_sum;
-    printf("FINALSUM: %i\n", final);
 
     int length = strlen(card);
 
