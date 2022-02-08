@@ -15,7 +15,7 @@ int main(void)
 
     int digit;
     int remainder_sum = 0;
-    char first_set[17];
+    char first_set[2];
     //char *backwards = malloc((sizeof(char) * 10) + 1);
     char backwards[12];
 
@@ -52,7 +52,7 @@ int main(void)
     int back_sum = 0;
     //int back_sum = atoi(backwards);
     //int back_sum = backwards[0] - '0';
-   
+
     printf("FIRST: %s\n", backwards);
 
 
