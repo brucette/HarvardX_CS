@@ -53,21 +53,21 @@ int main(void)
     }
     while (number /= 10);
 
-    int back_sum = (int) (backwards);
+    //int back_sum = (int) (backwards[0]);
     //sscanf(backwards, "%i", back_sum);
 
-    printf("FIRST: %s\n", backwards);
-    printf("FIRST: %i\n", back_sum);
+    printf("FIRST: %c\n", backwards[0]);
+    //printf("FIRST: %i\n", back_sum);
 
     //ADD ALL DIGITS IN first_set together
-    for (int i = 0; i < strlen(backwards); i++)
+    /*for (int i = 0; i < strlen(backwards); i++)
     {
         //printf("%i\n", (int)(backwards[i]));
         int again = (int)(backwards[i]);
         back_sum += again;
         //printf("%i\n", back_sum);
-    }
-    printf("BACKSUM: %i\n", back_sum);
+    }*/
+    //printf("BACKSUM: %i\n", back_sum);
     //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
     // 371449635398431
 }
