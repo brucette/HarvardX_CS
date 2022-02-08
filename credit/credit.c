@@ -77,7 +77,7 @@ int main(void)
     // Check if 0 exists in end sum by using % 10
     if (final % 10 == 0)
     {
-        if (card[0] == '4' && (length == 13 or 16))
+        if (card[0] == '4' && (length == 13 || 16))
         {
             printf("VISA\n");
         }
