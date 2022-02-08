@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-// This program checks for the validity of a credit card using the 
+// This program checks for the validity of a credit card using Luhn’s Algorithm
 
 int main(void)
 {
