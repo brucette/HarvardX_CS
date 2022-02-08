@@ -70,29 +70,32 @@ int main(void)
     int final = back_sum + remainder_sum;
     printf("FINALSUM: %i\n", final);
 
-    //CONVERT NUMBER TO STRING AND CHECK FOR LENGTH AND FIRST TWO CHARACTERS
+    // CHECK FOR LENGTH AND FIRST TWO CHARACTERS
     int length = strlen(card);
     printf("CARDlength: %i\n", length);
 
-    /* Check if 0 exists in end sum by using % 10
+    // Check if 0 exists in end sum by using % 10
     if (final % 10 == 0)
     {
         if (card[0] == '4' && (length == 13 or 16))
         {
-            printf("VISA\n")
+            printf("VISA\n");
         }
-        elif card[0] == '5' and card[1] >= '1' and card[1] <= '5' and length == 16:
-        print("MASTERCARD\n")
-
-        elif card[0] == '3' and card[1] == '4' or '7' and length == 15:
-        print("AMEX\n")
-
+        else if (card[0] == '5' && card[1] >= '1' && card[1] <= '5' && length == 16)
+        {
+            print("MASTERCARD\n");
+        }
+        else if (card[0] == '3' && card[1] == '4' || '7' && length == 15)
+        {
+            print("AMEX\n");
+        }
         else:
-        print("INVALID\n")
-    */
-
-
+        {
+            print("INVALID\n");
+        }
     }
+
+}
 
 
 
