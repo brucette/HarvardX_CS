@@ -29,7 +29,6 @@ int main(void)
         int digit = number % 10;
 
         // Get every other digit starting from second last by using counter
-        int index = 0;
         if (counter % 2 != 0)
         {
 
@@ -41,7 +40,6 @@ int main(void)
 
             // Concatenate that string to a new variable
             strcat(backwards, first_set);
-            index++;
         }
         else
         {
