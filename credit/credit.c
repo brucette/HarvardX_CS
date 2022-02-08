@@ -20,7 +20,7 @@ int main(void)
     int digit;
     int remainder_sum = 0;
     char first_set[17];
-    //char *backwards = malloc((sizeof(char) * 8) + 1);
+    char *backwards = malloc((sizeof(char) * 8) + 1);
     char backwards[9];
 
     int counter = 0;
@@ -53,7 +53,7 @@ int main(void)
     }
     while (number /= 10);
 
-    int back_sum = atoi(&backwards[0]);
+    int back_sum = atoi(backwards);
     //sscanf(backwards, "%i", back_sum);
 
     printf("FIRST: %c\n", backwards[0]);
