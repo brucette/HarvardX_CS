@@ -15,7 +15,7 @@ int main(void)
     // Print whole number as a string and save in card
     char converted = sprintf(card, "%li", number);
 
-    int digit;
+    //int digit;
     int remainder_sum = 0;
 
     // Variable for
@@ -26,7 +26,7 @@ int main(void)
     do
     {
         // Gets last digit of a number
-        digit = number % 10;
+        int digit = number % 10;
 
         // Get every other digit starting from second last by using counter
         int index = 0;
