@@ -49,8 +49,6 @@ int main(void)
     while (number /= 10);
 
     int back_sum = 0;
-    //int back_sum = atoi(backwards);
-    //int back_sum = backwards[0] - '0';
 
     // Add products of the multiplied digits together
     for (int i = 0; i < strlen(backwards); i++)
