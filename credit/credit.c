@@ -18,8 +18,8 @@ int main(void)
     //int digit;
     int remainder_sum = 0;
 
-    // Variable for temporarily holding a string 
-    char first_set[17];
+    // Variable for temporarily holding a string
+    //char first_set[17];
 
 
     char *backwards = malloc((sizeof(char) * 10) + 1);
