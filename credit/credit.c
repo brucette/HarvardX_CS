@@ -18,8 +18,10 @@ int main(void)
     //int digit;
     int remainder_sum = 0;
 
-    // Variable for
+    // Variable for temporarily holding a string 
     char first_set[17];
+
+
     char *backwards = malloc((sizeof(char) * 10) + 1);
 
     int counter = 0;
@@ -35,7 +37,7 @@ int main(void)
             // Multiply every other number starting from second last by 2
             int num = digit * 2;
 
-            // Convert that integer to string
+            // Convert num to a string
             char conv = sprintf(first_set, "%i", num);
 
             // Concatenate that string to a new variable
