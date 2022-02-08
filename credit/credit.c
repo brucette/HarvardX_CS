@@ -85,7 +85,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else if ((card[0] == '3' && card[1] == '4' || card[1] '7') && length == 15)
+        else if ((card[0] == '3') && (card[1] == '4') || (card[1] '7') && length == 15)
         {
             printf("AMEX\n");
         }
