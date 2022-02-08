@@ -15,11 +15,9 @@ int main(void)
     // Print whole number as a string and save in card
     char converted = sprintf(card, "%li", number);
 
-    //int digit;
     int remainder_sum = 0;
 
-    // Variable for printing a string to (when converting each digit to string)
-    char digit_to_string[3];
+    
 
     char *backwards = malloc((sizeof(char) * 10) + 1);
 
