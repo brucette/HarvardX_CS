@@ -5,6 +5,7 @@ Your query should output a table with two columns, one for the title of each mov
 Movies that do not have ratings should not be included in the result.
 SELECT title FROM movies WHERE year = 2010 ORDER BY rating DESC;
 
+
 SELECT
 <columns>
 FROM
