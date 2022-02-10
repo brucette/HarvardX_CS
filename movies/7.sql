@@ -13,4 +13,4 @@ table2
 ON
 <predicate>
 /* This prints movie and its rating, by rating descending order:*/
-SELECT title, rating FROM movies JOIN ratings ON id = movie_id ORDER BY rating DESC WHERE;
+SELECT title, rating FROM movies JOIN ratings ON id = movie_id ORDER BY rating DESC;
