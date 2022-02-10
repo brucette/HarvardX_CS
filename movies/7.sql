@@ -3,8 +3,6 @@ For movies with the same rating, order them alphabetically by title.
 
 Your query should output a table with two columns, one for the title of each movie and one for the rating of each movie.
 Movies that do not have ratings should not be included in the result.
-SELECT title FROM movies WHERE year = 2010 ORDER BY rating DESC;
-
 
 SELECT
 <columns>
@@ -14,3 +12,5 @@ JOIN
 table2
 ON
 <predicate>
+/* This prints movie and its rating, by rating descending order:*/
+SELECT title, rating FROM movies JOIN ratings ON id = movie_id ORDER BY rating DESC;
