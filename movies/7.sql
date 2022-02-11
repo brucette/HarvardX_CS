@@ -5,3 +5,5 @@ For movies with the same rating, order them alphabetically by title.
     Movies that do not have ratings should not be included in the result.
 
 SELECT title, rating FROM movies JOIN ratings ON id = movie_id ORDER BY rating DESC, title ASC;
+
+SELECT rating, title FROM movies JOIN ratings ON id = movie_id ORDER BY rating DESC, title ASC;
