@@ -6,5 +6,4 @@ In 10.sql, write a SQL query to list the names of all people who have directed a
 
 /*           Get all movies with rating 9 or over */
 SELECT DISTINCT name FROM people JOIN directors ON people.id = directors.person_id JOIN ratings ON directors.movie_id = ratings.movie_id;
-WHERE
-            (SELECT movie_id FROM ratings WHERE rating >= 9.0);
+WHERE directors.movie_id IN (SELECT movie_id FROM ratings WHERE rating >= 9.0);
