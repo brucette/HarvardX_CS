@@ -4,3 +4,5 @@ In 12.sql, write a SQL query to list the titles of all movies in which both John
     You may assume that there is only one person in the database with the name Johnny Depp.
     You may assume that there is only one person in the database with the name Helena Bonham Carter.
 
+SELECT title FROM movies JOIN stars ON movies.id = stars.movie_id JOIN people ON stars.person_id = people.id
+WHERE stars.person_id IN (SELECT id FROM people WHERE name = "Johnny Depp" and name = "Helena Bonham Carter")
