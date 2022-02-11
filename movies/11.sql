@@ -4,7 +4,7 @@ with the highest rated.
     Your query should output a table with a single column for the title of each movie.
     You may assume that there is only one person in the database with the name Chadwick Boseman.
 
-SELECT title FROM movies JOIN stars ON id = stars.movie_id JOIN ratings ON id = ratings.movie_id
+SELECT title, rating FROM movies JOIN stars ON id = stars.movie_id JOIN ratings ON id = ratings.movie_id
 WHERE person_id = (SELECT id FROM people WHERE name = 'Chadwick Boseman')
 ORDER BY rating DESC LIMIT 5;
 
