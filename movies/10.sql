@@ -5,4 +5,4 @@ In 10.sql, write a SQL query to list the names of all people who have directed a
 
 
 /*           Get all movies with rating 9 or over */
-            (SELECT movie_if FROM ratings WHERE rating >= 9.0);
+            (SELECT movie_id FROM ratings WHERE rating >= 9.0);
