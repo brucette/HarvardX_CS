@@ -6,4 +6,4 @@ In 12.sql, write a SQL query to list the titles of all movies in which both John
 
 SELECT title FROM movies JOIN stars ON movies.id = stars.movie_id JOIN people ON stars.person_id = people.id
 WHERE
-person_id IN (SELECT id FROM people WHERE name = "Johnny Depp" AND "Helena Bonham Carter");
+person_id IN (SELECT id FROM people WHERE name = "Johnny Depp", "Helena Bonham Carter");
