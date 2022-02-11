@@ -3,4 +3,4 @@ with the highest rated.
 
     Your query should output a table with a single column for the title of each movie.
     You may assume that there is only one person in the database with the name Chadwick Boseman.
-SELECT title FROM movies WHERE 
+SELECT title FROM movies JOIN 
