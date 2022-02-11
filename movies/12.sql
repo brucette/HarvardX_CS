@@ -10,7 +10,8 @@ WHERE person_id = (SELECT id FROM people WHERE name IN ("Johnny Depp", "Helena B
 
 SELECT title FROM movies
 JOIN stars ON movies.id = stars.movie_id JOIN people ON stars.person_id = people.id
-WHERE (SELECT id FROM people WHERE name = "Johnny Depp", "Helena Bonham Carter") IN stars);
+WHERE person_id = (SELECT id FROM people WHERE name = "Johnny Depp")
+AND (SELECT id FROM people WHERE name = "Helena Bonham Carter");
 
 SELECT title, person_id FROM movies JOIN stars ON id = movie_id
 WHERE title = "Sweeney Todd: The Demon Barber of Fleet Street";
