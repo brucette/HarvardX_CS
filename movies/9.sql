@@ -4,4 +4,5 @@ In 9.sql, write a SQL query to list the names of all people who starred in a mov
     No need to worry about people who have no birth year listed, so long as those who do have a birth year are listed in order.
     If a person appeared in more than one movie in 2004, they should only appear in your results once.
 
-SELECT COUNT(name) FROM people JOIN stars ON people.id = person_id JOIN movies ON movie_id = movies.id WHERE movie_id IN (SELECT id FROM movies where year = 2004);
+SELECT COUNT(name) FROM people JOIN stars ON people.id = stars.person_id JOIN movies ON stars.movie_id = movies.id
+WHERE stars.movie_id IN (SELECT id FROM movies where year = 2004);
