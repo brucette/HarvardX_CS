@@ -48,6 +48,7 @@ end of the phone to purchase the flight ticket. |
     license_plate TEXT,
     PRIMARY KEY(id)
 );*/
+  -- Thief is definitely one of these as was seen getting into car within this time frame:
 SELECT activity, license_plate, hour, minute
   FROM bakery_security_logs
  WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
