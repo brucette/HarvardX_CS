@@ -18,6 +18,6 @@ SELECT description
     each of their interview transcripts mentions the bakery.
     Littering took place at 16:36. No known witnesses.*/
 
--- Crime scene report mentions interview logs and  so following query was ran next:
+-- Crime scene report mentions interview logs and bakery so the following queries were ran next:
 
 -- List of suspects
