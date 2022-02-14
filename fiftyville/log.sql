@@ -37,5 +37,15 @@ end of the phone to purchase the flight ticket. |
 
 |Emma| I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour. They never bought anything.*/
 .schema bakery_security_logs
-
+/*bakery_security_logs (
+    id INTEGER,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    hour INTEGER,
+    minute INTEGER,
+    activity TEXT,
+    license_plate TEXT,
+    PRIMARY KEY(id)
+);*/
 -- List of suspects
