@@ -48,4 +48,7 @@ end of the phone to purchase the flight ticket. |
     license_plate TEXT,
     PRIMARY KEY(id)
 );*/
+SELECT activity, license_plate
+  FROM bakery_security_logs
+ WHERE month = 7 AND day = 28 AND 
 -- List of suspects
