@@ -20,9 +20,10 @@ SELECT description
 
 -- Crime scene report mentions interview logs and bakery so the following queries were ran next:
 .schema interviews
-SELECT id, name, transcript
+SELECT name, transcript
   FROM interviews
  WHERE month = 7
    AND day = 28;
+   AND transcription LIKE %bakery%;
 
 -- List of suspects
