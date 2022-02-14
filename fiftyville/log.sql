@@ -19,5 +19,5 @@ SELECT description
     Littering took place at 16:36. No known witnesses.*/
 
 -- Crime scene report mentions interview logs and bakery so the following queries were ran next:
-
+.schema interviews
 -- List of suspects
