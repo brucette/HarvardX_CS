@@ -5,5 +5,9 @@ SELECT title
 
        JOIN ratings
          ON id = ratings.movie_id
- WHERE person_id = (SELECT id FROM people WHERE name = 'Chadwick Boseman')
-ORDER BY rating DESC LIMIT 5;
+ WHERE person_id =
+       (SELECT id
+          FROM people
+         WHERE name = 'Chadwick Boseman')
+ ORDER BY rating DESC
+ LIMIT 5;
