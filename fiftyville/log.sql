@@ -37,19 +37,10 @@ end of the phone to purchase the flight ticket. |
 
 |Emma| I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour. They never bought anything.*/
 .schema bakery_security_logs
-/*bakery_security_logs (
-    id INTEGER,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    hour INTEGER,
-    minute INTEGER,
-    activity TEXT,
-    license_plate TEXT,
-    PRIMARY KEY(id)
-);*/
+
   -- Thief is definitely one of these as was seen getting into car within this time frame:
 SELECT activity, license_plate, hour, minute
   FROM bakery_security_logs
  WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
+ 
 -- List of suspects
