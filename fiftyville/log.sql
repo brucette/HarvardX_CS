@@ -19,13 +19,13 @@ SELECT description
     Littering took place at 16:36. No known witnesses.*/
 
 -- Crime scene report mentions interview logs and bakery so the following queries were ran next:
-.schema interviews
-SELECT name, transcript
-  FROM interviews
- WHERE month = 7 AND day = 28 AND transcript LIKE "%bakery%";
+  .schema interviews
+  -- to get interview logs:
+  SELECT name, transcript
+    FROM interviews
+  WHERE month = 7 AND day = 28 AND transcript LIKE "%bakery%";
 
-
-                                                         |
+/*                                                         |
 |Eugene| I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
 I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
                                                                                       |
@@ -37,8 +37,10 @@ end of the phone to purchase the flight ticket. |
 .schema bakery_security_logs
 
   -- Thief is definitely one of these as was seen getting into car within this time frame, according to interview transcripts:
-SELECT activity, license_plate, hour, minute
-  FROM bakery_security_logs
- WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
+  SELECT activity, license_plate, hour, minute
+    FROM bakery_security_logs
+  WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
+  -- Check when witness Eugene got to the bakery:
+  .schema people
 
 -- List of suspects
