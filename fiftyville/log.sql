@@ -22,8 +22,6 @@ SELECT description
 .schema interviews
 SELECT name, transcript
   FROM interviews
- WHERE month = 7
-   AND day = 28;
-   AND transcription LIKE %bakery%;
+ WHERE month = 7 AND day = 28 AND transcript LIKE "%bakery%";
 
 -- List of suspects
