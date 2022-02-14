@@ -3,6 +3,11 @@
 -- First query to see what tables are included:
 .tables
 
+airports              crime_scene_reports   people
+atm_transactions      flights               phone_calls
+bakery_security_logs  interviews
+bank_accounts         passengers
+
 -- Second query to take a look at the crime scene report table:
 SELECT description
   FROM crime_scene_reports
