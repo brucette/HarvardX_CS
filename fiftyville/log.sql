@@ -47,5 +47,5 @@ end of the phone to purchase the flight ticket. |
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
 
-    WHERE name = Eugene;
+    WHERE name = "Eugene";
 -- List of suspects
