@@ -40,7 +40,12 @@ end of the phone to purchase the flight ticket. |
   SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
   WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
-  -- Check when witness Eugene got to the bakery:
+  -- Check when witness Eugene got to the bakery as he saw thief just before that by an ATM:
   .schema people
+  SELECT hour, minute
+    FROM bakery_security_logs
+         JOIN people
+           ON bakery_security_logs.license_plate = people.license_plate
 
+    WHERE name = Eugene;
 -- List of suspects
