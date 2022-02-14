@@ -4,5 +4,9 @@
 .tables
 
 -- Second query to take a look at the crime scene report table:
+SELECT *
+  FROM crime_scene_reports
+ WHERE month = 7
+   AND day = 28
 
 -- List of suspects
