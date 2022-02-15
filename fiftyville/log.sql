@@ -55,5 +55,10 @@ end of the phone to purchase the flight ticket. |
   -- No timestaps given in atm_transactions.
   -- Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
   .schema bank_accounts
-  
+  SELECT id, name
+    FROM people
+         JOIN atm_transactions
+           ON 
+   WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
+
 -- List of suspects
