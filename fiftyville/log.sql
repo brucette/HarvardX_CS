@@ -55,7 +55,7 @@ end of the phone to purchase the flight ticket. |
   -- No timestaps given in atm_transactions.
   -- Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
   .schema bank_accounts
-  SELECT people.id, name
+  SELECT name
     FROM people
          JOIN bank_accounts
            ON people.id = bank_accounts.person_id
@@ -64,7 +64,7 @@ end of the phone to purchase the flight ticket. |
            ON atm_transactions.account_number = bank_accounts.account_number
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
   INTERSECT
-  SELECT name, bakery_security_logs.license_plate
+  SELECT name
     FROM bakery_security_logs
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
