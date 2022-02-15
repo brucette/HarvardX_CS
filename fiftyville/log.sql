@@ -49,7 +49,7 @@ end of the phone to purchase the flight ticket. |
     WHERE name = "Eugene";
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
   .schema
-  SELECT id, account_number, transaction_type
+  SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
    WHERE month = 7 AND day = 28 AND hour = 8 AND atm_location = "Leggett Street";
 -- List of suspects
