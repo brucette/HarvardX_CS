@@ -159,13 +159,14 @@ SELECT id, destination_airport_id, hour, minute
     FROM passengers
         JOIN people
           ON passengers.passport_number = people.passport_number
-    WHERE flight_id = 30 AND passengers.passport_number = 3592750733;
+    WHERE flight_id = 30 AND passengers.passport_number IN (3592750733, 5773159633);
  OR
- 5773159633
+
 
    SELECT name, passengers.passport_number
     FROM passengers
         JOIN people
           ON passengers.passport_number = people.passport_number
-      ORDER BY name;
-    WHERE flight_id = 30 AND passengers.passport_number = 3592750733;
+   WHERE flight_id = 30
+   ORDER BY name;
+     AND passengers.passport_number = 3592750733;
