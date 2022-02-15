@@ -65,4 +65,5 @@ end of the phone to purchase the flight ticket. |
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
    INTERSECT
    SELECT
+   
 -- List of suspects
