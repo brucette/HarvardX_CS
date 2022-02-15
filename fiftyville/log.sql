@@ -132,8 +132,10 @@ INTERSECT
       */
 
 -- check flights leaving from Fiftyville the following day, from earliest to latest
-SELECT
-FROM flights
+SELECT destination_airport_id, hour, minute
+  FROM flights
+ WHERE origin_airport_id = 8
+ ORDER BY hour, minute;
 
 airports
 flights
