@@ -146,10 +146,13 @@ SELECT id, destination_airport_id, hour, minute
  -- shows that destination of earliest flight from Fiftyville is Chicago with a flight id of 30
 
 /* Check if any of the suspects are passengers on first flight*/
+-- get Bruce's and Diana's passport numbers:
+SELECT * FROM people WHERE name = "Bruce" OR name = "Diana";
+
 SELECT name
   FROM passengers
        JOIN people
          ON passengers.passport_number = people.passport_number
-  WHERE name
-     IN ("Bruce", "Diana");
+  WHERE passport_number
+     IN (3592750733, 5773159633);
 
