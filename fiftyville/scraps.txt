@@ -1,3 +1,18 @@
+CRIME SCENE REPORT:
+/* Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery.
+Interviews were conducted today with three witnesses who were present at the time –
+each of their interview transcripts mentions the bakery.
+Littering took place at 16:36. No known witnesses.*/
+
+/* INTERVIEW LOGS:
+|Ruth| Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
+If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
+
+|Raymond| As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the
+thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other
+end of the phone to purchase the flight ticket. |
+
+
 bakery_security_logs (
     id INTEGER,
     year INTEGER,
@@ -44,6 +59,15 @@ bank_accounts (
     creation_year INTEGER,
     FOREIGN KEY(person_id) REFERENCES people(id)
 
+interviews (
+    id INTEGER,
+    name TEXT,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    transcript TEXT,
+    PRIMARY KEY(id)
+
 airports (
     id INTEGER,
     abbreviation TEXT,
@@ -70,28 +94,8 @@ passengers (
     seat TEXT,
     FOREIGN KEY(flight_id) REFERENCES flights(id)
 
-interviews (
-    id INTEGER,
-    name TEXT,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    transcript TEXT,
-    PRIMARY KEY(id)
 
-CRIME SCENE REPORT:
-/* Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery.
-Interviews were conducted today with three witnesses who were present at the time –
-each of their interview transcripts mentions the bakery.
-Littering took place at 16:36. No known witnesses.*/
 
-/* INTERVIEW LOGS:
-|Ruth| Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
-If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
-
-|Raymond| As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the
-thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other
-end of the phone to purchase the flight ticket. |
 +----+--------------+-----------------------------------------+---------------+
 | id | abbreviation |                full_name                |     city      |
 +----+--------------+-----------------------------------------+---------------+
