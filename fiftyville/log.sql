@@ -159,9 +159,11 @@ SELECT id, destination_airport_id, hour, minute
 
 
 
-  SELECT activity, license_plate, hour, minute
+  SELECT name, activity, bakery_security_logs.license_plate, hour, minute
     FROM bakery_security_logs
-  WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
+         JOIN people
+           ON bakery_security_logs.license_plate = people.license_plate
+   WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
 
     minute INTEGER,
     activity TEXT,
