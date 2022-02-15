@@ -25,7 +25,6 @@ SELECT description
 |Raymond| As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the
 thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other
 end of the phone to purchase the flight ticket. |
-
 |Emma| I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour. They never bought anything.*/
 .schema bakery_security_logs
 
@@ -33,6 +32,7 @@ end of the phone to purchase the flight ticket. |
   SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
   WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
+
   -- Check when witness Eugene got to the bakery as he saw thief just before that by an ATM on Leggett Street:
   .schema people
 
@@ -41,8 +41,10 @@ end of the phone to purchase the flight ticket. |
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
     WHERE name = "Eugene";
+
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
   .schema atm_transactions
+  
   SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
    WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
