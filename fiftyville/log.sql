@@ -89,7 +89,7 @@ flight the following day*/
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
 
   -- check who made a call of less than 60 s:
-  SELECT caller.name, receiver.name
+  SELECT people.caller.name
     FROM phone_calls
          JOIN people
            ON phone_calls.receiver = people.phone_number
