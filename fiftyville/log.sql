@@ -55,7 +55,7 @@ end of the phone to purchase the flight ticket. |
   -- No timestaps given in atm_transactions.
   -- Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
   .schema bank_accounts
-  SELECT atm_transactions.id, name
+  SELECT people.id, name
     FROM people
          JOIN bank_accounts
            ON people.id = bank_accounts.person_id
