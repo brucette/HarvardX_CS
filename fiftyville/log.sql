@@ -138,7 +138,6 @@ INTERSECT
       Diana
       */
 
-airports              crime_scene_reports   people
-atm_transactions      flights               phone_calls
-bakery_security_logs  interviews
-bank_accounts         passengers
+airports
+flights
+passengers
