@@ -154,6 +154,5 @@ SELECT name
        JOIN people
          ON passengers.passport_number = people.passport_number
   WHERE flight_id = 30
-    AND passengers.passport_number = 5773159633
-     OR passengers.passport_number = 3592750733;
+    AND passengers.passport_number = 5773159633 OR 3592750733;
 
