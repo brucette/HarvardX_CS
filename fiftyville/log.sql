@@ -9,10 +9,6 @@ SELECT description
    AND day = 28
    AND year = 2021
    AND street = "Humphrey Street";
-    /*Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery.
-    Interviews were conducted today with three witnesses who were present at the time –
-    each of their interview transcripts mentions the bakery.
-    Littering took place at 16:36. No known witnesses.*/
 
 -- Crime scene report mentions interview logs and bakery so the following queries were ran next:
   .schema interviews
@@ -22,9 +18,6 @@ SELECT description
   WHERE month = 7 AND day = 28 AND year = 2021 AND transcript LIKE "%bakery%";
 
 /*
-|Raymond| As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the
-thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other
-end of the phone to purchase the flight ticket. |
 |Emma| I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour. They never bought anything.*/
 .schema bakery_security_logs
 
