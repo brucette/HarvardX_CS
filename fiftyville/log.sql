@@ -2,11 +2,6 @@
 -- First query to see what tables are included:
 .tables
 
-airports              crime_scene_reports   people
-atm_transactions      flights               phone_calls
-bakery_security_logs  interviews
-bank_accounts         passengers
-
 -- Second query to take a look at the crime scene report table:
 SELECT description
   FROM crime_scene_reports
@@ -77,6 +72,15 @@ end of the phone to purchase the flight ticket. |
   Iman
   Luca
 
-/* Check call logs to see who where on a call around the time the thief left the bakery, as witness
+/* Check call, flight and passenger logs to see who where on a call around the time the thief left the bakery, as witness
 Raymond over heard a call that lasted less than a minute in which the thief planned to leave with the first
 flight the following day*/
+.schema phone_calls
+.schema airports
+.schema airports
+.schema passengers
+
+airports              crime_scene_reports   people
+atm_transactions      flights               phone_calls
+bakery_security_logs  interviews
+bank_accounts         passengers
