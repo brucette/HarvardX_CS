@@ -161,4 +161,5 @@ SELECT id, destination_airport_id, hour, minute
     FROM passengers
         JOIN people
           ON passengers.passport_number = people.passport_number
+      ORDER BY name;
     WHERE flight_id = 30 AND passengers.passport_number = 3592750733;
