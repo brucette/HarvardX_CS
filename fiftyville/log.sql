@@ -107,12 +107,21 @@ flight the following day*/
       | Doris      |
       | Anna
 
-  -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime:
+  -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime AND having withdrawn money:
   SELECT name
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
+INTERSECT
+  SELECT name
+    FROM people
+         JOIN bank_accounts
+           ON people.id = bank_accounts.person_id
+
+         JOIN atm_transactions
+           ON atm_transactions.account_number = bank_accounts.account_number
+   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
 INTERSECT
   SELECT name
     FROM bakery_security_logs
