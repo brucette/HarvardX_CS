@@ -33,7 +33,17 @@ bank_accounts (
     person_id INTEGER,
     creation_year INTEGER,
     FOREIGN KEY(person_id) REFERENCES people(id)
-);
+
+phone_calls (
+    id INTEGER,
+    caller TEXT,
+    receiver TEXT,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    duration INTEGER,
+    PRIMARY KEY(id)
+
 
 /* INTERVIEW LOGS:
 |Ruth| Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
