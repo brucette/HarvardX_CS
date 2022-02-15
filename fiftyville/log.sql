@@ -162,7 +162,6 @@ SELECT id, destination_airport_id, hour, minute
     WHERE flight_id = 30 AND passengers.passport_number IN (3592750733, 5773159633);
  OR
 
-
    SELECT name, passengers.passport_number
     FROM passengers
         JOIN people
