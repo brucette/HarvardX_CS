@@ -150,5 +150,6 @@ SELECT name
   FROM passengers
        JOIN people
          ON passengers.passport_number = people.passport_number
-      
+  WHERE name
+     IN ("Bruce", "Diana");
 
