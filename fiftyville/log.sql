@@ -77,7 +77,7 @@ Raymond over heard a call that lasted less than a minute in which the thief plan
 flight the following day*/
 .schema phone_calls
 .schema airports
-.schema airports
+.schema flights
 .schema passengers
 
 airports              crime_scene_reports   people
