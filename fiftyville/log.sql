@@ -44,13 +44,13 @@ end of the phone to purchase the flight ticket. |
 
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
   .schema atm_transactions
-  
+
   SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
    WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
 
   /* No timestaps given in atm_transactions.
-  Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
+  Look at bank_accounts table next to see if account numbers can be used to see who made withdraws that day
   and check which one of those people also left the bakery within 10 minutes of the crime */
   .schema bank_accounts
 
@@ -112,7 +112,13 @@ flight the following day*/
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
+INTERSECT
+  SELECT name
+    FROM bakery_security_logs
+         JOIN people
+           ON bakery_security_logs.license_plate = people.license_plate
+   WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
 
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
