@@ -62,6 +62,6 @@ end of the phone to purchase the flight ticket. |
 
          JOIN atm_transactions
            ON atm_transactions.account_number = bank_accounts.account_number
-   WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdrawal";
+   WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 
 -- List of suspects
