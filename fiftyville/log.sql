@@ -102,7 +102,7 @@ flight the following day*/
       */
 
   -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime AND having withdrawn money:
-   SELECT name
+   SELECT name, people.id
      FROM phone_calls
           JOIN people
             ON phone_calls.caller = people.phone_number
@@ -110,7 +110,7 @@ flight the following day*/
 
 INTERSECT
 
-   SELECT name
+   SELECT name, bank_accounts.id
      FROM people
           JOIN bank_accounts
             ON people.id = bank_accounts.person_id
@@ -121,7 +121,7 @@ INTERSECT
 
 INTERSECT
 
-   SELECT people.license_plate
+   SELECT people.license_plate, name
      FROM bakery_security_logs
           JOIN people
             ON bakery_security_logs.license_plate = people.license_plate
