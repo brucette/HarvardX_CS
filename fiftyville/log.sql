@@ -82,7 +82,7 @@ flight the following day*/
 .schema passengers
 
   -- check who the call was made to
-  SELECT caller, receiver
+  SELECT name
     FROM phone_calls
          JOIN people
            ON phone_calls.caller AND phone_calls.receiver = people.phone_number
