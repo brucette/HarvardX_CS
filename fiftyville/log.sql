@@ -98,7 +98,7 @@ INTERSECT
       Bruce
       Diana
       */
-      
+
 -- Check who the two suspects made their calls to:
  SELECT name
     FROM phone_calls
@@ -141,7 +141,15 @@ SELECT id, destination_airport_id, hour, minute
 +--------+-------+----------------+-----------------+---------------+*/
 
   -- check which passport number holder is on the first flight:
-  SELECT
+  SELECT seat
+    FROM passengers
+   WHERE flight_id = 30 AND passport_number = 5773159633;
+
+  passengers (
+    flight_id INTEGER,
+    passport_number INTEGER,
+    seat TEXT,
+    FOREIGN KEY(flight_id) REFERENCES flights(id)
 
 
 
