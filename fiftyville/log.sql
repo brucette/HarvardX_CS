@@ -136,15 +136,19 @@ SELECT * FROM airports;
 SELECT * FROM flights;
 
 -- check flights leaving from Fiftyville the following day, from earliest to latest
-SELECT destination_airport_id, hour, minute
+SELECT id, destination_airport_id, hour, minute
   FROM flights
  WHERE origin_airport_id =
        (SELECT id
           FROM airports
          WHERE city = "Fiftyville")
  ORDER BY hour, minute;
- -- shows that destination of earliest flight from Fiftyville is Chicago
+ -- shows that destination of earliest flight from Fiftyville is Chicago with a flight id of 30
 
 /* Check if any of the suspects are passengers on first flight*/
-SELECT 
+SELECT name
+  FROM passengers
+       JOIN people
+         ON passengers.passport_number = people.passport_number
+      
 
