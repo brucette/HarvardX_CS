@@ -65,9 +65,8 @@ SELECT description
   Iman
   Luca */
 
-/* Check call, flight and passenger logs to see who where on a call around the time the thief left the bakery, as witness
-Raymond overheard a call that lasted less than a minute in which the thief planned to leave with the first
-flight the following day*/
+/* Check call, flight and passenger logs to see who where on a call around the time the thief left the bakery, as witness Raymond
+ overheard a call that lasted less than a minute in which the thief planned to leave with the first flight the following day*/
 .schema phone_calls
 .schema airports
 .schema flights
