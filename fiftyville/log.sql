@@ -130,13 +130,17 @@ INTERSECT
       Bruce
       Diana
       */
+-- performed following queries to view flights, airports and passengers tables:
+SELECT * FROM passengers;
+SELECT * FROM airports;
+SELECT * FROM flights;
 
 -- check flights leaving from Fiftyville the following day, from earliest to latest
 SELECT destination_airport_id, hour, minute
   FROM flights
- WHERE origin_airport_id = 8
+ WHERE origin_airport_id =
+       (SELECT id
+          FROM airports
+         WHERE city = "Fiftyville")
  ORDER BY hour, minute;
 
-airports
-flights
-passengers
