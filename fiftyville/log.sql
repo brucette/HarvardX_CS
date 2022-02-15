@@ -81,15 +81,18 @@ flight the following day*/
 .schema flights
 .schema passengers
 
-  -- check who the call was made to
+  -- check who made a call of less than 60 s:
   SELECT name
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
 
-SELECT caller, receiver
-    FROM phone_calls;
+  SELECT name
+    FROM phone_calls
+         JOIN people
+           ON phone_calls.receiver = people.phone_number
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
 
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
