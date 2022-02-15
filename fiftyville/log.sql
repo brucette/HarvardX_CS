@@ -52,10 +52,12 @@ end of the phone to purchase the flight ticket. |
   SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
+
   /* No timestaps given in atm_transactions.
-     Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
-  */
+  Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
+  and check which one of those people also left the bakery within 10 minutes of the crime */
   .schema bank_accounts
+
   SELECT name
     FROM people
          JOIN bank_accounts
