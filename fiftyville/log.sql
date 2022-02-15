@@ -155,31 +155,4 @@ SELECT id, destination_airport_id, hour, minute
 +--------+-------+----------------+-----------------+---------------+*/
 
   -- check which passport number holder is on the first flight:
-  SELECT name
-    FROM passengers
-        JOIN people
-          ON passengers.passport_number = people.passport_number
-    WHERE flight_id = 30 AND passengers.passport_number IN (3592750733, 5773159633);
- OR
-
-   SELECT name, passengers.passport_number
-    FROM passengers
-        JOIN people
-          ON passengers.passport_number = people.passport_number
-   WHERE flight_id = 49
-   ORDER BY name;
-     AND passengers.passport_number = 3592750733;
-
-
-    SELECT name
-    FROM phone_calls
-         JOIN people
-           ON phone_calls.caller = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-
-  -- check who received a call of less than 60 seconds:
-  SELECT name
-    FROM phone_calls
-         JOIN people
-           ON phone_calls.receiver = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
+  SELECT
