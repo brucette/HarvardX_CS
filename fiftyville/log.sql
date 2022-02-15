@@ -156,3 +156,14 @@ SELECT id, destination_airport_id, hour, minute
 
   -- check which passport number holder is on the first flight:
   SELECT
+
+
+
+  SELECT activity, license_plate, hour, minute
+    FROM bakery_security_logs
+  WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
+
+    minute INTEGER,
+    activity TEXT,
+    license_plate TEXT,
+    PRIMARY KEY(id)
