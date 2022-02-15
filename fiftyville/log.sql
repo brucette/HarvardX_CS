@@ -49,5 +49,6 @@ end of the phone to purchase the flight ticket. |
     WHERE name = "Eugene";
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
   .schema
-  SELECT id,
+  SELECT id, account_number, transaction_type
+    FROM 
 -- List of suspects
