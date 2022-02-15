@@ -17,6 +17,16 @@ people (
     license_plate TEXT,
     PRIMARY KEY(id)
 
+phone_calls (
+    id INTEGER,
+    caller TEXT,
+    receiver TEXT,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    duration INTEGER,
+    PRIMARY KEY(id)
+    
 atm_transactions (
     id INTEGER,
     account_number INTEGER,
@@ -33,16 +43,6 @@ bank_accounts (
     person_id INTEGER,
     creation_year INTEGER,
     FOREIGN KEY(person_id) REFERENCES people(id)
-
-phone_calls (
-    id INTEGER,
-    caller TEXT,
-    receiver TEXT,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    duration INTEGER,
-    PRIMARY KEY(id)
 
 airports (
     id INTEGER,
