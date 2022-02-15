@@ -48,7 +48,7 @@ end of the phone to purchase the flight ticket. |
            ON bakery_security_logs.license_plate = people.license_plate
     WHERE name = "Eugene";
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
-  .schema
+  .schema atm_transactions
   SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
