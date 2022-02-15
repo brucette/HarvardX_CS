@@ -105,6 +105,13 @@ flight the following day*/
       | Doris      |
       | Anna
 
+  -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime:
+  SELECT name
+    FROM phone_calls
+         JOIN people
+           ON phone_calls.caller = people.phone_number
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
+
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
 bakery_security_logs  interviews
