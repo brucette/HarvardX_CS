@@ -132,7 +132,8 @@ INTERSECT
       */
 
 -- check flights leaving from Fiftyville the following day, from earliest to latest
-SELECT 
+SELECT
+FROM flights
 
 airports
 flights
