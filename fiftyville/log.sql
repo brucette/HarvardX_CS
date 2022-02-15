@@ -51,5 +51,5 @@ end of the phone to purchase the flight ticket. |
   .schema
   SELECT id, account_number, transaction_type
     FROM atm_transactions
-   WHERE month = 7 AND day = 28 AND hour = 8 AND atm_location = ;
+   WHERE month = 7 AND day = 28 AND hour = 8 AND atm_location = "Leggett Street";
 -- List of suspects
