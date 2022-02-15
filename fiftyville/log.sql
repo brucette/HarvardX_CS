@@ -32,7 +32,7 @@ end of the phone to purchase the flight ticket. |
   -- Thief is definitely one of these as was seen getting into car within this time frame, according to interview transcripts:
   SELECT activity, license_plate, hour, minute
     FROM bakery_security_logs
-  WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
+  WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
   -- Check when witness Eugene got to the bakery as he saw thief just before that by an ATM on Leggett Street:
   .schema people
 
@@ -45,7 +45,7 @@ end of the phone to purchase the flight ticket. |
   .schema atm_transactions
   SELECT id, account_number, transaction_type, amount
     FROM atm_transactions
-   WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
+   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
 
   /* No timestaps given in atm_transactions.
   Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
