@@ -68,5 +68,9 @@ end of the phone to purchase the flight ticket. |
     FROM bakery_security_logs
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
-   WHERE month = 7 AND day = 28 AND activity = "entrance" AND hour = 10;
+   WHERE month = 7 AND day = 28 AND activity = "e" AND hour = 10;
+
+     SELECT activity, license_plate, hour, minute
+    FROM bakery_security_logs
+  WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
 -- List of suspects
