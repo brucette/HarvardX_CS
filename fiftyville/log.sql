@@ -50,5 +50,5 @@ end of the phone to purchase the flight ticket. |
   -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
   .schema
   SELECT id, account_number, transaction_type
-    FROM 
+    FROM atm_transactions
 -- List of suspects
