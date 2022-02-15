@@ -182,4 +182,4 @@ SELECT id, destination_airport_id, hour, minute
     FROM phone_calls
          JOIN people
            ON phone_calls.receiver = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller = "Diana";
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
