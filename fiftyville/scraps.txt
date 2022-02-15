@@ -27,6 +27,12 @@ atm_transactions (
     transaction_type TEXT,
     amount INTEGER,
     PRIMARY KEY(id)
+
+    bank_accounts (
+    account_number INTEGER,
+    person_id INTEGER,
+    creation_year INTEGER,
+    FOREIGN KEY(person_id) REFERENCES people(id)
 );
 
 /* INTERVIEW LOGS:
