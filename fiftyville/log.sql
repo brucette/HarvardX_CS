@@ -153,6 +153,7 @@ SELECT name
   FROM passengers
        JOIN people
          ON passengers.passport_number = people.passport_number
-  WHERE passport_number
+  WHERE flight_id = 30
+    AND passport_number
      IN (3592750733, 5773159633);
 
