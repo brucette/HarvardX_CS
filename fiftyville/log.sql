@@ -42,7 +42,7 @@ end of the phone to purchase the flight ticket. |
   WHERE month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 30;
   -- Check when witness Eugene got to the bakery as he saw thief just before that by an ATM:
   .schema people
-  
+
   SELECT activity, hour, minute
     FROM bakery_security_logs
          JOIN people
@@ -74,4 +74,8 @@ end of the phone to purchase the flight ticket. |
            ON bakery_security_logs.license_plate = people.license_plate
    WHERE month = 7 AND day = 28 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
 
--- List of suspects
+  -- Current ist of suspects (those who withrdew money and left bakery within 10 minutes after crime):
+  Bruce
+  Diana
+  Iman
+  Luca
