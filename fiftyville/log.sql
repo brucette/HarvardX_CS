@@ -96,38 +96,47 @@ flight the following day*/
          JOIN people
            ON phone_calls.receiver = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-      -- gives list of possible accomplices:
-        Jack       |
-      | Larry      |
-      | Robin      |
-      | Melissa    |
-      | James      |
-      | Philip     |
-      | Jacqueline |
-      | Doris      |
-      | Anna
-
+      /* gives list of possible accomplices:
+        Jack
+        Larry
+        Robin
+        Melissa
+        James
+        Philip
+        Jacqueline
+        Doris
+        Anna
+      */
+      
   -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime AND having withdrawn money:
-  SELECT name
-    FROM phone_calls
-         JOIN people
-           ON phone_calls.caller = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
-INTERSECT
-  SELECT name
-    FROM people
-         JOIN bank_accounts
-           ON people.id = bank_accounts.person_id
+   SELECT name
+     FROM phone_calls
+          JOIN people
+            ON phone_calls.caller = people.phone_number
+    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
 
-         JOIN atm_transactions
-           ON atm_transactions.account_number = bank_accounts.account_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
 INTERSECT
-  SELECT name
-    FROM bakery_security_logs
-         JOIN people
-           ON bakery_security_logs.license_plate = people.license_plate
-   WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
+
+   SELECT name
+     FROM people
+          JOIN bank_accounts
+            ON people.id = bank_accounts.person_id
+
+          JOIN atm_transactions
+            ON atm_transactions.account_number = bank_accounts.account_number
+    WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+
+INTERSECT
+
+   SELECT name
+     FROM bakery_security_logs
+          JOIN people
+            ON bakery_security_logs.license_plate = people.license_plate
+    WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
+      /* this narrows the list of suspects down to two:
+      Bruce
+      Diana
+      */
 
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
