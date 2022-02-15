@@ -143,4 +143,8 @@ SELECT destination_airport_id, hour, minute
           FROM airports
          WHERE city = "Fiftyville")
  ORDER BY hour, minute;
+ -- shows that destination of earliest flight from Fiftyville is Chicago
+
+/* Check if any of the suspects are passengers on first flight*/
+SELECT 
 
