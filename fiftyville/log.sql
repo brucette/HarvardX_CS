@@ -55,4 +55,5 @@ end of the phone to purchase the flight ticket. |
   -- No timestaps given in atm_transactions.
   -- Look at bank_accounts table next to see if account numbers can be used to see who made withdrawals that day
   .schema bank_accounts
+  
 -- List of suspects
