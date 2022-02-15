@@ -121,7 +121,7 @@ INTERSECT
 
 INTERSECT
 
-   SELECT license_plate, name
+   SELECT license_plate
      FROM bakery_security_logs
           JOIN people
             ON bakery_security_logs.license_plate = people.license_plate
