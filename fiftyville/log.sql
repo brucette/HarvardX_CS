@@ -110,7 +110,7 @@ flight the following day*/
 
 INTERSECT
 
-   SELECT name, bank_accounts.person_id
+   SELECT name
      FROM people
           JOIN bank_accounts
             ON people.id = bank_accounts.person_id
@@ -121,7 +121,7 @@ INTERSECT
 
 INTERSECT
 
-   SELECT people.license_plate, name
+   SELECT people.license_plate
      FROM bakery_security_logs
           JOIN people
             ON bakery_security_logs.license_plate = people.license_plate
