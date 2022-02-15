@@ -75,12 +75,12 @@ flight the following day*/
 .schema passengers
 
   -- check who made a call of less than 60 seconds:
-  SELECT name
+  SELECT name, receiver
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-
+INTERSECT
   -- check who received a call of less than 60 seconds:
   SELECT name, caller
     FROM phone_calls
@@ -159,13 +159,14 @@ SELECT id, destination_airport_id, hour, minute
 
 
 
-  SELECT name, activity, bakery_security_logs.license_plate, hour, minute
-    FROM bakery_security_logs
+  SELECT name, caller, receiver
+    FROM phone_calls
          JOIN people
-           ON bakery_security_logs.license_plate = people.license_plate
-   WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
-
-    minute INTEGER,
-    activity TEXT,
-    license_plate TEXT,
-    PRIMARY KEY(id)
+           ON phone_calls.caller = people.phone_number
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
+INTERSECT
+  SELECT name, caller, receiver
+    FROM phone_calls
+         JOIN people
+           ON phone_calls.receiver = people.phone_number
+   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
