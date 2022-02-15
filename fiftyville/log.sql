@@ -16,7 +16,6 @@ SELECT description
     FROM interviews
   WHERE month = 7 AND day = 28 AND year = 2021 AND transcript LIKE "%bakery%";
 
-/* |Emma| I'm the bakery owner, and someone came in, suspiciously whispering into a phone for about half an hour. They never bought anything.*/
  .schema bakery_security_logs
 
   -- Thief is definitely one of these as was seen getting into car within this time frame, according to interview transcripts:
