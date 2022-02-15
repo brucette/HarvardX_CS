@@ -58,7 +58,7 @@ end of the phone to purchase the flight ticket. |
   SELECT id, name
     FROM people
          JOIN bank_accounts
-           ON 
+           ON people.id = bank_accounts.person_id
          JOIN atm_transactions
            ON
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
