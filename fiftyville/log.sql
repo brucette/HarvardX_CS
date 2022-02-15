@@ -66,5 +66,7 @@ end of the phone to purchase the flight ticket. |
 INTERSECT
   SELECT name
     FROM bakery_security_logs
-
+         JOIN people
+           ON bakery_security_logs.license_plate = people.license_plate
+  WHERE month = 7 AND day = 28 AND activity = "entrance" AND 
 -- List of suspects
