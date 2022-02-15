@@ -64,7 +64,7 @@ end of the phone to purchase the flight ticket. |
            ON atm_transactions.account_number = bank_accounts.account_number
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
   INTERSECT
-  SELECT name, license_plate
+  SELECT name, bakery_security_logs.license_plate
     FROM bakery_security_logs
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
