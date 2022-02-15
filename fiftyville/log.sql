@@ -94,7 +94,7 @@ flight the following day*/
          JOIN people
            ON phone_calls.receiver = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-      -- gives list of possible
+      -- gives list of possible accomplices:
         Jack       |
       | Larry      |
       | Robin      |
