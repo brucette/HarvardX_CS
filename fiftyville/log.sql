@@ -57,8 +57,10 @@ end of the phone to purchase the flight ticket. |
   .schema bank_accounts
   SELECT id, name
     FROM people
-         JOIN atm_transactions
+         JOIN bank_accounts
            ON 
+         JOIN atm_transactions
+           ON
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
 
 -- List of suspects
