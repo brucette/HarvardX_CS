@@ -12,7 +12,7 @@ SELECT description
 
 -- Crime scene report mentions interview logs and bakery so the following queries were ran next:
   .schema interviews
-  
+
   -- to get interview logs:
   SELECT name, transcript
     FROM interviews
@@ -131,6 +131,8 @@ INTERSECT
       Diana
       */
 
+-- check flights leaving from Fiftyville the following day, from earliest to latest
+SELECT 
 
 airports
 flights
