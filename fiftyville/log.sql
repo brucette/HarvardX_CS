@@ -59,8 +59,9 @@ end of the phone to purchase the flight ticket. |
     FROM people
          JOIN bank_accounts
            ON people.id = bank_accounts.person_id
+
          JOIN atm_transactions
-           ON 
+           ON atm_transactions.account_number = bank_accounts.account_number
    WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street";
 
 -- List of suspects
