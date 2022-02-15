@@ -93,8 +93,21 @@ flight the following day*/
     FROM phone_calls
          JOIN people
            ON phone_calls.receiver = people.phone_number
+
+         JOIN people
+           ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
       -- gives list of possible
+        Jack       |
+      | Larry      |
+      | Robin      |
+      | Melissa    |
+      | James      |
+      | Philip     |
+      | Jacqueline |
+      | Doris      |
+      | Anna
+
 airports              crime_scene_reports   people
 atm_transactions      flights               phone_calls
 bakery_security_logs  interviews
