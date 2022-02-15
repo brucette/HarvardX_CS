@@ -83,14 +83,14 @@ flight the following day*/
 .schema flights
 .schema passengers
 
-  -- check who made a call of less than 60 s:
+  -- check who made a call of less than 60 seconds:
   SELECT name
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
 
-  -- check who received a call of less than 60 s:
+  -- check who received a call of less than 60 seconds:
   SELECT name
     FROM phone_calls
          JOIN people
@@ -107,7 +107,7 @@ flight the following day*/
         Doris
         Anna
       */
-      
+
   -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime AND having withdrawn money:
    SELECT name
      FROM phone_calls
