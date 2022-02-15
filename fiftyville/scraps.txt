@@ -28,7 +28,7 @@ atm_transactions (
     amount INTEGER,
     PRIMARY KEY(id)
 
-    bank_accounts (
+bank_accounts (
     account_number INTEGER,
     person_id INTEGER,
     creation_year INTEGER,
