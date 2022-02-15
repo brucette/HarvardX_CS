@@ -70,29 +70,11 @@ SELECT description
 .schema phone_calls
 
   -- check who made a call of less than 60 seconds:
-  SELECT name, receiver
+  SELECT name
     FROM phone_calls
          JOIN people
            ON phone_calls.caller = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-INTERSECT
-  -- check who received a call of less than 60 seconds:
-  SELECT name, caller
-    FROM phone_calls
-         JOIN people
-           ON phone_calls.receiver = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
-      /* gives list of possible accomplices:
-        Jack
-        Larry
-        Robin
-        Melissa
-        James
-        Philip
-        Jacqueline
-        Doris
-        Anna
-      */
 
   -- out of those who made a call, check who is also on the list of people leaving the bakery within 10 min of crime AND having withdrawn money:
    SELECT name
@@ -160,4 +142,11 @@ SELECT id, destination_airport_id, hour, minute
            ON phone_calls.receiver = people.phone_number
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller IN
    (SELECT phone_number FROM people WHERE name = "Bruce" OR name = "Diana");
+   /* Bruce called Robin and Diana called Philip
+
+        |  name  |
+        +--------+
+        | Robin  |
+        | Philip |
+        +--------+ */
 
