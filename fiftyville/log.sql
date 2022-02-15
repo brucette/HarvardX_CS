@@ -84,6 +84,8 @@ flight the following day*/
   -- check who the call was made to
   SELECT caller, receiver
     FROM phone_calls
+         JOIN people
+           ON 
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60;
 
 SELECT caller, receiver, duration
