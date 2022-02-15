@@ -76,3 +76,7 @@ end of the phone to purchase the flight ticket. |
   Diana
   Iman
   Luca
+
+/* Check call logs to see who where on a call around the time the thief left the bakery, as witness
+Raymond over heard a call that lasted less than a minute in which the thief planned to leave with the first
+flight the following day*/
