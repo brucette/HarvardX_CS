@@ -59,13 +59,13 @@ end of the phone to purchase the flight ticket. |
 
          JOIN atm_transactions
            ON atm_transactions.account_number = bank_accounts.account_number
-   WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
   INTERSECT
   SELECT name
     FROM bakery_security_logs
          JOIN people
            ON bakery_security_logs.license_plate = people.license_plate
-   WHERE month = 7 AND day = 28 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
+   WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
 
   -- Current ist of suspects (those who withrdew money and left bakery within 10 minutes after crime):
   Bruce
