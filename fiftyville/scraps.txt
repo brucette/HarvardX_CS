@@ -51,6 +51,24 @@ airports (
     city TEXT,
     PRIMARY KEY(id)
 
+flights (
+    id INTEGER,
+    origin_airport_id INTEGER,
+    destination_airport_id INTEGER,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    hour INTEGER,
+    minute INTEGER,
+    PRIMARY KEY(id),
+    FOREIGN KEY(origin_airport_id) REFERENCES airports(id),
+    FOREIGN KEY(destination_airport_id) REFERENCES airports(id)
+
+passengers (
+    flight_id INTEGER,
+    passport_number INTEGER,
+    seat TEXT,
+    FOREIGN KEY(flight_id) REFERENCES flights(id)
 
 /* INTERVIEW LOGS:
 |Ruth| Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
