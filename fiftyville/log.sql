@@ -107,7 +107,6 @@ INTERSECT
    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller IN
    (SELECT phone_number FROM people WHERE name = "Bruce" OR name = "Diana");
    /* Bruce called Robin and Diana called Philip
-
         |  name  |
         +--------+
         | Robin  |
