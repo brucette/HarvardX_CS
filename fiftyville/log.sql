@@ -129,7 +129,7 @@ SELECT id, destination_airport_id, hour, minute
  /* the earliest flight is at 13:49 with flight id 6 to Dallas/Fort Worth International Airport, which has an airport id 5
  as per aiport table */
 
-/* Check if any of the suspects are passengers on first flight*/
+/* Check if any of the suspects are passengers on first flight */
 
   -- get Bruce's and Diana's passport numbers:
   SELECT * FROM people WHERE name = "Bruce" OR name = "Diana";
@@ -143,7 +143,7 @@ SELECT id, destination_airport_id, hour, minute
   -- check which passport number holder is on the first flight:
   SELECT seat
     FROM passengers
-   WHERE flight_id = 30 AND passport_number = 5773159633;
+   WHERE flight_id = 3;
 
   passengers (
     flight_id INTEGER,
