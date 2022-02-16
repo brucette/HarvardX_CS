@@ -126,7 +126,7 @@ SELECT id, destination_airport_id, hour, minute
          WHERE city = "Fiftyville")
    AND month = 7 AND day = 29 AND year = 2021
  ORDER BY hour, minute;
- /* the earliest flight is at 08:20 with flight id 36 to New York City/LaGuardia Airport , which has an airport id 4
+ /* the earliest flight is at 08:20 with flight id 36 to New York City/LaGuardia Airport , which has airport id 4
  as per aiport table */
 
 /* Check if any of the suspects are passengers on first flight */
