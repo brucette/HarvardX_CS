@@ -40,8 +40,8 @@ SELECT id, account_number, transaction_type, amount
  WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
 
 /* No timestaps given in atm_transactions.
-   Look at bank_accounts table next to see if account numbers can be used to see who made withdraws that day
-   and check which one of those people also left the bakery within 10 minutes of the crime. */
+Look at bank_accounts table next to see if account numbers can be used to see who made withdraws that day
+and check which one of those people also left the bakery within 10 minutes of the crime. */
 .schema bank_accounts
 
 SELECT name
@@ -51,48 +51,49 @@ SELECT name
 
        JOIN atm_transactions
          ON atm_transactions.account_number = bank_accounts.account_number
-  WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+ WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+
 INTERSECT
+
 SELECT name
   FROM bakery_security_logs
        JOIN people
          ON bakery_security_logs.license_plate = people.license_plate
  WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
-
-  /* Current list of suspects (those who withdrew money and left bakery within 10 minutes after crime):
-  Bruce, Diana, Iman, Luca */
+ /* current list of suspects (those who withdrew money and left bakery within 10 minutes after crime):
+    Bruce, Diana, Iman, Luca */
 
 /* Check call logs to see who where on a call around the time the thief left the bakery, as witness Raymond
- overheard a call that lasted less than a minute in which the thief planned to leave with the first flight the following day*/
+overheard a call that lasted less than a minute in which the thief planned to leave with the first flight the following day*/
 .schema phone_calls
 
-  -- out of those who made a call of less than 60 seconds, check who also left the bakery within 10 min of crime AND withdrew money:
-   SELECT name
-     FROM phone_calls
-          JOIN people
-            ON phone_calls.caller = people.phone_number
-    WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
+-- out of those who made a call of less than 60 seconds, check who also left the bakery within 10 min of crime AND withdrew money:
+SELECT name
+  FROM phone_calls
+       JOIN people
+         ON phone_calls.caller = people.phone_number
+ WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60
 
 INTERSECT
 
-   SELECT name
-     FROM people
-          JOIN bank_accounts
-            ON people.id = bank_accounts.person_id
+SELECT name
+  FROM people
+       JOIN bank_accounts
+         ON people.id = bank_accounts.person_id
 
-          JOIN atm_transactions
-            ON atm_transactions.account_number = bank_accounts.account_number
-    WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+       JOIN atm_transactions
+         ON atm_transactions.account_number = bank_accounts.account_number
+ WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
 
 INTERSECT
 
-   SELECT name
-     FROM bakery_security_logs
-          JOIN people
-            ON bakery_security_logs.license_plate = people.license_plate
-    WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
-    /* this narrows the list of suspects down to two:
-       Bruce, Diana */
+SELECT name
+  FROM bakery_security_logs
+       JOIN people
+         ON bakery_security_logs.license_plate = people.license_plate
+ WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
+  this narrows the list of suspects down to two:
+    Bruce, Diana */
 
 -- Check who the two suspects made their calls to:
  SELECT name
