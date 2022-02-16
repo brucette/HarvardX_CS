@@ -126,13 +126,13 @@ SELECT id, destination_airport_id, hour, minute
 /* Check if either of the suspects are passengers on first flight */
 
   -- get Bruce's and Diana's passport numbers:
-  SELECT * FROM people WHERE name = "Bruce" OR name = "Diana";
-/* +--------+-------+----------------+-----------------+---------------+
-|   id   | name  |  phone_number  | passport_number | license_plate |
-+--------+-------+----------------+-----------------+---------------+
-| 514354 | Diana | (770) 555-1861 | 3592750733      | 322W7JE       |
-| 686048 | Bruce | (367) 555-5533 | 5773159633      | 94KL13X       |
-+--------+-------+----------------+-----------------+---------------+*/
+  SELECT name, passport_number FROM people WHERE name = "Bruce" OR name = "Diana";
+/* +-------+-----------------+
+  | name  | passport_number |
+  +-------+-----------------+
+  | Diana | 3592750733      |
+  | Bruce | 5773159633      |
+  +-------+-----------------+ */
 
   -- check which passport holder is on the first flight:
   SELECT name
