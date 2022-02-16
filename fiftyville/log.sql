@@ -21,43 +21,43 @@ SELECT name, transcript
 -- Thief is definitely one of these as was seen getting into car within this time frame, according to interview transcripts:
 SELECT activity, license_plate, hour, minute
   FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
+ WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10 AND minute BETWEEN 15 AND 30;
 
 -- Check when witness Eugene got to the bakery as he saw thief just before that by an ATM on Leggett Street:
 .schema people
 
 SELECT activity, hour, minute
   FROM bakery_security_logs
-        JOIN people
-          ON bakery_security_logs.license_plate = people.license_plate
+       JOIN people
+         ON bakery_security_logs.license_plate = people.license_plate
  WHERE name = "Eugene";
 
-  -- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
-  .schema atm_transactions
+-- Eugene entered at 8:53. Check what activity can be found around the ATM shortly before this time:
+.schema atm_transactions
 
-  SELECT id, account_number, transaction_type, amount
-    FROM atm_transactions
-   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
+SELECT id, account_number, transaction_type, amount
+  FROM atm_transactions
+ WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street";
 
-  /* No timestaps given in atm_transactions.
-  Look at bank_accounts table next to see if account numbers can be used to see who made withdraws that day
-  and check which one of those people also left the bakery within 10 minutes of the crime */
-  .schema bank_accounts
+/* No timestaps given in atm_transactions.
+   Look at bank_accounts table next to see if account numbers can be used to see who made withdraws that day
+   and check which one of those people also left the bakery within 10 minutes of the crime. */
+.schema bank_accounts
 
-  SELECT name
-    FROM people
-         JOIN bank_accounts
-           ON people.id = bank_accounts.person_id
+SELECT name
+  FROM people
+       JOIN bank_accounts
+         ON people.id = bank_accounts.person_id
 
-         JOIN atm_transactions
-           ON atm_transactions.account_number = bank_accounts.account_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
-  INTERSECT
-  SELECT name
-    FROM bakery_security_logs
-         JOIN people
-           ON bakery_security_logs.license_plate = people.license_plate
-   WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
+       JOIN atm_transactions
+         ON atm_transactions.account_number = bank_accounts.account_number
+  WHERE month = 7 AND day = 28 AND year = 2021 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"
+INTERSECT
+SELECT name
+  FROM bakery_security_logs
+       JOIN people
+         ON bakery_security_logs.license_plate = people.license_plate
+ WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
 
   /* Current list of suspects (those who withdrew money and left bakery within 10 minutes after crime):
   Bruce, Diana, Iman, Luca */
