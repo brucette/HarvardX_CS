@@ -124,9 +124,9 @@ SELECT id, destination_airport_id, hour, minute
        (SELECT id
           FROM airports
          WHERE city = "Fiftyville")
-   AND month = 7 AND day = 28 AND year = 2021
+   AND month = 7 AND day = 29 AND year = 2021
  ORDER BY hour, minute;
- /* the earliest flight is at 13:49 with flight id 6 to Dallas/Fort Worth International Airport, which has an airport id 5
+ /* the earliest flight is at 08:20 with flight id 36 to New York City/LaGuardia Airport , which has an airport id 4
  as per aiport table */
 
 /* Check if any of the suspects are passengers on first flight */
@@ -143,7 +143,7 @@ SELECT id, destination_airport_id, hour, minute
   -- check which passport number holder is on the first flight:
   SELECT passport_number
     FROM passengers
-   WHERE flight_id = 6;
+   WHERE flight_id = 36;
 
   passengers (
     flight_id INTEGER,
