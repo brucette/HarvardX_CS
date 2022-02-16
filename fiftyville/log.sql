@@ -128,7 +128,7 @@ SELECT id, destination_airport_id, hour, minute
  /* the earliest flight is at 08:20 with flight id 36 to New York City/LaGuardia Airport , which has airport id 4
  as per aiport table */
 
-/* Check if any of the suspects are passengers on first flight */
+/* Check if either of the suspects are passengers on first flight */
 
   -- get Bruce's and Diana's passport numbers:
   SELECT * FROM people WHERE name = "Bruce" OR name = "Diana";
@@ -139,7 +139,7 @@ SELECT id, destination_airport_id, hour, minute
 | 686048 | Bruce | (367) 555-5533 | 5773159633      | 94KL13X       |
 +--------+-------+----------------+-----------------+---------------+*/
 
-  -- check which passport number holder is on the first flight:
+  -- check which passport holder is on the first flight:
   SELECT name
     FROM passengers
          JOIN people
