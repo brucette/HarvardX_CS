@@ -142,7 +142,7 @@ SELECT id, destination_airport_id, hour, minute
   -- check which passport number holder is on the first flight:
   SELECT name
     FROM passengers
-   WHERE flight_id = 36 AND passport_number IN ();
+   WHERE flight_id = 36 AND passport_number IN (SELECT passport_number FROM people WHERE name = "Bruce" OR name = "Diana");
 
   passengers (
     flight_id INTEGER,
