@@ -60,10 +60,7 @@ SELECT description
    WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
 
   /* Current list of suspects (those who withdrew money and left bakery within 10 minutes after crime):
-  Bruce
-  Diana
-  Iman
-  Luca */
+  Bruce, Diana, Iman, Luca */
 
 /* Check call logs to see who where on a call around the time the thief left the bakery, as witness Raymond
  overheard a call that lasted less than a minute in which the thief planned to leave with the first flight the following day*/
@@ -94,10 +91,8 @@ INTERSECT
           JOIN people
             ON bakery_security_logs.license_plate = people.license_plate
     WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
-      /* this narrows the list of suspects down to two:
-      Bruce
-      Diana
-      */
+    /* this narrows the list of suspects down to two:
+       Bruce, Diana */
 
 -- Check who the two suspects made their calls to:
  SELECT name
