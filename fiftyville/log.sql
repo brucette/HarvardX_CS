@@ -140,7 +140,7 @@ SELECT id, destination_airport_id, hour, minute
          JOIN people
            ON passengers.passport_number = people.passport_number
    WHERE flight_id = 36 AND passengers.passport_number IN (SELECT passport_number FROM people WHERE name = "Bruce" OR name = "Diana");
-   -- only Bruce is on the flight so he is the thief.
+   -- only Bruce is on the flight so he is the thief. Since Robin was called by Bruce at the time of the crime, he is likely the accomplice.
 
 
 
