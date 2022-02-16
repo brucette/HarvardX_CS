@@ -145,12 +145,7 @@ SELECT id, destination_airport_id, hour, minute
          JOIN people
            ON passengers.passport_number = people.passport_number
    WHERE flight_id = 36 AND passengers.passport_number IN (SELECT passport_number FROM people WHERE name = "Bruce" OR name = "Diana");
-
-  passengers (
-    flight_id INTEGER,
-    passport_number INTEGER,
-    seat TEXT,
-    FOREIGN KEY(flight_id) REFERENCES flights(id)
+   -- only Bruce is on the flight so he is the thief.
 
 
 
