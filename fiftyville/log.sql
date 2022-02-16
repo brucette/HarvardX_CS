@@ -92,17 +92,17 @@ SELECT name
        JOIN people
          ON bakery_security_logs.license_plate = people.license_plate
  WHERE month = 7 AND day = 28 AND year = 2021 AND activity = "exit" AND hour = 10 AND minute BETWEEN 15 AND 30;
-  this narrows the list of suspects down to two:
-    Bruce, Diana */
+ -- this narrows the list of suspects down to two: Bruce, Diana
+
 
 -- Check who the two suspects made their calls to:
- SELECT name
-    FROM phone_calls
-         JOIN people
-           ON phone_calls.receiver = people.phone_number
-   WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller IN
-   (SELECT phone_number FROM people WHERE name = "Bruce" OR name = "Diana");
-   /* Bruce called Robin and Diana called Philip
+SELECT name
+  FROM phone_calls
+       JOIN people
+         ON phone_calls.receiver = people.phone_number
+ WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller
+    IN (SELECT phone_number FROM people WHERE name = "Bruce" OR name = "Diana");
+    /* Bruce called Robin and Diana called Philip
         |  name  |
         +--------+
         | Robin  |
