@@ -143,7 +143,7 @@ SELECT id, destination_airport_id, hour, minute
   -- check which passport number holder is on the first flight:
   SELECT seat
     FROM passengers
-   WHERE flight_id = 3;
+   WHERE flight_id = 6;
 
   passengers (
     flight_id INTEGER,
