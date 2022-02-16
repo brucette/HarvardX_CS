@@ -131,7 +131,7 @@ SELECT id, destination_airport_id, hour, minute
 /* Check if any of the suspects are passengers on first flight */
 
   -- get Bruce's and Diana's passport numbers:
-  SELECT * FROM people WHERE name = "Bruce" OR name = "Diana" OR name = "Robin" OR name = "Philip";
+  SELECT * FROM people WHERE name = "Bruce" OR name = "Diana";
 /* +--------+-------+----------------+-----------------+---------------+
 |   id   | name  |  phone_number  | passport_number | license_plate |
 +--------+-------+----------------+-----------------+---------------+
@@ -140,7 +140,7 @@ SELECT id, destination_airport_id, hour, minute
 +--------+-------+----------------+-----------------+---------------+*/
 
   -- check which passport number holder is on the first flight:
-  SELECT passport_number
+  SELECT name       passport_number
     FROM passengers
    WHERE flight_id = 36;
 
