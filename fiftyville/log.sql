@@ -115,9 +115,7 @@ INTERSECT
         +--------+ */
 
 -- performed following queries to view flights, airports and passengers tables:
-SELECT * FROM passengers;
-SELECT * FROM airports;
-SELECT * FROM flights;
+SELECT * FROM passengers; SELECT * FROM airports; SELECT * FROM flights;
 
 -- check flights leaving from Fiftyville the following day, from earliest to latest
 SELECT id, destination_airport_id, hour, minute
