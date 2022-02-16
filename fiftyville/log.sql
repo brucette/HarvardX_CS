@@ -124,8 +124,7 @@ SELECT id, destination_airport_id, hour, minute
  /* the earliest flight is at 08:20 with flight id 36 to New York City/LaGuardia Airport , which has airport id 4
  as per aiport table */
 
-/* Check if either of the suspects are passengers on first flight */
-
+-- Check if either of the suspects are passengers on first flight:
   -- get Bruce's and Diana's passport numbers:
   SELECT name, passport_number FROM people WHERE name = "Bruce" OR name = "Diana";
 /* +-------+-----------------+
@@ -135,13 +134,14 @@ SELECT id, destination_airport_id, hour, minute
   | Bruce | 5773159633      |
   +-------+-----------------+ */
 
-  -- check which passport holder is on the first flight:
-  SELECT name
-    FROM passengers
-         JOIN people
-           ON passengers.passport_number = people.passport_number
-   WHERE flight_id = 36 AND passengers.passport_number IN (SELECT passport_number FROM people WHERE name = "Bruce" OR name = "Diana");
-   -- only Bruce is on the flight so he is the thief. Since Robin was called by Bruce at the time of the crime, he is likely the accomplice.
+-- Check which passport holder is on the first flight:
+SELECT name
+  FROM passengers
+       JOIN people
+         ON passengers.passport_number = people.passport_number
+ WHERE flight_id = 36 AND passengers.passport_number
+    IN (SELECT passport_number FROM people WHERE name = "Bruce" OR name = "Diana");
+    -- only Bruce is on the flight so he is the thief. Since Robin was called by Bruce at the time of the crime, he is likely the accomplice.
 
 
 
