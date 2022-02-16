@@ -124,6 +124,7 @@ SELECT id, destination_airport_id, hour, minute
        (SELECT id
           FROM airports
          WHERE city = "Fiftyville")
+   AND month = 7 AND day = 28 AND year = 2021
  ORDER BY hour, minute;
  -- shows that destination of earliest flight from Fiftyville is Chicago with a flight id of 30
 
