@@ -141,7 +141,7 @@ SELECT id, destination_airport_id, hour, minute
 +--------+-------+----------------+-----------------+---------------+*/
 
   -- check which passport number holder is on the first flight:
-  SELECT seat
+  SELECT passport_number
     FROM passengers
    WHERE flight_id = 6;
 
