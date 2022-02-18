@@ -42,8 +42,14 @@
         {
             answers[i].addEventListener("click", function()
             {
-                if (answers[i])
-
+                if (answers[i].class = "wrong")
+                {
+                    answers[i].style.backgroundColor = "red";
+                }
+                else
+                {
+                    answers[i].style.backgroundColor = "green";
+                }
             });
 
             style.backgroundColor = "red";
