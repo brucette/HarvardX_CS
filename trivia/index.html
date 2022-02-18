@@ -39,16 +39,14 @@
         // TODO: Add code to check answers to questions
                                                                     //let corrects = document.querySelectorAll(".right");
         let wrongs = document.querySelectorAll(".wrong");
-        let print = document.querySelector('p');
+        let print = document.querySelector(".section");
         for (let i = 0; i < wrongs.length; i++)
         {
             wrongs[i].addEventListener("click", function()
             {
                 wrongs[i].style.backgroundColor = "red";
                 //document.body.section.div.h3 += "Correct!"
-                let name =
-                    if (input.value) {
-                        name.innerHTML = `hello, ${input.value}`;
+                print.innerHTML += <br> + "Wrong";
 
             });
         }
