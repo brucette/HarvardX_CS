@@ -9,22 +9,17 @@
             // TODO: Add code to check answers to questions
             //querySelector();
             //querySelectorAll()
-            function wrong()
+            /*function wrong()
             {
                document.querySelector("button").addEventListener("click"))
                style.backgroundColor = "red";  //"#moon", "#disco", "#south
-            }
+            }*/
 
-
-
-            function correct()
-            {
-                document.querySelector(".right").addEventListener("click", function()
+            document.querySelector("button").addEventListener("click", function()
                 {
-                    
-                }style.backgroundColor = "green";
-                document.body.section.div.h3 += "Correct!"
-            }
+                    document.querySelector(".right")style.backgroundColor = "green";
+                    //document.body.section.div.h3 += "Correct!"
+                })
         </script>
     </head>
     <body>
@@ -40,7 +35,7 @@
                 <h3>What is nature's light show seen in the northern hemisphere called?</h3>
 
                 <button type="button" class = "wrong" onclick="wrong()">The High Moon</button>   <!--id="moon"-->
-                <button type="button" class = "right" onclick="correct()">Aurora Borealis</button> <!--id="aurora"-->
+                <button type="button" class = "right">Aurora Borealis</button> <!--onclick="correct() id="aurora"-->
                 <button type="button" class = "wrong" onclick="wrong()">Disco Lamps</button> <!-- id="disco" -->
                 <button type="button" class = "wrong" onclick="wrong()">The Southern Lights</button> <!-- id="south" -->
             </div>
