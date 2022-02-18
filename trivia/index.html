@@ -11,19 +11,19 @@
             //document.querySelectorAll()
             function wrong()
             {
-               document.querySelector().style.backgroundColor = "red";
+               document.querySelectorAll("#moon", "#disco", "#south").style.backgroundColor = "red";
             }
             function correct()
             {
                 document.querySelector("#aurora").style.backgroundColor = "green";
-                document.querySelector(".section") += "Correct!"
+                document.body.section.div.h3 = "Correct!"
             }
         </script>
     </head>
     <body>
         <div class="header">
             <h1>Trivia!</h1>
-        </div>
+        </div>s
 
         <div class="container">
             <div class="section">
@@ -31,10 +31,10 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is nature's light show seen in the northern hemisphere called?</h3>
-                <button type="button" onclick="wrong()">The High Moon</button>
+                <button type="button" id="moon" onclick="wrong()">The High Moon</button>
                 <button type="button" id="aurora" onclick="correct()">Aurora Borealis</button>
-                <button type="button" onclick="wrong()">Disco Lamps</button>
-                <button type="button" onclick="wrong()">The Southern Lights</button>
+                <button type="button" id="disco" onclick="wrong()">Disco Lamps</button>
+                <button type="button" id="south" onclick="wrong()">The Southern Lights</button>
             </div>
 
             <div class="section">
