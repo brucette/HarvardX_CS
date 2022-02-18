@@ -45,8 +45,11 @@
             //document.body.section.div.h3 += "Correct!"
         });
 
-        
-        let wrongs =
+
+        let answers = document.querySelectorAll("button");
+        documet.body.innerHTML = answers;
+
+
         document.querySelectorAll(".wrong").addEventListener("click", function()
         {
             document.querySelectorAll(".wrong").style.backgroundColor = "red";
