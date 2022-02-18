@@ -19,10 +19,10 @@
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is nature's light show seen in the northern hemisphere called?</h3>
 
-                <button type="button" class = "wrong" onclick="wrong()">The High Moon</button>   <!--id="moon"-->
+                <button type="button" class = "wrong">The High Moon</button>   <!--id="moon"-->
                 <button type="button" class = "right">Aurora Borealis</button> <!--onclick="correct() id="aurora"-->
-                <button type="button" class = "wrong" onclick="wrong()">Disco Lamps</button> <!-- id="disco" -->
-                <button type="button" class = "wrong" onclick="wrong()">The Southern Lights</button> <!-- id="south" -->
+                <button type="button" class = "wrong">Disco Lamps</button> <!-- id="disco" -->
+                <button type="button" class = "wrong">The Southern Lights</button> <!-- id="south" -->
             </div>
 
             <div class="section">
@@ -42,11 +42,11 @@
         {
             answers[i].addEventListener("click", function()
             {
-                if (answers[i].class = "wrong")
+                if (answers[i].class == "wrong")
                 {
                     answers[i].style.backgroundColor = "red";
                 }
-                if (answers[i].class = "right")
+                if (answers[i].class == "right")
                 {
                     answers[i].style.backgroundColor = "green";
                 }
