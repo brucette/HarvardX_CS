@@ -37,12 +37,24 @@
         </div>
         <script>
         // TODO: Add code to check answers to questions
-        document.querySelector("button").addEventListener("click", function()
+        /*document.querySelector("button").addEventListener("click", function()
             {
                 document.querySelector(".right").style.backgroundColor = "green";
                 document.querySelector(".wrong").style.backgroundColor = "red";
                 //document.body.section.div.h3 += "Correct!"
-            });
+            });*/
+        document.querySelector(".right").addEventListener("click", function()
+        {
+            document.querySelector(".right").style.backgroundColor = "green";
+            //document.querySelector(".wrong").style.backgroundColor = "red";
+            //document.body.section.div.h3 += "Correct!"
+        });
+        document.querySelectorAll(".wrong").addEventListener("click", function()
+        {
+            document.querySelectorAll(".wrong").style.backgroundColor = "red";
+            //document.querySelector(".wrong").style.backgroundColor = "red";
+            //document.body.section.div.h3 += "Correct!"
+        });
     </script>
     </body>
 </html>
