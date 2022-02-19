@@ -40,6 +40,7 @@
 
         let print = document.querySelectorAll(".section");
 
+        // Check for wrong answer:
         let wrongs = document.querySelectorAll(".wrong");
         for (let i = 0; i < wrongs.length; i++)
         {
@@ -50,7 +51,13 @@
             });
         }
 
-        // WORKS:
+        // Check for correct answer:
+       document.querySelector(".right").addEventListener("click", function()
+       {
+           document.querySelector(".right").style.backgroundColor = "green";
+           print[0].innerHTML += "<br><br> Correct!";
+       });
+
        document.querySelector(".right").addEventListener("click", function()
        {
            document.querySelector(".right").style.backgroundColor = "green";
