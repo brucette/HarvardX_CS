@@ -58,10 +58,11 @@
            print[0].innerHTML += "<br><br> Correct!";
        });
 
-       document.querySelector(".right").addEventListener("click", function()
+       // Check for text-based answer:
+       document.querySelector("#mandarin").addEventListener("click", function()
        {
            document.querySelector(".right").style.backgroundColor = "green";
-           print[0].innerHTML += "<br><br> Correct!";
+           print[1].innerHTML += "<br><br> Correct!";
        });
 
     </script>
