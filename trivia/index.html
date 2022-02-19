@@ -62,22 +62,18 @@
 
        document.querySelector("#mandarin").addEventListener("click", function()
        {
-           let answer = document.querySelector("input");
-           if (answer.value == "mandarin")
-           document.querySelector("#mandarin").style.backgroundColor = "green";
-           print[1].innerHTML += "<br><br> Correct!";
-
-           document.querySelector("#mandarin").style.backgroundColor = "red";
-           print[1].innerHTML += "<br><br> Incorrect.";
+           let answer = document.querySelector("input").value;
+           if (answer.toLowerCase() == "mandarin")
+           {
+               document.querySelector("#mandarin").style.backgroundColor = "green";
+               print[1].innerHTML += "<br><br> Correct!";
+           }
+           else
+           {
+               document.querySelector("#mandarin").style.backgroundColor = "red";
+               print[1].innerHTML += "<br><br> Incorrect.";
+           }
        });
-        let input = document.querySelector('input');
-                input.addEventListener('keyup', function(event) {
-                    let name = document.querySelector('p');
-                    if (input.value) {
-                        name.innerHTML = `hello, ${input.value}`;
-                    }
-                    else {
-                        name.innerHTML = 'hello, whoever you are';
     </script>
     </body>
 </html>
