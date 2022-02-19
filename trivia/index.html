@@ -59,10 +59,14 @@
        });
 
        // Check for text-based answer:
+       let answer = ;
        document.querySelector("#mandarin").addEventListener("click", function()
        {
-           document.querySelector(".right").style.backgroundColor = "green";
+           document.querySelector("#mandarin").style.backgroundColor = "green";
            print[1].innerHTML += "<br><br> Correct!";
+
+           document.querySelector("#mandarin").style.backgroundColor = "red";
+           print[1].innerHTML += "<br><br> Incorrect.";
        });
 
     </script>
