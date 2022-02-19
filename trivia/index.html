@@ -37,8 +37,8 @@
         </div>
         <script>
         // TODO: Add code to check answers to questions
-                                                                    //let corrects = document.querySelectorAll(".right");
-        let print = document.querySelector(".section");
+
+        let print = document.querySelectorAll(".section");
 
         let wrongs = document.querySelectorAll(".wrong");
         for (let i = 0; i < wrongs.length; i++)
@@ -46,8 +46,7 @@
             wrongs[i].addEventListener("click", function()
             {
                 wrongs[i].style.backgroundColor = "red";
-                //document.body.section.div.h3 += "Correct!"
-                print.innerHTML += "<br><br> Incorrect.";
+                print[0].innerHTML += "<br><br> Incorrect.";
             });
         }
 
@@ -55,7 +54,7 @@
        document.querySelector(".right").addEventListener("click", function()
         {
             document.querySelector(".right").style.backgroundColor = "green";
-            print.innerHTML += "<br><br> Correct!";
+            print[0].innerHTML += "<br><br> Correct!";
         });
     </script>
     </body>
