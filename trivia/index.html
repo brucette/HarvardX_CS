@@ -65,12 +65,12 @@
            let answer = document.querySelector("input").value;
            if (answer.toLowerCase() == "mandarin")
            {
-               document.querySelector("#mandarin").style.backgroundColor = "green";
+               document.querySelector("input").style.backgroundColor = "green";
                print[1].innerHTML += "<br><br> Correct!";
            }
            else
            {
-               document.querySelector("#mandarin").style.backgroundColor = "red";
+               document.querySelector("input").style.backgroundColor = "red";
                print[1].innerHTML += "<br><br> Incorrect.";
            }
        });
