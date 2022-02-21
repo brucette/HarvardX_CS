@@ -8,13 +8,13 @@
         <script>
             document.addEventListener("DOMContentLoaded", function(){
                 // Select area to print feedback to
-                let print = document.querySelectorAll(".section");
+                let response1 = document.querySelector("#response1");
 
                 // Check for correct answer:
                 document.querySelector(".right").addEventListener("click", function()
                 {
                     document.querySelector(".right").style.backgroundColor = "green";
-                    print[0].innerHTML += "<br><br> Correct!";
+                    response1.innerHTML = "<br><br> Correct!";
                 });
 
                 // Check for wrong answer:
@@ -24,23 +24,25 @@
                     wrongs[i].addEventListener("click", function()
                     {
                         wrongs[i].style.backgroundColor = "red";
-                        print[0].innerHTML += "<br><br> Incorrect.";
+                        response1.innerHTML = "<br><br> Incorrect.";
                     });
                 }
 
                 // Check for text-based answer:
+                let response2 = document.querySelector("#response2");
+
                 document.querySelector("#mandarin").addEventListener("click", function()
                 {
                     let answer = document.querySelector("input").value;
                     if (answer.toLowerCase() == "mandarin")
                     {
                         document.querySelector("input").style.backgroundColor = "green";
-                        print[1].innerHTML += "<br><br> Correct!";
+                        reponse2.innerHTML += "<br><br> Correct!";
                     }
                     else
                     {
                         document.querySelector("input").style.backgroundColor = "red";
-                        print[1].innerHTML += "<br><br> Incorrect.";
+                        reponse2.innerHTML += "<br><br> Incorrect.";
                     }
                 });
             });
@@ -63,7 +65,7 @@
                 <button type="button" class = "wrong">Disco Lamps</button>
                 <button type="button" class = "wrong">The Southern Lights</button>
 
-                <p >
+                <p id="response1"></p>
             </div>
 
             <div class="section">
@@ -74,6 +76,8 @@
                 <!-- mandarin -->
                 <input type="text">
                 <button type="button" id="mandarin">Check Answer</button>
+
+                <p id="response2"></p>
             </div>
         </div>
     </body>
