@@ -5,6 +5,46 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContenLoaded", function(){
+                // Select area to print feedback to
+                let print = document.querySelectorAll(".section");
+
+                // Check for wrong answer:
+                let wrongs = document.querySelectorAll(".wrong");
+                for (let i = 0; i < wrongs.length; i++)
+                {
+                    wrongs[i].addEventListener("click", function()
+                    {
+                        wrongs[i].style.backgroundColor = "red";
+                        print[0].innerHTML += "<br><br> Incorrect.";
+                    });
+                }
+
+                // Check for correct answer:
+                document.querySelector(".right").addEventListener("click", function()
+                {
+                    document.querySelector(".right").style.backgroundColor = "green";
+                    print[0].innerHTML += "<br><br> Correct!";
+                });
+
+                // Check for text-based answer:
+                document.querySelector("#mandarin").addEventListener("click", function()
+                {
+                    let answer = document.querySelector("input").value;
+                    if (answer.toLowerCase() == "mandarin")
+                    {
+                        document.querySelector("input").style.backgroundColor = "green";
+                        print[1].innerHTML += "<br><br> Correct!";
+                    }
+                    else
+                    {
+                        document.querySelector("input").style.backgroundColor = "red";
+                        print[1].innerHTML += "<br><br> Incorrect.";
+                    }
+                });
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -34,43 +74,5 @@
                 <button type="button" id="mandarin">Check Answer</button>
             </div>
         </div>
-        <script>
-        // Code to check answers to questions
-        let print = document.querySelectorAll(".section");
-
-        // Check for wrong answer:
-        let wrongs = document.querySelectorAll(".wrong");
-        for (let i = 0; i < wrongs.length; i++)
-        {
-            wrongs[i].addEventListener("click", function()
-            {
-                wrongs[i].style.backgroundColor = "red";
-                print[0].innerHTML += "<br><br> Incorrect.";
-            });
-        }
-
-        // Check for correct answer:
-       document.querySelector(".right").addEventListener("click", function()
-       {
-           document.querySelector(".right").style.backgroundColor = "green";
-           print[0].innerHTML += "<br><br> Correct!";
-       });
-
-       // Check for text-based answer:
-       document.querySelector("#mandarin").addEventListener("click", function()
-       {
-           let answer = document.querySelector("input").value;
-           if (answer.toLowerCase() == "mandarin")
-           {
-               document.querySelector("input").style.backgroundColor = "green";
-               print[1].innerHTML += "<br><br> Correct!";
-           }
-           else
-           {
-               document.querySelector("input").style.backgroundColor = "red";
-               print[1].innerHTML += "<br><br> Incorrect.";
-           }
-       });
-    </script>
     </body>
 </html>
