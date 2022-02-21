@@ -11,20 +11,18 @@
                 let response1 = document.querySelector("#response1");
 
                 // Check for correct answer:
-                document.querySelector(".right").addEventListener("click", function()
-                {
+                document.querySelector(".right").addEventListener("click", function(){
                     document.querySelector(".right").style.backgroundColor = "green";
-                    response1.innerHTML = "<br><br> Correct!";
+                    response1.innerHTML = "Correct!";
                 });
 
                 // Check for wrong answer:
                 let wrongs = document.querySelectorAll(".wrong");
                 for (let i = 0; i < wrongs.length; i++)
                 {
-                    wrongs[i].addEventListener("click", function()
-                    {
+                    wrongs[i].addEventListener("click", function(){
                         wrongs[i].style.backgroundColor = "red";
-                        response1.innerHTML = "<br><br> Incorrect.";
+                        response1.innerHTML = "Incorrect.";
                     });
                 }
 
