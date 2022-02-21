@@ -10,6 +10,13 @@
                 // Select area to print feedback to
                 let print = document.querySelectorAll(".section");
 
+                // Check for correct answer:
+                document.querySelector(".right").addEventListener("click", function()
+                {
+                    document.querySelector(".right").style.backgroundColor = "green";
+                    print[0].innerHTML += "<br><br> Correct!";
+                });
+
                 // Check for wrong answer:
                 let wrongs = document.querySelectorAll(".wrong");
                 for (let i = 0; i < wrongs.length; i++)
@@ -20,13 +27,6 @@
                         print[0].innerHTML += "<br><br> Incorrect.";
                     });
                 }
-
-                // Check for correct answer:
-                document.querySelector(".right").addEventListener("click", function()
-                {
-                    document.querySelector(".right").style.backgroundColor = "green";
-                    print[0].innerHTML += "<br><br> Correct!";
-                });
 
                 // Check for text-based answer:
                 document.querySelector("#mandarin").addEventListener("click", function()
