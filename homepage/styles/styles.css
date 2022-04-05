@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    font-size: 19px;
+}
+
+/* STYLE FOR TAGS */
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: rgb(199, 123, 88);
+}
+h2 {
+    font-size: 27px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: rgb(199, 123, 88);
+}
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+    font-style: bold;
+    padding: 12px;
+    color: rgb(238, 154, 115);
+}
+a:hover {
+    color: rgb(233, 230, 230);
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+    li {
+        display: inline;
+    }
+    li a {
+        color: rgb(236, 232, 232);
+        font-size: 30px;
+        padding: 40px;
+    }
+    li a:hover {
+        color: rgb(5, 5, 5);
+    }
+button {
+    background-color: #0e8fb6;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+button:hover{
+    background-color: #095268;
+}
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+hr {
+    color: rgb(226, 221, 221);
+}
+
+/* STYLE FOR IDs:*/
+::placeholder {
+    color: red;
+}
+#copy {
+    text-align: right;
+    padding-right: 5px;
+    font-size: 14px;
+}
+#banner {
+    height:380px;
+    background-image:url('../pics/autumn.jpg');
+    background-position-y: -380px;
+    background-size: cover;
+}
+#wrapper {
+    background-color: rgb(240, 223, 210);
+}
+
+#container {
+    padding-bottom: 5rem;
+}
+#footer {
+    background-color: rgb(94, 92, 91);
+    border: 1px solid black;
+    font-size: 17px;
+}
+#book  {
+    margin: 10; transform: translate(-25%, -25%);-ms-transform: translate(-25%, -25%);position: absolute; left: 48%;
+}
+/* STYLE FOR CLASSES */
+
+.treatments {
+    width: 55%;
+    margin: auto;
+    padding: 100px;
+  }
+.top {
+    background-color: slategray;
+    height:225px;
+    padding: 68px;
+    display: flex;
+}
+.left {
+    text-align: left;
+    height:220px;
+    flex: 25%;
+}
+.right {
+    flex: 75%;
+    text-align: left;
+    padding-top: 115px;
+}
+.row {
+    display: flex;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.column {
+    flex: 50%;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.center {
+    height: 750px;
+    background-image:url('../pics/cabins.jpg');
+    background-position-y: -750px;
+    background-size: cover;
+}
+.bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 60% /*280px*/;
+}
+.contact {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f1efec;
+}
+.fa {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 3px;
+    border-radius: 50%;
+    background: white;
+  }
+  .fa:hover {
+      opacity: 0.7;
+  }
