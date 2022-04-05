@@ -1,0 +1,72 @@
+@media only screen and (max-width: 768px){
+
+    * {
+        font-size: 15px;
+    }
+
+    /* STYLE FOR TAGS */
+    h2 {
+        font-size: 19px;
+        text-align: left;
+    }
+
+    li {
+        display: block;
+    }
+    li a {
+        font-size: 18px;
+        padding: 3px;
+    }
+
+    /* STYLE FOR IDs */
+    #copy {
+        padding-right: 2px;
+        padding-top: 30px;
+        font-size: 10px;
+    }
+    #book  {
+        margin: 10; transform: translate(-25%, -25%);-ms-transform: translate(-25%, -25%);position: absolute; left: 35%;
+    }
+
+    /* STYLE FOR CLASSES */
+    .treatments {
+        width: 90%;
+        padding: 10px 0;
+      }
+      .treatments {
+        padding-top: 50px;
+      }
+    .top {
+        height:225px;
+        padding: 40px;
+    }
+    .left {
+        height:200px;
+    }
+    .right {
+        padding-top: 30px;
+        padding-left: 35px;
+    }
+    .row {
+        margin-right: 5px;
+        margin-left: 5px;
+        display: block;
+    }
+    .column {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .center {
+        height:250px;
+        background-position-y: -100px;
+        }
+    .bottom {
+        width: 100%;
+        padding: 15px;
+    }
+    .contact {
+        width: 90%;
+    }
+}
