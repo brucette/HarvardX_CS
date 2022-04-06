@@ -92,7 +92,7 @@
                 let email = document.getElementById("email").value;
                 let message = document.getElementById("message").value;
 
-                /* Validate email address*/
+                /* Function to validate email address*/
                 function ValidateEmail(email)
                 {
                     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -105,7 +105,8 @@
                         return false;
                     }
                 }
-                /* Check all input fields are filled*/
+                
+                /* Check all input fields are filled */
                 if (ValidateEmail(email) == false)
                 {
                     document.getElementById("email").value = "";
