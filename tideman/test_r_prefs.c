@@ -7,13 +7,31 @@
 
 int preferences[3][3];
 
-void record_preferences(int ranks[])
+/*void record_preferences(int ranks[])
 {
     // TODO
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
+            if (ranks[i] == i && ranks[i] == j)
+            {
+                break;
+            }
+            else
+            {
+                preferences[ranks[i]][i+1]++;
+            }
+        }
+    }
+    return;
+}*/
+
+void record_preferences(int ranks[])
+{
+    // TODO
+    for (int i = 0; i < 3; i++)
+    {
             if (ranks[i] == i && ranks[i] == j)
             {
                 break;
