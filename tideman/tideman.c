@@ -122,7 +122,7 @@ void record_preferences(int ranks[])
         {
             if (ranks[i] == preferences[j])
             {
-                preferences[i][j]++
+                preferences[i][j] = 0;
             }
         }
     }
