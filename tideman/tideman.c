@@ -90,7 +90,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    //REMOVE THEN!
+    /*/REMOVE THEN!
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -99,7 +99,7 @@ int main(int argc, string argv[])
         }
         printf("\n");
     }
-    //REMOVE THEN!
+    //REMOVE THEN!*/
 
     add_pairs();
     sort_pairs();
