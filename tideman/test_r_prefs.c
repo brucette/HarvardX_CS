@@ -14,7 +14,7 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < 3; j++)
         {
-            if (ranks[i] == preferences[j] && ranks[i] == preferences[i])
+            if (ranks[i] == j && ranks[i] == i)
             {
                 preferences[i][j] = preferences[i][j];
             }
