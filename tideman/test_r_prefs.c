@@ -32,8 +32,10 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < 3; i++)
     {
-        int j = i + 1;
-        preferences[ranks[i]][j]++;
+        for (int j = i + 1; j < 3; j++)
+        {
+            preferences[ranks[i]][j]++;
+        }
     }
     return;
 }
