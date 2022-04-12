@@ -32,14 +32,15 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < 3; i++)
     {
-            if (ranks[i] == i && ranks[i] == j)
-            {
-                break;
-            }
-            else
-            {
-                preferences[ranks[i]][i+1]++;
-            }
+        int j = i + 1;
+        if (ranks[i] == i && ranks[i] == j)
+        {
+            break;
+        }
+        else
+        {
+            preferences[ranks[i]][i+1]++;
+        }
         }
     }
     return;
