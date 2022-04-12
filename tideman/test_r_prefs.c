@@ -10,15 +10,9 @@ int preferences[3][3];
 void record_preferences(int ranks[])
 {
     // TODO
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3 - 1; i++)
     {
-        for (int j = 0; j < 3; j++)
-        {
-            if (ranks[i] > j)
-            {
-                preferences[i][j]++;
-            }
-        }
+        preferences[ranks[i]][ranks[i + 1]++;
     }
     return;
 }
