@@ -5,8 +5,6 @@
 #define MAX 3
 
 
-
-
 int preferences[3][3];
 
 void record_preferences(int ranks[])
