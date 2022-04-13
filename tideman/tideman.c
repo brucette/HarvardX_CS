@@ -103,7 +103,7 @@ int main(int argc, string argv[])
 
     add_pairs();
 
-    //REMOVE THEN!
+    /*/REMOVE THEN!
     for (int j = 0; j < pair_count; j++)
     {
         printf("%i", pairs[j].winner);
@@ -111,7 +111,7 @@ int main(int argc, string argv[])
     printf("\n");
     printf("%i", pair_count);
     printf("\n");
-    //REMOVE THEN!
+    //REMOVE THEN!*/
 
     sort_pairs();
     lock_pairs();
