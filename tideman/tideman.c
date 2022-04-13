@@ -188,9 +188,9 @@ void sort_pairs(void)
 
     while (swap!= 0)
     {
+        swap = 0;
         for (int i = 0; i < pair_count; i++)
         {
-            swap = 0;
             if (pairs[i].winner - pairs[i].loser < pairs[i+1].winner - pairs[i+1].loser)
             {
                 temp = pairs[i];
