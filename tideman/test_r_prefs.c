@@ -33,10 +33,10 @@ void add_pairs(void)
                 pair.winner = ;
                 pair.loser = ;
                 pairs[i] = pair;
+                pair_count++;
             }
         }
     }
-    pair_count++;
     return;
 }
 
