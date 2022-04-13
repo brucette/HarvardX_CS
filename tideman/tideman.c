@@ -115,7 +115,6 @@ int main(int argc, string argv[])
 
     sort_pairs();
 
-
     lock_pairs();
     print_winner();
     return 0;
@@ -148,7 +147,6 @@ void record_preferences(int ranks[])
              preferences[ranks[i]][ranks[j]]++;
         }
     }
-    return;
 }
 
 // Record pairs of candidates where one is preferred over the other
@@ -170,7 +168,6 @@ void add_pairs(void)
             }
         }
     }
-    return;
 }
 
 // Sort pairs in decreasing order by strength of victory
@@ -202,12 +199,12 @@ void sort_pairs(void)
                 pairs[i+1] = temp;
                 swap++;
             }
-
+            /*REMOVE THEN!
             printf("%i", winner_votes - loser_votes);
             printf("\n");
+            REMOVE THEN!*/
         }
     }
-
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
