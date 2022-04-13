@@ -199,8 +199,8 @@ void sort_pairs(void)
                 swap++;
             }
         }
-        return;
     }
+    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
