@@ -70,5 +70,14 @@ int main(void)
         printf("\n");
     }
 
+    add_pairs();
+
+
+    for (int j = 0; j < 3; j++)
+    {
+        printf("%i ", pairs[j]);
+    }
+    printf("\n");
+
 
 }
