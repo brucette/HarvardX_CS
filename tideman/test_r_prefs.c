@@ -65,8 +65,7 @@ void sort_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        int difference = pairs[i].winner - pairs.[i].loser;
-        if (difference > min)
+        if (pairs[i].winner - pairs.[i].loser) > (pairs[i+1].winner - pairs.[i+1].loser))
         {
             temp = pairs[i];
             min = difference;
