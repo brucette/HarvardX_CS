@@ -194,8 +194,8 @@ void sort_pairs(void)
         for (int i = 0; i < pair_count - 1; i++)
         {
             int winner_votes = preferences[pairs[i].winner][pairs[i].loser];
-            int loser_votes = preferences[][];
-            
+            int loser_votes = preferences[pairs[i].loser][pairs[i].winner];
+
             if ( -  < pairs[i+1].winner - pairs[i+1].loser)
             {
                 temp = pairs[i];
