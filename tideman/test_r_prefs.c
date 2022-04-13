@@ -14,11 +14,15 @@ typedef struct
     int loser;
 }
 pair;
+pair pairs[3 * (3 - 1) / 2];
+
+int pair_count;
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     // TODO
+    pair_count++;
     return;
 }
 
