@@ -3,18 +3,18 @@
 #include <string.h>
 
 // Max number of candidates
-#define MAX 9
+#define MAX 3
 
 
-int preferences[MAX][MAX];
-int candidate_count = MAX;
+int preferences[3][3];
+int candidate_count = 3;
 typedef struct
 {
     int winner;
     int loser;
 }
 pair;
-pair pairs[MAX * (MAX - 1) / 2];
+pair pairs[3 * (3 - 1) / 2];
 
 int pair_count  = 0;
 
