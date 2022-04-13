@@ -77,9 +77,9 @@ int main(void)
     add_pairs();
 
 
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j < index; j++)
     {
-        printf("%d", pairs[j].winner);
+        printf("%i", pairs[j].winner);
     }
     printf("\n");
 
