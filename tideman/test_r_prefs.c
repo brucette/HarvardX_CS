@@ -67,6 +67,7 @@ void sort_pairs(void)
     {
         int difference = pairs[i].winner - pairs.[i].loser;
         if ()
+        min = 
     }
     return;
 }
