@@ -80,6 +80,7 @@ int main(void)
     for (int j = 0; j < 3 * (3 - 1) / 2; j++)
     {
         printf("%i", pairs[j].winner);
+        printf("%i", pairs[j].winner);
     }
     printf("\n");
 
