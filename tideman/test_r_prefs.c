@@ -14,6 +14,7 @@ typedef struct
     int loser;
 }
 pair;
+
 pair pairs[3 * (3 - 1) / 2];
 
 int pair_count  = 0;
@@ -30,9 +31,10 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])  //candidate_count / voter_count
             {
-                pair.winner = i;
-                pair.loser = j;
-                pairs[j] = pair;
+                struct new_pair = pair;
+                new_pair.winner = i;
+                new_pair.loser = j;
+                pairs[j] = new_pair;
                 pair_count++;
             }
         }
