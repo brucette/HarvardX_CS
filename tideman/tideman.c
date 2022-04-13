@@ -108,8 +108,8 @@ int main(int argc, string argv[])
     {
         printf("%i", pairs[j].winner);
         printf("\n");
-        printf("%i", pair_count);
     }
+    printf("%i", pair_count);
     printf("\n");
     //REMOVE THEN!
 
