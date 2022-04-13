@@ -117,11 +117,9 @@ int main(int argc, string argv[])
 
     for (int j = 0; j < pair_count; j++)
     {
-        printf("%i", pairs[j].winner - pairs.[i].loser);
+        printf("%i", pairs[j].winner - pairs[j].loser);
+        printf("\n");
     }
-    printf("\n");
-    printf("%i", pair_count);
-    printf("\n");
 
 
     lock_pairs();
@@ -193,7 +191,7 @@ void sort_pairs(void)
         for (int i = 0; i < pair_count; i++)
         {
             swap = 0;
-            if (pairs[i].winner - pairs.[i].loser) < (pairs[i+1].winner - pairs.[i+1].loser))
+            if (pairs[i].winner - pairs[i].loser < pairs[i+1].winner - pairs[i+1].loser)
             {
                 temp = pairs[i];
                 pairs[i] = pairs[i+1];
