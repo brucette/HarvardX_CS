@@ -77,7 +77,7 @@ int main(void)
 
     for (int j = 0; j < 3; j++)
     {
-        printf("%i ", pairs[j]);
+        printf("%d", pairs[j].winner);
     }
     printf("\n");
 
