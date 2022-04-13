@@ -69,9 +69,8 @@ void sort_pairs(void)
         if (difference > min)
         {
             temp = pairs[i];
-            
+            min = difference;
         }
-        min =
     }
     return;
 }
