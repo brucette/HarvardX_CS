@@ -28,7 +28,7 @@ void add_pairs(void)
     {
         for (int j = 0; j < 3; j++)
         {
-            if (preferences[i][j] > voter_count / 2)
+            if (preferences[i][j] > candidate_count / voter_count)
             {
                 pair.winner = ;
                 pair.loser = ;
