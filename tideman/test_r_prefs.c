@@ -32,7 +32,7 @@ void add_pairs(void)
             {
                 pair.winner = i;
                 pair.loser = j;
-                pairs[i] = pair;
+                pairs[j] = pair;
                 pair_count++;
             }
         }
