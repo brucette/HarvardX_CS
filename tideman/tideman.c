@@ -193,7 +193,10 @@ void sort_pairs(void)
         swap = 0;
         for (int i = 0; i < pair_count - 1; i++)
         {
-            if (pairs[i].winner - pairs[i].loser < pairs[i+1].winner - pairs[i+1].loser)
+            int winner_votes = preferences[pairs[i].winner][pairs[i].loser];
+            int loser_votes = preferences[][];
+            
+            if ( -  < pairs[i+1].winner - pairs[i+1].loser)
             {
                 temp = pairs[i];
                 pairs[i] = pairs[i+1];
