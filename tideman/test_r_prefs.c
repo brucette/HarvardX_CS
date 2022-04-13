@@ -60,6 +60,11 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+    int difference = 0;
+    for (int i = 0; i < pair_count; i++)
+    {
+        difference = pairs[i].winner - pairs.[i].loser;
+    }
     return;
 }
 
