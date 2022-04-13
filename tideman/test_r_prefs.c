@@ -31,7 +31,7 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])  //candidate_count / voter_count
             {
-                struct new_pair = pair;
+                pair new_pair = pair;
                 new_pair.winner = i;
                 new_pair.loser = j;
                 pairs[j] = new_pair;
