@@ -102,12 +102,16 @@ int main(int argc, string argv[])
     //REMOVE THEN!*/
 
     add_pairs();
-    for (int j = 0; j < pa; j++)
+
+    //REMOVE THEN!
+    for (int j = 0; j < pair_count; j++)
     {
         printf("%i", pairs[j].winner);
+        printf("\n");
         printf("%i", pair_count);
     }
     printf("\n");
+    //REMOVE THEN!
 
     sort_pairs();
     lock_pairs();
