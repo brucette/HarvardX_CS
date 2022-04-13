@@ -16,7 +16,7 @@ typedef struct
 pair;
 pair pairs[3 * (3 - 1) / 2];
 
-int pair_count;
+int pair_count +;
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
@@ -28,7 +28,6 @@ void add_pairs(void)
 
 void record_preferences(int ranks[])
 {
-    // TODO
     for (int i = 0; i < 3; i++)
     {
         for (int j = i + 1; j < 3; j++)
