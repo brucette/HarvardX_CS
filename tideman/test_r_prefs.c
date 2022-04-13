@@ -21,6 +21,19 @@ int pair_count  = 0;
 
 int voter_count = 3;
 
+
+void record_preferences(int ranks[])
+{
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = i + 1; j < 3; j++)
+        {
+            preferences[ranks[i]][ranks[j]]++;
+        }
+    }
+    return;
+}
+
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
@@ -43,19 +56,6 @@ void add_pairs(void)
     }
     return;
 }
-
-void record_preferences(int ranks[])
-{
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = i + 1; j < 3; j++)
-        {
-            preferences[ranks[i]][ranks[j]]++;
-        }
-    }
-    return;
-}
-
 
 int main(void)
 {
