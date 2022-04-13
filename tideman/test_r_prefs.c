@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 3
@@ -7,6 +8,19 @@
 
 int preferences[3][3];
 int candidate_count = 3;
+typedef struct
+{
+    int winner;
+    int loser;
+}
+pair;
+
+// Record pairs of candidates where one is preferred over the other
+void add_pairs(void)
+{
+    // TODO
+    return;
+}
 
 void record_preferences(int ranks[])
 {
@@ -18,13 +32,6 @@ void record_preferences(int ranks[])
             preferences[ranks[i]][ranks[j]]++;
         }
     }
-    return;
-}
-
-// Record pairs of candidates where one is preferred over the other
-void add_pairs(void)
-{
-    // TODO
     return;
 }
 
