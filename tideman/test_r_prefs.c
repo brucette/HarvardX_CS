@@ -30,8 +30,8 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])  //candidate_count / voter_count
             {
-                pair.winner = ;
-                pair.loser = ;
+                pair.winner = i;
+                pair.loser = j;
                 pairs[i] = pair;
                 pair_count++;
             }
