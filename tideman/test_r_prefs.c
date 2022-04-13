@@ -18,6 +18,8 @@ pair pairs[3 * (3 - 1) / 2];
 
 int pair_count  = 0;
 
+int voter_count = 3;
+
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
