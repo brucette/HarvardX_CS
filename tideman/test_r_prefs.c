@@ -25,6 +25,7 @@ int voter_count = 3;
 void add_pairs(void)
 {
     // TODO
+    int index = 0;
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -34,8 +35,9 @@ void add_pairs(void)
                 pair new_pair;
                 new_pair.winner = i;
                 new_pair.loser = j;
-                pairs[j] = new_pair;
+                pairs[index] = new_pair;
                 pair_count++;
+                index++;
             }
         }
     }
