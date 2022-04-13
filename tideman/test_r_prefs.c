@@ -6,7 +6,7 @@
 
 
 int preferences[3][3];
-
+int candidate_count = 3;
 
 void record_preferences(int ranks[])
 {
