@@ -60,15 +60,15 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int min = 0;
     pair temp;
 
     for (int i = 0; i < pair_count; i++)
     {
-        if (pairs[i].winner - pairs.[i].loser) > (pairs[i+1].winner - pairs.[i+1].loser))
+        if (pairs[i].winner - pairs.[i].loser) < (pairs[i+1].winner - pairs.[i+1].loser))
         {
             temp = pairs[i];
-            min = difference;
+            pairs[i] = pairs[i+1];
+            pairs[i+1] = temp;
         }
     }
     return;
