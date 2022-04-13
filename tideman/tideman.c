@@ -102,6 +102,13 @@ int main(int argc, string argv[])
     //REMOVE THEN!*/
 
     add_pairs();
+    for (int j = 0; j < pa; j++)
+    {
+        printf("%i", pairs[j].winner);
+        printf("%i", pair_count);
+    }
+    printf("\n");
+
     sort_pairs();
     lock_pairs();
     print_winner();
@@ -142,6 +149,22 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
+    int index = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (preferences[i][j] > preferences[j][i])  //candidate_count / voter_count
+            {
+                pair new_pair;
+                new_pair.winner = i;
+                new_pair.loser = j;
+                pairs[index] = new_pair;
+                pair_count++;
+                index++;
+            }
+        }
+    }
     return;
 }
 
