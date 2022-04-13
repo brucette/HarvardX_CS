@@ -114,6 +114,16 @@ int main(int argc, string argv[])
     //REMOVE THEN!*/
 
     sort_pairs();
+
+    for (int j = 0; j < pair_count; j++)
+    {
+        printf("%i", pairs[j].winner - pairs.[i].loser);
+    }
+    printf("\n");
+    printf("%i", pair_count);
+    printf("\n");
+
+
     lock_pairs();
     print_winner();
     return 0;
@@ -175,7 +185,24 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    return;
+    pair temp;
+    int swap = -1;
+
+    while (swap!= 0)
+    {
+        for (int i = 0; i < pair_count; i++)
+        {
+            swap = 0;
+            if (pairs[i].winner - pairs.[i].loser) < (pairs[i+1].winner - pairs.[i+1].loser))
+            {
+                temp = pairs[i];
+                pairs[i] = pairs[i+1];
+                pairs[i+1] = temp;
+                swap++;
+            }
+        }
+        return;
+    }
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
