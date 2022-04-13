@@ -30,7 +30,9 @@ void add_pairs(void)
         {
             if (preferences[i][j] > voter_count / 2)
             {
-
+                pair.winner = ;
+                pair.loser = ;
+                pairs[i] = pair;
             }
         }
     }
