@@ -116,7 +116,7 @@ int main(int argc, string argv[])
     sort_pairs();
 
     lock_pairs();
-    
+
     print_winner();
     return 0;
 }
@@ -275,5 +275,18 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    int winner;
+
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        for (int j = 0; j < pair_count - 2; j++)
+        {
+            if (winners[i] == losers[j])
+            {
+                break;
+            }
+            winner = winners[i];
+        }
+    }
     return;
 }
