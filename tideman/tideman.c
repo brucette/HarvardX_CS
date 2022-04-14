@@ -276,6 +276,7 @@ void print_winner(void)
 {
     // TODO
     int winner;
+    int wins = pair_count;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
