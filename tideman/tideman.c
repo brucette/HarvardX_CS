@@ -215,6 +215,16 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
+
+    //REMOVE THEN!
+    for (int j = 0; j < candidate_count; j++)
+        {
+            for (int k = 0; k < candidate_count; k++)
+            {
+                printf("%s", locked[j][k]);
+                printf("\n");
+            }
+        }
     return;
 }
 
