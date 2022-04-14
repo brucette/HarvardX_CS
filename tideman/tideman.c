@@ -212,12 +212,16 @@ void lock_pairs(void)
 {
     // TODO
     int edge = 0;
-    int limit = candidate_count -1;
+    int limit = candidate_count;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
-        locked[pairs[i].winner][pairs[i].loser] = true;
-        edge++;
+        if (edge < limit)
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+            edge++;
+        }
+
     }
 
     //REMOVE THEN!
