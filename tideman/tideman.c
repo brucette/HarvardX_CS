@@ -223,8 +223,8 @@ void lock_pairs(void)
             locked[pairs[i].winner][pairs[i].loser] = true;
             edge++;
 
-            winners[i] = locked[pairs[i].winner];
-            losers[i] = locked[pairs[i].loser];
+            winners[i] = pairs[i].winner;
+            losers[i] = pairs[i].loser;
         }
         else if (edge >= limit)
         {
