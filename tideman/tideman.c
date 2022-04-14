@@ -212,7 +212,7 @@ void lock_pairs(void)
 {
     // TODO
     int edge = 0;
-    int limit = candidate_count;
+    int limit = candidate_count -1;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
@@ -221,7 +221,10 @@ void lock_pairs(void)
             locked[pairs[i].winner][pairs[i].loser] = true;
             edge++;
         }
-        else )
+        else if (edge == limit && )
+        {
+
+        }
 
     }
 
