@@ -213,6 +213,8 @@ void lock_pairs(void)
     // TODO
     int edge = 0;
     int limit = candidate_count -1;
+    int losers[pair_count ];
+    int winners[];
 
     for (int i = 0; i < pair_count - 1; i++)
     {
