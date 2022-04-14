@@ -257,8 +257,9 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (winners[i] != losers[j])
+            if (winners[i] == losers[j])
             {
+                break;
                 winner = winners[i];
             }
             printf("%i", locked[j][k]);
