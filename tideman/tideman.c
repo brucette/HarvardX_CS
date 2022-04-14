@@ -276,7 +276,7 @@ void print_winner(void)
 {
     // TODO
     int winner;
-    int wins = pair_count;
+    int wins = 0;
 
     for (int i = 0; i < pair_count - 1; i++)
     {
@@ -286,7 +286,7 @@ void print_winner(void)
             if (locked[i][i] == false && locked[i][j] == true)
             {
                 wins++;
-                if (wins == )
+                if (wins == pair_count - 1)
                 {
                     winner = i;
                 }
