@@ -262,11 +262,10 @@ void lock_pairs(void)
                 break;
             }
             winner = winners[i];
-            
-            printf("%i", locked[j][k]);
-            printf("\n");
         }
     }
+    printf("%i", winner);
+    printf("\n");
 
     return;
 }
