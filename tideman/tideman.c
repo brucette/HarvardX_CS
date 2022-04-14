@@ -260,8 +260,9 @@ void lock_pairs(void)
             if (winners[i] == losers[j])
             {
                 break;
-                winner = winners[i];
             }
+            winner = winners[i];
+            
             printf("%i", locked[j][k]);
             printf("\n");
         }
