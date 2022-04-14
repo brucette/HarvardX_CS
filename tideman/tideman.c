@@ -235,13 +235,12 @@ void lock_pairs(void)
                 {
                     break;
                 }
-                else
-                {}
             }
             // If they are not in the losers list, the arrow(edge) can be added
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
+
 
     //REMOVE THEN!
     for (int j = 0; j < candidate_count; j++)
