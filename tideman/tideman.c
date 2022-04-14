@@ -253,9 +253,9 @@ void lock_pairs(void)
     // Find winner
     int winner;
 
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count - 1; i++)
     {
-        for (int j = 0; j < pair_count; j++)
+        for (int j = 0; j < pair_count - 1; j++)
         {
             if (winners[i] == losers[j])
             {
