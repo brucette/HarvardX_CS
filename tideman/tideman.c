@@ -286,7 +286,7 @@ void print_winner(void)
             {
                 break;
             }
-            winner = winners[i];
+            winner = i;
         }
     }
     printf("%s", candidates[winner]);
