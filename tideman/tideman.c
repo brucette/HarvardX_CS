@@ -211,6 +211,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    int edge = 0;
     for (int i = 0; i < pair_count - 1; i++)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
