@@ -214,7 +214,7 @@ void lock_pairs(void)
     int edge = 0;
     int limit = candidate_count;
 
-    for (int i = 0; i < pair_count - ; i++)
+    for (int i = 0; i < pair_count - 1; i++)
     {
         if (edge < limit)
         {
