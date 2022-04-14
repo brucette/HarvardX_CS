@@ -241,16 +241,14 @@ void lock_pairs(void)
         }
     }
 
-
-    //REMOVE THEN!
+    /*REMOVE THEN!
     for (int l = 0; l < candidate_count; l++)
     {
         for (int k = 0; k < candidate_count; k++)
         {
-            printf("%i", locked[j][k]);
             printf("\n");
         }
-    }
+    }*/
 
     // Find winner
     int winner;
@@ -259,6 +257,10 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
+            if (winners[i] != losers[j])
+            {
+                winner = winners[i];
+            }
             printf("%i", locked[j][k]);
             printf("\n");
         }
