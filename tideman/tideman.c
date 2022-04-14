@@ -283,12 +283,15 @@ void print_winner(void)
         for (int j = 0; j < pair_count - 1; j++)
         {
             // If any arrow pointing towards a candidates, they are not the winner
-            if (locked[i][i] == false && locked[i][j] == true)
+            if (locked[i][i] == false)
             {
-                wins++;
-                if (wins == pair_count - 1)
+                if (locked[i][j] == true)
                 {
-                    winner = i;
+                    wins++;
+                    if (wins == pair_count - 1)
+                    {
+                        winner = i;
+                    }
                 }
             }
         }
