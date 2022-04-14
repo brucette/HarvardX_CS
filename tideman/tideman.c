@@ -285,12 +285,14 @@ void print_winner(void)
             // If any arrow pointing towards a candidates, they are not the winner
             if (locked[i][i] == false && locked[i][j] == true)
             {
-                wins;
+                wins++;
+                if (wins == )
+                {
+                    winner = i;
+                }
             }
-            else
-            {
-                winner = i;
-            }
+
+
         }
     }
     printf("%s", candidates[winner]);
