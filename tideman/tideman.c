@@ -227,9 +227,16 @@ void lock_pairs(void)
             losers[i] = locked[pairs[i].loser];
 
         }
-        else if (edge >= limit && locked[pairs[i].winner !)
+        else if (edge >= limit)
         {
-            if ()
+            for (int j = 0; j < pair_count - 1; j++)
+            {
+                if (losers[j] == locked[pairs[i].winner)
+                {
+                    locked[pairs[i].winner][pairs[i].loser] = true;
+                }
+            }
+
 
         }
 
