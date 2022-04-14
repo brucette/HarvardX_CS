@@ -288,12 +288,12 @@ void print_winner(void)
                 if (locked[i][j] == true)
                 {
                     wins++;
-                    if (wins == pair_count - 1)
-                    {
-                        winner = i;
-                    }
                 }
             }
+        }
+        if (wins == pair_count - 1)
+        {
+            winner = i;
         }
     }
     printf("%s", candidates[winner]);
