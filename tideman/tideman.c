@@ -229,6 +229,7 @@ void lock_pairs(void)
         }
         else if (edge >= limit && locked[pairs[i].winner !)
         {
+            if ()
 
         }
 
