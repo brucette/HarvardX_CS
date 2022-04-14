@@ -281,7 +281,7 @@ void print_winner(void)
     {
         for (int j = i+1; j < pair_count - 2; j++)
         {
-            if (locked[i][j] = true && locked[i][j+1] == true && locked ;)
+            if (locked[i][j] == true && locked[i][j+1] == true && locked ;)
             {
                 break;
             }
