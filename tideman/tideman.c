@@ -288,5 +288,6 @@ void print_winner(void)
             winner = winners[i];
         }
     }
+    printf("%s", winner);
     return;
 }
