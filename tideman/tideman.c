@@ -200,10 +200,6 @@ void sort_pairs(void)
                 pairs[i+1] = temp;
                 swap++;
             }
-            /*REMOVE THEN!
-            printf("%i", winner_votes - loser_votes);
-            printf("\n");
-            REMOVE THEN!*/
         }
     }
 }
