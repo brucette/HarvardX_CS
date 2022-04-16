@@ -281,8 +281,8 @@ void print_winner(void)
     for (int i = 0; i < pair_count - 1; i++)
     {
         // If any arrow pointing towards a candidates, they are not the winner
-        if (locked[i][i] == false)
-        {
+        //if (locked[i][i] == false)
+        //{
             for (int j = 0; j < pair_count - 1; j++)
             {
                 if (locked[i][j] == true)
@@ -296,7 +296,7 @@ void print_winner(void)
                 }
             //wins = 0;
             }
-        }
+        //}
         printf("%i", wins);
         printf("\n");
     }
