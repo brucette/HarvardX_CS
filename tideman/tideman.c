@@ -291,7 +291,9 @@ void print_winner(void)
                     if (wins == pair_count - 1)
                     {
                         winner = i;
+                        break;
                     }
+                    wins = 0;
                 }
             }
         }
