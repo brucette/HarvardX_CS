@@ -280,26 +280,20 @@ void print_winner(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        // If any arrow pointing towards a candidates, they are not the winner
-        //if (locked[i][i] == false)
-        //{
-            for (int j = 0; j < pair_count; j++)
+        for (int j = 0; j < pair_count; j++)
+        {
+            if (locked[i][j] == true)
             {
-                if (locked[i][j] == true)
+                wins++;
+                if (wins == pair_count - 1)
                 {
-                    wins++;
-                    if (wins == pair_count - 1)
-                    {
-                        winner = i;
-                        break;
-                    }
+                    winner = i;
+                    break;
                 }
-            //wins = 0;
             }
-
-        //}
-        printf("%i", wins);
-        printf("\n");
+        }
+        //printf("%i", wins);
+        //printf("\n");
     }
     printf("%i", winner);
     printf("%s", candidates[winner]);
