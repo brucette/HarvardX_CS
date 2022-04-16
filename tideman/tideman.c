@@ -249,7 +249,7 @@ void lock_pairs(void)
         {
             printf("\n");
         }
-    }*/
+    }
 
     // Find winner
     int winner;
@@ -265,8 +265,8 @@ void lock_pairs(void)
             winner = winners[i];
         }
     }
-    printf("%i", winner);
-    printf("\n");
+    //printf("%i", winner);
+    //printf("\n");*/
 
     return;
 }
@@ -295,7 +295,7 @@ void print_winner(void)
         //printf("%i", wins);
         //printf("\n");
     }
-    printf("%i", winner);
+    //printf("%i", winner);
     printf("%s", candidates[winner]);
     printf("\n");
     return;
