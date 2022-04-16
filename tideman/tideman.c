@@ -298,6 +298,7 @@ void print_winner(void)
         }
         wins = 0;
     }
+    printf("%i", winner);
     printf("%s", candidates[winner]);
     printf("\n");
     return;
