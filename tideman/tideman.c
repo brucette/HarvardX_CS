@@ -289,13 +289,13 @@ void print_winner(void)
                 {
                     wins++;
                 }
-                if (wins == pair_count - 1)
+            //wins = 0;
+            }
+            if (wins == pair_count - 1)
                 {
                     winner = i;
                     break;
                 }
-            //wins = 0;
-            }
         //}
         printf("%i", wins);
         printf("\n");
