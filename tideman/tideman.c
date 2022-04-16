@@ -290,11 +290,10 @@ void print_winner(void)
                     wins++;
                     if (wins == pair_count - 1)
                     {
-                        
+                        winner = i;
                     }
                 }
             }
-
         }
     }
     printf("%s", candidates[winner]);
