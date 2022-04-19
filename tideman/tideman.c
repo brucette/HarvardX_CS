@@ -213,7 +213,7 @@ void lock_pairs(void)
     int losers[pair_count];
     int winners[pair_count];
 
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count; i++) //- 1
     {
         if (edge < limit)
         {
@@ -225,7 +225,7 @@ void lock_pairs(void)
         }
         else if (edge >= limit)
         {
-            for (int j = 0; j < pair_count - 1; j++)
+            for (int j = 0; j < pair_count; j++) //- 1
             {
                 // The remaining winner cannot be in the losers list
                 if (losers[j] != pairs[i].winner)
