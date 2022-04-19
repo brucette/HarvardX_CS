@@ -235,6 +235,7 @@ void lock_pairs(void)
             }
             // If they are not in the losers list, the arrow(edge) can be added
             locked[pairs[i].winner][pairs[i].loser] = true;
+            edge++;
         }
     }
     /*REMOVE THEN!
