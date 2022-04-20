@@ -124,6 +124,11 @@ Alice
 
 
 
+Alice
+Bob
+
+
+
 pair_count = A&B, A&C, A&D, B&C, B&D, C&D
 
 pairs =
