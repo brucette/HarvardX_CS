@@ -209,7 +209,7 @@ void lock_pairs(void)
 {
     // TODO
     int edge = 0;
-    int limit = 2; //pair_count -1;
+    int limit = pair_count - 1; //pair_count -1;
     int losers[pair_count];
     int winners[pair_count];
 
