@@ -133,4 +133,6 @@ pairs =
 winner pairs =
 
 A - 3       B - 3       C - 3
-B - 1  ,    C - 2  ,    D - 1
+B - 1  ,    C - 1  ,    D - 1
+
+printf("\n");
