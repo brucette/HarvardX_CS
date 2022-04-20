@@ -129,3 +129,8 @@ pair_count = A&B, A&C, A&D, B&C, B&D, C&D
 pairs =
 {A - 3      {A - 2      {D - 2      {B - 3      {B - 2
  B - 1} ,    C - 2} ,    A - 2} ,    C - 2} ,    D - 2}
+
+winner pairs =
+
+A - 3       B - 3
+B - 1  ,    C - 2
