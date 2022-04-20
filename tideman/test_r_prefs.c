@@ -114,9 +114,14 @@ Dean
 
 Charlie
 Dean
+Alice
 Bob
+
+Dean
+Bob
+Charlie
 Alice
 
 
-{A - 2      {A - 2
- B - 1} ,    C - 1} , 
+{A - 3      {A - 2      {A - 2      B
+ B - 1} ,    C - 1} ,    D - 1} ,
