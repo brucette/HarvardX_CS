@@ -146,17 +146,17 @@ Alice
 Bob
 Charlie
 
+Bob
 Charlie
 Alice
-Bob
 
 Charlie
 Alice
 Bob
 
 Charlie
-Bob
 Alice
+Bob
 
 
 A - 3       C - 3
