@@ -101,6 +101,8 @@ int main(int argc, string argv[])
     }
     //REMOVE THEN!*/
 
+    printf("Paircount first: %i", pair_count);
+
     add_pairs();
 
     printf("Paircount: %i", pair_count);
