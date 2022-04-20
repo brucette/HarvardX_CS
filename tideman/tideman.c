@@ -64,7 +64,7 @@ int main(int argc, string argv[])
         }
     }
 
-    //pair_count = 0;
+    pair_count = 0;
     int voter_count = get_int("Number of voters: ");
 
     // Query for votes
@@ -106,7 +106,7 @@ int main(int argc, string argv[])
     add_pairs();
 
     printf("Paircount: %i\n", pair_count);
-
+    printf("\n");
      //REMOVE THEN!
     for (int j = 0; j < pair_count; j++)
     {
