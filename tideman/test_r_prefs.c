@@ -123,6 +123,8 @@ Charlie
 Alice
 
 
+
+
 pair_count = A&B, A&C, A&D, B&C, B&D, C&D
 
 pairs =
