@@ -142,7 +142,12 @@ B - 1  ,    C - 2  ,    D - 2
 -------
 
 
+Alice
+Bob
+Charlie
 
 
-A - 3    C -
-B -     A -
+
+
+A - 3       C -
+B - 1   ,   A -
