@@ -146,7 +146,17 @@ Alice
 Bob
 Charlie
 
+Charlie
+Alice
+Bob
 
+Charlie
+Alice
+Bob
+
+Charlie
+Bob
+Alice
 
 
 A - 3       C -
