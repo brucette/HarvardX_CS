@@ -103,10 +103,12 @@ int main(int argc, string argv[])
 
     add_pairs();
 
-    /*/REMOVE THEN!
+    //REMOVE THEN!
     for (int j = 0; j < pair_count; j++)
     {
         printf("%i", pairs[j].winner);
+        printf("\n");
+        printf("%i", pairs[j].loser);
     }
     printf("\n");
     printf("%i", pair_count);
