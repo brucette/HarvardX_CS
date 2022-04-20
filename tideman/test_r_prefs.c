@@ -159,5 +159,5 @@ Bob
 Alice
 
 
-A - 3       C -
-B - 1   ,   A -
+A - 3       C - 3
+B - 1   ,   A - 1
