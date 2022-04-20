@@ -228,7 +228,7 @@ void lock_pairs(void)
             for (int j = 0; j < pair_count; j++) //- 1
             {
                 // The remaining winner cannot be in the losers list
-                if (winners[j] != pairs[i].winner)
+                if (losers[j] != pairs[i].winner)
                 {
                     break;
                 }
