@@ -110,9 +110,9 @@ int main(int argc, string argv[])
      //REMOVE THEN!
     for (int j = 0; j < pair_count; j++)
     {
-        printf("%i", pairs[j].winner);
+        printf("winner: %i", pairs[j].winner);
         printf("\n");
-        printf("%i", pairs[j].loser);
+        printf("loser: %i", pairs[j].loser);
     }
     printf("\n");
     //REMOVE THEN!*/
