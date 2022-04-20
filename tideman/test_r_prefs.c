@@ -105,14 +105,18 @@ int main(void)
 Alice
 Bob
 Charlie
-D
-
+Dean
 
 Alice
 Bob
 Charlie
+Dean
 
 Charlie
+Dean
 Bob
 Alice
 
+
+{A - 2      {A - 2
+ B - 1} ,    C - 1} , 
