@@ -123,6 +123,6 @@ Charlie
 Alice
 
 
-
-{A - 3      {A - 2      {A - 2      B
- B - 1} ,    C - 1} ,    D - 1} ,
+A&B, A&C, A&D, B&C, B&D
+{A - 3      {A - 2      {A - 2      {B - 3      {B - 2
+ B - 1} ,    C - 2} ,    D - 2} ,    C - 1} ,    D - 2}
