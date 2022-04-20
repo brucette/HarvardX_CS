@@ -101,3 +101,18 @@ int main(void)
 
 
 }
+
+Alice
+Bob
+Charlie
+D
+
+
+Alice
+Bob
+Charlie
+
+Charlie
+Bob
+Alice
+
