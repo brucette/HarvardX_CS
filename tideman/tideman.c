@@ -293,11 +293,10 @@ void print_winner(void)
     }
     //printf("%i", winner);
 
-    int the_winners = sizeof(winners) / (index + 1);
+    //int the_winners = sizeof(winners) / (index + 1);
+    //printf("Size of int array:%i \n",the_winners);
 
-    printf("Size of int array:%i \n",the_winners);
-
-    for (int k = 0; k < sizeof(winners); k++)
+    for (int k = 0; k < index + 1; k++)
     {
         printf("%s", candidates[winners[k]]);
         printf("\n");
