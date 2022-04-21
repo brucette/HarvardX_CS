@@ -289,7 +289,10 @@ void print_winner(void)
         //printf("\n");
     }
     //printf("%i", winner);
-    printf("%s", candidates[winner]);
-    printf("\n");
+    for (int k = 0; k < pair_count; k++)
+    {
+        printf("%s", candidates[winners[k]]);
+        printf("\n");
+    }
     return;
 }
