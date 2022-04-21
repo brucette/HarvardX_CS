@@ -141,7 +141,6 @@ B - 1  ,    C - 2  ,    D - 2
 
 -------
 
-
 Alice
 Bob
 Charlie

@@ -233,13 +233,16 @@ void lock_pairs(void)
             for (int j = 0; j < pair_count-1; j++) //- 1
             {
                 // The remaining winner cannot be in the losers list
-                if (losers[j] != pairs[i].winner)
+                if (losers[j] == pairs[i].winner)
                 {
                     break;
                 }
-                // If they are not in the losers list, the arrow(edge) can be added
-                locked[pairs[i].winner][pairs[i].loser] = true;
-                edge++;
+                else
+                {
+                    // If they are not in the losers list, the arrow(edge) can be added
+                    locked[pairs[i].winner][pairs[i].loser] = true;
+                    edge++;
+                }
             }
         }
     }
