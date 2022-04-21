@@ -287,7 +287,8 @@ void print_winner(void)
                 printf("one win\n");
                 wins++;
             }
-            if (wins == candidate_count - 1)
+        }
+        if (wins == candidate_count - 1)
                 {
                     winners[index] = i;
                     printf("winner index: %i\n", winners[index]);
@@ -295,7 +296,6 @@ void print_winner(void)
                     index++;
                     printf("index now: %i\n", index);
                 }
-        }
         wins = 0;
     }
 
