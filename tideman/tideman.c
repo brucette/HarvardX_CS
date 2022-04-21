@@ -281,7 +281,7 @@ void print_winner(void)
             {
                 wins++;
             }
-            if (wins == pair_count)
+            if (wins == candidate_count - 1)
                 {
                     winners[index] = i;
                     index++;
