@@ -237,6 +237,7 @@ void lock_pairs(void)
                 if (losers[j] != pairs[i].winner)
                 {
                     printf("winner in losers");
+                    locked[pairs[i].winner][pairs[i].loser] = true;
                     break;
                 }
                 /*else
