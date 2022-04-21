@@ -278,9 +278,9 @@ void print_winner(void)
     int wins = 0;
     int index = 0;
 
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < pair_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (locked[i][j] == false)
             {
