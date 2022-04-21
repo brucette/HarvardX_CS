@@ -292,7 +292,10 @@ void print_winner(void)
         //printf("\n");
     }
     //printf("%i", winner);
-    printf("Size of int array:%lu \n",sizeof(winners));
+
+    int the_winners = sizeof(winners) / (index + 1);
+
+    printf("Size of int array:%i \n",the_winners);
 
     for (int k = 0; k < sizeof(winners); k++)
     {
