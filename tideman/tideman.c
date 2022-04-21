@@ -288,7 +288,7 @@ void print_winner(void)
                 wins++;
             }
         }
-        if (wins == candidate_count - 1 && )
+        if (wins == candidate_count - 1)
                 {
                     winners[index] = i;
                     printf("winner index: %i\n", winners[index]);
@@ -301,8 +301,14 @@ void print_winner(void)
 
     for (int k = 0; k < index; k++)
     {
-        printf("%s", candidates[winners[k]]);
-        printf("\n");
+        for (int l = 0; l < pair_count; l++)
+        {
+            if (winners[k] != pairs[l].loser)
+            {
+                printf("%s", candidates[winners[k]]);
+                printf("\n");
+            }
+        }
     }
     return;
 }
