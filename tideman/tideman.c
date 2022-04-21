@@ -284,7 +284,6 @@ void print_winner(void)
             {
                 printf("one win\n");
                 wins++;
-
             }
             if (wins == candidate_count - 1)
                 {
