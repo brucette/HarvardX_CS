@@ -119,6 +119,7 @@ int main(int argc, string argv[])
     //REMOVE THEN!*/
 
     sort_pairs();
+    printf("pairs sorted");
 
     lock_pairs();
 
