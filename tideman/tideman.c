@@ -286,7 +286,6 @@ void print_winner(void)
             if (wins == candidate_count - 1)
                 {
                     winners[index] = i;
-
                     printf("winner index: %i\n", winners[index]);
                     printf("index: %i\n", index);
                     index++;
@@ -294,13 +293,7 @@ void print_winner(void)
                 }
         }
         wins = 0;
-        //printf("%i", wins);
-        //printf("\n");
     }
-    //printf("%i", winner);
-
-    //int the_winners = sizeof(winners) / (index + 1);
-    //printf("Size of int array:%i \n",the_winners);
 
     for (int k = 0; k < index; k++)
     {
