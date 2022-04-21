@@ -282,7 +282,9 @@ void print_winner(void)
         {
             if (locked[i][j] == true)
             {
+                printf("one win\n");
                 wins++;
+
             }
             if (wins == candidate_count - 1)
                 {
