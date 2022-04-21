@@ -269,7 +269,7 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    int winner = -1;
+    int winners[MAX];
     int wins = 0;
 
     for (int i = 0; i < pair_count; i++)
@@ -281,7 +281,7 @@ void print_winner(void)
                 wins++;
                 if (wins == pair_count - 1)
                 {
-                    winner = i;
+                    winners[i] = i;
                     break;
                 }
             }
