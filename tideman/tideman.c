@@ -271,6 +271,7 @@ void print_winner(void)
     // TODO
     int winners[MAX];
     int wins = 0;
+    int index = 0;
 
     for (int i = 0; i < pair_count; i++)
     {
@@ -281,7 +282,8 @@ void print_winner(void)
                 wins++;
                 if (wins == pair_count - 1)
                 {
-                    winners[i] = i;
+                    winners[index] = i;
+                    index++;
                 }
             }
         }
