@@ -280,7 +280,7 @@ void print_winner(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (locked[i][j] == true)
+            if (locked[i][j] == false)
             {
                 printf("one win\n");
                 wins++;
