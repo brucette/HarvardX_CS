@@ -285,6 +285,7 @@ void print_winner(void)
                 }
             }
         }
+        wins = 0;
         //printf("%i", wins);
         //printf("\n");
     }
