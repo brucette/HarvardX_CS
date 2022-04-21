@@ -225,7 +225,7 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             edge++;
-
+            printf("edge locked %i\n:", edge);
             winners[i] = pairs[i].winner;
             losers[i] = pairs[i].loser;
         }
