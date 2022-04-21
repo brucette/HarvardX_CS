@@ -289,7 +289,7 @@ void print_winner(void)
         //printf("\n");
     }
     //printf("%i", winner);
-    for (int k = 0; k < ; k++)
+    for (int k = 0; k < strlen; k++)
     {
         printf("%s", candidates[winners[k]]);
         printf("\n");
