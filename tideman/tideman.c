@@ -234,7 +234,7 @@ void lock_pairs(void)
             for (int j = 0; j < pair_count-1; j++) //- 1
             {
                 // The remaining winner cannot be in the losers list
-                if (losers[j] == pairs[i].winner)
+                if (losers[j] != pairs[i].winner)
                 {
                     printf("winner in losers");
                     break;
