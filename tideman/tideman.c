@@ -61,7 +61,15 @@ int main(int argc, string argv[])
             }
         }
 
-        record_preferences(ranks);
+        int ranks1[0, 1, 2]
+        int ranks2[1, 2, 0]
+        int ranks3[2, 0, 1]
+        int ranks4[2, 0, 1]
+
+        record_preferences(ranks1);
+        record_preferences(ranks2);
+        record_preferences(ranks3);
+        record_preferences(ranks4);
 
     }
 
