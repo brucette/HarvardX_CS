@@ -290,11 +290,14 @@ void print_winner(void)
         }
         if (wins == candidate_count - 1)
                 {
-                    winners[index] = i;
-                    printf("winner index: %i\n", winners[index]);
-                    printf("index: %i\n", index);
-                    index++;
-                    printf("index now: %i\n", index);
+                    if (locked[i][i] == false)
+                    {
+                        winners[index] = i;
+                        printf("winner index: %i\n", winners[index]);
+                        printf("index: %i\n", index);
+                        index++;
+                        printf("index now: %i\n", index);
+                    }
                 }
         wins = 0;
     }
