@@ -43,13 +43,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
-
+    // REMOVE LATER /////////
     if (strcmp(argv[1],"-d") == 0)
     {
         printf("debug");
         return 1;
         candidate_count = 3;
-        candidates[3] = {"Alice", "Bob", "Charlie"};
+        //candidates[3] = {"Alice", "Bob", "Charlie"};
         int voter_count = 4;
         pair_count = 0;
 
