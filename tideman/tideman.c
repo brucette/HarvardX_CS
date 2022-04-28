@@ -61,7 +61,7 @@ int main(int argc, string argv[])
             }
         }
 
-        
+        record_preferences(ranks);
 
     }
 
