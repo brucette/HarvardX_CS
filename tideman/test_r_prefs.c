@@ -173,7 +173,7 @@ printf("pairs sorted\n");
     }
     printf("\n");
 
-//REMOVE THEN!*/
+//REMOVE THEN!
 
     for (int i = 0; i < candidate_count; i++)
     {
@@ -183,4 +183,21 @@ printf("pairs sorted\n");
         }
         printf("\n");
     }
-//REMOVE THEN!*/
+//REMOVE THEN!
+
+//REMOVE THEN!
+    // Find winner
+    int winner;
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        for (int j = 0; j < pair_count - 1; j++)
+        {
+            if (winners[i] == losers[j])
+            {
+                break;
+            }
+            winner = winners[i];
+        }
+    }
+    //printf("%i", winner);
+    //printf("\n");*/

@@ -43,13 +43,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    /* // REMOVE LATER /////////
+    // REMOVE LATER /////////
     if (strcmp(argv[1],"-d") == 0)
     {
         printf("debug");
-        return 1;
+        //return 1;
         candidate_count = 3;
         //candidates[3] = {"Alice", "Bob", "Charlie"};
+
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidates[i] = argv[i + 2];
+        }
+
         int voter_count = 4;
         pair_count = 0;
 
@@ -79,7 +85,8 @@ int main(int argc, string argv[])
         lock_pairs();
 
         print_winner();
-    }*/
+        return 1;
+    }
 
     // Populate array of candidates
     candidate_count = argc - 1;
@@ -264,22 +271,6 @@ void lock_pairs(void)
             }
         }
     }
-    /*REMOVE THEN!
-    // Find winner
-    int winner;
-    for (int i = 0; i < pair_count - 1; i++)
-    {
-        for (int j = 0; j < pair_count - 1; j++)
-        {
-            if (winners[i] == losers[j])
-            {
-                break;
-            }
-            winner = winners[i];
-        }
-    }
-    //printf("%i", winner);
-    //printf("\n");*/
     return;
 }
 
