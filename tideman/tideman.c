@@ -48,6 +48,7 @@ int main(int argc, string argv[])
     {
         printf("debug");
         return 1;
+        
     }
 
     // Populate array of candidates
