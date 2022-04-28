@@ -48,10 +48,10 @@ int main(int argc, string argv[])
     {
         printf("debug");
         return 1;
-        int candidate_count = 3;
-        string candidates["Alice", "Bob", "Charlie"];
+        candidate_count = 3;
+        candidates["Alice", "Bob", "Charlie"];
         int voter_count = 4;
-        int pair_count = 0;
+        pair_count = 0;
 
         // Clear graph of locked in pairs
         for (int i = 0; i < candidate_count; i++)
