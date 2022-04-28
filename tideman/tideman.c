@@ -299,18 +299,17 @@ void print_winner(void)
         wins = 0;
     }
 
-    for (int k = 0; k < index; k++)
+    for (int i = 0; i < index; i++)
     {
-        for (int l = 0; l < pair_count; l++)
+        for (int j = 0; j < pair_count; j++)
         {
-            if (winners[k] == pairs[l].loser)
+            if (winners[i] == pairs[j].loser)
             {
                 break;
             }
         }
-        printf("%s", candidates[winners[k]]);
+        printf("%s", candidates[winners[i]]);
         printf("\n");
-
     }
     return;
 }
