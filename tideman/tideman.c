@@ -75,6 +75,8 @@ int main(int argc, string argv[])
         add_pairs();
 
         sort_pairs();
+
+        lock_pairs();
     }
 
     // Populate array of candidates
