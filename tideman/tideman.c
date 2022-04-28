@@ -48,6 +48,8 @@ int main(int argc, string argv[])
     {
         printf("debug");
         return 1;
+        candidate_count = 4;
+        candidates["Alice", "Bob", "Charlie"];
         
     }
 
