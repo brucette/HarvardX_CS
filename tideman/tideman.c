@@ -308,9 +308,12 @@ void print_winner(void)
             if (winners[i] == pairs[j].loser)
             {
                 exists = 1;
-                printf("%s", candidates[winners[i]]);
-                printf("\n");
             }
+        }
+        if (exists == 0)
+        {
+            printf("%s", candidates[winners[i]]);
+            printf("\n");
         }
     }
     return;
