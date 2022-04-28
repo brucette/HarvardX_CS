@@ -49,7 +49,7 @@ int main(int argc, string argv[])
         printf("debug");
         return 1;
         candidate_count = 3;
-        candidates = ["Alice", "Bob", "Charlie"];
+        //candidates[3] = {"Alice", "Bob", "Charlie"};
         int voter_count = 4;
         pair_count = 0;
 
