@@ -43,7 +43,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (argv[1] == "d")
+    //REMOVE LATER
+    if (strcmp(argv[1],"d") == 0)
     {
         printf("debug");
         return 1;
