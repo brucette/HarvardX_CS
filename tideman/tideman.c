@@ -43,6 +43,12 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    if (argv[1] == "d")
+    {
+        printf("debug");
+        return 1;
+    }
+
     // Populate array of candidates
     candidate_count = argc - 1;
     if (candidate_count > MAX)
