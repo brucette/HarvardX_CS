@@ -71,6 +71,7 @@ int main(int argc, string argv[])
         record_preferences(ranks3);
         record_preferences(ranks4);
 
+        add_pairs();
     }
 
     // Populate array of candidates
