@@ -303,13 +303,13 @@ void print_winner(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (winners[i] == pairs[j].loser)
+            if (winners[i] != pairs[j].loser)
             {
+                printf("%s", candidates[winners[i]]);
+                printf("\n");
                 break;
             }
         }
-        printf("%s", candidates[winners[i]]);
-        printf("\n");
     }
     return;
 }
