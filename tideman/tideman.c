@@ -48,8 +48,9 @@ int main(int argc, string argv[])
     {
         printf("debug");
         return 1;
-        candidate_count = 4;
+        candidate_count = 3;
         candidates["Alice", "Bob", "Charlie"];
+        int voter_count = 4;
 
         // Clear graph of locked in pairs
         for (int i = 0; i < candidate_count; i++)
@@ -59,7 +60,7 @@ int main(int argc, string argv[])
                 locked[i][j] = false;
             }
         }
-        
+
     }
 
     // Populate array of candidates
