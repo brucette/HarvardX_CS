@@ -49,7 +49,7 @@ int main(int argc, string argv[])
         printf("debug");
         return 1;
         candidate_count = 3;
-        //candidates[3] = {"Alice", "Bob", "Charlie"};
+        candidates[3] = {"Alice", "Bob", "Charlie"};
         int voter_count = 4;
         pair_count = 0;
 
@@ -62,10 +62,10 @@ int main(int argc, string argv[])
             }
         }
 
-        int ranks1[0, 1, 2];
-        int ranks2[1, 2, 0];
-        int ranks3[2, 0, 1];
-        int ranks4[2, 0, 1];
+        int ranks1[3] = {0, 1, 2};
+        int ranks2[3] = {1, 2, 0};
+        int ranks3[3] = {2, 0, 1};
+        int ranks4[3] = {2, 0, 1};
 
         record_preferences(ranks1);
         record_preferences(ranks2);
