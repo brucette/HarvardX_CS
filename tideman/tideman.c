@@ -50,6 +50,15 @@ int main(int argc, string argv[])
         return 1;
         candidate_count = 4;
         candidates["Alice", "Bob", "Charlie"];
+
+        // Clear graph of locked in pairs
+        for (int i = 0; i < candidate_count; i++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                locked[i][j] = false;
+            }
+        }
         
     }
 
