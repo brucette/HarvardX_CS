@@ -44,7 +44,7 @@ int main(int argc, string argv[])
     }
 
     //REMOVE LATER
-    if (strcmp(argv[1],"d") == 0)
+    if (strcmp(argv[1],"-d") == 0)
     {
         printf("debug");
         return 1;
