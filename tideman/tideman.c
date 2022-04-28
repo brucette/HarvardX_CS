@@ -306,10 +306,11 @@ void print_winner(void)
             if (winners[k] == pairs[l].loser)
             {
                 break;
+                printf("%s", candidates[winners[k]]);
+                printf("\n");
             }
         }
-        printf("%s", candidates[winners[k]]);
-        printf("\n");
+
     }
     return;
 }
