@@ -304,15 +304,16 @@ void print_winner(void)
 
     for (int k = 0; k < index; k++)
     {
-        for (int l = 0; l < pair_count; l++)
+        /*for (int l = 0; l < pair_count; l++)
         {
             if (winners[k] == pairs[l].loser)
             {
                 break;
             }
-            printf("%s", candidates[winners[k]]);
-            printf("\n");
-        }
+
+        }*/
+        printf("%s", candidates[winners[k]]);
+        printf("\n");
     }
     return;
 }
