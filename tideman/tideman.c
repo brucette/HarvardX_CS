@@ -43,13 +43,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //REMOVE LATER
+    //REMOVE LATER//////////////////////////////////
     if (strcmp(argv[1],"-d") == 0)
     {
         printf("debug");
         return 1;
-        candidate_count = 3;
-        candidates["Alice", "Bob", "Charlie"];
+        int candidate_count = 3;
+        string candidates["Alice", "Bob", "Charlie"];
         int voter_count = 4;
 
         // Clear graph of locked in pairs
@@ -60,6 +60,8 @@ int main(int argc, string argv[])
                 locked[i][j] = false;
             }
         }
+
+        
 
     }
 
