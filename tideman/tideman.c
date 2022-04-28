@@ -301,13 +301,15 @@ void print_winner(void)
 
     for (int i = 0; i < index; i++)
     {
+        int exists = 0;
+
         for (int j = 0; j < pair_count; j++)
         {
-            if (winners[i] != pairs[j].loser)
+            if (winners[i] == pairs[j].loser)
             {
+                exists = 1;
                 printf("%s", candidates[winners[i]]);
                 printf("\n");
-                break;
             }
         }
     }
