@@ -308,11 +308,8 @@ void print_winner(void)
                 break;
             }
         }
-        else
-            {
-                printf("%s", candidates[winners[k]]);
-                printf("\n");
-            }
+        printf("%s", candidates[winners[k]]);
+        printf("\n");
     }
     return;
 }
