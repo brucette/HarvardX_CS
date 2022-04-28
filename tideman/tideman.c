@@ -51,6 +51,7 @@ int main(int argc, string argv[])
         int candidate_count = 3;
         string candidates["Alice", "Bob", "Charlie"];
         int voter_count = 4;
+        int pair_count = 0;
 
         // Clear graph of locked in pairs
         for (int i = 0; i < candidate_count; i++)
