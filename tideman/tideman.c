@@ -73,6 +73,8 @@ int main(int argc, string argv[])
         record_preferences(ranks4);
 
         add_pairs();
+
+        sort_pairs();
     }
 
     // Populate array of candidates
