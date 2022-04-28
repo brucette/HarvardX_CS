@@ -160,3 +160,16 @@ Bob
 
 A - 3       C - 3       C - 2
 B - 1   ,   A - 1   ,   B - 2
+
+printf("Paircount first: %i\n", pair_count);
+printf("Paircount: %i\n", pair_count);
+printf("pairs sorted\n");
+//REMOVE THEN!
+    for (int j = 0; j < pair_count; j++)
+    {
+        printf("winner: %i\n", pairs[j].winner);
+        printf("loser: %i\n", pairs[j].loser);
+        printf("\n");
+    }
+    printf("\n");
+    //REMOVE THEN!*/
