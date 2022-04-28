@@ -43,7 +43,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // REMOVE LATER /////////
+    /* // REMOVE LATER /////////
     if (strcmp(argv[1],"-d") == 0)
     {
         printf("debug");
@@ -79,7 +79,7 @@ int main(int argc, string argv[])
         lock_pairs();
 
         print_winner();
-    }
+    }*/
 
     // Populate array of candidates
     candidate_count = argc - 1;
