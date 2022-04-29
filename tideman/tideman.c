@@ -265,7 +265,6 @@ void lock_pairs(void)
                 locked[pairs[i].winner][pairs[i].loser] = true;
                 winners[i] = pairs[i].winner;
                 losers[i] = pairs[i].loser;
-                edge++;
             }
         }
     }
