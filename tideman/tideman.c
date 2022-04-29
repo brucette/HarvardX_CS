@@ -232,6 +232,7 @@ void lock_pairs(void)
     int final_pair = pair_count -1;
     int losers[pair_count];
     int winners[pair_count];
+    int length_losers = sizeof(losers);
 
     for (int i = 0; i < pair_count; i++)
     {
