@@ -235,20 +235,20 @@ void lock_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        if (i == 0)
+        if (i < final_pair)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             edge++;
             winners[i] = pairs[i].winner;
             losers[i] = pairs[i].loser;
         }
-        if (i > 0 && i < final_pair)
+        /*if (i > 0 && i < final_pair)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             edge++;
             winners[i] = pairs[i].winner;
             losers[i] = pairs[i].loser;
-        }
+        }*/
         if (i == final_pair)//== final_pair - 1)
         {
             int found = 0;
