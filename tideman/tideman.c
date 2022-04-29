@@ -254,12 +254,14 @@ void lock_pairs(void)
                     edge++;
                 }
             }
-
-
-        }locked[pairs[i].winner][pairs[i].loser] = true;
-        winners[i] = pairs[i].winner;
-        losers[i] = pairs[i].loser;
-        edge++;
+        }
+        else
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+            winners[i] = pairs[i].winner;
+            losers[i] = pairs[i].loser;
+            edge++;
+        }
     }
 
 
