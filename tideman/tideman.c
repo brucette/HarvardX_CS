@@ -252,7 +252,6 @@ void lock_pairs(void)
                 }
 
                     // If they are not in the losers list, the arrow(edge) can be added
-
             }
             if (found == 0)
             {
@@ -261,7 +260,6 @@ void lock_pairs(void)
                 winners[i] = pairs[i].winner;
                 losers[i] = pairs[i].loser;
                 edge++;
-                //break;
             }
         }
     }
