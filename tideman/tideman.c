@@ -233,7 +233,7 @@ void lock_pairs(void)
     int losers[pair_count];
     int winners[pair_count];
 
-    for (int i = 0; i < pair_count-1; i++) //- 1
+    for (int i = 0; i < pair_count; i++) //- 1
     {
         if (edge < limit)
         {
