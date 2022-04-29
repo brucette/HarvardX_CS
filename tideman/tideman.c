@@ -233,14 +233,13 @@ void lock_pairs(void)
     int losers[pair_count];
     int winners[pair_count];
     int found = 0;
-    
+
     for (int i = 0; i < pair_count; i++) //- 1
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-        edge++;
-        printf("edge locked %i\n", edge);
         winners[i] = pairs[i].winner;
         losers[i] = pairs[i].loser;
+        edge++;
     }
 
 
