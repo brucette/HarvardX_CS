@@ -232,12 +232,14 @@ void lock_pairs(void)
     int limit = pair_count; //pair_count -1;
     int losers[pair_count];
     int winners[pair_count];
-    int found = 0;
 
-    for (int i = 0; i < pair_count; i++) //- 1
+    for (int i = 0; i < pair_count; i++)
     {
         if (edge < limit)
         {
+
+
+
             for (int j = 0; j < edge; j++) // pair_count-1
             {
                 // The remaining winner cannot be in the losers list
