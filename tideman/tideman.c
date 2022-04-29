@@ -244,7 +244,11 @@ void lock_pairs(void)
         }
         if (edge > 0 && edge < limit)
         {
-            
+
+        }
+        if (edge == limit -1)
+        {
+
         }
 
 
