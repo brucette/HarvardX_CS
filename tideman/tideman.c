@@ -245,9 +245,17 @@ void lock_pairs(void)
                 {
                     found = 1;
                 }
+                if (found == 0)
+                {
+                    printf("winner in losers \n");
+                    locked[pairs[i].winner][pairs[i].loser] = true;
+                    winners[i] = pairs[i].winner;
+                    losers[i] = pairs[i].loser;
+                    edge++;
+                }
             }
 
-            
+
         }locked[pairs[i].winner][pairs[i].loser] = true;
         winners[i] = pairs[i].winner;
         losers[i] = pairs[i].loser;
@@ -259,14 +267,7 @@ void lock_pairs(void)
 
                     // If they are not in the losers list, the arrow(edge) can be added
 
-            if (found == 0)
-            {
-                printf("winner in losers \n");
-                locked[pairs[i].winner][pairs[i].loser] = true;
-                winners[i] = pairs[i].winner;
-                losers[i] = pairs[i].loser;
-                edge++;
-            }
+
         }
     }
     return;
