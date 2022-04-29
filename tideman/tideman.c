@@ -242,11 +242,11 @@ void lock_pairs(void)
             winners[i] = pairs[i].winner;
             losers[i] = pairs[i].loser;
         }
-        if (edge > 0 && edge < final_pair)
+        /*if (edge > 0 && edge < final_pair)
         {
 
-        }
-        if (edge == final_pair - 1)
+        } */
+        if (edge > 0) //== final_pair - 1)
         {
             int found = 0;
             for (int j = 0; j < edge; j++) // pair_count-1
