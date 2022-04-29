@@ -246,7 +246,7 @@ void lock_pairs(void)
         {
 
         }
-        if (edge == limit -1)
+        if (edge == limit - 1)
         {
             int found = 0;
             for (int j = 0; j < edge; j++) // pair_count-1
