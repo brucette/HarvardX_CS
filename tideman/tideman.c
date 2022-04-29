@@ -266,34 +266,6 @@ void lock_pairs(void)
             }
 
         }
-
-
-
-            for (int j = 0; j < edge; j++) // pair_count-1
-            {
-                // The remaining winner cannot be in the losers list
-                if (losers[j] == pairs[i].winner)
-                {
-                    found = 1;
-                }
-                if (found == 0)
-                {
-                    printf("winner in losers \n");
-                    locked[pairs[i].winner][pairs[i].loser] = true;
-                    winners[i] = pairs[i].winner;
-                    losers[i] = pairs[i].loser;
-                    edge++;
-                }
-            }
-        }
-        else
-        {
-            locked[pairs[i].winner][pairs[i].loser] = true;
-            winners[i] = pairs[i].winner;
-            losers[i] = pairs[i].loser;
-            edge++;
-        }
-    }
     // If they are not in the losers list, the arrow(edge) can be added
     return;
 }
