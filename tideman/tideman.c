@@ -253,7 +253,7 @@ void lock_pairs(void)
         if (i == final_pair)//== final_pair - 1)
         {
             int found = 0;
-            for (int j = 0; j < pair_count; j++) // pair_count-1
+            for (int j = 0; j < edge; j++) // pair_count-1
             {
                 // The remaining winner cannot be in the losers list
                 if (losers[j] == pairs[i].winner)
