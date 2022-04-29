@@ -257,6 +257,13 @@ void lock_pairs(void)
                     found = 1;
                 }
             }
+            if (found == 0)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = true;
+                winners[i] = pairs[i].winner;
+                losers[i] = pairs[i].loser;
+                edge++;
+            }
 
         }
 
