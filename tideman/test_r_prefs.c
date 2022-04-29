@@ -201,3 +201,53 @@ printf("pairs sorted\n");
     }
     //printf("%i", winner);
     //printf("\n");*/
+
+    // Lock pairs into the candidate graph in order, without creating cycles
+void lock_pairs(void)
+{
+    // TODO
+    int edge = 0;
+    int limit = pair_count; //pair_count -1;
+    int losers[pair_count];
+    int winners[pair_count];
+
+    for (int i = 0; i < pair_count; i++) //- 1
+    {
+        if (edge < limit)
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+            edge++;
+            printf("edge locked %i\n", edge);
+            winners[i] = pairs[i].winner;
+            losers[i] = pairs[i].loser;
+        }
+        else //if (edge >= limit)
+        {
+            int found = 0;
+            for (int j = 0; j < edge; j++) // pair_count-1
+            {
+                // The remaining winner cannot be in the losers list
+                if (losers[j] == pairs[i].winner)
+                {
+                    found = 1;
+                }
+                /*else
+                {
+                    // If they are not in the losers list, the arrow(edge) can be added
+                    locked[pairs[i].winner][pairs[i].loser] = true;
+                    edge++;
+                }*/
+            }
+            if (found == 0)
+            {
+                printf("winner in losers \n");
+                locked[pairs[i].winner][pairs[i].loser] = true;
+                winners[i] = pairs[i].winner;
+                losers[i] = pairs[i].loser;
+                edge++;
+                //break;
+            }
+        }
+    }
+    return;
+}
