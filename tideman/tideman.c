@@ -264,10 +264,7 @@ void lock_pairs(void)
                 losers[i] = pairs[i].loser;
                 edge++;
             }
-
         }
-    // If they are not in the losers list, the arrow(edge) can be added
-    return;
     }
 }
 
