@@ -268,6 +268,7 @@ void lock_pairs(void)
         }
     // If they are not in the losers list, the arrow(edge) can be added
     return;
+    }
 }
 
 // Print the winner of the election
