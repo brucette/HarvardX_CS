@@ -263,15 +263,7 @@ void lock_pairs(void)
             edge++;
         }
     }
-
-
-
-
-                    // If they are not in the losers list, the arrow(edge) can be added
-
-
-        }
-    }
+    // If they are not in the losers list, the arrow(edge) can be added
     return;
 }
 
