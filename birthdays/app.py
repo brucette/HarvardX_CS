@@ -28,8 +28,8 @@ def index():
 
         # TODO: Add the user's entry into the database
         # Validate submission?????????????????
-        if not request.form.get("name")
-        return render_template("failure.html")
+            #if not request.form.get("name") or ....
+            #return render_template("failure.html")
         return redirect("/")
 
     else:
