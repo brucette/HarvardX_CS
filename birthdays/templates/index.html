@@ -36,19 +36,21 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <!--
-                                example froshims 3:
-                                {% for name in registrants %}
+                        <!--
+                            example froshims 3:
+                            {% for name in registrants %}
+                                <tr>
+                                    <td>{{ name }}</td>
+                                    <td>{{ registrants[name] }}</td>
+                                </tr>
+                            {% endfor %}
+                        -->
+                        {% for entry in entries %}
                                     <tr>
                                         <td>{{ name }}</td>
                                         <td>{{ registrants[name] }}</td>
                                     </tr>
-                                {% endfor %}
-                            -->
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
