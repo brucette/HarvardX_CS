@@ -44,11 +44,13 @@
                                     <td>{{ registrants[name] }}</td>
                                 </tr>
                             {% endfor %}
+
+                            /{{ entry["day"] }}
                         -->
                         {% for entry in entries %}
                             <tr>
                                 <td>{{ entry["name"] }}</td>
-                                <td>{{ entry["month"] }} / {{ entry["day"] }}</td>
+                                <td>{{ entry["month"],/,entry["day"]  }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
