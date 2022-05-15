@@ -29,6 +29,8 @@ def index():
         # TODO: Add the user's entry into the database
         # Validate submission?????????????????
         name = request.form.get("name")
+        name = request.form.get("month")
+        name = request.form.get("day")
             #if not request.form.get("name") or ....
             #return render_template("failure.html")
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
