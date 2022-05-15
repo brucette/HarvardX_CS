@@ -39,7 +39,7 @@
                         <!--     -->
                         {% for entry in entries %}
                             <tr>
-                                <td>{{ entry.name}}</td>
+                                <td>{{ entry["name"]}}</td>
                                 <td>{{ entry["month"] }}/{{ entry["day"] }}</td>
                             </tr>
                         {% endfor %}
