@@ -30,7 +30,7 @@ def index():
         # Validate submission?????????????????
             #if not request.form.get("name") or ....
             #return render_template("failure.html")
-        db.execute
+        db.execute("INSERT INTO birthdays (name, )")
         return redirect("/")
 
     else:
