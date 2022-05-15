@@ -30,6 +30,7 @@ def index():
         # Validate submission?????????????????
             #if not request.form.get("name") or ....
             #return render_template("failure.html")
+        
         return redirect("/")
 
     else:
