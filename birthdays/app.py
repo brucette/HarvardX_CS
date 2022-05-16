@@ -26,7 +26,8 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
+        # Add the user's entry into the database
+
         # Validate submission
         name = request.form.get("name")
         month = request.form.get("month")
@@ -41,7 +42,7 @@ def index():
 
     else:
 
-        # TODO: Display the entries in the database on index.html
+        # Display the entries in the database on index.html
         entries = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", entries=entries)
 
@@ -51,12 +52,3 @@ def remove():
     if id:
         db.execute("DELETE FROM birthdays WHERE id = ?", id)
     return redirect("/")
-
-
-
-#@app.route("/remove", methods=["POST"])
-#ef remove():
-    #id = request.form.get("id")
-    #if id:
-        #db.execute("DELETE FROM birthdays WHERE id = ?", id)
-    #return redirect("/remove")
