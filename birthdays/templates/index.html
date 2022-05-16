@@ -45,6 +45,11 @@
                                         <input name="id" type="hidden" value="{{ entry.id }}">
                                         <input type="submit" value="Remove">
                                     </form>
+                                    <!-- Add form to remove an entry from the database -->
+                                    <form action="/edit" method="post">
+                                        <input name="id" type="hidden" value="{{ entry.id }}">
+                                        <input type="submit" value="Edit">
+                                    </form>
                                 </td>
                             </tr>
                         {% endfor %}
