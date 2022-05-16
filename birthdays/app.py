@@ -48,4 +48,6 @@ def index():
 
 @app.route("/remove", methods=["POST"])
 def remove():
-    
+    id = request.form.get("id")
+    if id:
+        
