@@ -46,3 +46,6 @@ def index():
         return render_template("index.html", entries=entries)
 
 
+@app.route("/remove", methods=["POST"])
+def remove():
+    
