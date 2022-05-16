@@ -20,6 +20,7 @@
                     <input name="month" placeholder="Month" type="number">
                     <input name="day" placeholder="Day" type="number">
                     <input type="submit" value="Add Birthday">
+                    <input type="submit" value="Remove">
                 </form>
             </div>
 
@@ -39,7 +40,7 @@
                             <tr>
                                 <td>{{ entry["name"]}}</td>
                                 <td>{{ entry["month"] }}/{{ entry["day"] }}</td>
-                                <input type="submit" value="Remove">
+
                             </tr>
                         {% endfor %}
 
