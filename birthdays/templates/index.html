@@ -40,7 +40,10 @@
                                 <td>{{ entry["name"]}}</td>
                                 <td>{{ entry["month"] }}/{{ entry["day"] }}</td>
                                 <td>
-                                    <input type="submit" value="Remove">
+                                    <form action="/" method="post">
+                                        <input name="id" type="hidden" value="{{ entry.id }}">
+                                        <input type="submit" value="Remove">
+                                    </form>
                                 </td>
                             </tr>
                         {% endfor %}
