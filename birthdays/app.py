@@ -59,5 +59,7 @@ def remove():
 def edit():
     id = request.form.get("id")
     if id:
-        db.execute("DELETE FROM birthdays WHERE id = ?", id)
+        return render_template("edit.html")
+
+    db.execute("DELETE FROM birthdays WHERE id = ?", id)
     return redirect("/")
