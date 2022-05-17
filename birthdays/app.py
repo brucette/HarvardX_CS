@@ -61,5 +61,9 @@ def edit():
     if id:
         return render_template("edit.html")
 
+    name = request.form.get("name")
+    month = request.form.get("month")
+    day = request.form.get("day")
+
     db.execute("DELETE FROM birthdays WHERE id = ?", id)
     return redirect("/")
