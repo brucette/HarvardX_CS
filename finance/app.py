@@ -124,6 +124,9 @@ def quote():
             return apology("must enter symbol")
 
         results = lookup(symbol)
+
+        if not results:
+            
         return render_template("quoted.html", results=results)
 
 
