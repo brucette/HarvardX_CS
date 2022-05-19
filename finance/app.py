@@ -151,7 +151,7 @@ def register():
     hash_password = generate_password_hash(password)
     db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
 
-    id =
+    id = 
     session["user_id"] =
 
 
