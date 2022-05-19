@@ -114,8 +114,11 @@ def quote():
 
     # If tries to get, then display a form to request a stock quote
     if request.method == "GET":
-        
-    return apology("TODO")
+        return render_template("quote.html")
+
+    # Else use lookup function to search for that stock
+    else:
+        return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])    #1
