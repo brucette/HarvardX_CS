@@ -118,7 +118,11 @@ def quote():
 def register():
     """Register user"""
     #if tries to get, then display a form so they can register
-    if request.method == "GET":           return render_template("register.html")       #else check for possible errors, and insert new user into USERS table     create a users table?
+    if request.method == "GET":
+
+        return render_template("register.html")
+
+    #else check for possible errors, and insert new user into USERS table     create a users table?
     return apology("TODO")
 
 
