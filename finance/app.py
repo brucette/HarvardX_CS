@@ -143,7 +143,8 @@ def register():
             return apology("password must match verification", 403)
 
     # Insert new user into USERS table
-    #db.execute("INSERT ")
+    
+    db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
