@@ -161,7 +161,7 @@ def register():
     session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
 
 
-@app.route("/sell", methods=["GET", "POST"])
+@app.route("/sell", methods=["GET", "POST"])            #5
 @login_required
 def sell():
     """Sell shares of stock"""
