@@ -124,6 +124,7 @@ def register():
 
     #else check for possible errors, and insert new user into USERS table     create a users table?
     else:
+        if not request.form.get("username")
         return apology("TODO")
 
 
