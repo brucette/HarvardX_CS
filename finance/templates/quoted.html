@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main %}
-    {% for result in results %}
+    {% for key, value in results.items() %}
         <table>
             <tr>
                 <td>{{ result }}:</td>
