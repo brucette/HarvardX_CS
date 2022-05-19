@@ -55,7 +55,8 @@ def buy():
         return render_template("buy.html")
 
     else:
-        
+        stock = request.form.get("symbol")
+        if not stock or not lookup("symbol"):
     return apology("TODO")
 
 
