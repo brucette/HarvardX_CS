@@ -123,7 +123,8 @@ def register():
         return render_template("register.html")
 
     #else check for possible errors, and insert new user into USERS table     create a users table?
-    return apology("TODO")
+    else:
+        return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
