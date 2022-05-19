@@ -124,44 +124,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])    #1
 def register():
     """Register user"""
-
-    # If tries to get, then display a form so they can register
-    if request.method == "GET":
-
-        return render_template("register.html")
-
-    # Else check for possible errors
-    else:
-
-        username = request.form.get("username")
-        password = request.form.get("password")
-        verify_password = request.form.get("verify_password")
-
-        # Ensure username was submitted
-        if not username:
-            return apology("must provide username", 403)
-
-        # Ensure username not already taken
-        usernames = db.execute("SELECT username FROM users")
-        if username in usernames:
-            return apology("username is already taken", 403)
-
-        # Ensure password was submitted
-        elif not password:
-            return apology("must provide password", 403)
-
-        # Ensure password matches verification
-        elif not verify_password or password != verify_password:
-            return apology("password must match verification", 403)
-
-    # Insert new user into USERS table
-    hash_password = generate_password_hash(password)
-    db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
-
-    session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
-
-    # Redirect user to home page
-    return redirect("/")
+    return apology("TODO")
 
 @app.route("/sell", methods=["GET", "POST"])            #5
 @login_required
