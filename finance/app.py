@@ -118,7 +118,8 @@ def quote():
 
     # Else use lookup function to search for that stock and display the result to user
     else:
-        return apology("TODO")
+        if not request.form.get("symbol"):
+            return apology("must enter symbol")
 
 
 @app.route("/register", methods=["GET", "POST"])    #1
