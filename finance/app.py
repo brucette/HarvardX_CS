@@ -58,7 +58,9 @@ def buy():
         stock = request.form.get("symbol")
         if not stock or not lookup(stock):
             return apology("must enter valid stock symbol")
-        
+
+        elif not request.form.get("shares"):
+            return apology("number of shares missing")
 
 
 @app.route("/history")
