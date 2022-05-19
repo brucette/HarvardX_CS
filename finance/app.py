@@ -160,6 +160,8 @@ def register():
 
     session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
 
+    # Redirect user to home page
+    return redirect("/")
 
 @app.route("/sell", methods=["GET", "POST"])            #5
 @login_required
