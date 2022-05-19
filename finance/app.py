@@ -134,7 +134,7 @@ def register():
         if not username:
             return apology("must provide username", 403)
 
-        # Ensure username not already taken TODO!!!!!!!
+        # Ensure username not already taken
         usernames = db.execute("SELECT username FROM users")
         if username in usernames:
             return apology("username is already taken", 403)
@@ -148,7 +148,6 @@ def register():
             return apology("password must match verification", 403)
 
     # Insert new user into USERS table
-
     db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
 @app.route("/sell", methods=["GET", "POST"])
