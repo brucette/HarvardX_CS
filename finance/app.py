@@ -126,24 +126,28 @@ def register():
     # Else check for possible errors
     else:
 
+        username = request.form.get("username")
+        password = request.form.get("password")
+        verify_password = request.form.get("verify_password")
+
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 403)
 
         # Ensure username not already taken TODO!!!!!!!
-        if not request.form.get("username"):
+        if username:
             return apology("username is already taken", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
         # Ensure password matches verification
-        elif not request.form.get("verify_password") or request.form.get("password") != request.form.get("verify_password"):
+        elif not verify_password or password != verify_password:
             return apology("password must match verification", 403)
 
     # Insert new user into USERS table
-    
+
     db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
 @app.route("/sell", methods=["GET", "POST"])
