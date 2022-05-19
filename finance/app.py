@@ -140,7 +140,7 @@ def register():
 
     # Insert new user into USERS table  create a users table?
 
-    
+    #db.execute
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
