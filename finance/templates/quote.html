@@ -1,4 +1,4 @@
-<!-- chose a username, password and verify password  - use login.html as inspiration -->
+<!--  -->
 
 {% extends "layout.html" %}
 
@@ -7,16 +7,11 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/quote" method="post"> <!-- what should method be? -->
+    <form action="/quote" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock symbol" type="text">
         </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="verify_password" name="verify_password" placeholder="Verify password" type="password">
-        </div>
-        <button class="btn btn-primary" type="submit">Register</button>
+
+        <button class="btn btn-primary" type="submit">Search</button>
     </form>
 {% endblock %}
