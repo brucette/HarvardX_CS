@@ -114,9 +114,11 @@ def quote():
     return apology("TODO")
 
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])    #1
 def register():
     """Register user"""
+    #if tries to get, then display a form so they can register
+    #else check for possible errors, and insert user into USERS table
     return apology("TODO")
 
 
