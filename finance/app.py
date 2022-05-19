@@ -126,8 +126,10 @@ def quote():
         results = lookup(symbol)
 
         if not results:
-            
-        return render_template("quoted.html", results=results)
+            return apology("stock symbol does not exist")
+
+        else:
+            return render_template("quoted.html", results=results)
 
 
 @app.route("/register", methods=["GET", "POST"])    #1
