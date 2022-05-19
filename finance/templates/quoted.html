@@ -8,9 +8,11 @@
 
 {% block main %}
     {% for result in results %}
-        <tr>
-            <td>{{ result.key }}:</td>
-            <td>{{ result.value }}</td>
-        </tr>
+        <table>
+            <tr>
+                <td>{{ result.key }}:</td>
+                <td>{{ result.value }}</td>
+            </tr>
+        </table>
     {% endfor %}
 {% endblock %}
