@@ -124,7 +124,7 @@ def quote():
             return apology("must enter symbol")
 
         lookup(symbol)
-        return render_template("quoted.html")
+        return render_template("quoted.html", symbol=symbol)
 
 
 @app.route("/register", methods=["GET", "POST"])    #1
