@@ -121,6 +121,8 @@ def quote():
         if not request.form.get("symbol"):
             return apology("must enter symbol")
 
+        
+
 
 @app.route("/register", methods=["GET", "POST"])    #1
 def register():
