@@ -56,8 +56,8 @@ def buy():
 
     else:
         stock = request.form.get("symbol")
-        if not stock or not lookup("symbol"):
-    return apology("TODO")
+        if not stock or not lookup(stock):
+            return apology("TODO")
 
 
 @app.route("/history")
