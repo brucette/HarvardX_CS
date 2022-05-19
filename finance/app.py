@@ -118,7 +118,7 @@ def quote():
 def register():
     """Register user"""
     #if tries to get, then display a form so they can register
-    #else check for possible errors, and insert user into USERS table
+    #else check for possible errors, and insert new user into USERS table     create a users table? 
     return apology("TODO")
 
 
