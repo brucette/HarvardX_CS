@@ -55,7 +55,7 @@ def buy():
 
 @app.route("/history")
 @login_required
-def history():
+def history():                                  #6
     """Show history of transactions"""
     return apology("TODO")
 
