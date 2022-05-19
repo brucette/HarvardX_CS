@@ -123,8 +123,8 @@ def quote():
         if not symbol:
             return apology("must enter symbol")
 
-        lookup(symbol)
-        return render_template("quoted.html", symbol=symbol)
+        results = lookup(symbol)
+        return render_template("quoted.html", results=results)
 
 
 @app.route("/register", methods=["GET", "POST"])    #1
