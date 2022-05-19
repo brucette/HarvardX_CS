@@ -117,16 +117,30 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])    #1
 def register():
     """Register user"""
-    #if tries to get, then display a form so they can register
+
+    # If tries to get, then display a form so they can register
     if request.method == "GET":
 
         return render_template("register.html")
 
-    #else check for possible errors, and insert new user into USERS table     create a users table?
+    # Else check for possible errors
     else:
-        if not request.form.get("username")
-        return apology("TODO")
 
+        # Ensure username was submitted
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        # Ensure password matches verification
+        elif not request.form.get("verify_password") or request.form.get("password") != request.form.get("verify_password"):
+            return apology("password must match verification", 403)
+
+    # Insert new user into USERS table  create a users table?
+
+    
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
