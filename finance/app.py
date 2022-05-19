@@ -142,9 +142,8 @@ def register():
         elif not request.form.get("verify_password") or request.form.get("password") != request.form.get("verify_password"):
             return apology("password must match verification", 403)
 
-    # Insert new user into USERS table  create a users table?
-
-    #db.execute
+    # Insert new user into USERS table
+    #db.execute("INSERT ")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
