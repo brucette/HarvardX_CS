@@ -41,7 +41,7 @@ def after_request(response):
 
 @app.route("/")
 @login_required
-def index():
+def index():                                    #4
     """Show portfolio of stocks"""
     return apology("TODO")
 
