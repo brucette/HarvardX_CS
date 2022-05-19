@@ -111,6 +111,10 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    # If tries to get, then display a form to request a stock quote
+    if request.method == "GET":
+        
     return apology("TODO")
 
 
