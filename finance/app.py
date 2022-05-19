@@ -116,7 +116,7 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-    # Else use lookup function to search for that stock
+    # Else use lookup function to search for that stock and display the result to user
     else:
         return apology("TODO")
 
