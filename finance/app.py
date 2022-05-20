@@ -63,7 +63,7 @@ def buy():
         if not shares or shares <= 0:
             return apology("number of shares missing")
 
-        results = lookup(symbol)
+        price = lookup(symbol)
 
 @app.route("/history")
 @login_required
