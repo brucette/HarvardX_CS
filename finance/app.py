@@ -59,7 +59,7 @@ def buy():
         if not stock or not lookup(stock):
             return apology("must enter valid stock symbol")
 
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
         if not shares or shares <= 0:
             return apology("number of shares missing")
 
