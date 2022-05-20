@@ -64,9 +64,9 @@ def buy():
             return apology("number of shares missing")
 
         # Check if user has enough cash
-        details = lookup(symbol)
+        details = lookup(stock)
         price = details[1]
-        funds = db.execute(™SELECT cash FROM users WHERE id™)
+        funds = db.execute("SELECT cash FROM users WHERE id")
 
 @app.route("/history")
 @login_required
