@@ -66,8 +66,8 @@ def buy():
         # Check if user has enough cash
         details = lookup(stock)
         price = details[1]
-        funds = db.execute("SELECT cash FROM users WHERE id = ?", )
-
+        funds = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
+        
 @app.route("/history")
 @login_required
 def history():                                  #6
