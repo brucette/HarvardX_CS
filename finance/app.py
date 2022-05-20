@@ -66,7 +66,7 @@ def buy():
         # Check if user has enough cash
         details = lookup(stock)
         price = details["price"] * shares
-        funds = 10000
+        funds = 10000.00
         #db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
         if funds - price < 0:
             return apology("funds exceeded")
