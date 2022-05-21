@@ -73,7 +73,7 @@ def buy():
             return apology("funds exceeded")
 
         else:
-
+            db.execute("INSERT INTO")
 
 @app.route("/history")
 @login_required
