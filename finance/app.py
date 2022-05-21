@@ -70,6 +70,9 @@ def buy():
         if funds[0]["cash"] - price < 0:
             return apology("funds exceeded")
 
+        else:
+
+
 @app.route("/history")
 @login_required
 def history():                                  #6
