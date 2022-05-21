@@ -67,7 +67,7 @@ def buy():
         details = lookup(stock)
         price = details["price"] * shares
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        if funds[0] - price < 0:
+        if funds[0]["cash"] - price < 0:
             return apology("funds exceeded")
 
 @app.route("/history")
