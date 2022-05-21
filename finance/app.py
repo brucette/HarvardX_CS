@@ -73,7 +73,11 @@ def buy():
             return apology("funds exceeded")
 
         else:
-            db.execute("INSERT INTO")
+            # Update users portfolio
+            db.execute("INSERT INTO ? (header, header) VALUES", value value)
+
+            # Update users amount of cash in users table
+
 
 @app.route("/history")
 @login_required
