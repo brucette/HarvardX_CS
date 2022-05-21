@@ -2,6 +2,7 @@
 import csv
 import sys
 
+CREATE TABLE purchases (id INTEGER PRIMARY KEY NOT NULL, stock TEXT NOT NULL, price FLOAT NOT NULL, shares INTEGER NOT NULL, time DATETIME);
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""

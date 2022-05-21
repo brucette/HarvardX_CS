@@ -74,7 +74,7 @@ def buy():
 
         else:
             # Update users portfolio
-            db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?)", session["user_id"], stock, price, shares, )
+            db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, )
 
             # Update users amount of cash in users table
 
