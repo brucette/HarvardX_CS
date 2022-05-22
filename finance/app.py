@@ -46,7 +46,7 @@ def after_request(response):
 @login_required
 def index():                                    #4
     """Show portfolio of stocks"""
-    return apology("TODO IT HERE")
+    return apology("INDEX HERE")
 
 
 @app.route("/buy", methods=["GET", "POST"])     #3
@@ -78,12 +78,12 @@ def buy():
         else:
             now = datetime.now()
             # Update users portfolio
-            db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, now )
+            db.execute("INSERT INTO purchases (user_id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, now )
 
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
 
-            # Redirect user to home page????????????????|||||||rchase||||||||||||||||||||||
+            # Redirect user to home page????????????????|||||||||||||||||||||||||||||
             return redirect("/")
 
 @app.route("/history")
