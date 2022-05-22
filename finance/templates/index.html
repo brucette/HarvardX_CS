@@ -9,7 +9,16 @@
 {% block main %}
     <!--% for key, value in results.items() %}-->
         <div class="mb-3">
+            <h1>Here is your portfolio summary</h1>
+
             <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Number of shares</th>
+                    </tr>
+                </thead>
+
                 <tr>
                     <td>{{ key }}: </td>
                     <td> {{ value }}</td>
