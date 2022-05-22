@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main %}
-    {#% for key, value in results.items() %#}
+
         <div class="mb-3">
             <h1>Here is your portfolio summary</h1>
 
@@ -23,14 +23,17 @@
                 </thead>
 
                 <tbody>
+                {#% for key, value in results.items() %#}
+                {% for entry in portfolio %}
                     <tr>
-                        <td>{{ stock }}: </td>
-                        <td>{{ number }}</td>
-                        <td>{{ price }}</td>
-                        <td>{{ total value }}</td>
+                        <td>{{ portfolio.stock }}: </td>
+                        <td>{{ portfolio.shares }}</td>
+                        <td>{{  }}</td>
+                        <td>{{  }}</td>
                     </tr>
+                {% endfor %}
                 </tbody>
             </table>
         </div>
-    {#% endfor %#}
+
 {% endblock %}
