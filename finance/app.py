@@ -83,7 +83,7 @@ def buy():
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
 
-            # Redirect user to home page????????????????|||||||||||||||||||||||||||||
+            # Redirect user to home page????????????????|||||||rchase||||||||||||||||||||||
             return redirect("/")
 
 @app.route("/history")
