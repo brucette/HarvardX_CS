@@ -46,8 +46,9 @@ def after_request(response):
 @login_required
 def index():                                    #4
     """Show portfolio of stocks"""
-    
-    return apology("INDEX HERE")
+
+    return render_template("index.html")
+    #return apology("INDEX HERE")
 
 
 @app.route("/buy", methods=["GET", "POST"])     #3
