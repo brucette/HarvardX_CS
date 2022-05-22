@@ -81,7 +81,7 @@ def buy():
             db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, now )
 
             # Update users amount of cash in users table
-            db.execute("UPDATE users SET VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, now )
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
 
 
 @app.route("/history")
