@@ -76,8 +76,9 @@ def buy():
             return apology("funds exceeded")
 
         else:
+            now = datetime.now()
             # Update users portfolio
-            db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, )
+            db.execute("INSERT INTO purchases (id, stock, price, shares, time) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock, price, shares, now )
 
             # Update users amount of cash in users table
 
