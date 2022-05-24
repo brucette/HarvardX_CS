@@ -28,6 +28,7 @@ total (i.e., stocks’ total value plus cash) -->
                     <tr>
                         <td>{{ portfolio["stock"] }}</td>
                         <td>{{ portfolio["shares"] }}</td>
+                        <td>{{ lookup(portfolio["stock"]) }}</td>
                     </tr>
                 </tbody>
             </table>
