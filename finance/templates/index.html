@@ -40,7 +40,7 @@ total (i.e., stocks’ total value plus cash) -->
                     <tr>
                         <td><b>{{ "Grand total:" }}</b></td>
                         <td></td><td></td>
-                        <td>{{ total_value }}</td>
+                        <td>{{ (total_value + funds[0]["cash"]) | usd }}</td>
                     </tr>
             </tbody>
         </table>
