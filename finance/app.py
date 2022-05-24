@@ -54,7 +54,7 @@ def index():                                    #4
     for stock in portfolio:
         print(stock)
         current_price = lookup(stock["stock"])
-        current_prices.append({current_price["symbol"]: current_price["price"]}) #["price"]
+        current_prices.append(current_price["symbol"]: current_price["price"]) #["price"]
 
     for item in current_prices:
         print("current price:", item)
