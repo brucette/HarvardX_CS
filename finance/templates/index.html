@@ -25,8 +25,8 @@ total (i.e., stocks’ total value plus cash) -->
                 <tbody>
                 {% for item in portfolio %}
                     <tr>
-                        <td>{{ item.stock }}</td>
-                        <td>{{ item['SUM(shares)'] }}</td>
+                        <td>{{ item["stock"] }}</td>
+                        <td>{{ item["SUM(shares)"] }}</td>
                 {#% endfor %#}
                 {#% for item in current_prices %#}
                         <td>{{ current_prices.price }}</td>
