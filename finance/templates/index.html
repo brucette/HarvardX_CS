@@ -26,6 +26,7 @@ total (i.e., stocks’ total value plus cash) -->
                 </thead>
                 <tbody>
                 {% for item in portfolio%}
+                    current_price = lookup(item.stock)
                     <tr>
                         <td>{{ item.stock }}</td>
                         <td>{{ item.shares }}</td>
