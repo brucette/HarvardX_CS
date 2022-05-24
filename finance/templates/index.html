@@ -13,26 +13,28 @@ total (i.e., stocks’ total value plus cash) -->
 {% endblock %}
 
 {% block main %}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Stock</th>
-                        <th>Number of shares</th>
-                        <th>Current stock price</th>
-                        <th>Total stock value</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-                {% for item in portfolio %}
-                    <tr>
-                        <td>{{ item["stock"] }}</td>
-                        <td>{{ item["SUM(shares)"] }}</td>
-                        <td>{{ current_prices[item["stock"]] }}</td>
-                    {#% endfor %#}
-                        <td>{{ item["SUM(shares)"] * current_prices[item["stock"]] }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+    <h1>Here is a summary of your portfolio:</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Number of shares</th>
+                    <th>Current stock price</th>
+                    <th>Total stock value</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for item in portfolio %}
+                <tr>
+                    <td>{{ item["stock"] }}</td>
+                    <td>{{ item["SUM(shares)"] }}</td>
+                    <td>{{ current_prices[item["stock"]] }}</td>
+                {#% endfor %#}
+                    <td>{{ item["SUM(shares)"] * current_prices[item["stock"]] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 {% endblock %}
