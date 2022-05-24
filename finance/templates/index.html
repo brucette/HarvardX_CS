@@ -24,10 +24,12 @@ total (i.e., stocks’ total value plus cash) -->
                         <th>Total stock value</th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>{{ portfolio["stock"] }}: </td>
-                    <td> {{ portfolio["shares"] }}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>{{ portfolio["stock"] }}: </td>
+                        <td> {{ portfolio["shares"] }}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     {% endfor %}
