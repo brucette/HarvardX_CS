@@ -16,6 +16,14 @@ total (i.e., stocks’ total value plus cash) -->
     {% for item in portfolio%}
         <div class="mb-3">
             <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Number of shares</th>
+                        <th>Current stock price</th>
+                        <th>Total stock value</th>
+                    </tr>
+                </thead>
                 <tr>
                     <td>{{ portfolio["stock"] }}: </td>
                     <td> {{ portfolio["shares"] }}</td>
