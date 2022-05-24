@@ -2,6 +2,16 @@
 import csv
 import sys
 
+SELECT stock, SUM(shares) FROM purchases WHERE user_id = 1 GROUP BY stock;
++-------+-------------+
+| stock | SUM(shares) |
++-------+-------------+
+| AMZN  | 1           |
+| COX   | 5           |
+| NFLX  | 4           |
++-------+-------------+
+
+
 CREATE TABLE purchases (id INTEGER PRIMARY KEY NOT NULL, stock TEXT NOT NULL, price FLOAT NOT NULL, shares INTEGER NOT NULL, time DATETIME);
 
 def longest_match(sequence, subsequence):
