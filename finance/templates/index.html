@@ -13,7 +13,6 @@ total (i.e., stocks’ total value plus cash) -->
 {% endblock %}
 
 {% block main %}
-
         <div class="mb-3">
             <table>
                 <thead>
@@ -25,8 +24,8 @@ total (i.e., stocks’ total value plus cash) -->
                     </tr>
                 </thead>
                 <tbody>
-                {% for item in portfolio%}
-                {{current_price = lookup(item.stock)}}
+                {% for item in portfolio %}
+                    {{current_price = lookup(item.stock)}}
                     <tr>
                         <td>{{ item.stock }}</td>
                         <td>{{ item.shares }}</td>
@@ -37,5 +36,4 @@ total (i.e., stocks’ total value plus cash) -->
                 </tbody>
             </table>
         </div>
-
 {% endblock %}
