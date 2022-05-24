@@ -46,7 +46,8 @@ def after_request(response):
 @login_required
 def index():                                    #4
     """Show portfolio of stocks"""
-    portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+    #portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+    portfolio = db.execute("SELECT stock, SUM(shares), FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
     all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
     current_prices = []
 
