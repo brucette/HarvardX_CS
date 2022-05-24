@@ -34,6 +34,10 @@ total (i.e., stocks’ total value plus cash) -->
                     <td>{{ item["SUM(shares)"] * current_prices[item["stock"]] }}</td>
                 </tr>
             {% endfor %}
+                <tr>
+                    <td>{{ "current cash balance" }}</td>
+                    <td>{{ "grand total (i.e., stocks’ total value plus cash)" }}</td>
+                </tr>
             </tbody>
         </table>
 {% endblock %}
