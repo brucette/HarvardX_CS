@@ -23,12 +23,13 @@ total (i.e., stocks’ total value plus cash) -->
                     </tr>
                 </thead>
                 <tbody>
-                {% for item in portfolio, price in current_prices %}
+                {% for item in portfolio %}
                     <tr>
                         <td>{{ item.stock }}</td>
                         <td>{{ item.shares }}</td>
-                {#% for item in current_prices %#}
-                        <td>{{ price.stock }}</td>
+                {% endfor %}
+                {% for price in current_prices %}
+                        <td>{{ price }}</td>
                 {% endfor %}
                         <td>{{ "item.shares * current_price" }}</td>
                     </tr>
