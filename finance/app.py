@@ -50,8 +50,8 @@ def index():                                    #4
     all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
     current_prices = []
 
-    for stock in all_stocks:
-        current_price = lookup(stock.stock)
+    for item in all_stocks:
+        current_price = lookup(item.stock)
         current_prices.append(current_price)
 
     return render_template("index.html", portfolio=portfolio, current_prices=current_prices)
