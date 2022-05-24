@@ -47,6 +47,7 @@ def after_request(response):
 def index():                                    #4
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+    current_prices = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
     return render_template("index.html", portfolio=portfolio)
     #return apology("INDEX HERE")
 
