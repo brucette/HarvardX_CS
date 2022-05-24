@@ -13,7 +13,7 @@ total (i.e., stocks’ total value plus cash) -->
 {% endblock %}
 
 {% block main %}
-    
+
         <div class="mb-3">
             <table>
                 <thead>
@@ -25,6 +25,7 @@ total (i.e., stocks’ total value plus cash) -->
                     </tr>
                 </thead>
                 <tbody>
+                {% for item in portfolio%}
                     <tr>
                         <td>{{ portfolio["stock"] }}</td>
                         <td>{{ portfolio["shares"] }}</td>
