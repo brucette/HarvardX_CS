@@ -51,8 +51,9 @@ def index():                                    #4
     current_prices = []
 
     for item in all_stocks:
-        current_price = lookup(item.stock)
-        current_prices.append(current_price)
+        print(item)
+        #current_price = lookup(item.stock)
+        #current_prices.append(current_price)
 
     return render_template("index.html", portfolio=portfolio, current_prices=current_prices)
     #return apology("INDEX HERE")
