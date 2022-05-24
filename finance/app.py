@@ -52,7 +52,6 @@ def index():                                    #4
     current_prices = {}
 
     for item in portfolio:
-        print(stock)
         current_price = lookup(item["stock"])
         current_prices[current_price["symbol"]] = current_price["price"]
 
