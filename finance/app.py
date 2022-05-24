@@ -47,10 +47,13 @@ def after_request(response):
 def index():                                    #4
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
-    all_stocks = db.execlute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
+    all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
     current_prices = []
-    for stock in all_stocks
-    return render_template("index.html", portfolio=portfolio)
+
+    for stock in all_stocks:
+        current_prices.append(lookup(stock))
+
+    return render_template("index.html", portfolio=portfolio, current_prices=current_prices)
     #return apology("INDEX HERE")
 
 
