@@ -55,7 +55,7 @@ def index():                                    #4
 
     for item in portfolio:
         current_price = lookup(item["stock"])
-        total_value += 
+        total_value += current_price * item["SUM(shares)"]
         current_prices[current_price["symbol"]] = current_price["price"]
 
     return render_template("index.html", portfolio=portfolio, current_prices=current_prices, funds=funds)
