@@ -50,11 +50,12 @@ def index():                                    #4
     portfolio = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
     all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
     current_prices = {}
+    total_value = {}
 
     for stock in portfolio:
         print(stock)
         current_price = lookup(stock["stock"])
-        current_prices.append(current_price["symbol"], current_price["price"]) #["price"]
+        current_prices[current_price["symbol"]] = current_price["price"] #["price"]
 
     for item in current_prices:
         print("current price:", item)
