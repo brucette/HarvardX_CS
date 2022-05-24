@@ -48,6 +48,7 @@ def index():                                    #4
     """Show portfolio of stocks"""
     portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
     all_stocks = db.execlute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
+    current_prices = []
     for stock in all_stocks
     return render_template("index.html", portfolio=portfolio)
     #return apology("INDEX HERE")
