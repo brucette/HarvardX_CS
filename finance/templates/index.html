@@ -27,9 +27,9 @@ total (i.e., stocks’ total value plus cash) -->
                 <tbody>
                 {% for item in portfolio%}
                     <tr>
-                        <td>{{ portfolio.stock }}</td>
-                        <td>{{ portfolio["shares"] }}</td>
-
+                        <td>{{ item.stock }}</td>
+                        <td>{{ item["shares"] }}</td>
+                        <td>{{ item.stock }}</td>
                     </tr>
                  {% endfor %}
                 </tbody>
