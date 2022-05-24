@@ -30,7 +30,7 @@ total (i.e., stocks’ total value plus cash) -->
                         <td>{{ item["SUM(shares)"] }}</td>
                         <td>{{ current_prices[item["stock"]] }}</td>
                     {#% endfor %#}
-                        <td>{{ "item.shares * current_price" }}</td>
+                        <td>{{ item["SUM(shares)"] * current_prices[item["stock"]] }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
