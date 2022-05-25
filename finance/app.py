@@ -226,9 +226,10 @@ def sell():
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
         return render_template("sell.html")
-        
+
     else:
         # Ensure stock symbol was submitted and that it exists
         stock = request.form.get("symbol")
+        
         if not stock or not lookup(stock):
             return apology("must enter valid stock symbol")
