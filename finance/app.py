@@ -231,12 +231,16 @@ def sell():
         # Ensure stock symbol was submitted and that user has it
         stock = request.form.get("symbol")
         user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
-        list_user_stocks = []
-        
+        #list_user_stocks = []
+        dict_user_stock = {}
+
         print(user_stocks)
 
+        #for item in user_stocks:
+            #list_user_stocks.append(item["stock"])
+
         for item in user_stocks:
-            list_user_stocks.append(item["stock"])
+            dict_user_stocks["stock"] = item
 
         if not stock or stock not in list_user_stocks:
             return apology("must enter valid stock symbol")
