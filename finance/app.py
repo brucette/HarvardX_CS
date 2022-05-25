@@ -234,12 +234,10 @@ def sell():
         list_user_stocks = []
 
          for item in user_stocks:
-                if item.value(
-        print(user_stocks)
+                list_user_stocks.append(item.value())
+        print(list_user_stocks)
 
-        if not stock or
-           )
-            stock not in .values():
+        if not stock or stock not in list_user_stocks:
             return apology("must enter valid stock symbol")
         else:
             return apology("thats correct")
