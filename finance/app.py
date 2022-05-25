@@ -228,8 +228,9 @@ def sell():
         return render_template("sell.html")
 
     else:
-        # Ensure stock symbol was submitted and that it exists
+        # Ensure stock symbol was submitted and that user has it
         stock = request.form.get("symbol")
-        
-        if not stock or not lookup(stock):
+        user_stocks = db.execute("SELECT stock FROM users WHERE id = ?", session["user_id"])
+
+        if not stock or stock not in :
             return apology("must enter valid stock symbol")
