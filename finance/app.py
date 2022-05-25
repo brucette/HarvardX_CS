@@ -230,10 +230,16 @@ def sell():
     else:
         # Ensure stock symbol was submitted and that user has it
         stock = request.form.get("symbol")
-        user_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
+        user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
+        list_user_stocks = []
+
+         for item in user_stocks:
+                if item.value(
         print(user_stocks)
 
-        if not stock or stock not in user_stocks.values():
+        if not stock or
+           )
+            stock not in .values():
             return apology("must enter valid stock symbol")
         else:
             return apology("thats correct")
