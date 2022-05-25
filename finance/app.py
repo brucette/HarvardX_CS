@@ -232,6 +232,8 @@ def sell():
         stock = request.form.get("symbol")
         user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
         list_user_stocks = []
+        
+        print(user_stocks)
 
         for item in user_stocks:
             list_user_stocks.append(item["stock"])
