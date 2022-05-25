@@ -238,5 +238,11 @@ def sell():
 
         if not stock or stock not in list_user_stocks:
             return apology("must enter valid stock symbol")
+
+        # Ensure valid number of shares entered
+        shares = int(request.form.get("shares"))
+        if not shares or shares <= 0:
+            return apology("number of shares missing")
+
         else:
             return apology("thats correct")
