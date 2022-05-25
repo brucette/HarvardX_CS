@@ -241,7 +241,7 @@ def sell():
 
         # Ensure valid number of shares entered
         shares_entered = int(request.form.get("shares"))
-        actual_shares = db.execute("SELECT SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"]))
+        actual_shares = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
 
         if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares:
             return apology("number of shares missing")
