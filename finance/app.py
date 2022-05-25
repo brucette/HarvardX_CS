@@ -233,8 +233,8 @@ def sell():
         user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
         list_user_stocks = []
 
-         for item in user_stocks:
-                list_user_stocks.append(item.value())
+        for item in user_stocks:
+            list_user_stocks.append(item.value())
         print(list_user_stocks)
 
         if not stock or stock not in list_user_stocks:
