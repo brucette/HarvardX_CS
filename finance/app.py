@@ -235,7 +235,6 @@ def sell():
 
         for item in user_stocks:
             list_user_stocks.append(item["stock"])
-        print(list_user_stocks)
 
         if not stock or stock not in list_user_stocks:
             return apology("must enter valid stock symbol")
