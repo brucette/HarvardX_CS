@@ -223,6 +223,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+
     # Make a list of all of users stock
     user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
     list_user_stocks = []
