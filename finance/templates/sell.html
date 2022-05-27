@@ -8,12 +8,20 @@
     <form action="/sell" method="post">
         <div class="mb-3">
             <select>
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+                {% for item in portfolio %}
+                     <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
+
+                        <td>{{ item["stock"] }}</td>
+                        <td>{{ item["SUM(shares)"] }}</td>
+                        <td>{{ current_prices[item["stock"]] | usd }}</td>
+                        <td>{{ (item["SUM(shares)"] * current_prices[item["stock"]]) | usd }}</td>
+                    </tr>
+                {% endfor %}
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
             </select>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
-        </div>
+                    </div>
         <button class="btn btn-primary" type="submit">Sell</button>
     </form>
 {% endblock %}
