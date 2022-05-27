@@ -223,9 +223,11 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
+
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
-        return render_template("sell.html")
+        return render_template("sell.html", u)
 
     else:
         # Ensure stock symbol was submitted and that user has it
