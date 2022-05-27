@@ -251,6 +251,9 @@ def sell():
 
         # Check current price of the stock
         details = lookup(stock)
+        price = details["price"] * shares_entered
 
+        # Remove sold stock from user and increase their total cash
+        
         else:
             return apology("thats correct")
