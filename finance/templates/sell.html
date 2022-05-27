@@ -7,9 +7,9 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3">
-            <label for="symbol">Choose stock:</label>
+            <label for="symbol">Sell stock:</label>
             <select name="symbol" id="symbol" placeholder="Symbol">
-            <option></option>
+            <option>Select</option>
                 {% for item in list_user_stocks %}
                     <option>{{ item }}</option>
                 {% endfor %}
