@@ -249,5 +249,8 @@ def sell():
         if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares:
             return apology("invalid number of shares")
 
+        # Check current price of the stock
+        details = lookup(stock)
+
         else:
             return apology("thats correct")
