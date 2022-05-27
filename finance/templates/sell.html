@@ -9,11 +9,13 @@
         <div class="mb-3">
             <label for="symbol">Choose stock:</label>
             <select name="symbol" id="symbol" placeholder="Symbol">
+            <option></option>
                 {% for item in list_user_stocks %}
                     <option>{{ item }}</option>
                 {% endfor %}
-                <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
             </select>
+            <br><br>
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
         </div>
         <div class="mb-3">
                     </div>
