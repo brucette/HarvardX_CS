@@ -236,13 +236,12 @@ def sell():
     else:
         # Ensure stock symbol was submitted and that user has it
         stock = request.form.get("symbol")
-        #user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
 
         if not stock or stock not in list_user_stocks:
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
-        shares_entered = request.form.get("shares")
+        shares_entered = int(request.form.get("shares"))
         portf_shares = db.execute("SELECT SUM(shares) FROM purchases WHERE user_id = ? AND stock = ? GROUP BY stock", session["user_id"], stock)
         actual_shares = portf_shares[0]["SUM(shares)"]
 
