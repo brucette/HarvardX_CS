@@ -242,7 +242,7 @@ def sell():
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
-        shares_entered = int(request.form.get("shares"))
+        shares_entered = request.form.get("shares")
         portf_shares = db.execute("SELECT SUM(shares) FROM purchases WHERE user_id = ? AND stock = ? GROUP BY stock", session["user_id"], stock)
         actual_shares = portf_shares[0]["SUM(shares)"]
 
