@@ -9,10 +9,10 @@
         <div class="mb-3">
             <select>
                 {% for item in list_user_stocks %}
-                     <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
-                        <td>{{ item }}</td>
+                    <option>{{ item }}</option>
                 {% endfor %}
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+                <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="number">
             </select>
         </div>
         <div class="mb-3">
