@@ -227,7 +227,7 @@ def sell():
     """Sell shares of stock"""
 
     # Make a list of all of users stock
-    user_stocks = db.execute("SELECT stock, SUM(shares) FROM purchases WHERE user_id = ? GROUP BY stock", session["user_id"])
+    user_stocks = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
     list_user_stocks = []
     for item in user_stocks:
             list_user_stocks.append(item["stock"])
@@ -245,7 +245,7 @@ def sell():
 
         # Ensure valid number of shares entered
         shares_entered = int(request.form.get("shares"))
-        portf_shares = db.execute("SELECT SUM(shares) FROM purchases WHERE user_id = ? AND stock = ? GROUP BY stock", session["user_id"], stock)
+        portf_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], stock, "purchase")
         actual_shares = portf_shares[0]["SUM(shares)"]
 
         if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares:
