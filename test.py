@@ -11,6 +11,7 @@ SELECT stock, SUM(shares) FROM purchases WHERE user_id = 1 GROUP BY stock;
 | NFLX  | 4           |
 +-------+-------------+
 
+{{funds[0]["cash"] | usd }}
 
 CREATE TABLE purchases (id INTEGER PRIMARY KEY NOT NULL, stock TEXT NOT NULL, price FLOAT NOT NULL, shares INTEGER NOT NULL, time DATETIME);
 
