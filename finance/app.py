@@ -90,7 +90,7 @@ def buy():
         else:
             now = datetime.now()
             # Update users transactions
-            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", "purchase", stock, price, shares, now, session["user_id"] )
+            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", "purchase", stock, price, shares, now, session["user_id"] )
 
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
@@ -257,7 +257,7 @@ def sell():
         now = datetime.now()
         sale = "sale"
         # Update users transactions
-        db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", sale, stock, price, shares_entered, now, session["user_id"])
+        db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", sale, stock, price, shares_entered, now, session["user_id"])
 
         # Increase user's total cash in users table
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
