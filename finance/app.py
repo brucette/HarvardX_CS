@@ -53,7 +53,6 @@ def index():                                    #4
     except ValueError:
         return apology("You currently have no stocks to display")
     else:
-
         current_prices = {}
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         total_value = 0
