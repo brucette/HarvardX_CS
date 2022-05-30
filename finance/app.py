@@ -252,6 +252,7 @@ def sell():
         # Check current price of the stock
         details = lookup(stock)
         price = details["price"] * shares_entered
+        funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         else:
             now = datetime.now()
@@ -259,7 +260,7 @@ def sell():
             db.execute("INSERT INTO transactons (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", "purchase", stock, price, shares, now, session["user_id"] )
 
             # Increase user's total cash in users table
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
 
             return apology("thats correct")
 
