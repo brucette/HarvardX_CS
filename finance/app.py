@@ -46,21 +46,22 @@ def after_request(response):
 @login_required
 def index():                                    #4
     """Show portfolio of stocks"""
-    if user_id
-    #portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
-    #all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
-    portfolio = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-    current_prices = {}
-    funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    total_value = 0
+    if session[id]:
+        #portfolio = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+        #all_stocks = db.execute("SELECT stock FROM purchases WHERE user_id = ?", session["user_id"])
+        portfolio = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+        current_prices = {}
+        funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        total_value = 0
 
-    for item in portfolio:
-        current_price = lookup(item["stock"])
-        total_value += current_price["price"] * item["SUM(shares)"]
-        current_prices[current_price["symbol"]] = current_price["price"]
+        for item in portfolio:
+            current_price = lookup(item["stock"])
+            total_value += current_price["price"] * item["SUM(shares)"]
+            current_prices[current_price["symbol"]] = current_price["price"]
 
-    return render_template("index.html")#, portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
-
+        return render_template("index.html")#, portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
+    else:
+        return redirect("login")
 
 @app.route("/buy", methods=["GET", "POST"])     #3
 @login_required
