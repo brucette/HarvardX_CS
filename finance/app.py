@@ -46,8 +46,6 @@ def after_request(response):
 @login_required
 def index():                                    #4
     """Show portfolio of stocks"""
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-
     try:
         portfolio = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
     except RuntimeError:
