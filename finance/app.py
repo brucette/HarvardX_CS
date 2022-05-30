@@ -58,7 +58,7 @@ def index():                                    #4
         total_value += current_price["price"] * item["SUM(shares)"]
         current_prices[current_price["symbol"]] = current_price["price"]
 
-    return render_template("index.html", portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
+    return render_template("index.html")#, portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
 
 
 @app.route("/buy", methods=["GET", "POST"])     #3
