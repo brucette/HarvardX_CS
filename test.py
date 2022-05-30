@@ -10,7 +10,7 @@ SELECT stock, SUM(shares) FROM purchases WHERE user_id = 1 GROUP BY stock;
 | COX   | 5           |
 | NFLX  | 4           |
 +-------+-------------+
-
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, hash TEXT NOT NULL, cash NUMERIC NOT NULL DEFAULT 10000.00)
 {{funds[0]["cash"] | usd }}
 {{(total_value + funds[0]["cash"]) | usd }}
 
