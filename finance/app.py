@@ -255,9 +255,9 @@ def sell():
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         now = datetime.now()
-
+        sale = "sale"
         # Update users transactions
-        db.execute("INSERT INTO transactons (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", "sale", stock, price, shares_entered, now, session["user_id"])
+        db.execute("INSERT INTO transactons (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", sale, stock, price, shares_entered, now, session["user_id"])
 
         # Increase user's total cash in users table
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
