@@ -89,8 +89,10 @@ def buy():
 
         else:
             now = datetime.now()
+            purchase = "purchase"
+
             # Update users transactions
-            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", "purchase", stock, price, shares, now, session["user_id"] )
+            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", purchase, stock, price, shares, now, session["user_id"] )
 
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
@@ -235,7 +237,7 @@ def sell():
         return render_template("sell.html", list_user_stocks = list_user_stocks)
 
     else:
-        # Ensure stock symbol was submitted and that user has it
+        # Ensure stock symbol was submitted and that user owns that stock
         stock = request.form.get("symbol")
 
         if not stock or stock not in list_user_stocks:
