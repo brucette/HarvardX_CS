@@ -254,14 +254,14 @@ def sell():
         price = details["price"] * shares_entered
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
-        else:
-            now = datetime.now()
-            # Update users transactions
-            db.execute("INSERT INTO transactons (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", "sale", stock, price, shares_entered, now, session["user_id"] )
+        now = datetime.now()
 
-            # Increase user's total cash in users table
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
+        # Update users transactions
+        db.execute("INSERT INTO transactons (type, stock, price, shares, time, user_id,) VALUES (?, ?, ?, ?, ?, ?)", "sale", stock, price, shares_entered, now, session["user_id"])
 
-            return apology("thats correct")
+        # Increase user's total cash in users table
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
 
-        # Remove sold stock from user
+        return apology("thats correct")
+
+        # Remove sold stock from user?
