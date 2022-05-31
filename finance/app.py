@@ -84,6 +84,9 @@ def index():                                    #4
                 # current_prices[current_price["symbol"]] = current_price["price"]
                 # print("CURRENT PRICES:",current_prices)
                 # CURRENT PRICES: {'AMZN': 2354.32, 'NFLX': 195.62}
+
+                # Add dict to owned_stocks:
+                    # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
             #else:
 
         return render_template("index.html", bought=bought, current_prices=current_prices, funds=funds, total_value=total_value)
