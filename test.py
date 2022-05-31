@@ -1,3 +1,24 @@
+  <tbody>
+                {% for item in current_prices %}
+                    <tr>
+                        <td>{{ item["stock"] }}</td>
+                        <td>{{ item["SUM(shares)"] }}</td>
+                        <td>{{ current_prices[item["stock"]] | usd }}</td>
+                        <td>{{ (item["SUM(shares)"] * current_prices[item["stock"]]) | usd }}</td>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <td></td><td></td>
+                        <td>{{ "Cash balance:" }}</td>
+                        <td>{{ funds[0]["cash"] | usd }}</td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td>
+                        <td><b>{{ "Grand total:" }}</b></td>
+                        <td>{{ (total_value + funds[0]["cash"]) | usd }}</td>
+                    </tr>
+            </tbody>
+
 
 SELECT stock, SUM(shares) FROM purchases WHERE user_id = 1 GROUP BY stock;
 +-------+-------------+
