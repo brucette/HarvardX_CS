@@ -55,16 +55,20 @@ def index():                                    #4
         bought_stocks = []
             for item in portfolio:
                     bought_stocks.append(item["stock"])
+        print(bought_stocks)
+
         # Sold stock
         sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
         sold_stocks = []
             for item in sold:
                     sold_stocks.append(item["stock"])
 
+        print(sold_stocks)
+
         # Check if stocks user owns have been sold
         for item in bought_stocks:
             if item in sold_stocks:
-                
+
 
         current_prices = {}
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
