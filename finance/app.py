@@ -66,8 +66,8 @@ def index():                                    #4
         print(sold_stocks)
 
         # Check if stocks user owns have been sold
-        for item in bought_stocks:
-            if item in sold_stocks:
+        #for item in bought_stocks:
+            #if item in sold_stocks:
 
 
         current_prices = {}
