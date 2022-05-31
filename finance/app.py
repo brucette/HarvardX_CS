@@ -84,6 +84,13 @@ def buy():
         # Check if user has enough cash
         details = lookup(stock)
         price = details["price"] * shares
+
+
+        print("==========")
+        print(session["user_id"])
+
+        print(type(session["user_id"]))
+
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         if funds[0]["cash"] - price < 0:
             return apology("funds exceeded")
@@ -92,10 +99,6 @@ def buy():
             now = datetime.now()
             purchase = "purchase"
 
-            print("==========")
-            print(session["user_id"])
-
-            print(type(session["user_id"]))
 
             # Update users transactions
             db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", purchase, stock, price, shares, now, session["user_id"] )
