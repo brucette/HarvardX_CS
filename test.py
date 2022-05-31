@@ -21,4 +21,21 @@ CREATE TABLE purchases (id INTEGER PRIMARY KEY NOT NULL, stock TEXT NOT NULL, pr
 
 
 
+def index():                                    #4
+    """Show portfolio of stocks"""
+    try:
+        portfolio = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+    except RuntimeError:
+        return apology("You currently have no stocks to display")
+    else:
+        current_prices = {}
+        funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        total_value = 0
+
+        for item in portfolio:
+            current_price = lookup(item["stock"])
+            total_value += current_price["price"] * item["SUM(shares)"]
+            current_prices[current_price["symbol"]] = current_price["price"]
+
+        return render_template("index.html", portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
 
