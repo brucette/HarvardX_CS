@@ -51,10 +51,6 @@ def index():                                    #4
     except RuntimeError:
         return apology("You currently have no stocks to display")
     else:
-        current_prices = {}
-        funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        total_value = 0
-
         # Bought stock
         bought_stocks = []
             for item in portfolio:
@@ -64,6 +60,10 @@ def index():                                    #4
         sold_stocks = []
             for item in sold:
                     sold_stocks.append(item["stock"])
+
+        current_prices = {}
+        funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        total_value = 0
 
         for item in portfolio:
             current_price = lookup(item["stock"])
