@@ -49,7 +49,6 @@ def index():                                    #4
     try:
         # Get bought stock
         bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-        print(bought)
         #[{'type': 'purchase', 'stock': 'AMZN', 'SUM(shares)': 1}, {'type': 'purchase', 'stock': 'COX', 'SUM(shares)': 5}, {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}]
 
     except RuntimeError:
@@ -78,9 +77,10 @@ def index():                                    #4
                 current_price = lookup(item["stock"])
                 total_value += current_price["price"] * item["SUM(shares)"]
                 current_prices[current_price["symbol"]] = current_price["price"]
+                print(current_prices)
             #else:
 
-        return render_template("index.html", bought=bought, current_prices=current_prices, funds=funds, total_value=total_value)
+        return render_template("index.html", current_prices=current_prices, funds=funds, total_value=total_value)
 
 @app.route("/buy", methods=["GET", "POST"])     #3
 @login_required
