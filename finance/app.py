@@ -49,7 +49,6 @@ def index():                                    #4
     try:
         # Get bought stock
         bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-
         #[{'type': 'purchase', 'stock': 'AMZN', 'SUM(shares)': 1}, {'type': 'purchase', 'stock': 'COX', 'SUM(shares)': 5}, {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}]
 
     except RuntimeError:
