@@ -77,7 +77,7 @@ def index():                                    #4
                 current_prices[current_price["symbol"]] = current_price["price"]
             #else:
 
-        return render_template("index.html", portfolio=portfolio, current_prices=current_prices, funds=funds, total_value=total_value)
+        return render_template("index.html", portfolio=bought, current_prices=current_prices, funds=funds, total_value=total_value)
 
 @app.route("/buy", methods=["GET", "POST"])     #3
 @login_required
