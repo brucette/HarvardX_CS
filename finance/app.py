@@ -49,6 +49,7 @@ def index():                                    #4
     try:
         # Get bought stock
         bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+        print(bought)
     except RuntimeError:
         return apology("You currently have no stocks to display")
     else:
