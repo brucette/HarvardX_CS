@@ -93,7 +93,6 @@ def buy():
             now = datetime.now()
             purchase = "purchase"
 
-
             # Update users transactions
             db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", purchase, stock, price, shares, now, session["user_id"] )
 
@@ -188,12 +187,10 @@ def register():
 
     # If access via get, then display a form so they can register
     if request.method == "GET":
-
         return render_template("register.html")
 
     # Else check for possible errors
     else:
-
         username = request.form.get("username")
         password = request.form.get("password")
         verify_password = request.form.get("verify_password")
