@@ -59,11 +59,11 @@ def index():                                    #4
         bought_stocks = []
             for item in portfolio:
                     bought_stocks.append(item["stock"])
-    # Sold stock
-    sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
-    sold_stocks = []
-        for item in sold:
-                sold_stocks.append(item["stock"])
+        # Sold stock
+        sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
+        sold_stocks = []
+            for item in sold:
+                    sold_stocks.append(item["stock"])
 
         for item in portfolio:
             current_price = lookup(item["stock"])
