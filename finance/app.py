@@ -85,12 +85,6 @@ def buy():
         details = lookup(stock)
         price = details["price"] * shares
 
-
-        print("==========")
-        print(session["user_id"])
-
-        print(type(session["user_id"]))
-
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         if funds[0]["cash"] - price < 0:
             return apology("funds exceeded")
