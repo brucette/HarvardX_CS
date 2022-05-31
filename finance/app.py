@@ -55,6 +55,15 @@ def index():                                    #4
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         total_value = 0
 
+    # Bought stock
+    bought_stocks = []
+        for item in user_stocks:
+                list_user_stocks.append(item["stock"])
+    # Sold stock
+    sold_stocks = []
+        for item in user_stocks:
+                list_user_stocks.append(item["stock"])
+
         for item in portfolio:
             current_price = lookup(item["stock"])
             total_value += current_price["price"] * item["SUM(shares)"]
