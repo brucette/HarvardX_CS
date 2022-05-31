@@ -47,13 +47,14 @@ def after_request(response):
 def index():                                    #4
     """Show portfolio of stocks"""
     try:
-        portfolio = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+        # Get bought stock
+        bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
     except RuntimeError:
         return apology("You currently have no stocks to display")
     else:
         # Bought stock
         bought_stocks = []
-        for item in portfolio:
+        for item in bought:
             bought_stocks.append(item["stock"])
         print("BOUGHT:", bought_stocks)
 
