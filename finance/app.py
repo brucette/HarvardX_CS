@@ -227,9 +227,8 @@ def sell():
     """Sell shares of stock"""
 
     try:
-        # Make a list of all of users stock
+        # Make a list of all of users stock, if user has any
         user_stocks = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-
     except RuntimeError:
         return apology("You currently have no stocks to sell")
     else:
@@ -263,7 +262,7 @@ def sell():
 
         now = datetime.now()
         sale = "sale"
-        
+
         # Update users transactions
         db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", sale, stock, price, shares_entered, now, session["user_id"])
 
