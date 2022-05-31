@@ -227,11 +227,15 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-    # Make a list of all of users stock
-    user_stocks = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-    list_user_stocks = []
-    for item in user_stocks:
-            list_user_stocks.append(item["stock"])
+    try:
+        # Make a list of all of users stock
+        user_stocks = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+    except RuntimeError:
+        return apology("You currently have no stocks to sell")
+    else:
+        list_user_stocks = []
+        for item in user_stocks:
+                list_user_stocks.append(item["stock"])
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
