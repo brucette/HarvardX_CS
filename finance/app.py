@@ -92,6 +92,11 @@ def buy():
             now = datetime.now()
             purchase = "purchase"
 
+            print("==========")
+            print(session["user_id"])
+
+            print(type(session["user_id"]))
+
             # Update users transactions
             db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", purchase, stock, price, shares, now, session["user_id"] )
 
