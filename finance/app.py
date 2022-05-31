@@ -87,7 +87,7 @@ def index():                                    #4
 
                 # Add dict to owned_stocks:
                     # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
-                owned_stocks.append({})
+                owned_stocks.append({'stock':})
             #else:
 
         return render_template("index.html", bought=bought, current_prices=current_prices, funds=funds, total_value=total_value)
