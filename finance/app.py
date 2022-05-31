@@ -66,8 +66,8 @@ def index():                                    #4
         print("SOLD:", sold_stocks)
 
         # Check if stocks user owns have been sold
-        #for item in bought_stocks:
-            #if item in sold_stocks:
+        for item in bought:
+            if item["stock"] in sold_stocks:
 
         current_prices = {}
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
