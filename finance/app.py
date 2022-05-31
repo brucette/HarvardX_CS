@@ -77,6 +77,7 @@ def index():                                    #4
             if item["stock"] not in sold_stocks:
                 current_price = lookup(item["stock"])
                 print("PRICE!",current_price)
+                #PRICE! {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
                 total_value += current_price["price"] * item["SUM(shares)"]
 
                 # Adding to dict:
