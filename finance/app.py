@@ -269,6 +269,7 @@ def sell():
         # Increase user's total cash in users table
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
 
-        return apology("thats correct")
-
+        # return apology("thats correct")
+        # Redirect user to home page????????????????|||||||||||||||||||||||||||||
+        return redirect("/")
         # Remove sold stock from user?
