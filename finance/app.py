@@ -267,12 +267,13 @@ def sell():
 
         for item in bought:
             # Calculate if any of that specific stock still owned
-            all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
-            all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
-            difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
+            if item in sold_stocks:
+                all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
+                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
+                difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
-            if difference > 0:
-                user_stocks.append(item["stock"])
+                if difference > 0:
+                    user_stocks.append(item["stock"])
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
