@@ -86,7 +86,7 @@ def index():                                    #4
                 # Add dict to owned_stocks:
                     # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
                 owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
-            #else:
+            else:
                 #calculate if any stocks still available
                 all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
                 all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
