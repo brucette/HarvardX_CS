@@ -107,7 +107,7 @@ def buy():
 
         # Check if user has enough cash
         details = lookup(stock)
-        price = details["price"] * shares
+        price = details["price"] * int(shares)
 
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         if funds[0]["cash"] - price < 0:
