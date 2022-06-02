@@ -64,18 +64,17 @@ def index():                                    #4
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         total_value = 0
 
-        # Check if stocks user owns have been sold
+        # Check if any stocks user bought have also been sold
         for item in bought:
             current_price = lookup(item["stock"])
             # lookup: {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
             if item["stock"] not in sold_stocks:
-
-                # Add dict to owned_stocks:
+                # Add info about stock to owned_stocks:
                 owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
 
                 total_value += current_price["price"] * item["SUM(shares)"]
             else:
-                # Calculate if any stocks still owned
+                # Calculate if any of that specific stock still owned
                 all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
                 all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
