@@ -94,7 +94,8 @@ def index():                                    #4
                 print(all_bought[0])
                 print(all_sold)
                 #print(difference)
-
+                print(len(all_bought))
+                print(len(all_sold))
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
 
 @app.route("/buy", methods=["GET", "POST"])     #3
