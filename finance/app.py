@@ -251,14 +251,14 @@ def sell():
     """Sell shares of stock"""
 
     try:
-        # Make a list of all of users stock, if user has any
-        user_stocks = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+        # Make a list of all of stock user has bought, if user has bought any
+        bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
     except RuntimeError:
         return apology("You currently have no stocks to sell")
     else:
-        list_user_stocks = []
-        for item in user_stocks:
-                list_user_stocks.append(item["stock"])
+        user_stocks = []
+        for item in bought:
+                user_stocks.append(item["stock"])
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
