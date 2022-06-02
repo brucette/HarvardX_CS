@@ -88,9 +88,9 @@ def index():                                    #4
                 owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
             #else:
                 #calculate if any stocks still available
-                all_bought =
-                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? GROUP BY stock", session["user_id"], "sale")
-
+                all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item, "purchase")
+                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item, "sale")
+                print(type(all_bought))
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
 
