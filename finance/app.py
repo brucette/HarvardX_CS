@@ -281,7 +281,7 @@ def sell():
                     actual_shares[item["stock"]] = difference
             else:
                  user_stocks.append(item["stock"])
-                 actual_shares[item["stock"]] = difference
+                 actual_shares[item["stock"]] = item["SUM(shares)"]
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
