@@ -76,7 +76,7 @@ def index():                                    #4
         for item in bought:
             if item["stock"] not in sold_stocks:
                 current_price = lookup(item["stock"])
-                print("PRICE!",current_price)
+                #print("PRICE!",current_price)
                 #PRICE! {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
                 total_value += current_price["price"] * item["SUM(shares)"]
 
@@ -84,11 +84,11 @@ def index():                                    #4
                 # current_prices[current_price["symbol"]] = current_price["price"]
                 # print("CURRENT PRICES:",current_prices)
                 # CURRENT PRICES: {'AMZN': 2354.32, 'NFLX': 195.62}
-
                 # Add dict to owned_stocks:
                     # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
                 owned_stocks.append({"stock" : current_price["symbol"], "price" : current_price["price"], "shares" : item["SUM(shares)"]})
-            #else:
+            else:
+
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
 
