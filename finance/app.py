@@ -79,7 +79,6 @@ def index():                                    #4
                 #print("PRICE!",current_price)
                 #PRICE! {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
                 total_value += current_price["price"] * item["SUM(shares)"]
-
                 # Adding to dict:
                 # current_prices[current_price["symbol"]] = current_price["price"]
                 # print("CURRENT PRICES:",current_prices)
@@ -90,7 +89,7 @@ def index():                                    #4
             #else:
                 #calculate if any stocks still available
                 all_bought =
-                all_sold = 
+                all_sold =
 
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
