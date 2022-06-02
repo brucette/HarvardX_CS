@@ -264,6 +264,7 @@ def sell():
             sold_stocks.append(item["stock"])
 
         user_stocks = []
+        actual_shares = []
 
         for item in bought:
             # Calculate if any of that specific stock still owned
@@ -273,9 +274,11 @@ def sell():
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
                 if difference > 0:
-                    user_stocks.append({"stock": item["stock"], "shares": difference})
+                    user_stocks.append(item["stock"])
+                    actual_shares.append({"stock": item["stock"], "shares": difference})
             else:
                  user_stocks.append(item["stock"])
+                 actual_shares.append({"stock": item["stock"], "shares": difference})
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
@@ -291,7 +294,7 @@ def sell():
         # Ensure valid number of shares entered
         shares_entered = int(request.form.get("shares"))
         # **********************************UPDATE THE FOLLOWING:**********************************************************************************************************
-        portf_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], stock, "purchase")
+        #portf_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], stock, "purchase")
         actual_shares = portf_shares[0]["SUM(shares)"]
 
         if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares:

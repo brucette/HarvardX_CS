@@ -11,7 +11,7 @@
             <select name="symbol" id="symbol" placeholder="Symbol">
             <option>Select</option>
                 {% for item in user_stocks %}
-                    <option>{{ item["stock"] }}</option>
+                    <option>{{ item }}</option>
                 {% endfor %}
             </select>
             <br><br>
