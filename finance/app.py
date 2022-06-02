@@ -131,7 +131,7 @@ def buy():
 def history():                                  #6
     """Show history of transactions"""
 
-    transactions = db.execute("SELECT ")
+    transactions = db.execute("SELECT FROM transactions")
     return apology("TODO")
 
 
