@@ -54,18 +54,11 @@ def index():                                    #4
     except RuntimeError:
         return apology("You currently have no stocks to display")
     else:
-        # Bought stock
-        bought_stocks = []
-        for item in bought:
-            bought_stocks.append(item["stock"])
-        print("BOUGHT:", bought_stocks)
-
         # Sold stock
         sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
         sold_stocks = []
         for item in sold:
             sold_stocks.append(item["stock"])
-        print("SOLD:", sold_stocks)
 
         owned_stocks = []
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
@@ -77,9 +70,10 @@ def index():                                    #4
             # lookup: {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
             if item["stock"] not in sold_stocks:
 
-                total_value += current_price["price"] * item["SUM(shares)"]
                 # Add dict to owned_stocks:
                 owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
+
+                total_value += current_price["price"] * item["SUM(shares)"]
             else:
                 # Calculate if any stocks still owned
                 all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
@@ -88,6 +82,8 @@ def index():                                    #4
 
                 if difference > 0:
                     owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": difference})
+
+                    total_value += current_price["price"] * difference]
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
 
