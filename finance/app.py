@@ -300,7 +300,7 @@ def sell():
         #portf_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], stock, "purchase")
         actual_shares = portf_shares[0]["SUM(shares)"]
 
-        if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares:
+        if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares[stock]:
             return apology("invalid number of shares")
 
         # Check current price of the stock
