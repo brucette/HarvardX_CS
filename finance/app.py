@@ -264,7 +264,10 @@ def sell():
             sold_stocks.append(item["stock"])
 
         user_stocks = []
-        actual_shares = []
+        actual_shares = {}
+        # Adding to dict:
+                # current_prices[current_price["symbol"]] = current_price["price"]
+                # CURRENT PRICES: {'AMZN': 2354.32, 'NFLX': 195.62}
 
         for item in bought:
             # Calculate if any of that specific stock still owned
