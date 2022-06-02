@@ -299,7 +299,7 @@ def sell():
 
         # Check current price of the stock
         details = lookup(stock)
-        price = details["price"] * shares_entered
+        price = details["price"] * int(shares_entered)
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         now = datetime.now()
