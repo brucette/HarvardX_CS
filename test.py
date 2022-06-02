@@ -33,7 +33,7 @@
 | purchase | COX   | 5           |
 | purchase | NFLX  | 2           |
 
-
+current_prices = {}
 # Adding to dict:
                 # current_prices[current_price["symbol"]] = current_price["price"]
                 # CURRENT PRICES: {'AMZN': 2354.32, 'NFLX': 195.62}
