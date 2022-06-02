@@ -274,6 +274,8 @@ def sell():
 
                 if difference > 0:
                     user_stocks.append(item["stock"])
+            else:
+                 user_stocks.append(item["stock"])
 
     # If tries to get, then display a form to enter stock and number of shares
     if request.method == "GET":
