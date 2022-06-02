@@ -88,7 +88,8 @@ def index():                                    #4
                     # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
                 owned_stocks.append({"stock" : current_price["symbol"], "price" : current_price["price"], "shares" : item["SUM(shares)"]})
             #else:
-                #calculate if any stocks still 
+                #calculate if any stocks still available
+                
 
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
