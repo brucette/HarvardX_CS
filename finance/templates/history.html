@@ -4,3 +4,43 @@ listing row by row each and every buy and every sell.
 For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price, the number
 of shares bought or sold, and the date and time at which the transaction occurred.
 -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>Here is a summary of all your transactions to date:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Shares</th>
+                    <th>Current stock price</th>
+                    <th>Total stock value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in owned_stocks %}
+                    <tr>
+                        <td>{{ item["stock"] }}</td>
+                        <td>{{ item["shares"] }}</td>
+                        <td>{{ item["price"] | usd }}</td>
+                        <td>{{ (item["shares"] * item["price"]) | usd }}</td>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <td></td><td></td>
+                        <td>{{ "Cash balance:" }}</td>
+                        <td>{{ funds[0]["cash"] | usd }}</td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td>
+                        <td><b>{{ "Grand total:" }}</b></td>
+                        <td>{{ (total_value + funds[0]["cash"]) | usd }}</td>
+                    </tr>
+            </tbody>
+        </table>
+{% endblock %}
