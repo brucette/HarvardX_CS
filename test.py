@@ -19,8 +19,22 @@
                     </tr>
             </tbody>
 
++------+-------+-------------+
+| type | stock | SUM(shares) |
++------+-------+-------------+
+| sale | AMZN  | 1           |
+| sale | COX   | 3           |
++------+-------+-------------+
 
-SELECT stock, SUM(shares) FROM purchases WHERE user_id = 1 GROUP BY stock;
++----------+-------+-------------+
+|   type   | stock | SUM(shares) |
++----------+-------+-------------+
+| purchase | AMZN  | 1           |
+| purchase | COX   | 5           |
+| purchase | NFLX  | 2           |
+
+
+
 +-------+-------------+
 | stock | SUM(shares) |
 +-------+-------------+
