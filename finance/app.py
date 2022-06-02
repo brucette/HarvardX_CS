@@ -268,7 +268,7 @@ def sell():
         # Ensure stock symbol was submitted and that user owns that stock
         stock = request.form.get("symbol")
 
-        if not stock or stock not in list_user_stocks:
+        if not stock or stock not in user_stocks:
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
