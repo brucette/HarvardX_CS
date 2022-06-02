@@ -90,6 +90,7 @@ def index():                                    #4
             #else:
                 #calculate if any stocks still available
                 all_bought =
+                all_sold = 
 
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
