@@ -273,7 +273,7 @@ def sell():
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
                 if difference > 0:
-                    user_stocks.append("stock": item["stock"])
+                    user_stocks.append({"stock": item["stock"], "shares": difference})
             else:
                  user_stocks.append(item["stock"])
 
