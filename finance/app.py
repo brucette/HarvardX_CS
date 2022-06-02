@@ -83,9 +83,9 @@ def index():                                    #4
                 if difference > 0:
                     owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": difference})
 
-                    total_value += current_price["price"] * difference]
+                    total_value += current_price["price"] * difference
 
-        return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
+        return render_template("index.html", owned_stocks=owned_stocks, funds=funds, total_value=total_value)
 
 @app.route("/buy", methods=["GET", "POST"])     #3
 @login_required
