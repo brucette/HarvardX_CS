@@ -89,7 +89,7 @@ def index():                                    #4
             #else:
                 #calculate if any stocks still available
                 all_bought =
-                all_sold =
+                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? GROUP BY stock", session["user_id"], "sale")
 
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
