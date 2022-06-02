@@ -256,7 +256,6 @@ def sell():
     except RuntimeError:
         return apology("You currently have no stocks to sell")
     else:
-
         # Sold stock
         sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
 
