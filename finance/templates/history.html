@@ -29,6 +29,7 @@ of shares bought or sold, and the date and time at which the transaction occurre
                         <td>{{ item["type"] }}</td>
                         <td>{{ item["stock"] }}</td>
                         <td>{{ item["price"] | usd }}</td>
+                        <td>{{ item["shares"] }}</td>
                         <td>{{ item["time"] }}</td>
                     </tr>
                 {% endfor %}
