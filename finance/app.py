@@ -85,7 +85,7 @@ def index():                                    #4
                 # CURRENT PRICES: {'AMZN': 2354.32, 'NFLX': 195.62}
                 # Add dict to owned_stocks:
                     # {'type': 'purchase', 'stock': 'NFLX', 'SUM(shares)': 2}
-                owned_stocks.append({"stock" : current_price["symbol"], "price" : current_price["price"], "shares" : item["SUM(shares)"]})
+                owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
             #else:
                 #calculate if any stocks still available
                 all_bought =
