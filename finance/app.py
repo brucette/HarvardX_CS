@@ -101,7 +101,7 @@ def buy():
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
-        shares = request.form.get("shares"))
+        shares = request.form.get("shares")
         if not shares or int(shares) <= 0:
             return apology("number of shares missing")
 
