@@ -279,6 +279,7 @@ def sell():
 
         # Ensure valid number of shares entered
         shares_entered = int(request.form.get("shares"))
+        # **********************************UPDATE THE FOLLOWING:**********************************************************************************************************
         portf_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], stock, "purchase")
         actual_shares = portf_shares[0]["SUM(shares)"]
 
