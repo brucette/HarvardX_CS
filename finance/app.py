@@ -292,9 +292,9 @@ def sell():
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
-        shares_entered = int(request.form.get("shares"))
+        shares_entered = request.form.get("shares")
 
-        if not shares_entered or shares_entered <= 0 or shares_entered > actual_shares[stock]:
+        if not shares_entered or int(shares_entered) <= 0 or int(shares_entered) > actual_shares[stock]:
             return apology("invalid number of shares")
 
         # Check current price of the stock
