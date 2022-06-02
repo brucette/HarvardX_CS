@@ -74,8 +74,8 @@ def index():                                    #4
 
         # Check if stocks user owns have been sold
         for item in bought:
+            current_price = lookup(item["stock"])
             if item["stock"] not in sold_stocks:
-                current_price = lookup(item["stock"])
                 #print("PRICE!",current_price)
                 #PRICE! {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
                 total_value += current_price["price"] * item["SUM(shares)"]
@@ -95,7 +95,7 @@ def index():                                    #4
                 #print(all_sold)
                 print(difference)
                 if difference > 0:
-                    
+                    owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": difference})
                 #print(len(all_bought))
 
         return render_template("index.html", owned_stocks=owned_stocks, current_prices=current_prices, funds=funds, total_value=total_value)
