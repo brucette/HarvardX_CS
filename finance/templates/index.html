@@ -52,10 +52,10 @@ total (i.e., stocks’ total value plus cash) -->
             });
 
             let purchase = document.querySelectorAll(".buy");
-            for (let i = 0; i < wrongs.length; i++)
+            for (let i = 0; i < purchase.length; i++)
                 {
-                    wrongs[i].addEventListener("click", function(){
-                        wrongs[i].style.backgroundColor = "red";
+                    purchase[i].addEventListener("click", function(){
+                        purchase[i].style.backgroundColor = "red";
                         response1.innerHTML = "Incorrect.";
                     });
                 }
