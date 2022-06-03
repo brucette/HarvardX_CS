@@ -30,7 +30,7 @@ total (i.e., stocks’ total value plus cash) -->
                         <td>{{ item["shares"] }}</td>
                         <td>{{ item["price"] | usd }}</td>
                         <td>{{ (item["shares"] * item["price"]) | usd }}</td>
-                        <td><button id="buy">Buy</button></td>
+                        <td><button class="buy">Buy</button></td>
                         <td><button class="sell">Sell</button></td>
                     </tr>
                 {% endfor %}
@@ -47,14 +47,14 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
         </table>
         <script>
-            /*document.addEventListener("click", function(){
-            document.getElementById("buy").innerHTML = "hello!"
-            });*/
-
             document.addEventListener("click", function(){
+            document.getElementByClass("buy").innerHTML = "hello!"
+            });
+
+            /*document.addEventListener("click", function(){
             document.getElementById("buy");
             return render_template("buy.html");
-            });
+            });*/
 
         </script>
 {% endblock %}
