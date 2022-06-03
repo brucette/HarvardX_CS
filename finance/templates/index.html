@@ -31,7 +31,7 @@ total (i.e., stocks’ total value plus cash) -->
                         <td>{{ item["price"] | usd }}</td>
                         <td>{{ (item["shares"] * item["price"]) | usd }}</td>
                         <td><button>Buy</button></td>
-                        <button>Sell</button>
+                        <td><button>Sell</button></td>
                     </tr>
                 {% endfor %}
                     <tr>
