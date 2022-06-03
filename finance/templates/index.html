@@ -51,7 +51,14 @@ total (i.e., stocks’ total value plus cash) -->
             document.getElementByClass("buy").innerHTML = "hello!"
             });
 
-            document.querySelectorAll(".buy");
+            let purchase = document.querySelectorAll(".buy");
+            for (let i = 0; i < wrongs.length; i++)
+                {
+                    wrongs[i].addEventListener("click", function(){
+                        wrongs[i].style.backgroundColor = "red";
+                        response1.innerHTML = "Incorrect.";
+                    });
+                }
             /*document.addEventListener("click", function(){
             document.getElementById("buy");
             return render_template("buy.html");
