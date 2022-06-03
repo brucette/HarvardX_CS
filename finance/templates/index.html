@@ -33,12 +33,12 @@ total (i.e., stocks’ total value plus cash) -->
                         <td>
                             <!-- Add form to buy particular stock -->
                             <form action="/buy" method="post">
-                                <input name="id" type="hidden" value="{{ item.id }}">
+                                <input name="id" type="hidden" value="{{ item.stock }}">
                                 <input type="submit" value="Buy">
                             </form>
                         </td>
-                        <td><button class="buy">Buy</button></td>
-                        <td><button class="sell">Sell</button></td>
+                        <!--<td><button class="buy">Buy</button></td>-->
+                        <!--<td><button class="sell">Sell</button></td>-->
                     </tr>
                 {% endfor %}
                     <tr>
