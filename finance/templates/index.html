@@ -42,6 +42,7 @@ total (i.e., stocks’ total value plus cash) -->
                             <form action="/sell" method="post">
                                 <input name="symbol" type="hidden" value="{{ item.stock }}">
                                 <input type="submit" value="Sell">
+                                <input name="shares" type="number" placeholder="Number of shares">
                             </form>
                         </td>
                         <td>
