@@ -47,16 +47,13 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
         </table>
         <script>
-            let buy = document.getElementById("buy");
-
-            buy.addEventListener("click", function(){
-            /*return redirect("/buy");*/
-            /*render_template("buy.html")*/
-            buy.innerHMTL = "hello!";
+            document.addEventListener("click", function(){
+            document.getElementById("demo").innerHTML = "Hello World";
             });
 
             document.addEventListener("click", function(){
-            document.getElementById("sell") = ();
+            document.getElementById("buy").innerHTML = "hello!"
             });
+
         </script>
 {% endblock %}
