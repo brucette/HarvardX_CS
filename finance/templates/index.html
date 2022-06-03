@@ -47,11 +47,12 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
         </table>
         <script>
-            let sell = document.getElementById("sell");
-
             document.addEventListener("click", function(){
             document.getElementById("buy") = buy();
             });
 
+            document.addEventListener("click", function(){
+            document.getElementById("sell") = buy();
+            });
         </script>
 {% endblock %}
