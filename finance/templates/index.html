@@ -47,16 +47,16 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
         </table>
         <script>
-            document.addEventListener("click", function(){
+            /*document.addEventListener("click", function(){
             document.getElementByClass("buy").innerHTML = "hello!"
-            });
+            });*/
 
             let purchase = document.querySelectorAll(".buy");
             for (let i = 0; i < purchase.length; i++)
                 {
                     purchase[i].addEventListener("click", function(){
                         purchase[i].style.backgroundColor = "red";
-                        response1.innerHTML = "Incorrect.";
+                        /*response1.innerHTML = "Incorrect.";*/
                     });
                 }
             /*document.addEventListener("click", function(){
