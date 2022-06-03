@@ -55,9 +55,8 @@ total (i.e., stocks’ total value plus cash) -->
             for (let i = 0; i < purchase.length; i++)
                 {
                     purchase[i].addEventListener("click", function(){
-                        purchase[i].style.backgroundColor = "red";
-                        return redirect(url_for('buy', stock = name))
-                        /*response1.innerHTML = "Incorrect.";*/
+                        /*purchase[i].style.backgroundColor = "red";*/
+                        return redirect(url_for(buy))
                     });
                 }
             /*document.addEventListener("click", function(){
