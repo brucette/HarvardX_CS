@@ -50,12 +50,13 @@ total (i.e., stocks’ total value plus cash) -->
             /*document.addEventListener("click", function(){
             document.getElementByClass("buy").innerHTML = "hello!"
             });*/
-            
+
             let purchase = document.querySelectorAll(".buy");
             for (let i = 0; i < purchase.length; i++)
                 {
                     purchase[i].addEventListener("click", function(){
                         purchase[i].style.backgroundColor = "red";
+                        return redirect(url_for('accountType',Type = name))
                         /*response1.innerHTML = "Incorrect.";*/
                     });
                 }

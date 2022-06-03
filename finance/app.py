@@ -86,6 +86,7 @@ def index():                                    #4
 
         return render_template("index.html", owned_stocks=owned_stocks, funds=funds, total_value=total_value)
 
+
 @app.route("/buy", methods=["GET", "POST"])     #3
 @login_required
 def buy():
@@ -125,6 +126,7 @@ def buy():
 
             # Redirect user to home page????????????????|||||||||||||||||||||||||||||
             return redirect("/")
+
 
 @app.route("/history")
 @login_required
