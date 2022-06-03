@@ -300,7 +300,7 @@ def sell():
 
         # Ensure valid number of shares entered
         shares_entered = request.form.get("shares")
-        
+
         if not shares_entered or int(shares_entered) <= 0 or int(shares_entered) > actual_shares[stock]:
             return apology("invalid number of shares")
 
