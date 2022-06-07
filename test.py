@@ -1,3 +1,14 @@
+<form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock symbol" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Get quote</button>
+</form>
+
+
+
+
   <tbody>
                 {% for item in current_prices %}
                     <tr>
