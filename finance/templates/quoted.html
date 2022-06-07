@@ -8,11 +8,13 @@
 
 {% block main %}
     <table class="container-fluid py-5 text-center">
+        <tbody>
         {% for key, value in results.items() %}
             <tr>
                 <td>{{ key }}:</td>
                 <td> {{ value }}</td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 {% endblock %}
