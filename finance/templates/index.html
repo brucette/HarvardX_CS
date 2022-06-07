@@ -31,7 +31,7 @@ total (i.e., stocks’ total value plus cash) -->
                         <td>{{ item["price"] | usd }}</td>
                         <td>{{ (item["shares"] * item["price"]) | usd }}</td>
                         <td>
-                            <!-- Add form to buy particular stock -->
+                            <!-- Add form to buy or sell particular stock -->
                             <form action="/buy" method="post">
                                 <input name="symbol" type="hidden" value="{{ item.stock }}">
                                 <input name="shares" type="number" placeholder="No. shares">
@@ -39,25 +39,6 @@ total (i.e., stocks’ total value plus cash) -->
                                 <input type="submit" value="Sell" formaction="/sell">
                             </form>
                         </td>
-                         <td>
-                             /
-                        </td>
-                        <td>
-                            <!-- Add form to sell particular stock
-                            <form action="/sell" method="post">
-                                <input name="symbol" type="hidden" value="{{ item.stock }}">
-                                <input name="shares" type="number" placeholder="No. shares">
-                                <input type="submit" value="Sell">
-                            </form>-->
-                        </td>
-                        <td>
-                             <!-- Add form to sell particular stock
-                            <form>
-                                <input name="shares" type="number" placeholder="Number of shares">
-                            </form>-->
-                        </td>
-                        <!--<td><button class="buy">Buy</button></td>-->
-                        <!--<td><button class="sell">Sell</button></td>-->
                     </tr>
                 {% endfor %}
                     <tr>
