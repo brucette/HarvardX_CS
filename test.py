@@ -7,7 +7,8 @@
 </form>
 
 
-
+{% for key, value in results.items() %}
+{% endfor %}
 
   <tbody>
                 {% for item in current_prices %}
