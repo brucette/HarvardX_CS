@@ -25,7 +25,16 @@ nav .navbar-brand .green
 /* Center tables*/
 .table
 {
-
     margin-left: auto;
     margin-right: auto;
+}
+
+.left
+{
+    text-align: right;
+}
+
+.right
+{
+    text-align: left;
 }

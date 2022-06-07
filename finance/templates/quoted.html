@@ -7,14 +7,13 @@
 {% endblock %}
 
 {% block main %}
+    <h3>Here is the quote for the requested stock:</h3>
     <table class="table">
-        <tbody>
         {% for key, value in results.items() %}
             <tr>
-                <td>{{ key }}:</td>
-                <td> {{ value }}</td>
+                <td class="left">{{ key }}:</td>
+                <td class="right"> {{ value }}</td>
             </tr>
         {% endfor %}
-        </tbody>
     </table>
 {% endblock %}
