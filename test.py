@@ -8,10 +8,7 @@
 
 
 {% for key, value in results.items() %}
-<tr>
-                <td class="left">{{ key }}:</td>
-                <td class="right"> {{ value }}</td>
-            </tr>
+
 {% endfor %}
 
   <tbody>

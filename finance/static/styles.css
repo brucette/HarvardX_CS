@@ -29,11 +29,13 @@ nav .navbar-brand .green
     margin-right: auto;
 }
 
+/* Align left data field*/
 .left
 {
     text-align: right;
 }
 
+/* Align right data field*/
 .right
 {
     text-align: left;
