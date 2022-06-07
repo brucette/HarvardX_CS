@@ -8,7 +8,7 @@
     <form action="/sell" method="post">
         <div class="mb-3">
             <label for="symbol">Sell stock:</label>
-            <select name="symbol" id="symbol" placeholder="Symbol">
+            <select class="btn btn-secondary" name="symbol" id="symbol" placeholder="Symbol">
             <option>Select</option>
                 {% for item in user_stocks %}
                     <option>{{ item }}</option>
