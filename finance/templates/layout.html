@@ -59,7 +59,14 @@
 
         <main class="container-fluid py-5 text-center">
             {% block main %}
-
+                <table class="table">
+                    {% for key, value in results.items() %}
+                        <tr>
+                            <td class="left">{{ key }}:</td>
+                            <td class="right"> {{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
             {% endblock %}
 
         </main>
