@@ -9,11 +9,11 @@
 {% block main %}
     <h4>Here is the quote for the requested stock:</h4>
     <br>
-    <table class="table text-center">
+    <table>
         {% for key, value in results.items() %}
             <tr>
                 <td class="left">{{ key }}:</td>
-                <td class="right"> {{ value }}</td>
+                <td class="right">{{ value }}</td>
             </tr>
         {% endfor %}
     </table>
