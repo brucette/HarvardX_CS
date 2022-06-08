@@ -47,31 +47,23 @@ total (i.e., stocks’ total value plus cash) -->
             <tfoot>
                 <tr>
                     <td class="border-0 text-end" colspan="3"><b>{{ "Cash balance:" }}</b></td>
-                    <td class="text-end">{{ funds[0]["cash"] | usd }}</td>
+                    <td class="border-0 text-end">{{ funds[0]["cash"] | usd }}</td>
                 </tr>
                 <tr>
-                    <td class="text-end" colspan="3"><b>{{ "Grand total:" }}</b></td>
-                    <td class="text-end"><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
+                    <td class="border-0 text-end" colspan="3"><b>{{ "TOTAL:" }}</b></td>
+                    <td class="border-0 text-end"><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
                 </tr>
             </tfoot>
         </table>
 
         <script>
-            /*document.addEventListener("click", function(){
-            document.getElementByClass("buy").innerHTML = "hello!"
-            });*/
 
             let purchase = document.querySelectorAll(".buy");
             for (let i = 0; i < purchase.length; i++)
                 {
                     purchase[i].addEventListener("click", function(){
-                        /*purchase[i].style.backgroundColor = "red";*/
-                        /*print(url_for('www.google.com'));*/
                     });
                 }
-            /*document.addEventListener("click", function(){
-            document.getElementById("buy");
-            return render_template("buy.html");
-            });*/
+
         </script>
 {% endblock %}
