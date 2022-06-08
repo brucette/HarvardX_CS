@@ -28,11 +28,11 @@ total (i.e., stocks’ total value plus cash) -->
             <tbody>
                 {% for item in owned_stocks %}
                     <tr>
-                        <td class="text-start">{{ item["stock"] }}</td>
-                        <td class="text-start">{{ item["shares"] }}</td>
-                        <td class="text-center">{{ item["price"] | usd }}</td>
-                        <td class="text-end">{{ (item["shares"] * item["price"]) | usd }}</td>
-                        <td class="text-end">
+                        <td>{{ item["stock"] }}</td>
+                        <td>{{ item["shares"] }}</td>
+                        <td>{{ item["price"] | usd }}</td>
+                        <td>{{ (item["shares"] * item["price"]) | usd }}</td>
+                        <td>
                             <!-- Add form to buy or sell particular stock -->
                             <form action="/buy" method="post">
                                 <input name="symbol" type="hidden" value="{{ item.stock }}">
