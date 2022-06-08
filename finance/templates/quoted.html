@@ -13,7 +13,7 @@
         {% for key, value in results.items() %}
             <tr>
                 <td class="left">{{ key }}:</td>
-                <td class="right">{{ value }}</td>
+                <td class="right">{{ value | usd }}</td>
             </tr>
         {% endfor %}
     </table>
