@@ -44,24 +44,23 @@ total (i.e., stocks’ total value plus cash) -->
                     </tr>
                 {% endfor %}
             </tbody>
-        </table>
-        <table class="table">
-            <tr>
-                <td></td>
-                <td></td>
-                <td>{{ "Cash balance:" }}</td>
-                <td>{{ funds[0]["cash"] | usd }}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td><b>{{ "Grand total:" }}</b></td>
-                <td><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
-
-            </tr>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{ "Cash balance:" }}</td>
+                    <td>{{ funds[0]["cash"] | usd }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>{{ "Grand total:" }}</b></td>
+                    <td><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
+                </tr>
+            </tfoot>
         </table>
         <script>
             /*document.addEventListener("click", function(){
