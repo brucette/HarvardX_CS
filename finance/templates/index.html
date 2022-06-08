@@ -20,7 +20,7 @@ total (i.e., stocks’ total value plus cash) -->
                 <tr>
                     <th class="text-start">Stock</th>
                     <th class="text-start">Shares</th>
-                    <th class="text-end">Current stock price</th>
+                    <th class="text-center">Current stock price</th>
                     <th class="text-end">Total stock value</th>
                     <th class="text-end">Buy or Sell stock</th>
                 </tr>
@@ -30,7 +30,7 @@ total (i.e., stocks’ total value plus cash) -->
                     <tr>
                         <td class="text-start">{{ item["stock"] }}</td>
                         <td class="text-start">{{ item["shares"] }}</td>
-                        <td class="text-end">{{ item["price"] | usd }}</td>
+                        <td class="text-center">{{ item["price"] | usd }}</td>
                         <td class="text-end">{{ (item["shares"] * item["price"]) | usd }}</td>
                         <td class="text-end">
                             <!-- Add form to buy or sell particular stock -->
@@ -46,7 +46,7 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
             <tfoot>
                 <tr>
-                    <td>{{ "Cash balance:" }}</td>
+                    <td class="text-end">{{ "Cash balance:" }}</td>
                     <td>{{ funds[0]["cash"] | usd }}</td>
                 </tr>
                 <tr>
