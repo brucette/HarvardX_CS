@@ -36,7 +36,7 @@ total (i.e., stocks’ total value plus cash) -->
                             <!-- Add form to buy or sell particular stock -->
                             <form action="/buy" method="post">
                                 <input name="symbol" type="hidden" value="{{ item.stock }}">
-                                <div class="col-xs-1">
+                                <div class="col-sm">
                                 <input class="btn btn-outline-info btn-sm"  name="shares" type="number" placeholder="Shares">
                                 </div>
                                 <input class="btn btn-primary" type="submit" value="Buy">
