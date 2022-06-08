@@ -47,6 +47,7 @@ total (i.e., stocks’ total value plus cash) -->
         <table class="table">
             <tr>
                 <td></td>
+                <td></td>
                 <td>{{ "Cash balance:" }}</td>
                 <td>{{ funds[0]["cash"] | usd }}</td>
                 <td></td>
@@ -55,11 +56,10 @@ total (i.e., stocks’ total value plus cash) -->
             </tr>
             <tr>
                 <td></td>
+                <td></td>
                 <td><b>{{ "Grand total:" }}</b></td>
                 <td><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
-                <td></td>
-                <td></td>
-                <td></td>
+
             </tr>
         </table>
         <script>
