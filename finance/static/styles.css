@@ -22,21 +22,21 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
-/* Center tables*/
+/* Center tables
 .table
 {
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Align left data field*/
+Align left data field
 .left
 {
     text-align: right;
 }
 
-/* Align right data field*/
+Align right data field
 .right
 {
     text-align: left;
-}
+}*/
