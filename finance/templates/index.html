@@ -28,7 +28,7 @@ total (i.e., stocks’ total value plus cash) -->
             <tbody>
                 {% for item in owned_stocks %}
                     <tr>
-                        <td>{{ item["stock"] }}</td>
+                        <td class="text-start">{{ item["stock"] }}</td>
                         <td>{{ item["shares"] }}</td>
                         <td>{{ item["price"] | usd }}</td>
                         <td>{{ (item["shares"] * item["price"]) | usd }}</td>
