@@ -46,21 +46,12 @@ total (i.e., stocks’ total value plus cash) -->
             </tbody>
             <tfoot>
                 <tr>
-                    <td class="text-end" colspan="3"><b>{{ "Cash balance:" }}</b></td>
+                    <td class="border-0 text-end" colspan="3"><b>{{ "Cash balance:" }}</b></td>
                     <td class="text-end">{{ funds[0]["cash"] | usd }}</td>
                 </tr>
                 <tr>
                     <td class="text-end" colspan="3"><b>{{ "Grand total:" }}</b></td>
                     <td class="text-end"><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
-                </tr>
-
-                 <tr>
-                    <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
-                    <td class="border-0 text-end">$9,377.83</td>
-                </tr>
-                <tr>
-                    <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
-                    <td class="border-0 w-bold text-end">$9,999.46</td>
                 </tr>
             </tfoot>
         </table>
