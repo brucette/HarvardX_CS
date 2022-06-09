@@ -135,6 +135,10 @@ def history():
 
     transactions = db.execute("SELECT type, stock, price, shares, time FROM transactions WHERE user_id = ?", session["user_id"])
 
+    if not transactions:
+        return apology("")
+
+    else:
     return render_template("history.html", transactions=transactions)
 
 
