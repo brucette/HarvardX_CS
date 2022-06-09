@@ -234,11 +234,11 @@ def register():
             return apology("username is already taken")
 
         # Ensure password was submitted
-        elif not password:
+        if not password:
             return apology("must provide password")
 
         # Ensure password matches verification
-        elif not verify_password or password != verify_password:
+        if not verify_password or password != verify_password:
             return apology("password must match verification")
 
     # Insert new user into USERS table
