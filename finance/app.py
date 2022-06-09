@@ -59,7 +59,6 @@ def index():
         for item in sold:
             sold_stocks.append(item["stock"])
 
-        # List for stocks actually 
         owned_stocks = []
         funds = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         total_value = 0
