@@ -109,15 +109,10 @@ def buy():
             # converting to integer
             int(shares)
         except ValueError:
-            isInt = False
-if isInt:
-   print('Input value is an integer')
-else:
-   print('Not an integer')
-
-
-        if not shares or shares <= 0:
             return apology("number of shares missing")
+        else:
+            if not shares or shares <= 0:
+                return apology("number of shares missing")
 
         # Check if user has enough cash
         details = lookup(stock)
