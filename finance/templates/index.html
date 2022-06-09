@@ -14,17 +14,19 @@ the current price of each stock, and the total value of each holding. -->
             <thead>
                 <tr>
                     <th class="text-start">Stock</th>
+                    <th class="text-start">Name</th>
                     <th class="text-start">Shares</th>
                     <th class="text-end">Current stock price</th>
                     <th class="text-end">Total stock value</th>
                     <th class="text-end">Buy or Sell stock</th>
                 </tr>
             </thead>
-            
+
             <tbody>
                 {% for item in owned_stocks %}
                     <tr>
                         <td class="text-start">{{ item["stock"] }}</td>
+                        <td class="text-start">{{ item["name"] }}</td>
                         <td class="text-start">{{ item["shares"] }}</td>
                         <td class="text-end">{{ item["price"] | usd }}</td>
                         <td class="text-end">{{ (item["shares"] * item["price"]) | usd }}</td>

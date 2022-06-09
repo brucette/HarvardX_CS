@@ -70,7 +70,7 @@ def index():
             # lookup: {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
             if item["stock"] not in sold_stocks:
                 # Add info about stock to owned_stocks:
-                owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": item["SUM(shares)"]})
+                owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"],"price": current_price["price"], "shares": item["SUM(shares)"]})
 
                 total_value += current_price["price"] * item["SUM(shares)"]
             else:
