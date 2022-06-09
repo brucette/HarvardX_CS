@@ -133,13 +133,14 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    transactions = db.execute("SELECT type, stock, price, shares, time FROM transactions WHERE user_id = ?", session["user_id"])
+    try:
+        transactions = db.execute("SELECT type, stock, price, shares, time FROM transactions WHERE user_id = ?", session["user_id"])
 
     if not transactions:
-        return apology("")
+        return apology("You currently have no stocks to sell")
 
     else:
-    return render_template("history.html", transactions=transactions)
+        return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
