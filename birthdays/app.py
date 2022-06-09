@@ -59,7 +59,7 @@ def remove():
 def edit():
     id = request.form.get("id")
     if id:
-        return render_template("edit.html", name=)
+        return render_template("edit.html", edit_name=edit_name)
 
     edit_name = request.form.get("name")
     edit_month = request.form.get("month")
