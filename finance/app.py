@@ -185,16 +185,16 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])   #2
+@app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
     """Get stock quote."""
 
-    # If tries to get, then display a form to request a stock quote
+    # Display a form to request a stock quote
     if request.method == "GET":
         return render_template("quote.html")
 
-    # Else use lookup function to search for that stock and display the result to user
+    # Search for stock user entered and display the result
     else:
         symbol = request.form.get("symbol")
 
