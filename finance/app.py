@@ -248,12 +248,15 @@ def register():
 
     # Insert new user into USERS table
     hash_password = generate_password_hash(password)
-    db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
+    try:
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
+    except ValueError:
+        return apology("username is already taken", 200)
+    else:
+        session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
 
-    session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
-
-    # Redirect user to home page
-    return redirect("/", 200)
+        # Redirect user to home page
+        return redirect("/", 200)
 
 
 @app.route("/sell", methods=["GET", "POST"])
