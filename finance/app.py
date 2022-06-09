@@ -86,11 +86,12 @@ def index():
         return render_template("index.html", owned_stocks=owned_stocks, funds=funds, total_value=total_value)
 
 
-@app.route("/buy", methods=["GET", "POST"])     #3
+@app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-    # If tries to get, then display a form to enter stock and number of shares
+
+    # Display a form to enter stock and number of shares
     if request.method == "GET":
         return render_template("buy.html")
 
@@ -123,7 +124,7 @@ def buy():
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
 
-            # Redirect user to home page????????????????|||||||||||||||||||||||||||||
+            # Redirect user to home page
             return redirect("/")
 
 
