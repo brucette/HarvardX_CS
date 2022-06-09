@@ -33,7 +33,8 @@ def index():
         month = request.form.get("month")
         day = request.form.get("day")
 
-        if not name or not month or int(month) < 1 or not day:
+        if not name or not month or int(month) < 1 or int(month) > 12 or not day
+        or int(day) < 1 or int(day) > 31:
             return render_template("failure.html")
 
         # Add birthday to database
