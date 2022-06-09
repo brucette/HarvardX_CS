@@ -25,6 +25,7 @@ the current price of each stock, and the total value of each holding. -->
             <tbody>
                 {% for item in owned_stocks %}
                     <tr>
+
                         <td class="text-start">{{ item["stock"] }}</td>
                         <td class="text-start">{{ item["name"] }}</td>
                         <td class="text-start">{{ item["shares"] }}</td>
@@ -39,6 +40,7 @@ the current price of each stock, and the total value of each holding. -->
                                 <input class="btn btn-primary" type="submit" value="Sell" formaction="/sell">
                             </form>
                         </td>
+
                     </tr>
                 {% endfor %}
             </tbody>
