@@ -44,11 +44,11 @@ the current price of each stock, and the total value of each holding. -->
             </tbody>
             <tfoot>
                 <tr>
-                    <td class="border-0 text-end" colspan="3"><b>{{ "Cash balance:" }}</b></td>
+                    <td class="border-0 text-end" colspan="4"><b>{{ "Cash balance:" }}</b></td>
                     <td class="border-0 text-end">{{ funds[0]["cash"] | usd }}</td>
                 </tr>
                 <tr>
-                    <td class="border-0 text-end" colspan="3"><b>{{ "TOTAL:" }}</b></td>
+                    <td class="border-0 text-end" colspan="4"><b>{{ "TOTAL:" }}</b></td>
                     <td class="border-0 text-end"><b>{{ (total_value + funds[0]["cash"]) | usd }}</b></td>
                 </tr>
             </tfoot>
