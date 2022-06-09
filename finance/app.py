@@ -80,7 +80,7 @@ def index():
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
                 if difference > 0:
-                    owned_stocks.append({"stock": current_price["symbol"], "price": current_price["price"], "shares": difference})
+                    owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"], "price": current_price["price"], "shares": difference})
 
                     total_value += current_price["price"] * difference
 
