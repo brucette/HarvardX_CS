@@ -49,7 +49,7 @@ def index():
     try:
         # Get bought stock
         bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
-        
+
     except RuntimeError:
         return apology("You currently have no stocks to display")
     else:
@@ -66,7 +66,7 @@ def index():
         # Check if any stocks user bought have also been sold
         for item in bought:
             current_price = lookup(item["stock"])
-            # lookup: {'name': 'NetFlix Inc', 'price': 195.62, 'symbol': 'NFLX'}
+          
             if item["stock"] not in sold_stocks:
                 # Add info about stock to owned_stocks:
                 owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"], "price": current_price["price"], "shares": item["SUM(shares)"]})
