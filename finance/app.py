@@ -252,7 +252,7 @@ def register():
     return redirect("/")
 
 
-@app.route("/sell", methods=["GET", "POST"])            #5
+@app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
@@ -263,7 +263,7 @@ def sell():
     except RuntimeError:
         return apology("You currently have no stocks to sell")
     else:
-        # Sold stock
+        # Get sold stock
         sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
 
         sold_stocks = []
@@ -287,7 +287,7 @@ def sell():
                  user_stocks.append(item["stock"])
                  actual_shares[item["stock"]] = item["SUM(shares)"]
 
-    # If tries to get, then display a form to enter stock and number of shares
+    # Display a form to enter stock and number of shares
     if request.method == "GET":
         return render_template("sell.html", user_stocks = user_stocks)
 
