@@ -251,7 +251,7 @@ def register():
     try:
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
     except ValueError:
-        return apology("username is already taken", 200)
+        return apology("username is already taken")
     else:
         session["user_id"] = db.execute("SELECT id FROM users WHERE username = ?", username)
 
