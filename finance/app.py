@@ -97,7 +97,7 @@ def buy():
 
     else:
         # Ensure stock symbol was submitted and that it exists
-        stock = request.form.get("symbol")
+        stock = upper(request.form.get("symbol"))
         if not stock or not lookup(stock):
             return apology("must enter valid stock symbol")
 
@@ -201,7 +201,7 @@ def quote():
 
     # Search for stock user entered and display the result
     else:
-        symbol = request.form.get("symbol")
+        symbol = upper(request.form.get("symbol"))
 
         if not symbol:
             return apology("must enter symbol")
