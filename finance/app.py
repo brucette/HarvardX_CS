@@ -297,7 +297,7 @@ def sell():
 
     else:
         # Ensure stock symbol was submitted and that user owns that stock
-        stock = request.form.get("symbol")
+        stock = upper(request.form.get("symbol"))
 
         if not stock or stock not in user_stocks:
             return apology("must enter valid stock symbol")
