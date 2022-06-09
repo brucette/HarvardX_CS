@@ -35,7 +35,7 @@ the current price of each stock, and the total value of each holding. -->
                             <!-- Add form to buy or sell particular stock -->
                             <form action="/buy" method="post">
                                 <input name="symbol" type="hidden" value="{{ item.stock }}">
-                                <input class="col-sm-2 btn btn-outline-info btn-sm"  name="shares" type="number" placeholder="Shares">
+                                <input class="col-sm-3 btn btn-outline-info btn-sm"  name="shares" type="number" placeholder="Shares">
                                 <input class="btn btn-primary" type="submit" value="Buy">
                                 <input class="btn btn-primary" type="submit" value="Sell" formaction="/sell">
                             </form>
