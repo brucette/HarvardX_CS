@@ -103,7 +103,7 @@ def buy():
 
         # Ensure valid number of shares entered
         shares = request.form.get("shares")
-        if not shares or int(shares) <= 0:
+        if not shares or not is_integer(shares) or int(shares) <= 0:
             return apology("number of shares missing")
 
         # Check if user has enough cash
