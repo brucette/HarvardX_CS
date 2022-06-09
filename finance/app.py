@@ -111,7 +111,7 @@ def buy():
         except ValueError:
             return apology("number of shares missing")
         else:
-            if not shares or shares <= 0:
+            if not shares or int(shares) <= 0:
                 return apology("number of shares missing")
 
         # Check if user has enough cash
