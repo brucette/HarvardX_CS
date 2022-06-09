@@ -102,17 +102,20 @@ def buy():
             return apology("must enter valid stock symbol")
 
         # Ensure valid number of shares entered
+
+        shares = request.form.get("shares")
+
         try:
             # converting to integer
-            int(s)
-except ValueError:
-   isInt = False
+            int(shares)
+        except ValueError:
+            isInt = False
 if isInt:
    print('Input value is an integer')
 else:
    print('Not an integer')
 
-        shares = int(request.form.get("shares"))
+
         if not shares or shares <= 0:
             return apology("number of shares missing")
 
