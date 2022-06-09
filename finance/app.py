@@ -136,7 +136,7 @@ def history():
     try:
         transactions = db.execute("SELECT type, stock, price, shares, time FROM transactions WHERE user_id = ?", session["user_id"])
 
-    if not transactions:
+    except RuntimeError:
         return apology("You currently have no stocks to sell")
 
     else:
