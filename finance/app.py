@@ -210,15 +210,15 @@ def quote():
             return render_template("quoted.html", results=results)
 
 
-@app.route("/register", methods=["GET", "POST"])    #1
+@app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
 
-    # If access via get, then display a form so they can register
+    # Display a form so they can register
     if request.method == "GET":
         return render_template("register.html")
 
-    # Else check for possible errors
+    # Check for possible errors
     else:
         username = request.form.get("username")
         password = request.form.get("password")
