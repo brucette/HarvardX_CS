@@ -44,7 +44,7 @@ def after_request(response):
 
 @app.route("/")
 @login_required
-def index():                                    #4
+def index():
     """Show portfolio of stocks"""
     try:
         # Get bought stock
