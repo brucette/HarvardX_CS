@@ -53,17 +53,3 @@ def remove():
     if id:
         db.execute("DELETE FROM birthdays WHERE id = ?", id)
     return redirect("/")
-
-
-@app.route("/edit", methods=["POST"])
-def edit():
-    id = request.form.get("id")
-    if id:
-        return render_template("edit.html", edit_name=edit_name)
-
-    edit_name = request.form.get("name")
-    edit_month = request.form.get("month")
-    edit_day = request.form.get("day")
-
-    db.execute("DELETE FROM birthdays WHERE id = ?", id)
-    return redirect("/")
