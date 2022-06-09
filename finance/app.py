@@ -201,7 +201,7 @@ def quote():
 
     # Search for stock user entered and display the result
     else:
-        symbol = upper(request.form.get("symbol"))
+        symbol = request.form.get("symbol").upper()
 
         if not symbol:
             return apology("must enter symbol")
