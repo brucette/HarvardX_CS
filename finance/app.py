@@ -222,24 +222,24 @@ def register():
     else:
         username = request.form.get("username")
         password = request.form.get("password")
-        verify_password = request.form.get("verify_password")
+        verify_password = request.form.get("confirmation")
 
         # Ensure username was submitted
         if not username:
-            return apology("must provide username", 403)
+            return apology("must provide username")
 
         # Ensure username not already taken
         usernames = db.execute("SELECT username FROM users")
         if username in usernames:
-            return apology("username is already taken", 403)
+            return apology("username is already taken")
 
         # Ensure password was submitted
         elif not password:
-            return apology("must provide password", 403)
+            return apology("must provide password")
 
         # Ensure password matches verification
         elif not verify_password or password != verify_password:
-            return apology("password must match verification", 403)
+            return apology("password must match verification")
 
     # Insert new user into USERS table
     hash_password = generate_password_hash(password)
