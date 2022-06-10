@@ -336,7 +336,8 @@ def sell():
         sale = "sale"
 
         # Update users transactions
-        db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", sale, stock, price, shares_entered, now, session["user_id"])
+        db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)",
+                   sale, stock, price, shares_entered, now, session["user_id"])
 
         # Increase user's total cash in users table
         db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] + price, session["user_id"])
