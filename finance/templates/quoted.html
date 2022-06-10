@@ -1,5 +1,4 @@
-<!-- Table showing name, price and symbol for stock user wants to buy
-A share of First Trust Exchange-Traded Fund III - First Trust Large Cap Core AlphaDEX Fund (FEX) costs $82.37.-->
+<!-- Table showing name, price and symbol for stock user wants to buy -->
 
 {% extends "layout.html" %}
 
@@ -12,6 +11,6 @@ A share of First Trust Exchange-Traded Fund III - First Trust Large Cap Core Alp
     <br>
 
     <p>
-        A share of {{ results["name"]}} ({{ results["symbol"] }}) costs {{ results["price"] | usd}}
+        A share of {{ results["name"]}} ({{ results["symbol"] }}) costs {{ results["price"] | usd}}.
     </p>
 {% endblock %}
