@@ -133,7 +133,8 @@ def buy():
             purchase = "purchase"
 
             # Update users transactions
-            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)", purchase, stock, price, shares, now, session["user_id"] )
+            db.execute("INSERT INTO transactions (type, stock, price, shares, time, user_id) VALUES (?, ?, ?, ?, ?, ?)",
+                       purchase, stock, price, shares, now, session["user_id"])
 
             # Update users amount of cash in users table
             db.execute("UPDATE users SET cash = ? WHERE id = ?", funds[0]["cash"] - price, session["user_id"])
