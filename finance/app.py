@@ -71,17 +71,21 @@ def index():
 
             if item["stock"] not in sold_stocks:
                 # Add info about stock to owned_stocks:
-                owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"], "price": current_price["price"], "shares": item["SUM(shares)"]})
+                owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"],
+                                    "price": current_price["price"], "shares": item["SUM(shares)"]})
 
                 total_value += current_price["price"] * item["SUM(shares)"]
             else:
                 # Calculate if any of that specific stock still owned
-                all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
-                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
+                all_bought = db.execute(
+                    "SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
+                all_sold = db.execute(
+                    "SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
                 if difference > 0:
-                    owned_stocks.append({"stock": current_price["symbol"], "name": current_price["name"], "price": current_price["price"], "shares": difference})
+                    owned_stocks.append(
+                        {"stock": current_price["symbol"], "name": current_price["name"], "price": current_price["price"], "shares": difference})
 
                     total_value += current_price["price"] * difference
 
