@@ -1,6 +1,13 @@
 <!-- {{ results.name (results.symbol) }}  {{ results.price}} -->
 
-
+<table class="table table-bordered table-striped text-center">
+    {% for key, value in results.items() %}
+        <tr>
+            <td>{{ key }}:</td>
+            <td>{{ value }}</td>
+        </tr>
+    {% endfor %}
+</table>
 
 <form action="/quote" method="post">
         <div class="mb-3">
