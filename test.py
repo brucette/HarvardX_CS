@@ -1,3 +1,7 @@
+<!-- {{ results.name (results.symbol) }}  {{ results.price}} -->
+
+
+
 <form action="/quote" method="post">
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock symbol" type="text">
