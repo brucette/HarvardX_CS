@@ -241,10 +241,6 @@ def register():
         if not username:
             return apology("must provide username")
 
-        # Ensure username not already taken
-        #usernames = db.execute("SELECT username FROM users")
-        #if username in usernames:
-            #return apology("username is already taken", 200)
 
         # Ensure password was submitted
         if not password:
@@ -256,7 +252,9 @@ def register():
 
     # Insert new user into USERS table
     hash_password = generate_password_hash(password)
+
     try:
+        # Ensure username not already taken
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash_password)
     except ValueError:
         return apology("username is already taken")
