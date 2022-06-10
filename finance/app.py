@@ -215,8 +215,7 @@ def quote():
             return apology("must enter symbol")
 
         results = lookup(symbol)
-        print(results)
-
+        #{'name': 'First Trust Exchange-Traded Fund III - First Trust Large Cap Core AlphaDEX Fund', 'price': 82.37, 'symbol': 'FEX'}
         if not results:
             return apology("stock symbol does not exist")
 
