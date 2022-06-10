@@ -215,6 +215,7 @@ def quote():
             return apology("must enter symbol")
 
         results = lookup(symbol)
+        print(results)
 
         if not results:
             return apology("stock symbol does not exist")
