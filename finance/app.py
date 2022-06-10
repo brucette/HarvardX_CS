@@ -248,7 +248,6 @@ def register():
         if not username:
             return apology("must provide username")
 
-
         # Ensure password was submitted
         if not password:
             return apology("must provide password")
@@ -279,12 +278,14 @@ def sell():
 
     try:
         # Make a list of all of stock user has bought, if user has bought any
-        bought = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
+        bought = db.execute(
+            "SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "purchase")
     except RuntimeError:
         return apology("You currently have no stocks to sell")
     else:
         # Get sold stock
-        sold = db.execute("SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
+        sold = db.execute(
+            "SELECT type, stock, SUM(shares) FROM transactions WHERE user_id = ? AND type = ? GROUP BY stock", session["user_id"], "sale")
 
         sold_stocks = []
         for item in sold:
@@ -296,20 +297,22 @@ def sell():
         for item in bought:
             # Calculate if any of that specific stock still owned
             if item["stock"] in sold_stocks:
-                all_bought = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
-                all_sold = db.execute("SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
+                all_bought = db.execute(
+                    "SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "purchase")
+                all_sold = db.execute(
+                    "SELECT SUM(shares) FROM transactions WHERE user_id = ? AND stock = ? AND type = ? GROUP BY stock", session["user_id"], item["stock"], "sale")
                 difference = all_bought[0]["SUM(shares)"] - all_sold[0]["SUM(shares)"]
 
                 if difference > 0:
                     user_stocks.append(item["stock"])
                     actual_shares[item["stock"]] = difference
             else:
-                 user_stocks.append(item["stock"])
-                 actual_shares[item["stock"]] = item["SUM(shares)"]
+                user_stocks.append(item["stock"])
+                actual_shares[item["stock"]] = item["SUM(shares)"]
 
     # Display a form to enter stock and number of shares
     if request.method == "GET":
-        return render_template("sell.html", user_stocks = user_stocks)
+        return render_template("sell.html", user_stocks=user_stocks)
 
     else:
         # Ensure stock symbol was submitted and that user owns that stock
